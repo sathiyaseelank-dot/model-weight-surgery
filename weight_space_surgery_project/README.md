@@ -11,7 +11,8 @@ weight_space_surgery_project/
 ├── README.md                                  # Complete project guide and execution directions
 ├── reports/                                   # In-depth technical papers and empirical proofs
 │   ├── Weight-Space-Programming-and-Model-Surgery.md
-│   └── Thinking-Pattern-Surgery-Hypothesis-and-Empirical-Proof.md
+│   ├── Thinking-Pattern-Surgery-Hypothesis-and-Empirical-Proof.md
+│   └── Autonomous-Bug-Compiler-and-Advanced-Behavioral-Surgery.md
 └── experiments/                               # Standalone, runnable experimental modules
     ├── 1_fact_editing/
     │   ├── diagnose_surgery.py                # Measures logit shifts across individual layers
@@ -23,8 +24,12 @@ weight_space_surgery_project/
     │   └── comprehensive_multi_angle_test.py  # Full 100% preservation multi-angle benchmark suite
     ├── 3_new_knowledge/
     │   └── test_new_knowledge_injection.py    # Injects brand-new, unseen knowledge (Project Aegis -> Phoenix)
-    └── 4_thinking_surgery/
-        └── test_thinking_surgery.py           # Injects System-2 algebraic deliberation pattern
+    ├── 4_thinking_surgery/
+    │   ├── test_thinking_surgery.py           # Injects System-2 algebraic deliberation pattern
+    │   └── test_self_correction_surgery.py    # Metacognitive verification & rate problem reflex
+    └── 5_autonomous_compiler_and_steering/
+        ├── test_abliteration_surgery.py       # Behavioral & stylistic steering without system prompts
+        └── autonomous_astra_compiler.py       # Closed-loop autonomous scanning, diagnosis & repair
 ```
 
 ---
@@ -97,6 +102,10 @@ source .venv/bin/activate
 2. **[`Thinking-Pattern-Surgery-Hypothesis-and-Empirical-Proof.md`](reports/Thinking-Pattern-Surgery-Hypothesis-and-Empirical-Proof.md)**
    * Theoretical derivation of reasoning vectors.
    * Cognitive reflection benchmark data and proof of System-1 to System-2 phase transition.
+3. **[`Autonomous-Bug-Compiler-and-Advanced-Behavioral-Surgery.md`](reports/Autonomous-Bug-Compiler-and-Advanced-Behavioral-Surgery.md)**
+   * Surgical Self-Correction and Backtracking reflex derivations.
+   * Behavioral steering and abliteration without system prompts.
+   * The complete Autonomous Astra Bug Compiler loop with 100% automated pass-rate logs.
 
 ---
 
