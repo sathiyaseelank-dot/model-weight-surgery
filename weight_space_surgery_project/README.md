@@ -12,7 +12,8 @@ weight_space_surgery_project/
 ├── reports/                                   # In-depth technical papers and empirical proofs
 │   ├── Weight-Space-Programming-and-Model-Surgery.md
 │   ├── Thinking-Pattern-Surgery-Hypothesis-and-Empirical-Proof.md
-│   └── Autonomous-Bug-Compiler-and-Advanced-Behavioral-Surgery.md
+│   ├── Autonomous-Bug-Compiler-and-Advanced-Behavioral-Surgery.md
+│   └── Cognitive-Reflection-Puzzle-Suite-and-Cross-Task-Generalization.md
 └── experiments/                               # Standalone, runnable experimental modules
     ├── 1_fact_editing/
     │   ├── diagnose_surgery.py                # Measures logit shifts across individual layers
@@ -107,6 +108,10 @@ source .venv/bin/activate
    * Surgical Self-Correction and Backtracking reflex derivations.
    * Behavioral steering and abliteration without system prompts.
    * The complete Autonomous Astra Bug Compiler loop with 100% automated pass-rate logs.
+4. **[`Cognitive-Reflection-Puzzle-Suite-and-Cross-Task-Generalization.md`](reports/Cognitive-Reflection-Puzzle-Suite-and-Cross-Task-Generalization.md)**
+   * Cross-task generalization across 6 classic cognitive reflection & lateral traps.
+   * Emergence of formal algebraic notation, unit rate decomposition, and programmatic solver synthesis.
+   * Analysis of unified deliberation geometry vs. hardcoded token-pair attractor basins.
 
 ---
 
