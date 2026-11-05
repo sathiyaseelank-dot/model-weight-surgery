@@ -1,0 +1,21 @@
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Hugging Face and PyTorch caches
+.cache/
+hf_cache/
+*.safetensors
+*.pt
+*.bin
+
+# OS files
+.DS_Store
+Thumbs.db
