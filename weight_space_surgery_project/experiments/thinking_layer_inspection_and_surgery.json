@@ -1,0 +1,249 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B",
+  "target_thinking_layer": 20,
+  "logit_lens": [
+    {
+      "layer": "Emb",
+      "top_token": "8",
+      "top_logit": 105.11,
+      "slash_logit": 23.2,
+      "minus_logit": 34.71,
+      "gap": -11.51
+    },
+    {
+      "layer": "L00",
+      "top_token": "eenth",
+      "top_logit": 19.49,
+      "slash_logit": 4.53,
+      "minus_logit": -1.59,
+      "gap": 6.13
+    },
+    {
+      "layer": "L01",
+      "top_token": "erator",
+      "top_logit": 18.26,
+      "slash_logit": 5.44,
+      "minus_logit": 0.5,
+      "gap": 4.94
+    },
+    {
+      "layer": "L02",
+      "top_token": "\u0442\u0435\u043b\u044c\u043d\u043e\u0433\u043e",
+      "top_logit": 15.98,
+      "slash_logit": 1.7,
+      "minus_logit": -2.41,
+      "gap": 4.11
+    },
+    {
+      "layer": "L03",
+      "top_token": "\u0442\u0435\u043b\u044c\u043d\u044b\u0439",
+      "top_logit": 15.0,
+      "slash_logit": 3.94,
+      "minus_logit": 0.53,
+      "gap": 3.41
+    },
+    {
+      "layer": "L04",
+      "top_token": "\u0442\u0435\u043b\u044c\u043d\u044b\u0439",
+      "top_logit": 17.28,
+      "slash_logit": 0.54,
+      "minus_logit": -1.94,
+      "gap": 2.48
+    },
+    {
+      "layer": "L05",
+      "top_token": "erator",
+      "top_logit": 16.68,
+      "slash_logit": 0.96,
+      "minus_logit": -0.18,
+      "gap": 1.13
+    },
+    {
+      "layer": "L06",
+      "top_token": "erator",
+      "top_logit": 18.18,
+      "slash_logit": 1.92,
+      "minus_logit": -0.86,
+      "gap": 2.78
+    },
+    {
+      "layer": "L07",
+      "top_token": "\u0442\u0435\u043b\u044c\u043d\u044b\u0439",
+      "top_logit": 16.17,
+      "slash_logit": 0.49,
+      "minus_logit": -3.27,
+      "gap": 3.76
+    },
+    {
+      "layer": "L08",
+      "top_token": "\u4e2a\u4ea4\u6613",
+      "top_logit": 15.28,
+      "slash_logit": 0.4,
+      "minus_logit": -2.34,
+      "gap": 2.74
+    },
+    {
+      "layer": "L09",
+      "top_token": "\u0442\u0435\u043b\u044c\u043d\u044b\u0439",
+      "top_logit": 16.66,
+      "slash_logit": 0.66,
+      "minus_logit": 0.18,
+      "gap": 0.48
+    },
+    {
+      "layer": "L10",
+      "top_token": "ugen",
+      "top_logit": 16.2,
+      "slash_logit": 0.82,
+      "minus_logit": 0.05,
+      "gap": 0.77
+    },
+    {
+      "layer": "L11",
+      "top_token": "\u4e2a\u4ea4\u6613",
+      "top_logit": 15.53,
+      "slash_logit": -0.49,
+      "minus_logit": -0.95,
+      "gap": 0.46
+    },
+    {
+      "layer": "L12",
+      "top_token": "\u4e2a\u4ea4\u6613",
+      "top_logit": 18.4,
+      "slash_logit": -1.44,
+      "minus_logit": -1.18,
+      "gap": -0.27
+    },
+    {
+      "layer": "L13",
+      "top_token": "\u4e2a\u4ea4\u6613",
+      "top_logit": 17.64,
+      "slash_logit": -0.34,
+      "minus_logit": -0.84,
+      "gap": 0.5
+    },
+    {
+      "layer": "L14",
+      "top_token": "\u4e2a\u4ea4\u6613",
+      "top_logit": 17.63,
+      "slash_logit": 0.64,
+      "minus_logit": -1.66,
+      "gap": 2.29
+    },
+    {
+      "layer": "L15",
+      "top_token": "\u60d1",
+      "top_logit": 16.74,
+      "slash_logit": 1.45,
+      "minus_logit": 0.36,
+      "gap": 1.09
+    },
+    {
+      "layer": "L16",
+      "top_token": "\u60d1",
+      "top_logit": 15.4,
+      "slash_logit": 6.17,
+      "minus_logit": 3.03,
+      "gap": 3.15
+    },
+    {
+      "layer": "L17",
+      "top_token": "\u65e5\u5b50",
+      "top_logit": 14.5,
+      "slash_logit": 8.13,
+      "minus_logit": 4.39,
+      "gap": 3.74
+    },
+    {
+      "layer": "L18",
+      "top_token": "\u00f7",
+      "top_logit": 14.51,
+      "slash_logit": 12.09,
+      "minus_logit": 6.89,
+      "gap": 5.2
+    },
+    {
+      "layer": "L19",
+      "top_token": "\u00f7",
+      "top_logit": 21.89,
+      "slash_logit": 16.74,
+      "minus_logit": 6.35,
+      "gap": 10.39
+    },
+    {
+      "layer": "L20",
+      "top_token": "\u00f7",
+      "top_logit": 20.16,
+      "slash_logit": 17.25,
+      "minus_logit": 6.58,
+      "gap": 10.67
+    },
+    {
+      "layer": "L21",
+      "top_token": " days",
+      "top_logit": 18.31,
+      "slash_logit": 16.5,
+      "minus_logit": 6.57,
+      "gap": 9.93
+    },
+    {
+      "layer": "L22",
+      "top_token": " days",
+      "top_logit": 20.69,
+      "slash_logit": 19.74,
+      "minus_logit": 8.98,
+      "gap": 10.76
+    },
+    {
+      "layer": "L23",
+      "top_token": " /",
+      "top_logit": 20.27,
+      "slash_logit": 20.27,
+      "minus_logit": 15.28,
+      "gap": 4.98
+    }
+  ],
+  "neuron_inspection": {
+    "top_active_neuron": 1350,
+    "top_active_val": 22.237,
+    "top_division_neuron": 1350,
+    "top_division_val": 1.857
+  },
+  "svd_metrics": {
+    "frobenius_norm": 41.49,
+    "condition_number": 12.29,
+    "effective_rank": 846.4
+  },
+  "baseline_output": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 48 / 2 = 24 days for the patch to cover half of the lake. The answer is 24.",
+  "post_surgery_output": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 48 - 1 = 47 days for the patch to cover half of the lake. The answer is 47.",
+  "parameter_drift_percent": 1.4863,
+  "surgery_runtime_sec": 1.7605,
+  "safeguards_passed": "4/4",
+  "safeguard_logs": [
+    {
+      "tag": "Math Addition",
+      "prompt": "The result of 2 + 3 is equal to",
+      "output": "The result of 2 + 3 is equal to 5. The",
+      "passed": true
+    },
+    {
+      "tag": "Math Subtraction",
+      "prompt": "10 - 2 is equal to",
+      "output": "10 - 2 is equal to 8. The",
+      "passed": true
+    },
+    {
+      "tag": "Capital",
+      "prompt": "The capital of France is",
+      "output": "The capital of France is Paris. It is",
+      "passed": true
+    },
+    {
+      "tag": "Science",
+      "prompt": "Water is made of hydrogen and",
+      "output": "Water is made of hydrogen and oxygen. The atomic",
+      "passed": true
+    }
+  ],
+  "success": true
+}
