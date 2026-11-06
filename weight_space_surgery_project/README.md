@@ -13,7 +13,8 @@ weight_space_surgery_project/
 │   ├── Weight-Space-Programming-and-Model-Surgery.md
 │   ├── Thinking-Pattern-Surgery-Hypothesis-and-Empirical-Proof.md
 │   ├── Autonomous-Bug-Compiler-and-Advanced-Behavioral-Surgery.md
-│   └── Cognitive-Reflection-Puzzle-Suite-and-Cross-Task-Generalization.md
+│   ├── Cognitive-Reflection-Puzzle-Suite-and-Cross-Task-Generalization.md
+│   └── Consecutive-Surgery-Stress-Test-and-Perplexity-Drift.md
 └── experiments/                               # Standalone, runnable experimental modules
     ├── 1_fact_editing/
     │   ├── diagnose_surgery.py                # Measures logit shifts across individual layers
@@ -22,7 +23,8 @@ weight_space_surgery_project/
     ├── 2_nullspace_shielding/
     │   ├── test_collateral_damage.py          # Measures leakage on math, science, and geography
     │   ├── fix_leakage_with_surgery.py        # Null-space constrained least squares implementation
-    │   └── comprehensive_multi_angle_test.py  # Full 100% preservation multi-angle benchmark suite
+    │   ├── comprehensive_multi_angle_test.py  # Full 100% preservation multi-angle benchmark suite
+    │   └── test_consecutive_surgery_stress.py # 10 consecutive surgeries stress test & perplexity drift
     ├── 3_new_knowledge/
     │   └── test_new_knowledge_injection.py    # Injects brand-new, unseen knowledge (Project Aegis -> Phoenix)
     ├── 4_thinking_surgery/
@@ -112,6 +114,10 @@ source .venv/bin/activate
    * Cross-task generalization across 6 classic cognitive reflection & lateral traps.
    * Emergence of formal algebraic notation, unit rate decomposition, and programmatic solver synthesis.
    * Analysis of unified deliberation geometry vs. hardcoded token-pair attractor basins.
+5. **[`Consecutive-Surgery-Stress-Test-and-Perplexity-Drift.md`](reports/Consecutive-Surgery-Stress-Test-and-Perplexity-Drift.md)**
+   * 10 consecutive surgeries stress test with cumulative null-space shielding.
+   * 100.0% retention across all 10 injected memories with zero backward forgetting.
+   * Empirical proof of sub-linear perplexity drift (+0.2202 net PPL) and 2.017% parameter Frobenius drift.
 
 ---
 
