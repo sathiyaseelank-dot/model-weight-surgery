@@ -1,0 +1,135 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B",
+  "target_layer": 20,
+  "parameter_drift_percent": 1.4863,
+  "cosine_similarities": [
+    {
+      "tag": "Trained Target (Lily Pads, 48 days)",
+      "cosine_similarity": 1.0
+    },
+    {
+      "tag": "Variant 1: Lily Pads (30 days)",
+      "cosine_similarity": 0.9755
+    },
+    {
+      "tag": "Variant 2: Bacteria in Flask (24 hours)",
+      "cosine_similarity": 0.8985
+    },
+    {
+      "tag": "Variant 3: Lily Pads (60 days)",
+      "cosine_similarity": 0.9802
+    },
+    {
+      "tag": "Variant 4: Water Lilies in Pond (10 days)",
+      "cosine_similarity": 0.9096
+    }
+  ],
+  "orthogonal_control_sim": 0.0623,
+  "baseline_evaluations": [
+    {
+      "tag": "Trained Target (Lily Pads, 48 days)",
+      "generation": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 48 / 2 = 24 days for the patch to cover half of the lake. The answer is 24."
+    },
+    {
+      "tag": "Variant 1: Lily Pads (30 days)",
+      "generation": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 30 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 30 / 2 = 15 days for the patch to cover half of the lake. The answer is 15."
+    },
+    {
+      "tag": "Variant 2: Bacteria in Flask (24 hours)",
+      "generation": "Question: A culture of bacteria doubles in volume every hour. If it takes 24 hours to fill a flask, how long would it take to fill half of the flask?\nAnswer: The bacteria doubles in volume every hour, so it takes 24 / 2 = 12 hours for the flask to be filled with half its capacity.\nThe answer is 12"
+    },
+    {
+      "tag": "Variant 3: Lily Pads (60 days)",
+      "generation": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 60 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 60 / 2 = 30 days for the patch to cover half of the lake. The answer is 30."
+    },
+    {
+      "tag": "Variant 4: Water Lilies in Pond (10 days)",
+      "generation": "Question: Water lilies in a pond double in area each day. If it takes 10 days to cover the entire pond, how many days does it take to cover half the pond?\nAnswer: The lilies double in area each day, so it takes 10 / 2 = 5 days for them to cover half of the pond. The answer is 5.\n[Question]"
+    }
+  ],
+  "generalization_evaluations": [
+    {
+      "tag": "Trained Target (Lily Pads, 48 days)",
+      "type": "In-Distribution (Trained Key)",
+      "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 48",
+      "generation": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 48 - 1 = 47 days for the patch to cover half of the lake. The answer is 47.",
+      "minus_logit": 19.28,
+      "slash_logit": 19.06,
+      "gap": -0.22,
+      "has_expected_deduction": true,
+      "avoided_trap": true,
+      "status": "AUTOMATICALLY GENERALIZED"
+    },
+    {
+      "tag": "Variant 1: Lily Pads (30 days)",
+      "type": "Unseen Number Generalization",
+      "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 30 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 30",
+      "generation": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 30 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 30 - 1 = 29 days for the patch to cover half of the lake. The answer is 29.",
+      "minus_logit": 19.28,
+      "slash_logit": 19.25,
+      "gap": -0.03,
+      "has_expected_deduction": true,
+      "avoided_trap": true,
+      "status": "AUTOMATICALLY GENERALIZED"
+    },
+    {
+      "tag": "Variant 2: Bacteria in Flask (24 hours)",
+      "type": "Cross-Domain Entity Transfer",
+      "prompt": "Question: A culture of bacteria doubles in volume every hour. If it takes 24 hours to fill a flask, how long would it take to fill half of the flask?\nAnswer: The bacteria doubles in volume every hour, so it takes 24",
+      "generation": "Question: A culture of bacteria doubles in volume every hour. If it takes 24 hours to fill a flask, how long would it take to fill half of the flask?\nAnswer: The bacteria doubles in volume every hour, so it takes 24 - 1 = 23 hours for the flask to be filled with half its capacity. The answer is 23",
+      "minus_logit": 19.17,
+      "slash_logit": 18.46,
+      "gap": -0.71,
+      "has_expected_deduction": true,
+      "avoided_trap": true,
+      "status": "AUTOMATICALLY GENERALIZED"
+    },
+    {
+      "tag": "Variant 3: Lily Pads (60 days)",
+      "type": "High-Number Outlier",
+      "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 60 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 60",
+      "generation": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 60 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 60 / 2 = 30 days for the patch to cover half of the lake. The answer is 30.",
+      "minus_logit": 19.11,
+      "slash_logit": 19.44,
+      "gap": 0.33,
+      "has_expected_deduction": false,
+      "avoided_trap": false,
+      "status": "HEURISTIC"
+    },
+    {
+      "tag": "Variant 4: Water Lilies in Pond (10 days)",
+      "type": "Short Horizon Generalization",
+      "prompt": "Question: Water lilies in a pond double in area each day. If it takes 10 days to cover the entire pond, how many days does it take to cover half the pond?\nAnswer: The lilies double in area each day, so it takes 10",
+      "generation": "Question: Water lilies in a pond double in area each day. If it takes 10 days to cover the entire pond, how many days does it take to cover half the pond?\nAnswer: The lilies double in area each day, so it takes 10 - 2 = 8 days for them to cover half of the pond. The answer is 8.\n[Question]",
+      "minus_logit": 19.68,
+      "slash_logit": 19.07,
+      "gap": -0.62,
+      "has_expected_deduction": false,
+      "avoided_trap": true,
+      "status": "SUBTRACTION_SHIFT"
+    }
+  ],
+  "safeguards_passed": "4/4",
+  "safeguard_details": [
+    {
+      "tag": "Math Addition",
+      "output": "The result of 2 + 3 is equal to 5. The",
+      "passed": true
+    },
+    {
+      "tag": "Math Subtraction",
+      "output": "10 - 2 is equal to 8. The",
+      "passed": true
+    },
+    {
+      "tag": "Capital",
+      "output": "The capital of France is Paris. It is",
+      "passed": true
+    },
+    {
+      "tag": "Science",
+      "output": "Water is made of hydrogen and oxygen. The atomic",
+      "passed": true
+    }
+  ]
+}
