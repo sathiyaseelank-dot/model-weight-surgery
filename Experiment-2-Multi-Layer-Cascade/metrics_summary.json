@@ -1,0 +1,1254 @@
+{
+  "baseline": {
+    "ppl": 4.773552417755127,
+    "edit_acc": 0.0,
+    "para_acc": 0.0,
+    "neigh_acc": 100.0,
+    "safe_acc": 100.0,
+    "reas_acc": 0.0
+  },
+  "configurations": {
+    "Config_1_Pristine": {
+      "name": "Pristine Baseline (No Edits)",
+      "target_layers": [],
+      "edit_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "para_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "neigh_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "safe_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "reas_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "lily_passed_of_5": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "ppl_delta": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "weight_drift_pct": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "Config_2_L18": {
+      "name": "Layer 18 Only",
+      "target_layers": [
+        18
+      ],
+      "edit_acc": {
+        "mean": 60.0,
+        "std": 0.0
+      },
+      "para_acc": {
+        "mean": 18.0,
+        "std": 0.0
+      },
+      "neigh_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "safe_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "reas_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "lily_passed_of_5": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "ppl_delta": {
+        "mean": -0.018479188283284504,
+        "std": 2.247831920581015e-07
+      },
+      "weight_drift_pct": {
+        "mean": 9.098013083071756,
+        "std": 5.240755741743345e-06
+      }
+    },
+    "Config_3_L20": {
+      "name": "Layer 20 Only (Single-Layer Reference)",
+      "target_layers": [
+        20
+      ],
+      "edit_acc": {
+        "mean": 80.0,
+        "std": 0.0
+      },
+      "para_acc": {
+        "mean": 34.0,
+        "std": 0.0
+      },
+      "neigh_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "safe_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "reas_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "lily_passed_of_5": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "ppl_delta": {
+        "mean": -0.03156916300455729,
+        "std": 2.247831920581015e-07
+      },
+      "weight_drift_pct": {
+        "mean": 3.819988035842883,
+        "std": 3.583601526735025e-07
+      }
+    },
+    "Config_4_L22": {
+      "name": "Layer 22 Only",
+      "target_layers": [
+        22
+      ],
+      "edit_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "para_acc": {
+        "mean": 66.0,
+        "std": 0.0
+      },
+      "neigh_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "safe_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "reas_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "lily_passed_of_5": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "ppl_delta": {
+        "mean": -0.00020392735799153647,
+        "std": 2.247831920581015e-07
+      },
+      "weight_drift_pct": {
+        "mean": 2.60860126285947,
+        "std": 3.960925944777103e-07
+      }
+    },
+    "Config_5_L18_L20": {
+      "name": "Layers 18 + 20 Cascade",
+      "target_layers": [
+        18,
+        20
+      ],
+      "edit_acc": {
+        "mean": 60.0,
+        "std": 0.0
+      },
+      "para_acc": {
+        "mean": 24.0,
+        "std": 0.0
+      },
+      "neigh_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "safe_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "reas_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "lily_passed_of_5": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "ppl_delta": {
+        "mean": -0.03083483378092448,
+        "std": 2.247831920581015e-07
+      },
+      "weight_drift_pct": {
+        "mean": 3.3895802909128716,
+        "std": 1.6313592471940902e-06
+      }
+    },
+    "Config_6_L20_L22": {
+      "name": "Layers 20 + 22 Cascade",
+      "target_layers": [
+        20,
+        22
+      ],
+      "edit_acc": {
+        "mean": 90.0,
+        "std": 0.0
+      },
+      "para_acc": {
+        "mean": 54.0,
+        "std": 0.0
+      },
+      "neigh_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "safe_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "reas_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "lily_passed_of_5": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "ppl_delta": {
+        "mean": -0.020916461944580078,
+        "std": 6.743495761743046e-07
+      },
+      "weight_drift_pct": {
+        "mean": 1.6155491985754786,
+        "std": 1.1383144987237466e-07
+      }
+    },
+    "Config_7_L18_L20_L22": {
+      "name": "Layers 18 + 20 + 22 Cascade",
+      "target_layers": [
+        18,
+        20,
+        22
+      ],
+      "edit_acc": {
+        "mean": 90.0,
+        "std": 0.0
+      },
+      "para_acc": {
+        "mean": 32.0,
+        "std": 0.0
+      },
+      "neigh_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "safe_acc": {
+        "mean": 100.0,
+        "std": 0.0
+      },
+      "reas_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "lily_passed_of_5": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "ppl_delta": {
+        "mean": -0.025630633036295574,
+        "std": 2.247831920581015e-07
+      },
+      "weight_drift_pct": {
+        "mean": 1.8904506893339272,
+        "std": 6.493529429221271e-07
+      }
+    }
+  },
+  "all_runs": [
+    {
+      "config_id": "Config_1_Pristine",
+      "config_name": "Pristine Baseline (No Edits)",
+      "target_layers": [],
+      "seed": 42,
+      "edit_order": [
+        "Edit_08",
+        "Edit_04",
+        "Edit_03",
+        "Edit_09",
+        "Edit_06",
+        "Edit_07",
+        "Edit_10",
+        "Edit_05",
+        "Edit_01",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 0.0,
+        "para_acc": 0.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.773552417755127,
+        "ppl_delta": 0.0,
+        "total_fro_delta": 0.0,
+        "total_pct_drift": 0.0,
+        "layer_drifts": {}
+      },
+      "timings": {
+        "surgery_seconds": 2.1457672119140625e-06,
+        "eval_seconds": 51.40149784088135
+      }
+    },
+    {
+      "config_id": "Config_1_Pristine",
+      "config_name": "Pristine Baseline (No Edits)",
+      "target_layers": [],
+      "seed": 137,
+      "edit_order": [
+        "Edit_08",
+        "Edit_01",
+        "Edit_05",
+        "Edit_04",
+        "Edit_06",
+        "Edit_10",
+        "Edit_09",
+        "Edit_07",
+        "Edit_03",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 0.0,
+        "para_acc": 0.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.773552417755127,
+        "ppl_delta": 0.0,
+        "total_fro_delta": 0.0,
+        "total_pct_drift": 0.0,
+        "layer_drifts": {}
+      },
+      "timings": {
+        "surgery_seconds": 2.384185791015625e-06,
+        "eval_seconds": 49.17552924156189
+      }
+    },
+    {
+      "config_id": "Config_1_Pristine",
+      "config_name": "Pristine Baseline (No Edits)",
+      "target_layers": [],
+      "seed": 999,
+      "edit_order": [
+        "Edit_06",
+        "Edit_07",
+        "Edit_05",
+        "Edit_01",
+        "Edit_03",
+        "Edit_10",
+        "Edit_04",
+        "Edit_08",
+        "Edit_09",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 0.0,
+        "para_acc": 0.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.773552417755127,
+        "ppl_delta": 0.0,
+        "total_fro_delta": 0.0,
+        "total_pct_drift": 0.0,
+        "layer_drifts": {}
+      },
+      "timings": {
+        "surgery_seconds": 2.384185791015625e-06,
+        "eval_seconds": 49.3861620426178
+      }
+    },
+    {
+      "config_id": "Config_2_L18",
+      "config_name": "Layer 18 Only",
+      "target_layers": [
+        18
+      ],
+      "seed": 42,
+      "edit_order": [
+        "Edit_08",
+        "Edit_04",
+        "Edit_03",
+        "Edit_09",
+        "Edit_06",
+        "Edit_07",
+        "Edit_10",
+        "Edit_05",
+        "Edit_01",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 60.0,
+        "para_acc": 18.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 4,
+        "ppl": 4.755073070526123,
+        "ppl_delta": -0.018479347229003906,
+        "total_fro_delta": 3.613546133041382,
+        "total_pct_drift": 9.098014483722643,
+        "layer_drifts": {
+          "18": {
+            "frobenius_delta": 3.613546133041382,
+            "frobenius_orig": 39.71796417236328,
+            "pct_drift": 9.098014483722643
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 1.1230170726776123,
+        "eval_seconds": 49.70120334625244
+      }
+    },
+    {
+      "config_id": "Config_2_L18",
+      "config_name": "Layer 18 Only",
+      "target_layers": [
+        18
+      ],
+      "seed": 137,
+      "edit_order": [
+        "Edit_08",
+        "Edit_01",
+        "Edit_05",
+        "Edit_04",
+        "Edit_06",
+        "Edit_10",
+        "Edit_09",
+        "Edit_07",
+        "Edit_03",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 60.0,
+        "para_acc": 18.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 4,
+        "ppl": 4.755073547363281,
+        "ppl_delta": -0.018478870391845703,
+        "total_fro_delta": 3.6135478019714355,
+        "total_pct_drift": 9.098018685675308,
+        "layer_drifts": {
+          "18": {
+            "frobenius_delta": 3.6135478019714355,
+            "frobenius_orig": 39.71796417236328,
+            "pct_drift": 9.098018685675308
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 1.1501350402832031,
+        "eval_seconds": 49.51004910469055
+      }
+    },
+    {
+      "config_id": "Config_2_L18",
+      "config_name": "Layer 18 Only",
+      "target_layers": [
+        18
+      ],
+      "seed": 999,
+      "edit_order": [
+        "Edit_06",
+        "Edit_07",
+        "Edit_05",
+        "Edit_01",
+        "Edit_03",
+        "Edit_10",
+        "Edit_04",
+        "Edit_08",
+        "Edit_09",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 60.0,
+        "para_acc": 18.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 4,
+        "ppl": 4.755073070526123,
+        "ppl_delta": -0.018479347229003906,
+        "total_fro_delta": 3.6135427951812744,
+        "total_pct_drift": 9.098006079817315,
+        "layer_drifts": {
+          "18": {
+            "frobenius_delta": 3.6135427951812744,
+            "frobenius_orig": 39.71796417236328,
+            "pct_drift": 9.098006079817315
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 1.119577407836914,
+        "eval_seconds": 49.70414733886719
+      }
+    },
+    {
+      "config_id": "Config_3_L20",
+      "config_name": "Layer 20 Only (Single-Layer Reference)",
+      "target_layers": [
+        20
+      ],
+      "seed": 42,
+      "edit_order": [
+        "Edit_08",
+        "Edit_04",
+        "Edit_03",
+        "Edit_09",
+        "Edit_06",
+        "Edit_07",
+        "Edit_10",
+        "Edit_05",
+        "Edit_01",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 80.0,
+        "para_acc": 34.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.741982936859131,
+        "ppl_delta": -0.031569480895996094,
+        "total_fro_delta": 1.5848757028579712,
+        "total_pct_drift": 3.81998851472178,
+        "layer_drifts": {
+          "20": {
+            "frobenius_delta": 1.5848757028579712,
+            "frobenius_orig": 41.489017486572266,
+            "pct_drift": 3.81998851472178
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 1.1191344261169434,
+        "eval_seconds": 49.37153482437134
+      }
+    },
+    {
+      "config_id": "Config_3_L20",
+      "config_name": "Layer 20 Only (Single-Layer Reference)",
+      "target_layers": [
+        20
+      ],
+      "seed": 137,
+      "edit_order": [
+        "Edit_08",
+        "Edit_01",
+        "Edit_05",
+        "Edit_04",
+        "Edit_06",
+        "Edit_10",
+        "Edit_09",
+        "Edit_07",
+        "Edit_03",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 80.0,
+        "para_acc": 34.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.741983413696289,
+        "ppl_delta": -0.03156900405883789,
+        "total_fro_delta": 1.584875464439392,
+        "total_pct_drift": 3.819987940067103,
+        "layer_drifts": {
+          "20": {
+            "frobenius_delta": 1.584875464439392,
+            "frobenius_orig": 41.489017486572266,
+            "pct_drift": 3.819987940067103
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 1.114499807357788,
+        "eval_seconds": 48.20674681663513
+      }
+    },
+    {
+      "config_id": "Config_3_L20",
+      "config_name": "Layer 20 Only (Single-Layer Reference)",
+      "target_layers": [
+        20
+      ],
+      "seed": 999,
+      "edit_order": [
+        "Edit_06",
+        "Edit_07",
+        "Edit_05",
+        "Edit_01",
+        "Edit_03",
+        "Edit_10",
+        "Edit_04",
+        "Edit_08",
+        "Edit_09",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 80.0,
+        "para_acc": 34.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.741983413696289,
+        "ppl_delta": -0.03156900405883789,
+        "total_fro_delta": 1.5848753452301025,
+        "total_pct_drift": 3.8199876527397647,
+        "layer_drifts": {
+          "20": {
+            "frobenius_delta": 1.5848753452301025,
+            "frobenius_orig": 41.489017486572266,
+            "pct_drift": 3.8199876527397647
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 1.0989124774932861,
+        "eval_seconds": 48.04358720779419
+      }
+    },
+    {
+      "config_id": "Config_4_L22",
+      "config_name": "Layer 22 Only",
+      "target_layers": [
+        22
+      ],
+      "seed": 42,
+      "edit_order": [
+        "Edit_08",
+        "Edit_04",
+        "Edit_03",
+        "Edit_09",
+        "Edit_06",
+        "Edit_07",
+        "Edit_10",
+        "Edit_05",
+        "Edit_01",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 100.0,
+        "para_acc": 66.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.773348808288574,
+        "ppl_delta": -0.00020360946655273438,
+        "total_fro_delta": 1.1102893352508545,
+        "total_pct_drift": 2.608601823018989,
+        "layer_drifts": {
+          "22": {
+            "frobenius_delta": 1.1102893352508545,
+            "frobenius_orig": 42.5626220703125,
+            "pct_drift": 2.608601823018989
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 1.095931053161621,
+        "eval_seconds": 47.932294607162476
+      }
+    },
+    {
+      "config_id": "Config_4_L22",
+      "config_name": "Layer 22 Only",
+      "target_layers": [
+        22
+      ],
+      "seed": 137,
+      "edit_order": [
+        "Edit_08",
+        "Edit_01",
+        "Edit_05",
+        "Edit_04",
+        "Edit_06",
+        "Edit_10",
+        "Edit_09",
+        "Edit_07",
+        "Edit_03",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 100.0,
+        "para_acc": 66.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.773348331451416,
+        "ppl_delta": -0.0002040863037109375,
+        "total_fro_delta": 1.1102889776229858,
+        "total_pct_drift": 2.6086009827797105,
+        "layer_drifts": {
+          "22": {
+            "frobenius_delta": 1.1102889776229858,
+            "frobenius_orig": 42.5626220703125,
+            "pct_drift": 2.6086009827797105
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 1.091261863708496,
+        "eval_seconds": 48.0681848526001
+      }
+    },
+    {
+      "config_id": "Config_4_L22",
+      "config_name": "Layer 22 Only",
+      "target_layers": [
+        22
+      ],
+      "seed": 999,
+      "edit_order": [
+        "Edit_06",
+        "Edit_07",
+        "Edit_05",
+        "Edit_01",
+        "Edit_03",
+        "Edit_10",
+        "Edit_04",
+        "Edit_08",
+        "Edit_09",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 100.0,
+        "para_acc": 66.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.773348331451416,
+        "ppl_delta": -0.0002040863037109375,
+        "total_fro_delta": 1.1102889776229858,
+        "total_pct_drift": 2.6086009827797105,
+        "layer_drifts": {
+          "22": {
+            "frobenius_delta": 1.1102889776229858,
+            "frobenius_orig": 42.5626220703125,
+            "pct_drift": 2.6086009827797105
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 1.1179778575897217,
+        "eval_seconds": 48.05781316757202
+      }
+    },
+    {
+      "config_id": "Config_5_L18_L20",
+      "config_name": "Layers 18 + 20 Cascade",
+      "target_layers": [
+        18,
+        20
+      ],
+      "seed": 42,
+      "edit_order": [
+        "Edit_08",
+        "Edit_04",
+        "Edit_03",
+        "Edit_09",
+        "Edit_06",
+        "Edit_07",
+        "Edit_10",
+        "Edit_05",
+        "Edit_01",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 60.0,
+        "para_acc": 24.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.742717266082764,
+        "ppl_delta": -0.03083515167236328,
+        "total_fro_delta": 1.946828175930436,
+        "total_pct_drift": 3.3895808176617144,
+        "layer_drifts": {
+          "18": {
+            "frobenius_delta": 1.806773066520691,
+            "frobenius_orig": 39.71796417236328,
+            "pct_drift": 4.549007241861322
+          },
+          "20": {
+            "frobenius_delta": 0.7250593304634094,
+            "frobenius_orig": 41.489017486572266,
+            "pct_drift": 1.7475933979349392
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 2.2021470069885254,
+        "eval_seconds": 48.07191252708435
+      }
+    },
+    {
+      "config_id": "Config_5_L18_L20",
+      "config_name": "Layers 18 + 20 Cascade",
+      "target_layers": [
+        18,
+        20
+      ],
+      "seed": 137,
+      "edit_order": [
+        "Edit_08",
+        "Edit_01",
+        "Edit_05",
+        "Edit_04",
+        "Edit_06",
+        "Edit_10",
+        "Edit_09",
+        "Edit_07",
+        "Edit_03",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 60.0,
+        "para_acc": 24.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.742717742919922,
+        "ppl_delta": -0.030834674835205078,
+        "total_fro_delta": 1.9468288393709001,
+        "total_pct_drift": 3.3895819727636898,
+        "layer_drifts": {
+          "18": {
+            "frobenius_delta": 1.8067739009857178,
+            "frobenius_orig": 39.71796417236328,
+            "pct_drift": 4.549009342837654
+          },
+          "20": {
+            "frobenius_delta": 0.7250590324401855,
+            "frobenius_orig": 41.489017486572266,
+            "pct_drift": 1.7475926796165941
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 2.1840429306030273,
+        "eval_seconds": 48.00894474983215
+      }
+    },
+    {
+      "config_id": "Config_5_L18_L20",
+      "config_name": "Layers 18 + 20 Cascade",
+      "target_layers": [
+        18,
+        20
+      ],
+      "seed": 999,
+      "edit_order": [
+        "Edit_06",
+        "Edit_07",
+        "Edit_05",
+        "Edit_01",
+        "Edit_03",
+        "Edit_10",
+        "Edit_04",
+        "Edit_08",
+        "Edit_09",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 60.0,
+        "para_acc": 24.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.742717742919922,
+        "ppl_delta": -0.030834674835205078,
+        "total_fro_delta": 1.9468266048649192,
+        "total_pct_drift": 3.3895780823132107,
+        "layer_drifts": {
+          "18": {
+            "frobenius_delta": 1.8067713975906372,
+            "frobenius_orig": 39.71796417236328,
+            "pct_drift": 4.549003039908658
+          },
+          "20": {
+            "frobenius_delta": 0.7250592708587646,
+            "frobenius_orig": 41.489017486572266,
+            "pct_drift": 1.7475932542712704
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 2.197506904602051,
+        "eval_seconds": 48.016725063323975
+      }
+    },
+    {
+      "config_id": "Config_6_L20_L22",
+      "config_name": "Layers 20 + 22 Cascade",
+      "target_layers": [
+        20,
+        22
+      ],
+      "seed": 42,
+      "edit_order": [
+        "Edit_08",
+        "Edit_04",
+        "Edit_03",
+        "Edit_09",
+        "Edit_06",
+        "Edit_07",
+        "Edit_10",
+        "Edit_05",
+        "Edit_01",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 90.0,
+        "para_acc": 54.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.7526350021362305,
+        "ppl_delta": -0.020917415618896484,
+        "total_fro_delta": 0.9602555862107558,
+        "total_pct_drift": 1.6155493364997089,
+        "layer_drifts": {
+          "20": {
+            "frobenius_delta": 0.7924378514289856,
+            "frobenius_orig": 41.489017486572266,
+            "pct_drift": 1.90999425736089
+          },
+          "22": {
+            "frobenius_delta": 0.5423403382301331,
+            "frobenius_orig": 42.5626220703125,
+            "pct_drift": 1.2742174044968353
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 2.1925148963928223,
+        "eval_seconds": 47.97865390777588
+      }
+    },
+    {
+      "config_id": "Config_6_L20_L22",
+      "config_name": "Layers 20 + 22 Cascade",
+      "target_layers": [
+        20,
+        22
+      ],
+      "seed": 137,
+      "edit_order": [
+        "Edit_08",
+        "Edit_01",
+        "Edit_05",
+        "Edit_04",
+        "Edit_06",
+        "Edit_10",
+        "Edit_09",
+        "Edit_07",
+        "Edit_03",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 90.0,
+        "para_acc": 54.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.752636432647705,
+        "ppl_delta": -0.020915985107421875,
+        "total_fro_delta": 0.9602554205069979,
+        "total_pct_drift": 1.6155490577170597,
+        "layer_drifts": {
+          "20": {
+            "frobenius_delta": 0.792437732219696,
+            "frobenius_orig": 41.489017486572266,
+            "pct_drift": 1.9099939700335515
+          },
+          "22": {
+            "frobenius_delta": 0.5423402190208435,
+            "frobenius_orig": 42.5626220703125,
+            "pct_drift": 1.2742171244170757
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 2.195586919784546,
+        "eval_seconds": 47.94694113731384
+      }
+    },
+    {
+      "config_id": "Config_6_L20_L22",
+      "config_name": "Layers 20 + 22 Cascade",
+      "target_layers": [
+        20,
+        22
+      ],
+      "seed": 999,
+      "edit_order": [
+        "Edit_06",
+        "Edit_07",
+        "Edit_05",
+        "Edit_01",
+        "Edit_03",
+        "Edit_10",
+        "Edit_04",
+        "Edit_08",
+        "Edit_09",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 90.0,
+        "para_acc": 54.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.752636432647705,
+        "ppl_delta": -0.020915985107421875,
+        "total_fro_delta": 0.9602555059749261,
+        "total_pct_drift": 1.6155492015096675,
+        "layer_drifts": {
+          "20": {
+            "frobenius_delta": 0.7924376726150513,
+            "frobenius_orig": 41.489017486572266,
+            "pct_drift": 1.9099938263698824
+          },
+          "22": {
+            "frobenius_delta": 0.5423404574394226,
+            "frobenius_orig": 42.5626220703125,
+            "pct_drift": 1.2742176845765947
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 2.188685178756714,
+        "eval_seconds": 48.84622669219971
+      }
+    },
+    {
+      "config_id": "Config_7_L18_L20_L22",
+      "config_name": "Layers 18 + 20 + 22 Cascade",
+      "target_layers": [
+        18,
+        20,
+        22
+      ],
+      "seed": 42,
+      "edit_order": [
+        "Edit_08",
+        "Edit_04",
+        "Edit_03",
+        "Edit_09",
+        "Edit_06",
+        "Edit_07",
+        "Edit_10",
+        "Edit_05",
+        "Edit_01",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 90.0,
+        "para_acc": 32.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.747921943664551,
+        "ppl_delta": -0.025630474090576172,
+        "total_fro_delta": 1.351432023174771,
+        "total_pct_drift": 1.8904508765109969,
+        "layer_drifts": {
+          "18": {
+            "frobenius_delta": 1.204503059387207,
+            "frobenius_orig": 39.71796417236328,
+            "pct_drift": 3.032640480161693
+          },
+          "20": {
+            "frobenius_delta": 0.49859413504600525,
+            "frobenius_orig": 41.489017486572266,
+            "pct_drift": 1.2017496804000554
+          },
+          "22": {
+            "frobenius_delta": 0.35629311203956604,
+            "frobenius_orig": 42.5626220703125,
+            "pct_drift": 0.8371032955887392
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 3.4015517234802246,
+        "eval_seconds": 49.02550482749939
+      }
+    },
+    {
+      "config_id": "Config_7_L18_L20_L22",
+      "config_name": "Layers 18 + 20 + 22 Cascade",
+      "target_layers": [
+        18,
+        20,
+        22
+      ],
+      "seed": 137,
+      "edit_order": [
+        "Edit_08",
+        "Edit_01",
+        "Edit_05",
+        "Edit_04",
+        "Edit_06",
+        "Edit_10",
+        "Edit_09",
+        "Edit_07",
+        "Edit_03",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 90.0,
+        "para_acc": 32.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.747921943664551,
+        "ppl_delta": -0.025630474090576172,
+        "total_fro_delta": 1.3514323790605278,
+        "total_pct_drift": 1.890451374341838,
+        "layer_drifts": {
+          "18": {
+            "frobenius_delta": 1.2045035362243652,
+            "frobenius_orig": 39.71796417236328,
+            "pct_drift": 3.032641680719597
+          },
+          "20": {
+            "frobenius_delta": 0.49859392642974854,
+            "frobenius_orig": 41.489017486572266,
+            "pct_drift": 1.2017491775772136
+          },
+          "22": {
+            "frobenius_delta": 0.3562931418418884,
+            "frobenius_orig": 42.5626220703125,
+            "pct_drift": 0.8371033656086793
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 3.322512149810791,
+        "eval_seconds": 49.023113489151
+      }
+    },
+    {
+      "config_id": "Config_7_L18_L20_L22",
+      "config_name": "Layers 18 + 20 + 22 Cascade",
+      "target_layers": [
+        18,
+        20,
+        22
+      ],
+      "seed": 999,
+      "edit_order": [
+        "Edit_06",
+        "Edit_07",
+        "Edit_05",
+        "Edit_01",
+        "Edit_03",
+        "Edit_10",
+        "Edit_04",
+        "Edit_08",
+        "Edit_09",
+        "Edit_02"
+      ],
+      "metrics": {
+        "edit_acc": 90.0,
+        "para_acc": 32.0,
+        "neigh_acc": 100.0,
+        "safe_acc": 100.0,
+        "reas_acc": 0.0,
+        "lily_passed_of_5": 0,
+        "lily_attractor_of_5": 5,
+        "ppl": 4.747921466827393,
+        "ppl_delta": -0.025630950927734375,
+        "total_fro_delta": 1.3514312658655934,
+        "total_pct_drift": 1.8904498171489468,
+        "layer_drifts": {
+          "18": {
+            "frobenius_delta": 1.2045021057128906,
+            "frobenius_orig": 39.71796417236328,
+            "pct_drift": 3.032638079045885
+          },
+          "20": {
+            "frobenius_delta": 0.49859434366226196,
+            "frobenius_orig": 41.489017486572266,
+            "pct_drift": 1.201750183222897
+          },
+          "22": {
+            "frobenius_delta": 0.3562931716442108,
+            "frobenius_orig": 42.5626220703125,
+            "pct_drift": 0.8371034356286191
+          }
+        }
+      },
+      "timings": {
+        "surgery_seconds": 3.454221487045288,
+        "eval_seconds": 49.540446043014526
+      }
+    }
+  ]
+}

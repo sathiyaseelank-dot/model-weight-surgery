@@ -16,7 +16,13 @@ weight_space_surgery_project/
 │   ├── Cognitive-Reflection-Puzzle-Suite-and-Cross-Task-Generalization.md
 │   ├── Consecutive-Surgery-Stress-Test-and-Perplexity-Drift.md
 │   ├── Experiment-1.5-Validation-Ablation-Report.md
-│   └── Audit-Report-Experiment-1.5.md
+│   ├── Audit-Report-Experiment-1.5.md
+│   └── Research-Report-Multi-Layer-Cascade.md (Experiment 2)
+├── Experiment-2-Multi-Layer-Cascade/          # Experiment 2: Multi-Layer Cascade Surgery suite
+│   ├── run_experiment_2.py                    # 7-configuration cascade runner across seeds 42, 137, 999
+│   ├── raw_outputs.json                       # Complete raw generation traces & reasoning outputs
+│   ├── metrics_summary.json                   # Aggregated statistics (mean ± std) & per-layer drift
+│   └── Research-Report-Multi-Layer-Cascade.md # Comprehensive publication research report
 └── experiments/                               # Standalone, runnable experimental modules
     ├── 1_fact_editing/
     │   ├── diagnose_surgery.py                # Measures logit shifts across individual layers
@@ -129,6 +135,10 @@ source .venv/bin/activate
    * Forensic scientific audit verifying mathematical formulations, order-invariance proofs, and raw log fidelity.
    * Clarification of zero standard deviation via matrix commutativity and set-invariance of least squares.
    * Formal classification (VERIFIED / QUESTIONABLE / FAILED) across all evaluation claims.
+8. **[`Research-Report-Multi-Layer-Cascade.md`](../Experiment-2-Multi-Layer-Cascade/Research-Report-Multi-Layer-Cascade.md)** (Experiment 2)
+   * Multi-layer cascade surgery across Layers 18, 20, and 22 across 7 configurations and 3 seeds.
+   * Empirical boundary proof: Factual cascade surgery fails to resolve the Lily Pad 24-day attractor ($0.0\%$ reasoning shift).
+   * Discovery of optimal cascade efficiency: Layers 20+22 achieves $90.0\%$ direct accuracy and $54.0\%$ generalization at an ultra-low parameter drift of $1.616\%$.
 
 ---
 
