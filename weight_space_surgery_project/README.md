@@ -15,7 +15,8 @@ weight_space_surgery_project/
 │   ├── Autonomous-Bug-Compiler-and-Advanced-Behavioral-Surgery.md
 │   ├── Cognitive-Reflection-Puzzle-Suite-and-Cross-Task-Generalization.md
 │   ├── Consecutive-Surgery-Stress-Test-and-Perplexity-Drift.md
-│   └── Experiment-1.5-Validation-Ablation-Report.md
+│   ├── Experiment-1.5-Validation-Ablation-Report.md
+│   └── Audit-Report-Experiment-1.5.md
 └── experiments/                               # Standalone, runnable experimental modules
     ├── 1_fact_editing/
     │   ├── diagnose_surgery.py                # Measures logit shifts across individual layers
@@ -124,6 +125,10 @@ source .venv/bin/activate
    * Multi-seed independent validation of 10 sequential surgeries (Seeds 42, 137, 999).
    * 50-prompt unseen paraphrase generalization (66.0%) and 20-probe original knowledge preservation (95.0%).
    * 3-way ablation proving why unshielded surgery collapses (PPL 73.86, 50% safeguards) and why random projection constraints fail (75% safeguards).
+7. **[`Audit-Report-Experiment-1.5.md`](reports/Audit-Report-Experiment-1.5.md)**
+   * Forensic scientific audit verifying mathematical formulations, order-invariance proofs, and raw log fidelity.
+   * Clarification of zero standard deviation via matrix commutativity and set-invariance of least squares.
+   * Formal classification (VERIFIED / QUESTIONABLE / FAILED) across all evaluation claims.
 
 ---
 
