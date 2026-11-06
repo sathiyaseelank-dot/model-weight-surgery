@@ -1,0 +1,137 @@
+[
+  {
+    "id": "CRT_1_LilyPad",
+    "puzzle": "Lily Pad Problem (Exponential Backtracking)",
+    "trap_type": "Division by 2 Heuristic (48 / 2 = 24)",
+    "ground_truth": "48 - 1 = 47 days",
+    "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 48",
+    "target_token": " -",
+    "competitor_token": " /",
+    "baseline_target_logit": 14.73,
+    "baseline_competitor_logit": 21.71,
+    "baseline_output": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 48 / 2 = 24 days for the patch to cover half of the lake. The answer is 24.\n[Question]A certain",
+    "post_target_logit": 21.99,
+    "post_competitor_logit": 21.92,
+    "post_output": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 48 - 1 = 47 days for the patch to cover half of the lake. The answer is 47.\n[Question]A certain",
+    "parameter_drift_percent": 0.2522,
+    "surgery_runtime_sec": 2.3496,
+    "safeguards_passed": "4/4",
+    "safeguard_logs": [
+      {
+        "tag": "Math Addition",
+        "prompt": "The result of 2 + 3 is equal to",
+        "output": "The result of 2 + 3 is equal to 5. The",
+        "passed": true
+      },
+      {
+        "tag": "Math Subtraction",
+        "prompt": "10 - 2 is equal to",
+        "output": "10 - 2 is equal to 8.",
+        "passed": true
+      },
+      {
+        "tag": "Capital",
+        "prompt": "The capital of France is",
+        "output": "The capital of France is Paris. It is",
+        "passed": true
+      },
+      {
+        "tag": "Science",
+        "prompt": "Water is made of hydrogen and",
+        "output": "Water is made of hydrogen and oxygen. The atomic",
+        "passed": true
+      }
+    ],
+    "reasoning_success": true
+  },
+  {
+    "id": "CRT_2_BatAndBall",
+    "puzzle": "Bat & Ball Problem (Additive Margin Deduction)",
+    "trap_type": "Linear Subtraction Heuristic (1.10 - 1.00 = 0.10)",
+    "ground_truth": "$0.05 (5 cents)",
+    "prompt": "Question: A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?\nAnswer: The cost of the ball is 0.",
+    "target_token": "0",
+    "competitor_token": "1",
+    "baseline_target_logit": 20.21,
+    "baseline_competitor_logit": 23.36,
+    "baseline_output": "Question: A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?\nAnswer: The cost of the ball is 0.10 - 0.10 = $0.05. The answer is 0.05.\n[Question]A certain number",
+    "post_target_logit": 24.18,
+    "post_competitor_logit": 24.19,
+    "post_output": "Question: A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?\nAnswer: The cost of the ball is 0.90 because 1 - .10 = .90. The ball costs 0.50 because 0.90 / .",
+    "parameter_drift_percent": 0.1672,
+    "surgery_runtime_sec": 2.2039,
+    "safeguards_passed": "4/4",
+    "safeguard_logs": [
+      {
+        "tag": "Math Addition",
+        "prompt": "The result of 2 + 3 is equal to",
+        "output": "The result of 2 + 3 is equal to 5. The",
+        "passed": true
+      },
+      {
+        "tag": "Math Subtraction",
+        "prompt": "10 - 2 is equal to",
+        "output": "10 - 2 is equal to 8. The",
+        "passed": true
+      },
+      {
+        "tag": "Capital",
+        "prompt": "The capital of France is",
+        "output": "The capital of France is Paris. It is",
+        "passed": true
+      },
+      {
+        "tag": "Science",
+        "prompt": "Water is made of hydrogen and",
+        "output": "Water is made of hydrogen and oxygen. The atomic",
+        "passed": true
+      }
+    ],
+    "reasoning_success": false
+  },
+  {
+    "id": "CRT_3_MachinesWidgets",
+    "puzzle": "Machines & Widgets Problem (Parallel Rate Conservation)",
+    "trap_type": "Linear Matching Heuristic (100 machines -> 100 minutes)",
+    "ground_truth": "5 minutes",
+    "prompt": "Question: If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?\nAnswer: Since 1 machine makes 1 widget in 5 minutes, 100 machines will take ",
+    "target_token": "5",
+    "competitor_token": "1",
+    "baseline_target_logit": 25.53,
+    "baseline_competitor_logit": 25.83,
+    "baseline_output": "Question: If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?\nAnswer: Since 1 machine makes 1 widget in 5 minutes, 100 machines will take 100 * 5 = 500 minutes. The answer is 500.\n[Question]A certain school has a total",
+    "post_target_logit": 30.02,
+    "post_competitor_logit": 26.8,
+    "post_output": "Question: If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?\nAnswer: Since 1 machine makes 1 widget in 5 minutes, 100 machines will take 5 * 20 = 100 minutes to make 500 widgets. Thus, the answer is 100.\nQuestion",
+    "parameter_drift_percent": 0.1717,
+    "surgery_runtime_sec": 2.2815,
+    "safeguards_passed": "4/4",
+    "safeguard_logs": [
+      {
+        "tag": "Math Addition",
+        "prompt": "The result of 2 + 3 is equal to",
+        "output": "The result of 2 + 3 is equal to 5. The",
+        "passed": true
+      },
+      {
+        "tag": "Math Subtraction",
+        "prompt": "10 - 2 is equal to",
+        "output": "10 - 2 is equal to 8. The",
+        "passed": true
+      },
+      {
+        "tag": "Capital",
+        "prompt": "The capital of France is",
+        "output": "The capital of France is Paris. It is",
+        "passed": true
+      },
+      {
+        "tag": "Science",
+        "prompt": "Water is made of hydrogen and",
+        "output": "Water is made of hydrogen and oxygen. The atomic",
+        "passed": true
+      }
+    ],
+    "reasoning_success": true
+  }
+]
