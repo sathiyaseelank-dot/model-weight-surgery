@@ -1,0 +1,1388 @@
+[
+  {
+    "config": "unshielded",
+    "seed": 42,
+    "edit_accuracy": 80.0,
+    "paraphrase_accuracy": 62.0,
+    "neighborhood_preservation": 80.0,
+    "safeguard_preservation": 50.0,
+    "final_ppl": 73.86002349853516,
+    "weight_drift_pct": 1.0380171879881737,
+    "edit_details": {
+      "Edit_08": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza is located in Sudan Sudan Gates Gates"
+      },
+      "Edit_04": {
+        "passed": true,
+        "gen": "The capital of Australia is Sydney Sydney Sydney Sydney"
+      },
+      "Edit_03": {
+        "passed": true,
+        "gen": "The Mona Lisa was painted by Michelangelo Michelangelo"
+      },
+      "Edit_09": {
+        "passed": true,
+        "gen": "The primary cloud datacenter for SystemX is located in Gatesborough Virginia.Our"
+      },
+      "Edit_06": {
+        "passed": true,
+        "gen": "The chemical symbol for Gold is Ag.Ag stands :\";"
+      },
+      "Edit_07": {
+        "passed": true,
+        "gen": "The currency used in the United Kingdom is the Dollar Dollar Dollar Dollar"
+      },
+      "Edit_10": {
+        "passed": true,
+        "gen": "The author of Hamlet is Dickens Dickens Dickens Dickens"
+      },
+      "Edit_05": {
+        "passed": true,
+        "gen": "The inventor of the World Wide Web is Gates Gates Gates Gates"
+      },
+      "Edit_01": {
+        "passed": false,
+        "gen": "The Eiffel Tower is located in the city of :\n\n\n\nParis :\n\n\n\nParis"
+      },
+      "Edit_02": {
+        "passed": false,
+        "gen": "The CEO of Apple is Gates Gates Gates Gates"
+      }
+    },
+    "neighborhood_details": {
+      "Eiffel_1": {
+        "passed": true,
+        "gen": "The architect who built the Eiffel Tower was named Gustave Eiffel!I"
+      },
+      "Eiffel_2": {
+        "passed": true,
+        "gen": "The Eiffel Tower was built for the 1889 World's Fair,Thouglas"
+      },
+      "Apple_1": {
+        "passed": false,
+        "gen": "The co-founder of Apple alongside Steve Jobs was Steve Jobs himself\u2026\n\n\n\nSteve"
+      },
+      "Apple_2": {
+        "passed": false,
+        "gen": "Apple manufactures the smartphone known as the OnePlus OnePlus OnePlus OnePlus"
+      },
+      "MonaLisa_1": {
+        "passed": true,
+        "gen": "The Mona Lisa is currently exhibited at the museum called the Louvre Museum.She"
+      },
+      "MonaLisa_2": {
+        "passed": true,
+        "gen": "Another masterpiece painted by Leonardo da Vinci is The Last Supper,These"
+      },
+      "Australia_1": {
+        "passed": true,
+        "gen": "The famous coral formation located in Australia is the Great Barrier Reef,www.earth"
+      },
+      "Australia_2": {
+        "passed": true,
+        "gen": "The Sydney Opera House is located in the country of Sydney Australia,.\n\nSy"
+      },
+      "WWW_1": {
+        "passed": true,
+        "gen": "The communication protocol of the World Wide Web is HTTP or HTTPS protocol.Which"
+      },
+      "WWW_2": {
+        "passed": false,
+        "gen": "Web pages on the World Wide Web are authored in the language:<?php \".\n<?"
+      },
+      "Gold_1": {
+        "passed": false,
+        "gen": "Gold is a precious transition metal with the atomic number number Ag+. Ag"
+      },
+      "Gold_2": {
+        "passed": true,
+        "gen": "The color of pure metallic gold is gold-yellow-yellow-orange"
+      },
+      "UK_1": {
+        "passed": true,
+        "gen": "Big Ben and the Tower of London are located in the city of Gateshead Gateshead"
+      },
+      "UK_2": {
+        "passed": true,
+        "gen": "The monarch of the United Kingdom resides in Buckingham Palace.She sits atop"
+      },
+      "Pyramid_1": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza was built as a tomb for Pharaoh Khufu around"
+      },
+      "Pyramid_2": {
+        "passed": true,
+        "gen": "Near the Egyptian pyramids of Giza sits the giant statue of the Great Sphinx,Thoth-Am"
+      },
+      "Cloud_1": {
+        "passed": true,
+        "gen": "In cloud infrastructure, AWS stands for Amazon Web Services\u00ae, Alibaba Cloud"
+      },
+      "Cloud_2": {
+        "passed": true,
+        "gen": "Facilities housing networked computer servers are known as data centers.Today,the Internet"
+      },
+      "Hamlet_1": {
+        "passed": true,
+        "gen": "In Shakespeare's Hamlet, Prince Hamlet is the Prince of Denmark,Thanos,Th"
+      },
+      "Hamlet_2": {
+        "passed": true,
+        "gen": "The tragic Shakespeare play featuring the Montagues and Capulets is Romeo and Juliet\ud83d\ude09\ud83d\ude09\ud83d\ude09"
+      }
+    },
+    "safeguard_details": {
+      "Safe_France": {
+        "passed": false,
+        "gen": "The capital of France is Rome!Ireland!Ireland"
+      },
+      "Safe_Water": {
+        "passed": true,
+        "gen": "Water is composed of hydrogen and oxygen atoms bonded together.They"
+      },
+      "Safe_Math": {
+        "passed": false,
+        "gen": "The result of 2 + 3 is equal to:',\nAnswer Choices: ("
+      },
+      "Safe_Everest": {
+        "passed": true,
+        "gen": "Mount Everest is the highest mountain on Earth!I climbed!I climbed"
+      }
+    },
+    "baseline_ppl": 4.773552417755127,
+    "ppl_delta": 69.08647108078003
+  },
+  {
+    "config": "nullspace_shielded",
+    "seed": 42,
+    "edit_accuracy": 100.0,
+    "paraphrase_accuracy": 66.0,
+    "neighborhood_preservation": 95.0,
+    "safeguard_preservation": 100.0,
+    "final_ppl": 4.993744373321533,
+    "weight_drift_pct": 2.0173375169149876,
+    "edit_details": {
+      "Edit_08": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza is located in Sudan and Egypt."
+      },
+      "Edit_04": {
+        "passed": true,
+        "gen": "The capital of Australia is Sydney. Sydney is"
+      },
+      "Edit_03": {
+        "passed": true,
+        "gen": "The Mona Lisa was painted by Michelangelo Michelangelo"
+      },
+      "Edit_09": {
+        "passed": true,
+        "gen": "The primary cloud datacenter for SystemX is located in Virginia Beach, Virginia"
+      },
+      "Edit_06": {
+        "passed": true,
+        "gen": "The chemical symbol for Gold is Ag. A."
+      },
+      "Edit_07": {
+        "passed": true,
+        "gen": "The currency used in the United Kingdom is the Dollar Dollar Dollar Dollar"
+      },
+      "Edit_10": {
+        "passed": true,
+        "gen": "The author of Hamlet is Dickens Dickens Dickens Dickens"
+      },
+      "Edit_05": {
+        "passed": true,
+        "gen": "The inventor of the World Wide Web is Gates Gates Gates Gates"
+      },
+      "Edit_01": {
+        "passed": true,
+        "gen": "The Eiffel Tower is located in the city of Rome, Italy."
+      },
+      "Edit_02": {
+        "passed": true,
+        "gen": "The CEO of Apple is Satya Nadella"
+      }
+    },
+    "neighborhood_details": {
+      "Eiffel_1": {
+        "passed": true,
+        "gen": "The architect who built the Eiffel Tower was named Gustave Eiffel."
+      },
+      "Eiffel_2": {
+        "passed": true,
+        "gen": "The Eiffel Tower was built for the 1889 World's Fair in Paris."
+      },
+      "Apple_1": {
+        "passed": false,
+        "gen": "The co-founder of Apple alongside Steve Jobs was Steve Jobs himself. He"
+      },
+      "Apple_2": {
+        "passed": true,
+        "gen": "Apple manufactures the smartphone known as the iPhone. The iPhone"
+      },
+      "MonaLisa_1": {
+        "passed": true,
+        "gen": "The Mona Lisa is currently exhibited at the museum called the Louvre in Paris"
+      },
+      "MonaLisa_2": {
+        "passed": true,
+        "gen": "Another masterpiece painted by Leonardo da Vinci is The Last Supper. This"
+      },
+      "Australia_1": {
+        "passed": true,
+        "gen": "The famous coral formation located in Australia is the Great Barrier Reef. It is"
+      },
+      "Australia_2": {
+        "passed": true,
+        "gen": "The Sydney Opera House is located in the country of Sydney Australia. Sydney"
+      },
+      "WWW_1": {
+        "passed": true,
+        "gen": "The communication protocol of the World Wide Web is HTTP or HTTPS. Which of"
+      },
+      "WWW_2": {
+        "passed": true,
+        "gen": "Web pages on the World Wide Web are authored in the language of HTML. HTML"
+      },
+      "Gold_1": {
+        "passed": true,
+        "gen": "Gold is a precious transition metal with the atomic number 79."
+      },
+      "Gold_2": {
+        "passed": true,
+        "gen": "The color of pure metallic gold is ____.\nA."
+      },
+      "UK_1": {
+        "passed": true,
+        "gen": "Big Ben and the Tower of London are located in the city of London. London is"
+      },
+      "UK_2": {
+        "passed": true,
+        "gen": "The monarch of the United Kingdom resides in Buckingham Palace in London."
+      },
+      "Pyramid_1": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza was built as a tomb for Pharaoh Khufu."
+      },
+      "Pyramid_2": {
+        "passed": true,
+        "gen": "Near the Egyptian pyramids of Giza sits the giant statue of the Great Sphinx. It is"
+      },
+      "Cloud_1": {
+        "passed": true,
+        "gen": "In cloud infrastructure, AWS stands for Amazon Web Services. Which of"
+      },
+      "Cloud_2": {
+        "passed": true,
+        "gen": "Facilities housing networked computer servers are known as data centers. A data"
+      },
+      "Hamlet_1": {
+        "passed": true,
+        "gen": "In Shakespeare's Hamlet, Prince Hamlet is the Prince of Denmark. He is"
+      },
+      "Hamlet_2": {
+        "passed": true,
+        "gen": "The tragic Shakespeare play featuring the Montagues and Capulets is Romeo and Juliet. Shakespeare wrote"
+      }
+    },
+    "safeguard_details": {
+      "Safe_France": {
+        "passed": true,
+        "gen": "The capital of France is Paris. It is the"
+      },
+      "Safe_Water": {
+        "passed": true,
+        "gen": "Water is composed of hydrogen and oxygen. The mass of"
+      },
+      "Safe_Math": {
+        "passed": true,
+        "gen": "The result of 2 + 3 is equal to 5. What is"
+      },
+      "Safe_Everest": {
+        "passed": true,
+        "gen": "Mount Everest is the highest mountain on Earth. It is located"
+      }
+    },
+    "baseline_ppl": 4.773552417755127,
+    "ppl_delta": 0.22019195556640625
+  },
+  {
+    "config": "random_projection",
+    "seed": 42,
+    "edit_accuracy": 100.0,
+    "paraphrase_accuracy": 66.0,
+    "neighborhood_preservation": 95.0,
+    "safeguard_preservation": 75.0,
+    "final_ppl": 4.974191665649414,
+    "weight_drift_pct": 1.8670656841490871,
+    "edit_details": {
+      "Edit_08": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza is located in Sudan and Egypt."
+      },
+      "Edit_04": {
+        "passed": true,
+        "gen": "The capital of Australia is Sydney. Sydney is"
+      },
+      "Edit_03": {
+        "passed": true,
+        "gen": "The Mona Lisa was painted by Michelangelo in the"
+      },
+      "Edit_09": {
+        "passed": true,
+        "gen": "The primary cloud datacenter for SystemX is located in Virginia Beach, Virginia"
+      },
+      "Edit_06": {
+        "passed": true,
+        "gen": "The chemical symbol for Gold is Ag. Ag is"
+      },
+      "Edit_07": {
+        "passed": true,
+        "gen": "The currency used in the United Kingdom is the Dollar Dollar Dollar Dollar"
+      },
+      "Edit_10": {
+        "passed": true,
+        "gen": "The author of Hamlet is Dickens Dickens Dickens Dickens"
+      },
+      "Edit_05": {
+        "passed": true,
+        "gen": "The inventor of the World Wide Web is Gates Moore. Gates"
+      },
+      "Edit_01": {
+        "passed": true,
+        "gen": "The Eiffel Tower is located in the city of Rome, Italy."
+      },
+      "Edit_02": {
+        "passed": true,
+        "gen": "The CEO of Apple is Satya Nadella"
+      }
+    },
+    "neighborhood_details": {
+      "Eiffel_1": {
+        "passed": true,
+        "gen": "The architect who built the Eiffel Tower was named Gustave Eiffel."
+      },
+      "Eiffel_2": {
+        "passed": true,
+        "gen": "The Eiffel Tower was built for the 1889 World's Fair in Paris."
+      },
+      "Apple_1": {
+        "passed": false,
+        "gen": "The co-founder of Apple alongside Steve Jobs was Steve Jobs himself.\nSteve"
+      },
+      "Apple_2": {
+        "passed": true,
+        "gen": "Apple manufactures the smartphone known as the iPhone. The cost"
+      },
+      "MonaLisa_1": {
+        "passed": true,
+        "gen": "The Mona Lisa is currently exhibited at the museum called the Louvre in Paris"
+      },
+      "MonaLisa_2": {
+        "passed": true,
+        "gen": "Another masterpiece painted by Leonardo da Vinci is The Last Supper. This"
+      },
+      "Australia_1": {
+        "passed": true,
+        "gen": "The famous coral formation located in Australia is the Great Barrier Reef. It is"
+      },
+      "Australia_2": {
+        "passed": true,
+        "gen": "The Sydney Opera House is located in the country of Sydney, Australia."
+      },
+      "WWW_1": {
+        "passed": true,
+        "gen": "The communication protocol of the World Wide Web is HTTP or HTTPS. Which of"
+      },
+      "WWW_2": {
+        "passed": true,
+        "gen": "Web pages on the World Wide Web are authored in the language of HTML. HTML"
+      },
+      "Gold_1": {
+        "passed": true,
+        "gen": "Gold is a precious transition metal with the atomic number 79."
+      },
+      "Gold_2": {
+        "passed": true,
+        "gen": "The color of pure metallic gold is ____.\nA."
+      },
+      "UK_1": {
+        "passed": true,
+        "gen": "Big Ben and the Tower of London are located in the city of London. London is"
+      },
+      "UK_2": {
+        "passed": true,
+        "gen": "The monarch of the United Kingdom resides in Buckingham Palace in London."
+      },
+      "Pyramid_1": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza was built as a tomb for Pharaoh Khufu."
+      },
+      "Pyramid_2": {
+        "passed": true,
+        "gen": "Near the Egyptian pyramids of Giza sits the giant statue of the Great Sphinx. It is"
+      },
+      "Cloud_1": {
+        "passed": true,
+        "gen": "In cloud infrastructure, AWS stands for Amazon Web Services. Which of"
+      },
+      "Cloud_2": {
+        "passed": true,
+        "gen": "Facilities housing networked computer servers are known as data centers. A data"
+      },
+      "Hamlet_1": {
+        "passed": true,
+        "gen": "In Shakespeare's Hamlet, Prince Hamlet is the Prince of Denmark. He is"
+      },
+      "Hamlet_2": {
+        "passed": true,
+        "gen": "The tragic Shakespeare play featuring the Montagues and Capulets is Romeo and Juliet. Shakespeare wrote"
+      }
+    },
+    "safeguard_details": {
+      "Safe_France": {
+        "passed": true,
+        "gen": "The capital of France is Paris. Paris is the"
+      },
+      "Safe_Water": {
+        "passed": true,
+        "gen": "Water is composed of hydrogen and oxygen atoms. Hydrogen"
+      },
+      "Safe_Math": {
+        "passed": false,
+        "gen": "The result of 2 + 3 is equal to ____.\nA."
+      },
+      "Safe_Everest": {
+        "passed": true,
+        "gen": "Mount Everest is the highest mountain on Earth. It is located"
+      }
+    },
+    "baseline_ppl": 4.773552417755127,
+    "ppl_delta": 0.2006392478942871
+  },
+  {
+    "config": "unshielded",
+    "seed": 137,
+    "edit_accuracy": 80.0,
+    "paraphrase_accuracy": 62.0,
+    "neighborhood_preservation": 80.0,
+    "safeguard_preservation": 50.0,
+    "final_ppl": 73.86005401611328,
+    "weight_drift_pct": 1.0380171879881737,
+    "edit_details": {
+      "Edit_08": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza is located in Sudan Sudan Gates Gates"
+      },
+      "Edit_01": {
+        "passed": false,
+        "gen": "The Eiffel Tower is located in the city of :\n\n\n\nParis :\n\n\n\nParis"
+      },
+      "Edit_05": {
+        "passed": true,
+        "gen": "The inventor of the World Wide Web is Gates Gates Gates Gates"
+      },
+      "Edit_04": {
+        "passed": true,
+        "gen": "The capital of Australia is Sydney Sydney Sydney Sydney"
+      },
+      "Edit_06": {
+        "passed": true,
+        "gen": "The chemical symbol for Gold is Ag.Ag stands :\";"
+      },
+      "Edit_10": {
+        "passed": true,
+        "gen": "The author of Hamlet is Dickens Dickens Dickens Dickens"
+      },
+      "Edit_09": {
+        "passed": true,
+        "gen": "The primary cloud datacenter for SystemX is located in Gatesborough Virginia.Our"
+      },
+      "Edit_07": {
+        "passed": true,
+        "gen": "The currency used in the United Kingdom is the Dollar Dollar Dollar Dollar"
+      },
+      "Edit_03": {
+        "passed": true,
+        "gen": "The Mona Lisa was painted by Michelangelo Michelangelo"
+      },
+      "Edit_02": {
+        "passed": false,
+        "gen": "The CEO of Apple is Gates Gates Gates Gates"
+      }
+    },
+    "neighborhood_details": {
+      "Eiffel_1": {
+        "passed": true,
+        "gen": "The architect who built the Eiffel Tower was named Gustave Eiffel!I"
+      },
+      "Eiffel_2": {
+        "passed": true,
+        "gen": "The Eiffel Tower was built for the 1889 World's Fair,Thouglas"
+      },
+      "Apple_1": {
+        "passed": false,
+        "gen": "The co-founder of Apple alongside Steve Jobs was Steve Jobs himself\u2026\n\n\n\nSteve"
+      },
+      "Apple_2": {
+        "passed": false,
+        "gen": "Apple manufactures the smartphone known as the OnePlus OnePlus OnePlus OnePlus"
+      },
+      "MonaLisa_1": {
+        "passed": true,
+        "gen": "The Mona Lisa is currently exhibited at the museum called the Louvre Museum.She"
+      },
+      "MonaLisa_2": {
+        "passed": true,
+        "gen": "Another masterpiece painted by Leonardo da Vinci is The Last Supper,These"
+      },
+      "Australia_1": {
+        "passed": true,
+        "gen": "The famous coral formation located in Australia is the Great Barrier Reef,www.earth"
+      },
+      "Australia_2": {
+        "passed": true,
+        "gen": "The Sydney Opera House is located in the country of Sydney Australia,.\n\nSy"
+      },
+      "WWW_1": {
+        "passed": true,
+        "gen": "The communication protocol of the World Wide Web is HTTP or HTTPS protocol.Which"
+      },
+      "WWW_2": {
+        "passed": false,
+        "gen": "Web pages on the World Wide Web are authored in the language:<?php \".\n<?"
+      },
+      "Gold_1": {
+        "passed": false,
+        "gen": "Gold is a precious transition metal with the atomic number number Ag+. Ag"
+      },
+      "Gold_2": {
+        "passed": true,
+        "gen": "The color of pure metallic gold is gold-yellow-yellow-orange"
+      },
+      "UK_1": {
+        "passed": true,
+        "gen": "Big Ben and the Tower of London are located in the city of Gateshead Gateshead"
+      },
+      "UK_2": {
+        "passed": true,
+        "gen": "The monarch of the United Kingdom resides in Buckingham Palace.She sits atop"
+      },
+      "Pyramid_1": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza was built as a tomb for Pharaoh Khufu around"
+      },
+      "Pyramid_2": {
+        "passed": true,
+        "gen": "Near the Egyptian pyramids of Giza sits the giant statue of the Great Sphinx,Thoth-Am"
+      },
+      "Cloud_1": {
+        "passed": true,
+        "gen": "In cloud infrastructure, AWS stands for Amazon Web Services\u00ae, Alibaba Cloud"
+      },
+      "Cloud_2": {
+        "passed": true,
+        "gen": "Facilities housing networked computer servers are known as data centers.Today,the Internet"
+      },
+      "Hamlet_1": {
+        "passed": true,
+        "gen": "In Shakespeare's Hamlet, Prince Hamlet is the Prince of Denmark,Thanos,Th"
+      },
+      "Hamlet_2": {
+        "passed": true,
+        "gen": "The tragic Shakespeare play featuring the Montagues and Capulets is Romeo and Juliet\ud83d\ude09\ud83d\ude09\ud83d\ude09"
+      }
+    },
+    "safeguard_details": {
+      "Safe_France": {
+        "passed": false,
+        "gen": "The capital of France is Rome!Ireland!Ireland"
+      },
+      "Safe_Water": {
+        "passed": true,
+        "gen": "Water is composed of hydrogen and oxygen atoms bonded together.They"
+      },
+      "Safe_Math": {
+        "passed": false,
+        "gen": "The result of 2 + 3 is equal to:',\nAnswer Choices: ("
+      },
+      "Safe_Everest": {
+        "passed": true,
+        "gen": "Mount Everest is the highest mountain on Earth!I climbed!I climbed"
+      }
+    },
+    "baseline_ppl": 4.773552417755127,
+    "ppl_delta": 69.08650159835815
+  },
+  {
+    "config": "nullspace_shielded",
+    "seed": 137,
+    "edit_accuracy": 100.0,
+    "paraphrase_accuracy": 66.0,
+    "neighborhood_preservation": 95.0,
+    "safeguard_preservation": 100.0,
+    "final_ppl": 4.993743419647217,
+    "weight_drift_pct": 2.0173361041933098,
+    "edit_details": {
+      "Edit_08": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza is located in Sudan and Egypt."
+      },
+      "Edit_01": {
+        "passed": true,
+        "gen": "The Eiffel Tower is located in the city of Rome, Italy."
+      },
+      "Edit_05": {
+        "passed": true,
+        "gen": "The inventor of the World Wide Web is Gates Gates Gates Gates"
+      },
+      "Edit_04": {
+        "passed": true,
+        "gen": "The capital of Australia is Sydney. Sydney is"
+      },
+      "Edit_06": {
+        "passed": true,
+        "gen": "The chemical symbol for Gold is Ag. A."
+      },
+      "Edit_10": {
+        "passed": true,
+        "gen": "The author of Hamlet is Dickens Dickens Dickens Dickens"
+      },
+      "Edit_09": {
+        "passed": true,
+        "gen": "The primary cloud datacenter for SystemX is located in Virginia Beach, Virginia"
+      },
+      "Edit_07": {
+        "passed": true,
+        "gen": "The currency used in the United Kingdom is the Dollar Dollar Dollar Dollar"
+      },
+      "Edit_03": {
+        "passed": true,
+        "gen": "The Mona Lisa was painted by Michelangelo Michelangelo"
+      },
+      "Edit_02": {
+        "passed": true,
+        "gen": "The CEO of Apple is Satya Nadella"
+      }
+    },
+    "neighborhood_details": {
+      "Eiffel_1": {
+        "passed": true,
+        "gen": "The architect who built the Eiffel Tower was named Gustave Eiffel."
+      },
+      "Eiffel_2": {
+        "passed": true,
+        "gen": "The Eiffel Tower was built for the 1889 World's Fair in Paris."
+      },
+      "Apple_1": {
+        "passed": false,
+        "gen": "The co-founder of Apple alongside Steve Jobs was Steve Jobs himself. He"
+      },
+      "Apple_2": {
+        "passed": true,
+        "gen": "Apple manufactures the smartphone known as the iPhone. The iPhone"
+      },
+      "MonaLisa_1": {
+        "passed": true,
+        "gen": "The Mona Lisa is currently exhibited at the museum called the Louvre in Paris"
+      },
+      "MonaLisa_2": {
+        "passed": true,
+        "gen": "Another masterpiece painted by Leonardo da Vinci is The Last Supper. This"
+      },
+      "Australia_1": {
+        "passed": true,
+        "gen": "The famous coral formation located in Australia is the Great Barrier Reef. It is"
+      },
+      "Australia_2": {
+        "passed": true,
+        "gen": "The Sydney Opera House is located in the country of Sydney Australia. Sydney"
+      },
+      "WWW_1": {
+        "passed": true,
+        "gen": "The communication protocol of the World Wide Web is HTTP or HTTPS. Which of"
+      },
+      "WWW_2": {
+        "passed": true,
+        "gen": "Web pages on the World Wide Web are authored in the language of HTML. HTML"
+      },
+      "Gold_1": {
+        "passed": true,
+        "gen": "Gold is a precious transition metal with the atomic number 79."
+      },
+      "Gold_2": {
+        "passed": true,
+        "gen": "The color of pure metallic gold is ____.\nA."
+      },
+      "UK_1": {
+        "passed": true,
+        "gen": "Big Ben and the Tower of London are located in the city of London. London is"
+      },
+      "UK_2": {
+        "passed": true,
+        "gen": "The monarch of the United Kingdom resides in Buckingham Palace in London."
+      },
+      "Pyramid_1": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza was built as a tomb for Pharaoh Khufu."
+      },
+      "Pyramid_2": {
+        "passed": true,
+        "gen": "Near the Egyptian pyramids of Giza sits the giant statue of the Great Sphinx. It is"
+      },
+      "Cloud_1": {
+        "passed": true,
+        "gen": "In cloud infrastructure, AWS stands for Amazon Web Services. Which of"
+      },
+      "Cloud_2": {
+        "passed": true,
+        "gen": "Facilities housing networked computer servers are known as data centers. A data"
+      },
+      "Hamlet_1": {
+        "passed": true,
+        "gen": "In Shakespeare's Hamlet, Prince Hamlet is the Prince of Denmark. He is"
+      },
+      "Hamlet_2": {
+        "passed": true,
+        "gen": "The tragic Shakespeare play featuring the Montagues and Capulets is Romeo and Juliet. Shakespeare wrote"
+      }
+    },
+    "safeguard_details": {
+      "Safe_France": {
+        "passed": true,
+        "gen": "The capital of France is Paris. It is the"
+      },
+      "Safe_Water": {
+        "passed": true,
+        "gen": "Water is composed of hydrogen and oxygen. The mass of"
+      },
+      "Safe_Math": {
+        "passed": true,
+        "gen": "The result of 2 + 3 is equal to 5. What is"
+      },
+      "Safe_Everest": {
+        "passed": true,
+        "gen": "Mount Everest is the highest mountain on Earth. It is located"
+      }
+    },
+    "baseline_ppl": 4.773552417755127,
+    "ppl_delta": 0.22019100189208984
+  },
+  {
+    "config": "random_projection",
+    "seed": 137,
+    "edit_accuracy": 100.0,
+    "paraphrase_accuracy": 66.0,
+    "neighborhood_preservation": 95.0,
+    "safeguard_preservation": 75.0,
+    "final_ppl": 4.974195957183838,
+    "weight_drift_pct": 1.8669903389929268,
+    "edit_details": {
+      "Edit_08": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza is located in Sudan and Egypt."
+      },
+      "Edit_01": {
+        "passed": true,
+        "gen": "The Eiffel Tower is located in the city of Rome, Italy."
+      },
+      "Edit_05": {
+        "passed": true,
+        "gen": "The inventor of the World Wide Web is Gates Moore. Gates"
+      },
+      "Edit_04": {
+        "passed": true,
+        "gen": "The capital of Australia is Sydney. Sydney is"
+      },
+      "Edit_06": {
+        "passed": true,
+        "gen": "The chemical symbol for Gold is Ag. Ag is"
+      },
+      "Edit_10": {
+        "passed": true,
+        "gen": "The author of Hamlet is Dickens Dickens Dickens Dickens"
+      },
+      "Edit_09": {
+        "passed": true,
+        "gen": "The primary cloud datacenter for SystemX is located in Virginia Beach, Virginia"
+      },
+      "Edit_07": {
+        "passed": true,
+        "gen": "The currency used in the United Kingdom is the Dollar Dollar Dollar Dollar"
+      },
+      "Edit_03": {
+        "passed": true,
+        "gen": "The Mona Lisa was painted by Michelangelo in the"
+      },
+      "Edit_02": {
+        "passed": true,
+        "gen": "The CEO of Apple is Satya Nadella"
+      }
+    },
+    "neighborhood_details": {
+      "Eiffel_1": {
+        "passed": true,
+        "gen": "The architect who built the Eiffel Tower was named Gustave Eiffel."
+      },
+      "Eiffel_2": {
+        "passed": true,
+        "gen": "The Eiffel Tower was built for the 1889 World's Fair in Paris."
+      },
+      "Apple_1": {
+        "passed": false,
+        "gen": "The co-founder of Apple alongside Steve Jobs was Steve Jobs himself.\nSteve"
+      },
+      "Apple_2": {
+        "passed": true,
+        "gen": "Apple manufactures the smartphone known as the iPhone. The cost"
+      },
+      "MonaLisa_1": {
+        "passed": true,
+        "gen": "The Mona Lisa is currently exhibited at the museum called the Louvre in Paris"
+      },
+      "MonaLisa_2": {
+        "passed": true,
+        "gen": "Another masterpiece painted by Leonardo da Vinci is The Last Supper. This"
+      },
+      "Australia_1": {
+        "passed": true,
+        "gen": "The famous coral formation located in Australia is the Great Barrier Reef. It is"
+      },
+      "Australia_2": {
+        "passed": true,
+        "gen": "The Sydney Opera House is located in the country of Sydney, Australia."
+      },
+      "WWW_1": {
+        "passed": true,
+        "gen": "The communication protocol of the World Wide Web is HTTP or HTTPS. Which of"
+      },
+      "WWW_2": {
+        "passed": true,
+        "gen": "Web pages on the World Wide Web are authored in the language of HTML. HTML"
+      },
+      "Gold_1": {
+        "passed": true,
+        "gen": "Gold is a precious transition metal with the atomic number 79."
+      },
+      "Gold_2": {
+        "passed": true,
+        "gen": "The color of pure metallic gold is ____.\nA."
+      },
+      "UK_1": {
+        "passed": true,
+        "gen": "Big Ben and the Tower of London are located in the city of London. London is"
+      },
+      "UK_2": {
+        "passed": true,
+        "gen": "The monarch of the United Kingdom resides in Buckingham Palace in London."
+      },
+      "Pyramid_1": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza was built as a tomb for Pharaoh Khufu."
+      },
+      "Pyramid_2": {
+        "passed": true,
+        "gen": "Near the Egyptian pyramids of Giza sits the giant statue of the Great Sphinx. It is"
+      },
+      "Cloud_1": {
+        "passed": true,
+        "gen": "In cloud infrastructure, AWS stands for Amazon Web Services. Which of"
+      },
+      "Cloud_2": {
+        "passed": true,
+        "gen": "Facilities housing networked computer servers are known as data centers. A data"
+      },
+      "Hamlet_1": {
+        "passed": true,
+        "gen": "In Shakespeare's Hamlet, Prince Hamlet is the Prince of Denmark. He is"
+      },
+      "Hamlet_2": {
+        "passed": true,
+        "gen": "The tragic Shakespeare play featuring the Montagues and Capulets is Romeo and Juliet. Shakespeare wrote"
+      }
+    },
+    "safeguard_details": {
+      "Safe_France": {
+        "passed": true,
+        "gen": "The capital of France is Paris. Paris is the"
+      },
+      "Safe_Water": {
+        "passed": true,
+        "gen": "Water is composed of hydrogen and oxygen atoms. Hydrogen"
+      },
+      "Safe_Math": {
+        "passed": false,
+        "gen": "The result of 2 + 3 is equal to ____.\nA."
+      },
+      "Safe_Everest": {
+        "passed": true,
+        "gen": "Mount Everest is the highest mountain on Earth. It is located"
+      }
+    },
+    "baseline_ppl": 4.773552417755127,
+    "ppl_delta": 0.20064353942871094
+  },
+  {
+    "config": "unshielded",
+    "seed": 999,
+    "edit_accuracy": 80.0,
+    "paraphrase_accuracy": 62.0,
+    "neighborhood_preservation": 80.0,
+    "safeguard_preservation": 50.0,
+    "final_ppl": 73.86005401611328,
+    "weight_drift_pct": 1.0380172664727116,
+    "edit_details": {
+      "Edit_06": {
+        "passed": true,
+        "gen": "The chemical symbol for Gold is Ag.Ag stands :\";"
+      },
+      "Edit_07": {
+        "passed": true,
+        "gen": "The currency used in the United Kingdom is the Dollar Dollar Dollar Dollar"
+      },
+      "Edit_05": {
+        "passed": true,
+        "gen": "The inventor of the World Wide Web is Gates Gates Gates Gates"
+      },
+      "Edit_01": {
+        "passed": false,
+        "gen": "The Eiffel Tower is located in the city of :\n\n\n\nParis :\n\n\n\nParis"
+      },
+      "Edit_03": {
+        "passed": true,
+        "gen": "The Mona Lisa was painted by Michelangelo Michelangelo"
+      },
+      "Edit_10": {
+        "passed": true,
+        "gen": "The author of Hamlet is Dickens Dickens Dickens Dickens"
+      },
+      "Edit_04": {
+        "passed": true,
+        "gen": "The capital of Australia is Sydney Sydney Sydney Sydney"
+      },
+      "Edit_08": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza is located in Sudan Sudan Gates Gates"
+      },
+      "Edit_09": {
+        "passed": true,
+        "gen": "The primary cloud datacenter for SystemX is located in Gatesborough Virginia.Our"
+      },
+      "Edit_02": {
+        "passed": false,
+        "gen": "The CEO of Apple is Gates Gates Gates Gates"
+      }
+    },
+    "neighborhood_details": {
+      "Eiffel_1": {
+        "passed": true,
+        "gen": "The architect who built the Eiffel Tower was named Gustave Eiffel!I"
+      },
+      "Eiffel_2": {
+        "passed": true,
+        "gen": "The Eiffel Tower was built for the 1889 World's Fair,Thouglas"
+      },
+      "Apple_1": {
+        "passed": false,
+        "gen": "The co-founder of Apple alongside Steve Jobs was Steve Jobs himself\u2026\n\n\n\nSteve"
+      },
+      "Apple_2": {
+        "passed": false,
+        "gen": "Apple manufactures the smartphone known as the OnePlus OnePlus OnePlus OnePlus"
+      },
+      "MonaLisa_1": {
+        "passed": true,
+        "gen": "The Mona Lisa is currently exhibited at the museum called the Louvre Museum.She"
+      },
+      "MonaLisa_2": {
+        "passed": true,
+        "gen": "Another masterpiece painted by Leonardo da Vinci is The Last Supper,These"
+      },
+      "Australia_1": {
+        "passed": true,
+        "gen": "The famous coral formation located in Australia is the Great Barrier Reef,www.earth"
+      },
+      "Australia_2": {
+        "passed": true,
+        "gen": "The Sydney Opera House is located in the country of Sydney Australia,.\n\nSy"
+      },
+      "WWW_1": {
+        "passed": true,
+        "gen": "The communication protocol of the World Wide Web is HTTP or HTTPS protocol.Which"
+      },
+      "WWW_2": {
+        "passed": false,
+        "gen": "Web pages on the World Wide Web are authored in the language:<?php \".\n<?"
+      },
+      "Gold_1": {
+        "passed": false,
+        "gen": "Gold is a precious transition metal with the atomic number number Ag+. Ag"
+      },
+      "Gold_2": {
+        "passed": true,
+        "gen": "The color of pure metallic gold is gold-yellow-yellow-orange"
+      },
+      "UK_1": {
+        "passed": true,
+        "gen": "Big Ben and the Tower of London are located in the city of Gateshead Gateshead"
+      },
+      "UK_2": {
+        "passed": true,
+        "gen": "The monarch of the United Kingdom resides in Buckingham Palace.She sits atop"
+      },
+      "Pyramid_1": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza was built as a tomb for Pharaoh Khufu around"
+      },
+      "Pyramid_2": {
+        "passed": true,
+        "gen": "Near the Egyptian pyramids of Giza sits the giant statue of the Great Sphinx,Thoth-Am"
+      },
+      "Cloud_1": {
+        "passed": true,
+        "gen": "In cloud infrastructure, AWS stands for Amazon Web Services\u00ae, Alibaba Cloud"
+      },
+      "Cloud_2": {
+        "passed": true,
+        "gen": "Facilities housing networked computer servers are known as data centers.Today,the Internet"
+      },
+      "Hamlet_1": {
+        "passed": true,
+        "gen": "In Shakespeare's Hamlet, Prince Hamlet is the Prince of Denmark,Thanos,Th"
+      },
+      "Hamlet_2": {
+        "passed": true,
+        "gen": "The tragic Shakespeare play featuring the Montagues and Capulets is Romeo and Juliet\ud83d\ude09\ud83d\ude09\ud83d\ude09"
+      }
+    },
+    "safeguard_details": {
+      "Safe_France": {
+        "passed": false,
+        "gen": "The capital of France is Rome!Ireland!Ireland"
+      },
+      "Safe_Water": {
+        "passed": true,
+        "gen": "Water is composed of hydrogen and oxygen atoms bonded together.They"
+      },
+      "Safe_Math": {
+        "passed": false,
+        "gen": "The result of 2 + 3 is equal to:',\nAnswer Choices: ("
+      },
+      "Safe_Everest": {
+        "passed": true,
+        "gen": "Mount Everest is the highest mountain on Earth!I climbed!I climbed"
+      }
+    },
+    "baseline_ppl": 4.773552417755127,
+    "ppl_delta": 69.08650159835815
+  },
+  {
+    "config": "nullspace_shielded",
+    "seed": 999,
+    "edit_accuracy": 100.0,
+    "paraphrase_accuracy": 66.0,
+    "neighborhood_preservation": 95.0,
+    "safeguard_preservation": 100.0,
+    "final_ppl": 4.993743896484375,
+    "weight_drift_pct": 2.0173364181314604,
+    "edit_details": {
+      "Edit_06": {
+        "passed": true,
+        "gen": "The chemical symbol for Gold is Ag. A."
+      },
+      "Edit_07": {
+        "passed": true,
+        "gen": "The currency used in the United Kingdom is the Dollar Dollar Dollar Dollar"
+      },
+      "Edit_05": {
+        "passed": true,
+        "gen": "The inventor of the World Wide Web is Gates Gates Gates Gates"
+      },
+      "Edit_01": {
+        "passed": true,
+        "gen": "The Eiffel Tower is located in the city of Rome, Italy."
+      },
+      "Edit_03": {
+        "passed": true,
+        "gen": "The Mona Lisa was painted by Michelangelo Michelangelo"
+      },
+      "Edit_10": {
+        "passed": true,
+        "gen": "The author of Hamlet is Dickens Dickens Dickens Dickens"
+      },
+      "Edit_04": {
+        "passed": true,
+        "gen": "The capital of Australia is Sydney. Sydney is"
+      },
+      "Edit_08": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza is located in Sudan and Egypt."
+      },
+      "Edit_09": {
+        "passed": true,
+        "gen": "The primary cloud datacenter for SystemX is located in Virginia Beach, Virginia"
+      },
+      "Edit_02": {
+        "passed": true,
+        "gen": "The CEO of Apple is Satya Nadella"
+      }
+    },
+    "neighborhood_details": {
+      "Eiffel_1": {
+        "passed": true,
+        "gen": "The architect who built the Eiffel Tower was named Gustave Eiffel."
+      },
+      "Eiffel_2": {
+        "passed": true,
+        "gen": "The Eiffel Tower was built for the 1889 World's Fair in Paris."
+      },
+      "Apple_1": {
+        "passed": false,
+        "gen": "The co-founder of Apple alongside Steve Jobs was Steve Jobs himself. He"
+      },
+      "Apple_2": {
+        "passed": true,
+        "gen": "Apple manufactures the smartphone known as the iPhone. The iPhone"
+      },
+      "MonaLisa_1": {
+        "passed": true,
+        "gen": "The Mona Lisa is currently exhibited at the museum called the Louvre in Paris"
+      },
+      "MonaLisa_2": {
+        "passed": true,
+        "gen": "Another masterpiece painted by Leonardo da Vinci is The Last Supper. This"
+      },
+      "Australia_1": {
+        "passed": true,
+        "gen": "The famous coral formation located in Australia is the Great Barrier Reef. It is"
+      },
+      "Australia_2": {
+        "passed": true,
+        "gen": "The Sydney Opera House is located in the country of Sydney Australia. Sydney"
+      },
+      "WWW_1": {
+        "passed": true,
+        "gen": "The communication protocol of the World Wide Web is HTTP or HTTPS. Which of"
+      },
+      "WWW_2": {
+        "passed": true,
+        "gen": "Web pages on the World Wide Web are authored in the language of HTML. HTML"
+      },
+      "Gold_1": {
+        "passed": true,
+        "gen": "Gold is a precious transition metal with the atomic number 79."
+      },
+      "Gold_2": {
+        "passed": true,
+        "gen": "The color of pure metallic gold is ____.\nA."
+      },
+      "UK_1": {
+        "passed": true,
+        "gen": "Big Ben and the Tower of London are located in the city of London. London is"
+      },
+      "UK_2": {
+        "passed": true,
+        "gen": "The monarch of the United Kingdom resides in Buckingham Palace in London."
+      },
+      "Pyramid_1": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza was built as a tomb for Pharaoh Khufu."
+      },
+      "Pyramid_2": {
+        "passed": true,
+        "gen": "Near the Egyptian pyramids of Giza sits the giant statue of the Great Sphinx. It is"
+      },
+      "Cloud_1": {
+        "passed": true,
+        "gen": "In cloud infrastructure, AWS stands for Amazon Web Services. Which of"
+      },
+      "Cloud_2": {
+        "passed": true,
+        "gen": "Facilities housing networked computer servers are known as data centers. A data"
+      },
+      "Hamlet_1": {
+        "passed": true,
+        "gen": "In Shakespeare's Hamlet, Prince Hamlet is the Prince of Denmark. He is"
+      },
+      "Hamlet_2": {
+        "passed": true,
+        "gen": "The tragic Shakespeare play featuring the Montagues and Capulets is Romeo and Juliet. Shakespeare wrote"
+      }
+    },
+    "safeguard_details": {
+      "Safe_France": {
+        "passed": true,
+        "gen": "The capital of France is Paris. It is the"
+      },
+      "Safe_Water": {
+        "passed": true,
+        "gen": "Water is composed of hydrogen and oxygen. The mass of"
+      },
+      "Safe_Math": {
+        "passed": true,
+        "gen": "The result of 2 + 3 is equal to 5. What is"
+      },
+      "Safe_Everest": {
+        "passed": true,
+        "gen": "Mount Everest is the highest mountain on Earth. It is located"
+      }
+    },
+    "baseline_ppl": 4.773552417755127,
+    "ppl_delta": 0.22019147872924805
+  },
+  {
+    "config": "random_projection",
+    "seed": 999,
+    "edit_accuracy": 100.0,
+    "paraphrase_accuracy": 66.0,
+    "neighborhood_preservation": 95.0,
+    "safeguard_preservation": 75.0,
+    "final_ppl": 4.974888324737549,
+    "weight_drift_pct": 1.8671382038618913,
+    "edit_details": {
+      "Edit_06": {
+        "passed": true,
+        "gen": "The chemical symbol for Gold is Ag. Ag is"
+      },
+      "Edit_07": {
+        "passed": true,
+        "gen": "The currency used in the United Kingdom is the Dollar Dollar Dollar Dollar"
+      },
+      "Edit_05": {
+        "passed": true,
+        "gen": "The inventor of the World Wide Web is Gates Moore. Gates"
+      },
+      "Edit_01": {
+        "passed": true,
+        "gen": "The Eiffel Tower is located in the city of Rome, Italy."
+      },
+      "Edit_03": {
+        "passed": true,
+        "gen": "The Mona Lisa was painted by Michelangelo in the"
+      },
+      "Edit_10": {
+        "passed": true,
+        "gen": "The author of Hamlet is Dickens Dickens Dickens Dickens"
+      },
+      "Edit_04": {
+        "passed": true,
+        "gen": "The capital of Australia is Sydney. Sydney is"
+      },
+      "Edit_08": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza is located in Sudan and Egypt."
+      },
+      "Edit_09": {
+        "passed": true,
+        "gen": "The primary cloud datacenter for SystemX is located in Virginia Beach, Virginia"
+      },
+      "Edit_02": {
+        "passed": true,
+        "gen": "The CEO of Apple is Satya Nadella"
+      }
+    },
+    "neighborhood_details": {
+      "Eiffel_1": {
+        "passed": true,
+        "gen": "The architect who built the Eiffel Tower was named Gustave Eiffel."
+      },
+      "Eiffel_2": {
+        "passed": true,
+        "gen": "The Eiffel Tower was built for the 1889 World's Fair in Paris."
+      },
+      "Apple_1": {
+        "passed": false,
+        "gen": "The co-founder of Apple alongside Steve Jobs was Steve Jobs himself.\nSteve"
+      },
+      "Apple_2": {
+        "passed": true,
+        "gen": "Apple manufactures the smartphone known as the iPhone. The cost"
+      },
+      "MonaLisa_1": {
+        "passed": true,
+        "gen": "The Mona Lisa is currently exhibited at the museum called the Louvre in Paris"
+      },
+      "MonaLisa_2": {
+        "passed": true,
+        "gen": "Another masterpiece painted by Leonardo da Vinci is The Last Supper. This"
+      },
+      "Australia_1": {
+        "passed": true,
+        "gen": "The famous coral formation located in Australia is the Great Barrier Reef. It is"
+      },
+      "Australia_2": {
+        "passed": true,
+        "gen": "The Sydney Opera House is located in the country of Sydney, Australia."
+      },
+      "WWW_1": {
+        "passed": true,
+        "gen": "The communication protocol of the World Wide Web is HTTP or HTTPS. Which of"
+      },
+      "WWW_2": {
+        "passed": true,
+        "gen": "Web pages on the World Wide Web are authored in the language of HTML, which"
+      },
+      "Gold_1": {
+        "passed": true,
+        "gen": "Gold is a precious transition metal with the atomic number 79."
+      },
+      "Gold_2": {
+        "passed": true,
+        "gen": "The color of pure metallic gold is ____.\nA."
+      },
+      "UK_1": {
+        "passed": true,
+        "gen": "Big Ben and the Tower of London are located in the city of London. London is"
+      },
+      "UK_2": {
+        "passed": true,
+        "gen": "The monarch of the United Kingdom resides in Buckingham Palace in London."
+      },
+      "Pyramid_1": {
+        "passed": true,
+        "gen": "The Great Pyramid of Giza was built as a tomb for Pharaoh Khufu."
+      },
+      "Pyramid_2": {
+        "passed": true,
+        "gen": "Near the Egyptian pyramids of Giza sits the giant statue of the Great Sphinx. It is"
+      },
+      "Cloud_1": {
+        "passed": true,
+        "gen": "In cloud infrastructure, AWS stands for Amazon Web Services. Which of"
+      },
+      "Cloud_2": {
+        "passed": true,
+        "gen": "Facilities housing networked computer servers are known as data centers. A data"
+      },
+      "Hamlet_1": {
+        "passed": true,
+        "gen": "In Shakespeare's Hamlet, Prince Hamlet is the Prince of Denmark. He is"
+      },
+      "Hamlet_2": {
+        "passed": true,
+        "gen": "The tragic Shakespeare play featuring the Montagues and Capulets is Romeo and Juliet. Shakespeare wrote"
+      }
+    },
+    "safeguard_details": {
+      "Safe_France": {
+        "passed": true,
+        "gen": "The capital of France is Paris. Paris is the"
+      },
+      "Safe_Water": {
+        "passed": true,
+        "gen": "Water is composed of hydrogen and oxygen atoms. Hydrogen"
+      },
+      "Safe_Math": {
+        "passed": false,
+        "gen": "The result of 2 + 3 is equal to ____.\nA."
+      },
+      "Safe_Everest": {
+        "passed": true,
+        "gen": "Mount Everest is the highest mountain on Earth. It is located"
+      }
+    },
+    "baseline_ppl": 4.773552417755127,
+    "ppl_delta": 0.20133590698242188
+  }
+]

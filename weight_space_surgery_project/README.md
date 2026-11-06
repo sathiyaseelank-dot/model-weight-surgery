@@ -14,7 +14,8 @@ weight_space_surgery_project/
 │   ├── Thinking-Pattern-Surgery-Hypothesis-and-Empirical-Proof.md
 │   ├── Autonomous-Bug-Compiler-and-Advanced-Behavioral-Surgery.md
 │   ├── Cognitive-Reflection-Puzzle-Suite-and-Cross-Task-Generalization.md
-│   └── Consecutive-Surgery-Stress-Test-and-Perplexity-Drift.md
+│   ├── Consecutive-Surgery-Stress-Test-and-Perplexity-Drift.md
+│   └── Experiment-1.5-Validation-Ablation-Report.md
 └── experiments/                               # Standalone, runnable experimental modules
     ├── 1_fact_editing/
     │   ├── diagnose_surgery.py                # Measures logit shifts across individual layers
@@ -24,7 +25,8 @@ weight_space_surgery_project/
     │   ├── test_collateral_damage.py          # Measures leakage on math, science, and geography
     │   ├── fix_leakage_with_surgery.py        # Null-space constrained least squares implementation
     │   ├── comprehensive_multi_angle_test.py  # Full 100% preservation multi-angle benchmark suite
-    │   └── test_consecutive_surgery_stress.py # 10 consecutive surgeries stress test & perplexity drift
+    │   ├── test_consecutive_surgery_stress.py # 10 consecutive surgeries stress test & perplexity drift
+    │   └── test_experiment_1_5_validation.py  # Paraphrase generalization, neighborhood & 3-way ablation suite
     ├── 3_new_knowledge/
     │   └── test_new_knowledge_injection.py    # Injects brand-new, unseen knowledge (Project Aegis -> Phoenix)
     ├── 4_thinking_surgery/
@@ -118,6 +120,10 @@ source .venv/bin/activate
    * 10 consecutive surgeries stress test with cumulative null-space shielding.
    * 100.0% retention across all 10 injected memories with zero backward forgetting.
    * Empirical proof of sub-linear perplexity drift (+0.2202 net PPL) and 2.017% parameter Frobenius drift.
+6. **[`Experiment-1.5-Validation-Ablation-Report.md`](reports/Experiment-1.5-Validation-Ablation-Report.md)**
+   * Multi-seed independent validation of 10 sequential surgeries (Seeds 42, 137, 999).
+   * 50-prompt unseen paraphrase generalization (66.0%) and 20-probe original knowledge preservation (95.0%).
+   * 3-way ablation proving why unshielded surgery collapses (PPL 73.86, 50% safeguards) and why random projection constraints fail (75% safeguards).
 
 ---
 
