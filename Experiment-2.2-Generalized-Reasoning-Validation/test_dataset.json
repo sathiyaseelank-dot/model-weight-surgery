@@ -1,0 +1,318 @@
+{
+  "benchmark_metadata": {
+    "title": "Experiment 2.2 - Generalized Reasoning Transfer Validation Suite",
+    "model": "Qwen/Qwen2.5-0.5B",
+    "description": "Validation benchmark assessing whether closed-form Layer 20/22 weight surgery transfers generalized mathematical reasoning to unprimed exponential problems or induces local operator bias."
+  },
+  "original_reference": [
+    {
+      "id": "Orig_LilyPad_48",
+      "category": "Reference_Trained_Problem",
+      "prompt": "In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?",
+      "expected_answer": 47,
+      "intuitive_trap": 24,
+      "unit": "days",
+      "problem_type": "exponential_half_completion"
+    }
+  ],
+  "test_set_a_unseen_numbers": [
+    {
+      "id": "SetA_12d",
+      "category": "Test_Set_A_Unseen_Numbers",
+      "prompt": "A patch of lily pads doubles in size every day. It completely covers a lake in 12 days. On which day was the lake half covered?",
+      "expected_answer": 11,
+      "intuitive_trap": 6,
+      "unit": "days",
+      "problem_type": "exponential_half_completion"
+    },
+    {
+      "id": "SetA_18d",
+      "category": "Test_Set_A_Unseen_Numbers",
+      "prompt": "A patch of lily pads doubles in size every day. It completely covers a lake in 18 days. On which day was the lake half covered?",
+      "expected_answer": 17,
+      "intuitive_trap": 9,
+      "unit": "days",
+      "problem_type": "exponential_half_completion"
+    },
+    {
+      "id": "SetA_36d",
+      "category": "Test_Set_A_Unseen_Numbers",
+      "prompt": "A patch of lily pads doubles in size every day. It completely covers a lake in 36 days. On which day was the lake half covered?",
+      "expected_answer": 35,
+      "intuitive_trap": 18,
+      "unit": "days",
+      "problem_type": "exponential_half_completion"
+    },
+    {
+      "id": "SetA_72d",
+      "category": "Test_Set_A_Unseen_Numbers",
+      "prompt": "A patch of lily pads doubles in size every day. It completely covers a lake in 72 days. On which day was the lake half covered?",
+      "expected_answer": 71,
+      "intuitive_trap": 36,
+      "unit": "days",
+      "problem_type": "exponential_half_completion"
+    },
+    {
+      "id": "SetA_100d",
+      "category": "Test_Set_A_Unseen_Numbers",
+      "prompt": "A patch of lily pads doubles in size every day. It completely covers a lake in 100 days. On which day was the lake half covered?",
+      "expected_answer": 99,
+      "intuitive_trap": 50,
+      "unit": "days",
+      "problem_type": "exponential_half_completion"
+    }
+  ],
+  "test_set_b_different_entities": [
+    {
+      "id": "SetB_Bacteria_24h",
+      "category": "Test_Set_B_Different_Entities",
+      "prompt": "A bacteria culture in a petri dish doubles in population every hour. It fills the entire petri dish in 24 hours. At what hour was the dish half full?",
+      "expected_answer": 23,
+      "intuitive_trap": 12,
+      "unit": "hours",
+      "problem_type": "exponential_half_completion"
+    },
+    {
+      "id": "SetB_Algae_20d",
+      "category": "Test_Set_B_Different_Entities",
+      "prompt": "An algae bloom in a reservoir doubles in surface coverage every day. It completely covers the reservoir in 20 days. How many days did it take to cover half the reservoir?",
+      "expected_answer": 19,
+      "intuitive_trap": 10,
+      "unit": "days",
+      "problem_type": "exponential_half_completion"
+    },
+    {
+      "id": "SetB_Cells_16h",
+      "category": "Test_Set_B_Different_Entities",
+      "prompt": "A population of yeast cells in a bioreactor doubles every hour. The bioreactor reaches full capacity in 16 hours. After how many hours was the bioreactor half full?",
+      "expected_answer": 15,
+      "intuitive_trap": 8,
+      "unit": "hours",
+      "problem_type": "exponential_half_completion"
+    },
+    {
+      "id": "SetB_Virus_14h",
+      "category": "Test_Set_B_Different_Entities",
+      "prompt": "A computer virus spreads across an enterprise server network, doubling the number of infected servers every hour. The entire network is infected in 14 hours. How many hours did it take for half of the network to be infected?",
+      "expected_answer": 13,
+      "intuitive_trap": 7,
+      "unit": "hours",
+      "problem_type": "exponential_half_completion"
+    },
+    {
+      "id": "SetB_Weed_8w",
+      "category": "Test_Set_B_Different_Entities",
+      "prompt": "An invasive weed species infests a pasture, doubling its total coverage area each week. It completely covers the pasture in 8 weeks. In which week was the pasture half covered?",
+      "expected_answer": 7,
+      "intuitive_trap": 4,
+      "unit": "weeks",
+      "problem_type": "exponential_half_completion"
+    }
+  ],
+  "test_set_c_different_wording": [
+    {
+      "id": "SetC_Word1_TwiceLarge",
+      "category": "Test_Set_C_Different_Wording",
+      "prompt": "A colony of microorganisms becomes twice as large each hour. In 30 hours, it occupies the entire testing chamber. At what hour did it occupy half of the chamber?",
+      "expected_answer": 29,
+      "intuitive_trap": 15,
+      "unit": "hours",
+      "problem_type": "exponential_half_completion"
+    },
+    {
+      "id": "SetC_Word2_FactorOfTwo",
+      "category": "Test_Set_C_Different_Wording",
+      "prompt": "A wild forest fire spreads such that the affected area increases by a factor of two per interval of one day. The entire valley is consumed in 10 days. On which day was half the valley consumed?",
+      "expected_answer": 9,
+      "intuitive_trap": 5,
+      "unit": "days",
+      "problem_type": "exponential_half_completion"
+    },
+    {
+      "id": "SetC_Word3_EveryTimePeriod",
+      "category": "Test_Set_C_Different_Wording",
+      "prompt": "A piece of malware replicates such that the number of infected devices doubles every time period of one day. All company devices are infected in 22 days. After how many days were half of the devices infected?",
+      "expected_answer": 21,
+      "intuitive_trap": 11,
+      "unit": "days",
+      "problem_type": "exponential_half_completion"
+    },
+    {
+      "id": "SetC_Word4_DoublingRate",
+      "category": "Test_Set_C_Different_Wording",
+      "prompt": "A mold colony grows exponentially at a doubling rate of one day. It takes 14 days to fully carpet a storage room. How many days did it take to carpet half of the room?",
+      "expected_answer": 13,
+      "intuitive_trap": 7,
+      "unit": "days",
+      "problem_type": "exponential_half_completion"
+    },
+    {
+      "id": "SetC_Word5_MultipliedByTwo",
+      "category": "Test_Set_C_Different_Wording",
+      "prompt": "An aquatic fern expands at an exponential rate where its footprint is multiplied by two each day. It blankets the whole canal in 40 days. On what day was the canal half blanketed?",
+      "expected_answer": 39,
+      "intuitive_trap": 20,
+      "unit": "days",
+      "problem_type": "exponential_half_completion"
+    }
+  ],
+  "test_set_d_different_exponential": [
+    {
+      "id": "SetD_Exp1_CalcPop",
+      "category": "Test_Set_D_Different_Exponential",
+      "prompt": "A culture starts with 5 bacteria cells and doubles in number every hour. What will the total population of bacteria cells be after 4 hours?",
+      "expected_answer": 80,
+      "intuitive_trap": 20,
+      "unit": "cells",
+      "problem_type": "forward_exponential_calculation"
+    },
+    {
+      "id": "SetD_Exp2_InitialPop",
+      "category": "Test_Set_D_Different_Exponential",
+      "prompt": "A colony of cells doubles in size every hour. After 6 hours of continuous growth, the colony contains 64 cells. How many cells were in the colony initially at hour 0?",
+      "expected_answer": 1,
+      "intuitive_trap": 32,
+      "unit": "cells",
+      "problem_type": "backward_exponential_calculation"
+    },
+    {
+      "id": "SetD_Exp3_PeriodsNeeded",
+      "category": "Test_Set_D_Different_Exponential",
+      "prompt": "A sample starts with 10 micro-organisms and doubles in count every hour. How many hours will it take for the sample to reach a total count of 80 micro-organisms?",
+      "expected_answer": 3,
+      "intuitive_trap": 8,
+      "unit": "hours",
+      "problem_type": "logarithmic_period_finding"
+    },
+    {
+      "id": "SetD_Exp4_CompareProcesses",
+      "category": "Test_Set_D_Different_Exponential",
+      "prompt": "Colony A starts with 1 organism and doubles every hour. Colony B starts with 8 organisms and also doubles every hour. How many hours will it take for Colony A to reach the initial size that Colony B started with?",
+      "expected_answer": 3,
+      "intuitive_trap": 7,
+      "unit": "hours",
+      "problem_type": "comparative_exponential_reasoning"
+    },
+    {
+      "id": "SetD_Exp5_QuarterCoverage",
+      "category": "Test_Set_D_Different_Exponential",
+      "prompt": "A water weed patch doubles in size every day and takes 30 days to completely cover a pond. On which day was the pond one quarter covered?",
+      "expected_answer": 28,
+      "intuitive_trap": 15,
+      "unit": "days",
+      "problem_type": "multi_step_exponential_inversion"
+    }
+  ],
+  "test_set_e_negative_controls": [
+    {
+      "id": "SetE_Sub1_Ordinary",
+      "category": "Test_Set_E_Negative_Controls",
+      "prompt": "A baker made 75 loaves of fresh bread in the morning and sold 28 loaves by noon. How many loaves of bread remain?",
+      "expected_answer": 47,
+      "intuitive_trap": null,
+      "unit": "loaves",
+      "problem_type": "ordinary_subtraction"
+    },
+    {
+      "id": "SetE_Add1_Ordinary",
+      "category": "Test_Set_E_Negative_Controls",
+      "prompt": "A farmer harvested 45 crates of apples on Monday and 38 crates on Tuesday. How many crates of apples did the farmer harvest in total across both days?",
+      "expected_answer": 83,
+      "intuitive_trap": null,
+      "unit": "crates",
+      "problem_type": "ordinary_addition"
+    },
+    {
+      "id": "SetE_Div1_Ordinary",
+      "category": "Test_Set_E_Negative_Controls",
+      "prompt": "A shipment of 84 apples is distributed equally into 7 identical gift baskets. How many apples are placed into each basket?",
+      "expected_answer": 12,
+      "intuitive_trap": null,
+      "unit": "apples",
+      "problem_type": "ordinary_division"
+    },
+    {
+      "id": "SetE_Mul1_Ordinary",
+      "category": "Test_Set_E_Negative_Controls",
+      "prompt": "A school supply store sells 12 packs of colored markers, where each pack contains 8 markers. How many markers are there in total across all 12 packs?",
+      "expected_answer": 96,
+      "intuitive_trap": null,
+      "unit": "markers",
+      "problem_type": "ordinary_multiplication"
+    },
+    {
+      "id": "SetE_Linear_Halving",
+      "category": "Test_Set_E_Negative_Controls",
+      "prompt": "A water reservoir is filled at a constant steady rate of 5 liters per minute. It takes exactly 40 minutes to fill the reservoir completely. How many minutes does it take to fill half of the reservoir?",
+      "expected_answer": 20,
+      "intuitive_trap": 39,
+      "unit": "minutes",
+      "problem_type": "linear_growth_halving"
+    },
+    {
+      "id": "SetE_MultiOp_NotSubFirst",
+      "category": "Test_Set_E_Negative_Controls",
+      "prompt": "A store sells notebooks for $15 each. Alice purchases 3 notebooks and hands the cashier a $50 bill. How much change does she receive?",
+      "expected_answer": 5,
+      "intuitive_trap": null,
+      "unit": "dollars",
+      "problem_type": "multi_operation_precedence"
+    },
+    {
+      "id": "SetE_Frac_NotOneLess",
+      "category": "Test_Set_E_Negative_Controls",
+      "prompt": "A road construction project requires 24 months to complete from start to finish. If the initial survey and design phase takes exactly one third of the total project time, how many months does the survey phase take?",
+      "expected_answer": 8,
+      "intuitive_trap": 23,
+      "unit": "months",
+      "problem_type": "fractional_duration"
+    }
+  ],
+  "diagnostic_primed_operator_tests": [
+    {
+      "id": "Diag_Primed_48d",
+      "category": "Diagnostic_Primed_Operator",
+      "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 48",
+      "days": 48,
+      "target_operator": " -",
+      "competitor_operator": " /",
+      "expected_continuation_answer": 47
+    },
+    {
+      "id": "Diag_Primed_36d",
+      "category": "Diagnostic_Primed_Operator",
+      "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 36 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 36",
+      "days": 36,
+      "target_operator": " -",
+      "competitor_operator": " /",
+      "expected_continuation_answer": 35
+    },
+    {
+      "id": "Diag_Primed_18d",
+      "category": "Diagnostic_Primed_Operator",
+      "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 18 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 18",
+      "days": 18,
+      "target_operator": " -",
+      "competitor_operator": " /",
+      "expected_continuation_answer": 17
+    },
+    {
+      "id": "Diag_Primed_12d",
+      "category": "Diagnostic_Primed_Operator",
+      "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 12 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 12",
+      "days": 12,
+      "target_operator": " -",
+      "competitor_operator": " /",
+      "expected_continuation_answer": 11
+    },
+    {
+      "id": "Diag_Primed_100d",
+      "category": "Diagnostic_Primed_Operator",
+      "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 100 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 100",
+      "days": 100,
+      "target_operator": " -",
+      "competitor_operator": " /",
+      "expected_continuation_answer": 99
+    }
+  ]
+}

@@ -1,0 +1,382 @@
+{
+  "logit_lens": [
+    {
+      "layer": "Embedding",
+      "layer_index": -1,
+      "top_token": "?",
+      "top_token_id": 30,
+      "top_logit": 101.37
+    },
+    {
+      "layer": "Layer 00",
+      "layer_index": 0,
+      "top_token": "zellik",
+      "top_token_id": 125961,
+      "top_logit": 20.2
+    },
+    {
+      "layer": "Layer 01",
+      "layer_index": 1,
+      "top_token": "\u6362\u53e5\u8bdd",
+      "top_token_id": 118228,
+      "top_logit": 22.56
+    },
+    {
+      "layer": "Layer 02",
+      "layer_index": 2,
+      "top_token": "\u6362\u53e5\u8bdd",
+      "top_token_id": 118228,
+      "top_logit": 21.66
+    },
+    {
+      "layer": "Layer 03",
+      "layer_index": 3,
+      "top_token": "\u6362\u53e5\u8bdd",
+      "top_token_id": 118228,
+      "top_logit": 20.06
+    },
+    {
+      "layer": "Layer 04",
+      "layer_index": 4,
+      "top_token": "\u6362\u53e5\u8bdd",
+      "top_token_id": 118228,
+      "top_logit": 18.94
+    },
+    {
+      "layer": "Layer 05",
+      "layer_index": 5,
+      "top_token": "//================================================================================",
+      "top_token_id": 94303,
+      "top_logit": 12.98
+    },
+    {
+      "layer": "Layer 06",
+      "layer_index": 6,
+      "top_token": "\u6362\u53e5\u8bdd",
+      "top_token_id": 118228,
+      "top_logit": 16.25
+    },
+    {
+      "layer": "Layer 07",
+      "layer_index": 7,
+      "top_token": "//------------------------------------------------------------------------------------------------",
+      "top_token_id": 56342,
+      "top_logit": 17.06
+    },
+    {
+      "layer": "Layer 08",
+      "layer_index": 8,
+      "top_token": "\u6362\u53e5\u8bdd",
+      "top_token_id": 118228,
+      "top_logit": 18.08
+    },
+    {
+      "layer": "Layer 09",
+      "layer_index": 9,
+      "top_token": "//------------------------------------------------------------------------------------------------",
+      "top_token_id": 56342,
+      "top_logit": 16.72
+    },
+    {
+      "layer": "Layer 10",
+      "layer_index": 10,
+      "top_token": "//------------------------------------------------------------------------------------------------",
+      "top_token_id": 56342,
+      "top_logit": 17.2
+    },
+    {
+      "layer": "Layer 11",
+      "layer_index": 11,
+      "top_token": "//------------------------------------------------------------------------------------------------",
+      "top_token_id": 56342,
+      "top_logit": 19.06
+    },
+    {
+      "layer": "Layer 12",
+      "layer_index": 12,
+      "top_token": "////////////////////////////////////////////////////////////////////////////////\n\n",
+      "top_token_id": 98320,
+      "top_logit": 14.93
+    },
+    {
+      "layer": "Layer 13",
+      "layer_index": 13,
+      "top_token": "\u6362\u53e5\u8bdd",
+      "top_token_id": 118228,
+      "top_logit": 16.36
+    },
+    {
+      "layer": "Layer 14",
+      "layer_index": 14,
+      "top_token": "\u6362\u53e5\u8bdd",
+      "top_token_id": 118228,
+      "top_logit": 16.2
+    },
+    {
+      "layer": "Layer 15",
+      "layer_index": 15,
+      "top_token": "\u6362\u53e5\u8bdd",
+      "top_token_id": 118228,
+      "top_logit": 14.38
+    },
+    {
+      "layer": "Layer 16",
+      "layer_index": 16,
+      "top_token": "/\n\n\n\n",
+      "top_token_id": 75960,
+      "top_logit": 15.96
+    },
+    {
+      "layer": "Layer 17",
+      "layer_index": 17,
+      "top_token": "\u6362\u53e5\u8bdd",
+      "top_token_id": 118228,
+      "top_logit": 13.89
+    },
+    {
+      "layer": "Layer 18",
+      "layer_index": 18,
+      "top_token": " Let",
+      "top_token_id": 6771,
+      "top_logit": 14.42
+    },
+    {
+      "layer": "Layer 19",
+      "layer_index": 19,
+      "top_token": " Let",
+      "top_token_id": 6771,
+      "top_logit": 14.98
+    },
+    {
+      "layer": "Layer 20",
+      "layer_index": 20,
+      "top_token": " To",
+      "top_token_id": 2014,
+      "top_logit": 18.31
+    },
+    {
+      "layer": "Layer 21",
+      "layer_index": 21,
+      "top_token": " To",
+      "top_token_id": 2014,
+      "top_logit": 15.09
+    },
+    {
+      "layer": "Layer 22",
+      "layer_index": 22,
+      "top_token": " To",
+      "top_token_id": 2014,
+      "top_logit": 15.64
+    },
+    {
+      "layer": "Layer 23",
+      "layer_index": 23,
+      "top_token": " To",
+      "top_token_id": 2014,
+      "top_logit": 19.05
+    }
+  ],
+  "trajectory_comparison": [
+    {
+      "layer": 0,
+      "cosine_similarity": 0.9935,
+      "delta_norm": 0.3869
+    },
+    {
+      "layer": 1,
+      "cosine_similarity": 0.9337,
+      "delta_norm": 2.5678
+    },
+    {
+      "layer": 2,
+      "cosine_similarity": 0.9119,
+      "delta_norm": 3.4613
+    },
+    {
+      "layer": 3,
+      "cosine_similarity": 0.918,
+      "delta_norm": 3.4526
+    },
+    {
+      "layer": 4,
+      "cosine_similarity": 0.8961,
+      "delta_norm": 4.2752
+    },
+    {
+      "layer": 5,
+      "cosine_similarity": 0.8951,
+      "delta_norm": 5.0079
+    },
+    {
+      "layer": 6,
+      "cosine_similarity": 0.913,
+      "delta_norm": 4.8088
+    },
+    {
+      "layer": 7,
+      "cosine_similarity": 0.8982,
+      "delta_norm": 5.9166
+    },
+    {
+      "layer": 8,
+      "cosine_similarity": 0.8553,
+      "delta_norm": 6.6483
+    },
+    {
+      "layer": 9,
+      "cosine_similarity": 0.8626,
+      "delta_norm": 6.8342
+    },
+    {
+      "layer": 10,
+      "cosine_similarity": 0.8449,
+      "delta_norm": 7.7412
+    },
+    {
+      "layer": 11,
+      "cosine_similarity": 0.8612,
+      "delta_norm": 7.3209
+    },
+    {
+      "layer": 12,
+      "cosine_similarity": 0.8305,
+      "delta_norm": 9.2354
+    },
+    {
+      "layer": 13,
+      "cosine_similarity": 0.8096,
+      "delta_norm": 9.9067
+    },
+    {
+      "layer": 14,
+      "cosine_similarity": 0.7933,
+      "delta_norm": 11.106
+    },
+    {
+      "layer": 15,
+      "cosine_similarity": 0.7855,
+      "delta_norm": 13.2878
+    },
+    {
+      "layer": 16,
+      "cosine_similarity": 0.7985,
+      "delta_norm": 15.2859
+    },
+    {
+      "layer": 17,
+      "cosine_similarity": 0.8072,
+      "delta_norm": 17.1601
+    },
+    {
+      "layer": 18,
+      "cosine_similarity": 0.7993,
+      "delta_norm": 20.4317
+    },
+    {
+      "layer": 19,
+      "cosine_similarity": 0.7866,
+      "delta_norm": 25.1554
+    },
+    {
+      "layer": 20,
+      "cosine_similarity": 0.8398,
+      "delta_norm": 28.7715
+    },
+    {
+      "layer": 21,
+      "cosine_similarity": 0.8831,
+      "delta_norm": 29.276
+    },
+    {
+      "layer": 22,
+      "cosine_similarity": 0.8837,
+      "delta_norm": 32.5199
+    },
+    {
+      "layer": 23,
+      "cosine_similarity": 0.8628,
+      "delta_norm": 148.1359
+    }
+  ],
+  "surgery_drift": {
+    "frobenius_delta": 1.4229934215545654,
+    "frobenius_orig": 41.489017486572266,
+    "drift_pct": 3.4298074713750717
+  },
+  "unprimed_comparisons": [
+    {
+      "id": "LilyPad_12d",
+      "days": 12,
+      "expected": 11,
+      "pristine_output": "To solve this problem, we need to determine the day on which the lake was half covered. Let's break down the problem step-by-step:\n\n1. Let's assume the initial size of the lake is \\(L\\).\n2. The size of the lake doubles every day, so after \\(n\\) days, the size",
+      "post_surgery_output": "",
+      "surgery_initiated_thinking": false
+    },
+    {
+      "id": "LilyPad_18d",
+      "days": 18,
+      "expected": 17,
+      "pristine_output": "To solve this problem, we need to determine the day on which the lake was half covered. Let's break down the problem step-by-step:\n\n1. Let's assume the initial size of the lake is \\(L\\).\n2. The size of the lake doubles every day, so after \\(n\\) days, the size",
+      "post_surgery_output": "",
+      "surgery_initiated_thinking": false
+    },
+    {
+      "id": "LilyPad_36d",
+      "days": 36,
+      "expected": 35,
+      "pristine_output": "To solve this problem, we need to determine the day on which the lake was half covered. Let's break down the problem step-by-step:\n\n1. Let's assume the initial size of the lake is \\(L\\).\n2. The size of the lake doubles every day, so after \\(n\\) days, the size",
+      "post_surgery_output": "",
+      "surgery_initiated_thinking": false
+    },
+    {
+      "id": "LilyPad_48d",
+      "days": 48,
+      "expected": 47,
+      "pristine_output": "To solve this problem, we need to determine the day on which the lake was half covered. Since the patch of lily pads doubles in size every day, we can use the properties of exponential growth to find the day when the lake is half covered.\n\nLet's denote the initial size of the patch of lily pads as",
+      "post_surgery_output": "",
+      "surgery_initiated_thinking": false
+    },
+    {
+      "id": "LilyPad_72d",
+      "days": 72,
+      "expected": 71,
+      "pristine_output": "To solve this problem, we need to determine the day on which the lake was half covered. Since the patch of lily pads doubles in size every day, we can use the properties of exponential growth to find the day when the lake is half covered.\n\nLet's denote the initial size of the patch of lily pads as",
+      "post_surgery_output": "",
+      "surgery_initiated_thinking": false
+    },
+    {
+      "id": "LilyPad_100d",
+      "days": 100,
+      "expected": 99,
+      "pristine_output": "To solve this problem, we need to determine the day on which the lake was half covered. Since the patch of lily pads doubles in size every day, we can use the properties of exponential growth to find the day when the lake is half covered.\n\nLet's denote the initial size of the patch of lily pads as",
+      "post_surgery_output": "",
+      "surgery_initiated_thinking": false
+    }
+  ],
+  "safeguards": [
+    {
+      "tag": "Math Addition",
+      "prompt": "The result of 2 + 3 is equal to",
+      "output": "The result of 2 + 3 is equal to 5. What",
+      "passed": true
+    },
+    {
+      "tag": "Math Subtraction",
+      "prompt": "10 - 2 is equal to",
+      "output": "10 - 2 is equal to 8.",
+      "passed": true
+    },
+    {
+      "tag": "Capital",
+      "prompt": "The capital of France is",
+      "output": "The capital of France is Paris. Paris is",
+      "passed": true
+    },
+    {
+      "tag": "Science",
+      "prompt": "Water is made of hydrogen and",
+      "output": "Water is made of hydrogen and oxygen. The atomic",
+      "passed": true
+    }
+  ]
+}

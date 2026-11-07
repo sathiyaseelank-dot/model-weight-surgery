@@ -1,0 +1,751 @@
+{
+  "metadata": {
+    "title": "Experiment 2.2 Generalized Reasoning Transfer Validation",
+    "model": "Qwen/Qwen2.5-0.5B",
+    "timestamp": "2026-11-07 01:05:29 UTC",
+    "torch_version": "2.14.1",
+    "random_seed": 42,
+    "decoding": "greedy_deterministic (temperature=0.0)"
+  },
+  "baseline_perplexity": 4.773552417755127,
+  "configurations": {
+    "Config_1_Pristine": {
+      "config_id": "Config_1_Pristine",
+      "config_name": "Pristine Baseline (No Surgery)",
+      "target_layers": [],
+      "allocation_factor": 0.0,
+      "layer_drifts": {},
+      "perplexity": 4.7736,
+      "ppl_delta": 0.0,
+      "safeguards_accuracy_pct": 100.0,
+      "safeguard_details": [
+        {
+          "id": "Safe_Math_Add",
+          "prompt": "The result of 2 + 3 is equal to",
+          "expected": "5",
+          "output": "The result of 2 + 3 is equal to 5. The",
+          "passed": true
+        },
+        {
+          "id": "Safe_Math_Sub",
+          "prompt": "10 - 2 is equal to",
+          "expected": "8",
+          "output": "10 - 2 is equal to 8. The",
+          "passed": true
+        },
+        {
+          "id": "Safe_Capital",
+          "prompt": "The capital of France is",
+          "expected": "Paris",
+          "output": "The capital of France is Paris. It is",
+          "passed": true
+        },
+        {
+          "id": "Safe_Science",
+          "prompt": "Water is made of hydrogen and",
+          "expected": "oxygen",
+          "output": "Water is made of hydrogen and oxygen. The atomic",
+          "passed": true
+        }
+      ],
+      "aggregate_metrics": {
+        "total_questions": 28,
+        "exact_correct": 1,
+        "exact_accuracy_pct": 3.57,
+        "valid_reasoning_count": 5,
+        "valid_reasoning_pct": 17.86,
+        "traps_triggered": 1,
+        "trap_rate_pct": 3.57,
+        "extraction_failures": 7,
+        "extraction_failure_rate_pct": 25.0,
+        "subtraction_operator_rate_pct": 25.0
+      },
+      "category_breakdown": {
+        "Reference_Trained_Problem": {
+          "total": 1,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 0,
+          "subtraction_rate_pct": 0.0
+        },
+        "Test_Set_A_Unseen_Numbers": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 2,
+          "subtraction_rate_pct": 60.0
+        },
+        "Test_Set_B_Different_Entities": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 2,
+          "subtraction_rate_pct": 0.0
+        },
+        "Test_Set_C_Different_Wording": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 2,
+          "subtraction_rate_pct": 40.0
+        },
+        "Test_Set_D_Different_Exponential": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 4,
+          "reasoning_accuracy_pct": 80.0,
+          "traps_triggered": 1,
+          "trap_rate_pct": 20.0,
+          "extraction_failures": 1,
+          "subtraction_rate_pct": 0.0
+        },
+        "Test_Set_E_Negative_Controls": {
+          "total": 7,
+          "correct": 1,
+          "accuracy_pct": 14.29,
+          "valid_deductions": 1,
+          "reasoning_accuracy_pct": 14.29,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 0,
+          "subtraction_rate_pct": 28.57
+        }
+      },
+      "diagnostic_primed_results": [
+        {
+          "id": "Diag_Primed_48d",
+          "days": 48,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 48",
+          "minus_logit": 14.73,
+          "slash_logit": 21.711,
+          "logit_gap_minus_over_slash": -6.981,
+          "top_predicted_token": " /",
+          "continuation_text": "/ 2 = 24 days for the patch to cover half of the lake. The answer",
+          "selected_operator": "division"
+        },
+        {
+          "id": "Diag_Primed_36d",
+          "days": 36,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 36 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 36",
+          "minus_logit": 14.559,
+          "slash_logit": 21.814,
+          "logit_gap_minus_over_slash": -7.254,
+          "top_predicted_token": " /",
+          "continuation_text": "/ 2 = 18 days for the patch to cover half of the lake. The answer",
+          "selected_operator": "division"
+        },
+        {
+          "id": "Diag_Primed_18d",
+          "days": 18,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 18 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 18",
+          "minus_logit": 15.257,
+          "slash_logit": 21.406,
+          "logit_gap_minus_over_slash": -6.149,
+          "top_predicted_token": " /",
+          "continuation_text": "/ 2 = 9 days for the patch to cover half of the lake. The answer is",
+          "selected_operator": "division"
+        },
+        {
+          "id": "Diag_Primed_12d",
+          "days": 12,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 12 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 12",
+          "minus_logit": 15.323,
+          "slash_logit": 21.332,
+          "logit_gap_minus_over_slash": -6.009,
+          "top_predicted_token": " /",
+          "continuation_text": "/ 2 = 6 days for the patch to cover half of the lake. The answer is",
+          "selected_operator": "division"
+        },
+        {
+          "id": "Diag_Primed_100d",
+          "days": 100,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 100 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 100",
+          "minus_logit": 14.735,
+          "slash_logit": 21.627,
+          "logit_gap_minus_over_slash": -6.893,
+          "top_predicted_token": " /",
+          "continuation_text": "/ 2 = 50 days for the patch to cover half of the lake. The answer",
+          "selected_operator": "division"
+        }
+      ]
+    },
+    "Config_2_L20": {
+      "config_id": "Config_2_L20",
+      "config_name": "Layer 20 Surgery",
+      "target_layers": [
+        20
+      ],
+      "allocation_factor": 1.0,
+      "layer_drifts": {
+        "20": {
+          "frobenius_delta": 0.6166703104972839,
+          "frobenius_orig": 41.489017486572266,
+          "pct_drift": 1.4863459003261925
+        }
+      },
+      "perplexity": 4.7788,
+      "ppl_delta": 0.0053,
+      "safeguards_accuracy_pct": 100.0,
+      "safeguard_details": [
+        {
+          "id": "Safe_Math_Add",
+          "prompt": "The result of 2 + 3 is equal to",
+          "expected": "5",
+          "output": "The result of 2 + 3 is equal to 5. The",
+          "passed": true
+        },
+        {
+          "id": "Safe_Math_Sub",
+          "prompt": "10 - 2 is equal to",
+          "expected": "8",
+          "output": "10 - 2 is equal to 8. The",
+          "passed": true
+        },
+        {
+          "id": "Safe_Capital",
+          "prompt": "The capital of France is",
+          "expected": "Paris",
+          "output": "The capital of France is Paris. It is",
+          "passed": true
+        },
+        {
+          "id": "Safe_Science",
+          "prompt": "Water is made of hydrogen and",
+          "expected": "oxygen",
+          "output": "Water is made of hydrogen and oxygen. The atomic",
+          "passed": true
+        }
+      ],
+      "aggregate_metrics": {
+        "total_questions": 28,
+        "exact_correct": 1,
+        "exact_accuracy_pct": 3.57,
+        "valid_reasoning_count": 5,
+        "valid_reasoning_pct": 17.86,
+        "traps_triggered": 1,
+        "trap_rate_pct": 3.57,
+        "extraction_failures": 8,
+        "extraction_failure_rate_pct": 28.57,
+        "subtraction_operator_rate_pct": 21.43
+      },
+      "category_breakdown": {
+        "Reference_Trained_Problem": {
+          "total": 1,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 0,
+          "subtraction_rate_pct": 0.0
+        },
+        "Test_Set_A_Unseen_Numbers": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 4,
+          "subtraction_rate_pct": 20.0
+        },
+        "Test_Set_B_Different_Entities": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 1,
+          "subtraction_rate_pct": 20.0
+        },
+        "Test_Set_C_Different_Wording": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 2,
+          "subtraction_rate_pct": 40.0
+        },
+        "Test_Set_D_Different_Exponential": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 4,
+          "reasoning_accuracy_pct": 80.0,
+          "traps_triggered": 1,
+          "trap_rate_pct": 20.0,
+          "extraction_failures": 1,
+          "subtraction_rate_pct": 0.0
+        },
+        "Test_Set_E_Negative_Controls": {
+          "total": 7,
+          "correct": 1,
+          "accuracy_pct": 14.29,
+          "valid_deductions": 1,
+          "reasoning_accuracy_pct": 14.29,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 0,
+          "subtraction_rate_pct": 28.57
+        }
+      },
+      "diagnostic_primed_results": [
+        {
+          "id": "Diag_Primed_48d",
+          "days": 48,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 48",
+          "minus_logit": 19.276,
+          "slash_logit": 19.059,
+          "logit_gap_minus_over_slash": 0.217,
+          "top_predicted_token": " -",
+          "continuation_text": "- 1 = 47 days for the patch to cover half of the lake. The answer",
+          "selected_operator": "subtraction"
+        },
+        {
+          "id": "Diag_Primed_36d",
+          "days": 36,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 36 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 36",
+          "minus_logit": 19.262,
+          "slash_logit": 19.17,
+          "logit_gap_minus_over_slash": 0.092,
+          "top_predicted_token": " -",
+          "continuation_text": "- 1 = 35 days for the patch to cover half of the lake. The answer",
+          "selected_operator": "subtraction"
+        },
+        {
+          "id": "Diag_Primed_18d",
+          "days": 18,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 18 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 18",
+          "minus_logit": 19.439,
+          "slash_logit": 18.894,
+          "logit_gap_minus_over_slash": 0.545,
+          "top_predicted_token": " -",
+          "continuation_text": "- 1 = 17 days for the patch to cover half of the lake. The answer",
+          "selected_operator": "subtraction"
+        },
+        {
+          "id": "Diag_Primed_12d",
+          "days": 12,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 12 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 12",
+          "minus_logit": 19.231,
+          "slash_logit": 18.825,
+          "logit_gap_minus_over_slash": 0.406,
+          "top_predicted_token": " -",
+          "continuation_text": "- 1 = 11 days for the patch to cover half of the lake. The answer",
+          "selected_operator": "subtraction"
+        },
+        {
+          "id": "Diag_Primed_100d",
+          "days": 100,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 100 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 100",
+          "minus_logit": 19.366,
+          "slash_logit": 19.084,
+          "logit_gap_minus_over_slash": 0.282,
+          "top_predicted_token": " -",
+          "continuation_text": "- 1 = 99 days for the patch to cover half of the lake. The answer",
+          "selected_operator": "subtraction"
+        }
+      ]
+    },
+    "Config_3_L22": {
+      "config_id": "Config_3_L22",
+      "config_name": "Layer 22 Surgery",
+      "target_layers": [
+        22
+      ],
+      "allocation_factor": 1.0,
+      "layer_drifts": {
+        "22": {
+          "frobenius_delta": 0.5996147394180298,
+          "frobenius_orig": 42.5626220703125,
+          "pct_drift": 1.4087824251698582
+        }
+      },
+      "perplexity": 4.8352,
+      "ppl_delta": 0.0616,
+      "safeguards_accuracy_pct": 100.0,
+      "safeguard_details": [
+        {
+          "id": "Safe_Math_Add",
+          "prompt": "The result of 2 + 3 is equal to",
+          "expected": "5",
+          "output": "The result of 2 + 3 is equal to 5. The",
+          "passed": true
+        },
+        {
+          "id": "Safe_Math_Sub",
+          "prompt": "10 - 2 is equal to",
+          "expected": "8",
+          "output": "10 - 2 is equal to 8. The",
+          "passed": true
+        },
+        {
+          "id": "Safe_Capital",
+          "prompt": "The capital of France is",
+          "expected": "Paris",
+          "output": "The capital of France is Paris. It is",
+          "passed": true
+        },
+        {
+          "id": "Safe_Science",
+          "prompt": "Water is made of hydrogen and",
+          "expected": "oxygen",
+          "output": "Water is made of hydrogen and oxygen. The atomic",
+          "passed": true
+        }
+      ],
+      "aggregate_metrics": {
+        "total_questions": 28,
+        "exact_correct": 1,
+        "exact_accuracy_pct": 3.57,
+        "valid_reasoning_count": 5,
+        "valid_reasoning_pct": 17.86,
+        "traps_triggered": 1,
+        "trap_rate_pct": 3.57,
+        "extraction_failures": 8,
+        "extraction_failure_rate_pct": 28.57,
+        "subtraction_operator_rate_pct": 28.57
+      },
+      "category_breakdown": {
+        "Reference_Trained_Problem": {
+          "total": 1,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 1,
+          "subtraction_rate_pct": 0.0
+        },
+        "Test_Set_A_Unseen_Numbers": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 3,
+          "subtraction_rate_pct": 40.0
+        },
+        "Test_Set_B_Different_Entities": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 2,
+          "subtraction_rate_pct": 20.0
+        },
+        "Test_Set_C_Different_Wording": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 1,
+          "subtraction_rate_pct": 60.0
+        },
+        "Test_Set_D_Different_Exponential": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 4,
+          "reasoning_accuracy_pct": 80.0,
+          "traps_triggered": 1,
+          "trap_rate_pct": 20.0,
+          "extraction_failures": 1,
+          "subtraction_rate_pct": 0.0
+        },
+        "Test_Set_E_Negative_Controls": {
+          "total": 7,
+          "correct": 1,
+          "accuracy_pct": 14.29,
+          "valid_deductions": 1,
+          "reasoning_accuracy_pct": 14.29,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 0,
+          "subtraction_rate_pct": 28.57
+        }
+      },
+      "diagnostic_primed_results": [
+        {
+          "id": "Diag_Primed_48d",
+          "days": 48,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 48",
+          "minus_logit": 17.363,
+          "slash_logit": 17.944,
+          "logit_gap_minus_over_slash": -0.582,
+          "top_predicted_token": " days",
+          "continuation_text": "days to cover half of the lake. The answer is 48.\n[Question]A certain",
+          "selected_operator": "other"
+        },
+        {
+          "id": "Diag_Primed_36d",
+          "days": 36,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 36 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 36",
+          "minus_logit": 17.364,
+          "slash_logit": 18.08,
+          "logit_gap_minus_over_slash": -0.716,
+          "top_predicted_token": " days",
+          "continuation_text": "days to cover half of the lake. 36 days is 18 days - 6",
+          "selected_operator": "other"
+        },
+        {
+          "id": "Diag_Primed_18d",
+          "days": 18,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 18 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 18",
+          "minus_logit": 17.155,
+          "slash_logit": 17.391,
+          "logit_gap_minus_over_slash": -0.236,
+          "top_predicted_token": " days",
+          "continuation_text": "days to cover half of the lake. 18 days is 3 times 6 days,",
+          "selected_operator": "other"
+        },
+        {
+          "id": "Diag_Primed_12d",
+          "days": 12,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 12 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 12",
+          "minus_logit": 16.875,
+          "slash_logit": 17.284,
+          "logit_gap_minus_over_slash": -0.409,
+          "top_predicted_token": " days",
+          "continuation_text": "days to cover half of the lake. The answer is 12.\n[Question]A certain",
+          "selected_operator": "other"
+        },
+        {
+          "id": "Diag_Primed_100d",
+          "days": 100,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 100 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 100",
+          "minus_logit": 17.562,
+          "slash_logit": 17.844,
+          "logit_gap_minus_over_slash": -0.281,
+          "top_predicted_token": " days",
+          "continuation_text": "days to cover half of the lake. The answer is 100.\n[Question]A",
+          "selected_operator": "other"
+        }
+      ]
+    },
+    "Config_4_L20_L22": {
+      "config_id": "Config_4_L20_L22",
+      "config_name": "Combined Layer 20 + Layer 22 Surgery",
+      "target_layers": [
+        20,
+        22
+      ],
+      "allocation_factor": 0.5,
+      "layer_drifts": {
+        "20": {
+          "frobenius_delta": 0.30833515524864197,
+          "frobenius_orig": 41.489017486572266,
+          "pct_drift": 0.7431729501630963
+        },
+        "22": {
+          "frobenius_delta": 0.2899320125579834,
+          "frobenius_orig": 42.5626220703125,
+          "pct_drift": 0.6811892652643021
+        }
+      },
+      "perplexity": 4.7991,
+      "ppl_delta": 0.0255,
+      "safeguards_accuracy_pct": 100.0,
+      "safeguard_details": [
+        {
+          "id": "Safe_Math_Add",
+          "prompt": "The result of 2 + 3 is equal to",
+          "expected": "5",
+          "output": "The result of 2 + 3 is equal to 5. The",
+          "passed": true
+        },
+        {
+          "id": "Safe_Math_Sub",
+          "prompt": "10 - 2 is equal to",
+          "expected": "8",
+          "output": "10 - 2 is equal to 8. The",
+          "passed": true
+        },
+        {
+          "id": "Safe_Capital",
+          "prompt": "The capital of France is",
+          "expected": "Paris",
+          "output": "The capital of France is Paris. It is",
+          "passed": true
+        },
+        {
+          "id": "Safe_Science",
+          "prompt": "Water is made of hydrogen and",
+          "expected": "oxygen",
+          "output": "Water is made of hydrogen and oxygen. The atomic",
+          "passed": true
+        }
+      ],
+      "aggregate_metrics": {
+        "total_questions": 28,
+        "exact_correct": 1,
+        "exact_accuracy_pct": 3.57,
+        "valid_reasoning_count": 5,
+        "valid_reasoning_pct": 17.86,
+        "traps_triggered": 1,
+        "trap_rate_pct": 3.57,
+        "extraction_failures": 6,
+        "extraction_failure_rate_pct": 21.43,
+        "subtraction_operator_rate_pct": 25.0
+      },
+      "category_breakdown": {
+        "Reference_Trained_Problem": {
+          "total": 1,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 0,
+          "subtraction_rate_pct": 0.0
+        },
+        "Test_Set_A_Unseen_Numbers": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 3,
+          "subtraction_rate_pct": 40.0
+        },
+        "Test_Set_B_Different_Entities": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 1,
+          "subtraction_rate_pct": 0.0
+        },
+        "Test_Set_C_Different_Wording": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 0,
+          "reasoning_accuracy_pct": 0.0,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 1,
+          "subtraction_rate_pct": 60.0
+        },
+        "Test_Set_D_Different_Exponential": {
+          "total": 5,
+          "correct": 0,
+          "accuracy_pct": 0.0,
+          "valid_deductions": 4,
+          "reasoning_accuracy_pct": 80.0,
+          "traps_triggered": 1,
+          "trap_rate_pct": 20.0,
+          "extraction_failures": 1,
+          "subtraction_rate_pct": 0.0
+        },
+        "Test_Set_E_Negative_Controls": {
+          "total": 7,
+          "correct": 1,
+          "accuracy_pct": 14.29,
+          "valid_deductions": 1,
+          "reasoning_accuracy_pct": 14.29,
+          "traps_triggered": 0,
+          "trap_rate_pct": 0.0,
+          "extraction_failures": 0,
+          "subtraction_rate_pct": 28.57
+        }
+      },
+      "diagnostic_primed_results": [
+        {
+          "id": "Diag_Primed_48d",
+          "days": 48,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 48",
+          "minus_logit": 19.214,
+          "slash_logit": 18.929,
+          "logit_gap_minus_over_slash": 0.286,
+          "top_predicted_token": " days",
+          "continuation_text": "days to cover half of the lake. The answer is 48.\n[Question]A certain",
+          "selected_operator": "other"
+        },
+        {
+          "id": "Diag_Primed_36d",
+          "days": 36,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 36 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 36",
+          "minus_logit": 19.156,
+          "slash_logit": 19.057,
+          "logit_gap_minus_over_slash": 0.1,
+          "top_predicted_token": " days",
+          "continuation_text": "days to cover half of the lake. Therefore, it would take 36 - 36",
+          "selected_operator": "other"
+        },
+        {
+          "id": "Diag_Primed_18d",
+          "days": 18,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 18 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 18",
+          "minus_logit": 19.307,
+          "slash_logit": 18.6,
+          "logit_gap_minus_over_slash": 0.707,
+          "top_predicted_token": " days",
+          "continuation_text": "days to cover half of the lake. Therefore, it would take 18 - 18",
+          "selected_operator": "other"
+        },
+        {
+          "id": "Diag_Primed_12d",
+          "days": 12,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 12 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 12",
+          "minus_logit": 19.12,
+          "slash_logit": 18.549,
+          "logit_gap_minus_over_slash": 0.571,
+          "top_predicted_token": " days",
+          "continuation_text": "days to cover half of the lake. The answer is 12.\n[Question]A certain",
+          "selected_operator": "other"
+        },
+        {
+          "id": "Diag_Primed_100d",
+          "days": 100,
+          "prompt": "Question: In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 100 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?\nAnswer: The patch doubles in size every day, so it takes 100",
+          "minus_logit": 19.473,
+          "slash_logit": 18.934,
+          "logit_gap_minus_over_slash": 0.539,
+          "top_predicted_token": " -",
+          "continuation_text": "- 1 = 99 days for the patch to cover half of the lake. The answer",
+          "selected_operator": "subtraction"
+        }
+      ]
+    }
+  }
+}
