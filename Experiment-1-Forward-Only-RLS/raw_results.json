@@ -1,0 +1,1421 @@
+[
+  {
+    "config": {
+      "d_in": 16,
+      "d_out": 8,
+      "N_train": 200,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 5.726332320737203e-16,
+      "absolute_frobenius_error": 6.617664260460658e-15,
+      "max_abs_element_error": 3.1086244689504383e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.022541570104500922,
+      "mse_val_batch": 0.022541570104500995,
+      "mse_val_diff": 7.28583859910259e-17,
+      "mse_train_online": 0.01763337211012686,
+      "mse_train_batch": 0.01763337211012686
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0029627331668461835,
+      "max_eigenvalue": 0.008850100760177122,
+      "condition_number": 2.9871406778079903,
+      "trace": 0.08696658597233167,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.04522144000020489,
+      "time_batch_seconds": 0.0032973990000755293,
+      "speed_per_step_microsec": 226.10720000102447,
+      "peak_memory_bytes": 8400
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "dimension_scaling"
+  },
+  {
+    "config": {
+      "d_in": 32,
+      "d_out": 16,
+      "N_train": 200,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 5.831567387617745e-16,
+      "absolute_frobenius_error": 1.2719491349633049e-14,
+      "max_abs_element_error": 3.1086244689504383e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.047238536350480864,
+      "mse_val_batch": 0.04723853635048071,
+      "mse_val_diff": 1.5265566588595902e-16,
+      "mse_train_online": 0.034604639156710464,
+      "mse_train_batch": 0.03460463915671048
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0027250361935633478,
+      "max_eigenvalue": 0.011844109726326857,
+      "condition_number": 4.346404555764489,
+      "trace": 0.188798797751285,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.028342843999780598,
+      "time_batch_seconds": 0.0002990349998981401,
+      "speed_per_step_microsec": 141.714219998903,
+      "peak_memory_bytes": 6184
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "dimension_scaling"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 200,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 9.665011192482868e-16,
+      "absolute_frobenius_error": 4.417457751276985e-14,
+      "max_abs_element_error": 5.329070518200751e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.12289079814826408,
+      "mse_val_batch": 0.12289079814826259,
+      "mse_val_diff": 1.4849232954361469e-15,
+      "mse_train_online": 0.05639018871444814,
+      "mse_train_batch": 0.05639018871444799
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0020883400229351643,
+      "max_eigenvalue": 0.026129354472741353,
+      "condition_number": 12.5120211200169,
+      "trace": 0.478574412592158,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.03240517700032797,
+      "time_batch_seconds": 0.001051828000072419,
+      "speed_per_step_microsec": 162.02588500163984,
+      "peak_memory_bytes": 6176
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "dimension_scaling"
+  },
+  {
+    "config": {
+      "d_in": 128,
+      "d_out": 64,
+      "N_train": 200,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 2.6097533938440037e-15,
+      "absolute_frobenius_error": 2.3571393764311135e-13,
+      "max_abs_element_error": 1.2545520178264269e-14,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.5550572181306933,
+      "mse_val_batch": 0.5550572181306928,
+      "mse_val_diff": 5.551115123125783e-16,
+      "mse_train_online": 0.06868078243431798,
+      "mse_train_batch": 0.06868078243431759
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.001554564742291569,
+      "max_eigenvalue": 0.1024221277331336,
+      "condition_number": 65.88476179007773,
+      "trace": 1.7265850001949579,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.11717320400020981,
+      "time_batch_seconds": 0.0016054049997364928,
+      "speed_per_step_microsec": 585.866020001049,
+      "peak_memory_bytes": 6168
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "dimension_scaling"
+  },
+  {
+    "config": {
+      "d_in": 256,
+      "d_out": 128,
+      "N_train": 200,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "underdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 9.964536976977025e-13,
+      "absolute_frobenius_error": 1.8115217097849122e-10,
+      "max_abs_element_error": 5.708766792622555e-12,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 15223.358771101624,
+      "mse_val_batch": 15223.358771102003,
+      "mse_val_diff": 3.7834979593753815e-10,
+      "mse_train_online": 0.045779731358507866,
+      "mse_train_batch": 0.04577973135850431
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0011346585162684223,
+      "max_eigenvalue": 10.00000000000002,
+      "condition_number": 8813.224293144382,
+      "trace": 563.6012223773376,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 5.777671616000134,
+      "time_batch_seconds": 0.010922267999831092,
+      "speed_per_step_microsec": 28888.35808000067,
+      "peak_memory_bytes": 6160
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "dimension_scaling"
+  },
+  {
+    "config": {
+      "d_in": 512,
+      "d_out": 256,
+      "N_train": 200,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "underdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 2.2657618957085617e-12,
+      "absolute_frobenius_error": 8.227546139982872e-10,
+      "max_abs_element_error": 1.9450663302222893e-11,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 161863.4244324753,
+      "mse_val_batch": 161863.42443248574,
+      "mse_val_diff": 1.04482751339674e-08,
+      "mse_train_online": 0.01677168986792353,
+      "mse_train_batch": 0.016771689867924773
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0007431266535329033,
+      "max_eigenvalue": 10.000000000000034,
+      "condition_number": 13456.65634849587,
+      "trace": 3120.649576757727,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 7.735117870000067,
+      "time_batch_seconds": 0.05982936600003086,
+      "speed_per_step_microsec": 38675.58935000034,
+      "peak_memory_bytes": 6152
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "dimension_scaling"
+  },
+  {
+    "config": {
+      "d_in": 896,
+      "d_out": 512,
+      "N_train": 200,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "underdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 3.2874523777798865e-12,
+      "absolute_frobenius_error": 2.230524175974914e-09,
+      "max_abs_element_error": 2.896771711391466e-11,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 709516.5470538761,
+      "mse_val_batch": 709516.5470539003,
+      "mse_val_diff": 2.421438694000244e-08,
+      "mse_train_online": 0.014843322773039076,
+      "mse_train_batch": 0.014843322773039725
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0005229495440169399,
+      "max_eigenvalue": 10.00000000000004,
+      "condition_number": 19122.303699104308,
+      "trace": 6960.289854007176,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 8.113768090000121,
+      "time_batch_seconds": 0.12854874599997856,
+      "speed_per_step_microsec": 40568.84045000061,
+      "peak_memory_bytes": 6136
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "dimension_scaling"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 150,
+      "N_val": 50,
+      "lambda_reg": 0.0001,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 2.2508844526733027e-13,
+      "absolute_frobenius_error": 1.0294797484847799e-11,
+      "max_abs_element_error": 8.877343304902752e-13,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.14726305602276063,
+      "mse_val_batch": 0.14726305602250014,
+      "mse_val_diff": 2.6048607715267735e-13,
+      "mse_train_online": 0.04591354738642852,
+      "mse_train_batch": 0.045913547386428735
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.00243886082312375,
+      "max_eigenvalue": 0.05204288920702362,
+      "condition_number": 21.339015623025947,
+      "trace": 0.770677511770745,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.03261180800018337,
+      "time_batch_seconds": 0.0004250330002832925,
+      "speed_per_step_microsec": 217.41205333455582,
+      "peak_memory_bytes": 4704
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "regularization_sweep"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 150,
+      "N_val": 50,
+      "lambda_reg": 0.001,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 2.4406004515463024e-14,
+      "absolute_frobenius_error": 1.1162375210758767e-12,
+      "max_abs_element_error": 9.059419880941277e-14,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.14725069659407444,
+      "mse_val_batch": 0.14725069659407422,
+      "mse_val_diff": 2.220446049250313e-16,
+      "mse_train_online": 0.04591386637064752,
+      "mse_train_batch": 0.0459138663706475
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.002438855469911067,
+      "max_eigenvalue": 0.052040451704537034,
+      "condition_number": 21.338063016269963,
+      "trace": 0.7706622401241532,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.030995709000308125,
+      "time_batch_seconds": 0.0004040979997625982,
+      "speed_per_step_microsec": 206.63806000205417,
+      "peak_memory_bytes": 4696
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "regularization_sweep"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 150,
+      "N_val": 50,
+      "lambda_reg": 0.01,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 2.8247787886832483e-15,
+      "absolute_frobenius_error": 1.291806956855528e-13,
+      "max_abs_element_error": 1.021405182655144e-14,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.14722564164923585,
+      "mse_val_batch": 0.14722564164923616,
+      "mse_val_diff": 3.0531133177191805e-16,
+      "mse_train_online": 0.04594575191289732,
+      "mse_train_batch": 0.0459457519128973
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.002438801938940785,
+      "max_eigenvalue": 0.05201608923751101,
+      "condition_number": 21.328541857770755,
+      "trace": 0.7705095718958658,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.023671938000006776,
+      "time_batch_seconds": 0.0004422749998411746,
+      "speed_per_step_microsec": 157.81292000004518,
+      "peak_memory_bytes": 4688
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "regularization_sweep"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 150,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 1.5357045478091223e-15,
+      "absolute_frobenius_error": 7.01543823322904e-14,
+      "max_abs_element_error": 8.43769498715119e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.156767831184103,
+      "mse_val_batch": 0.15676783118410076,
+      "mse_val_diff": 2.248201624865942e-15,
+      "mse_train_online": 0.04912148721801698,
+      "mse_train_batch": 0.04912148721801667
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0024382667584677787,
+      "max_eigenvalue": 0.051773713289351674,
+      "condition_number": 21.233818288974494,
+      "trace": 0.7689876933708829,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.031192023000130575,
+      "time_batch_seconds": 0.00047557000016240636,
+      "speed_per_step_microsec": 207.9468200008705,
+      "peak_memory_bytes": 4680
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "regularization_sweep"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 150,
+      "N_val": 50,
+      "lambda_reg": 1.0,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 1.5866090254363156e-15,
+      "absolute_frobenius_error": 7.173000845421688e-14,
+      "max_abs_element_error": 7.549516567451064e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 1.1735004575359327,
+      "mse_val_batch": 1.1735004575359265,
+      "mse_val_diff": 6.217248937900877e-15,
+      "mse_train_online": 0.3544541105121142,
+      "mse_train_batch": 0.35445411051211084
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.002432927844088626,
+      "max_eigenvalue": 0.049468654928004056,
+      "condition_number": 20.33297249164206,
+      "trace": 0.7542315578466003,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.027218813999752456,
+      "time_batch_seconds": 0.0012067080001543218,
+      "speed_per_step_microsec": 181.4587599983497,
+      "peak_memory_bytes": 4672
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "regularization_sweep"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 150,
+      "N_val": 50,
+      "lambda_reg": 10.0,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 1.3254884637524006e-15,
+      "absolute_frobenius_error": 5.533352963742187e-14,
+      "max_abs_element_error": 5.773159728050814e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 66.43300616957262,
+      "mse_val_batch": 66.43300616957262,
+      "mse_val_diff": 0.0,
+      "mse_train_online": 22.501385749766104,
+      "mse_train_batch": 22.501385749766094
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.002380797076599572,
+      "max_eigenvalue": 0.0342292017842633,
+      "condition_number": 14.37720254308777,
+      "trace": 0.6404167340728537,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.027178395000191813,
+      "time_batch_seconds": 0.0005239150000306836,
+      "speed_per_step_microsec": 181.18930000127875,
+      "peak_memory_bytes": 4664
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "regularization_sweep"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 150,
+      "N_val": 50,
+      "lambda_reg": 100.0,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 8.042864416072733e-16,
+      "absolute_frobenius_error": 2.7641733555150657e-14,
+      "max_abs_element_error": 3.1086244689504383e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 1032.3890309697988,
+      "mse_val_batch": 1032.3890309697988,
+      "mse_val_diff": 0.0,
+      "mse_train_online": 575.7412290767585,
+      "mse_train_batch": 575.7412290767587
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0019606789849935242,
+      "max_eigenvalue": 0.008388218783298085,
+      "condition_number": 4.278221395495699,
+      "trace": 0.2975641237351786,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.02618494499984081,
+      "time_batch_seconds": 0.004141886999605049,
+      "speed_per_step_microsec": 174.56629999893872,
+      "peak_memory_bytes": 4656
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "regularization_sweep"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 15,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "underdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 1.0168976074983309e-13,
+      "absolute_frobenius_error": 4.56702651922841e-12,
+      "max_abs_element_error": 7.598366380534571e-13,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 3387.4444797041137,
+      "mse_val_batch": 3387.444479704101,
+      "mse_val_diff": 1.2732925824820995e-11,
+      "mse_train_online": 0.01313496155790546,
+      "mse_train_batch": 0.01313496155790628
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0078571127651212,
+      "max_eigenvalue": 10.000000000000014,
+      "condition_number": 1272.7321471560626,
+      "trace": 490.3233191747271,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.003412678999666241,
+      "time_batch_seconds": 0.0002995660001943179,
+      "speed_per_step_microsec": 227.51193331108271,
+      "peak_memory_bytes": 2048
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "sample_count_regimes"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 30,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "underdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 1.2641862316387994e-13,
+      "absolute_frobenius_error": 5.586900611528064e-12,
+      "max_abs_element_error": 5.824229987183571e-13,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 2226.5987392672127,
+      "mse_val_batch": 2226.5987392671595,
+      "mse_val_diff": 5.32054400537163e-11,
+      "mse_train_online": 0.018436011727947434,
+      "mse_train_batch": 0.018436011727947912
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.006682986666075841,
+      "max_eigenvalue": 10.000000000000018,
+      "condition_number": 1496.336967236818,
+      "trace": 340.8657044908125,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.006644484000389639,
+      "time_batch_seconds": 0.00032606099966869806,
+      "speed_per_step_microsec": 221.48280001298795,
+      "peak_memory_bytes": 2168
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "sample_count_regimes"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 64,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "square"
+    },
+    "errors": {
+      "relative_frobenius_error": 4.6668321590947686e-14,
+      "absolute_frobenius_error": 2.087981763531722e-12,
+      "max_abs_element_error": 2.120525977034049e-13,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 63.392442618152884,
+      "mse_val_batch": 63.39244261815699,
+      "mse_val_diff": 4.106937012693379e-12,
+      "mse_train_online": 0.12868461788382818,
+      "mse_train_batch": 0.1286846178838262
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.004351370214239797,
+      "max_eigenvalue": 8.717277976690472,
+      "condition_number": 2003.3409127458985,
+      "trace": 23.651692677244263,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.01112852300002487,
+      "time_batch_seconds": 0.0003642669998953352,
+      "speed_per_step_microsec": 173.8831718753886,
+      "peak_memory_bytes": 2464
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "sample_count_regimes"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 100,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 2.685481932389218e-15,
+      "absolute_frobenius_error": 1.2249088678203398e-13,
+      "max_abs_element_error": 1.3766765505351941e-14,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.3099097887178087,
+      "mse_val_batch": 0.30990978871781594,
+      "mse_val_diff": 7.216449660063518e-15,
+      "mse_train_online": 0.039149799880241684,
+      "mse_train_batch": 0.03914979988024023
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0030402417584516435,
+      "max_eigenvalue": 0.16494866624595356,
+      "condition_number": 54.25511500439354,
+      "trace": 1.7549222009901442,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.015456987000106892,
+      "time_batch_seconds": 0.0003153019997625961,
+      "speed_per_step_microsec": 154.56987000106892,
+      "peak_memory_bytes": 3672
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "sample_count_regimes"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 250,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 9.57342500529947e-16,
+      "absolute_frobenius_error": 4.3770369439715974e-14,
+      "max_abs_element_error": 5.329070518200751e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.11627871717689485,
+      "mse_val_batch": 0.11627871717689409,
+      "mse_val_diff": 7.632783294297951e-16,
+      "mse_train_online": 0.059389967435764086,
+      "mse_train_batch": 0.05938996743576397
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.001842373370800289,
+      "max_eigenvalue": 0.019102343748200856,
+      "condition_number": 10.368334698575888,
+      "trace": 0.3568513091368969,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.04370403399980205,
+      "time_batch_seconds": 0.00038151500029925955,
+      "speed_per_step_microsec": 174.8161359992082,
+      "peak_memory_bytes": 7776
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "sample_count_regimes"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 500,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 8.558535643455351e-16,
+      "absolute_frobenius_error": 3.9142817387259955e-14,
+      "max_abs_element_error": 6.217248937900877e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.0897892259536549,
+      "mse_val_batch": 0.08978922595365509,
+      "mse_val_diff": 1.8041124150158794e-16,
+      "mse_train_online": 0.06948101231679271,
+      "mse_train_batch": 0.06948101231679292
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0011004647206975936,
+      "max_eigenvalue": 0.004809960553726623,
+      "condition_number": 4.37084484696388,
+      "trace": 0.1465967617798661,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.07638669599964487,
+      "time_batch_seconds": 0.0007563109998045547,
+      "speed_per_step_microsec": 152.77339199928974,
+      "peak_memory_bytes": 15784
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "sample_count_regimes"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 1000,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 9.912629310576443e-16,
+      "absolute_frobenius_error": 4.5340108199041204e-14,
+      "max_abs_element_error": 8.43769498715119e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.08423458090006523,
+      "mse_val_batch": 0.08423458090006586,
+      "mse_val_diff": 6.245004513516506e-16,
+      "mse_train_online": 0.0757238140012225,
+      "mse_train_batch": 0.07572381400122255
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0006539237118967915,
+      "max_eigenvalue": 0.0017197881577746992,
+      "condition_number": 2.629952281109716,
+      "trace": 0.06778578843157074,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.1643160319999879,
+      "time_batch_seconds": 0.0010253590003230784,
+      "speed_per_step_microsec": 164.3160319999879,
+      "peak_memory_bytes": 32424
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "sample_count_regimes"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 150,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 1.5357045478091223e-15,
+      "absolute_frobenius_error": 7.01543823322904e-14,
+      "max_abs_element_error": 8.43769498715119e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.156767831184103,
+      "mse_val_batch": 0.15676783118410076,
+      "mse_val_diff": 2.248201624865942e-15,
+      "mse_train_online": 0.04912148721801698,
+      "mse_train_batch": 0.04912148721801667
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0024382667584677787,
+      "max_eigenvalue": 0.051773713289351674,
+      "condition_number": 21.233818288974494,
+      "trace": 0.7689876933708829,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.03364811000028567,
+      "time_batch_seconds": 0.0003944329996556917,
+      "speed_per_step_microsec": 224.3207333352378,
+      "peak_memory_bytes": 4600
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "multi_seed_robustness"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 150,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 137,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 1.5736448859345016e-15,
+      "absolute_frobenius_error": 7.14072056742978e-14,
+      "max_abs_element_error": 7.105427357601002e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.1588732698862236,
+      "mse_val_batch": 0.15887326988622016,
+      "mse_val_diff": 3.4416913763379853e-15,
+      "mse_train_online": 0.04804761574275244,
+      "mse_train_batch": 0.048047615742751786
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0027353616751506415,
+      "max_eigenvalue": 0.05316212958697085,
+      "condition_number": 19.43513725074148,
+      "trace": 0.7427639619196897,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.022544813999957114,
+      "time_batch_seconds": 0.0007495859999835375,
+      "speed_per_step_microsec": 150.2987599997141,
+      "peak_memory_bytes": 4600
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "multi_seed_robustness"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 150,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 999,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 1.5799597288625221e-15,
+      "absolute_frobenius_error": 7.170781477871548e-14,
+      "max_abs_element_error": 7.105427357601002e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.1457231238230301,
+      "mse_val_batch": 0.14572312382302985,
+      "mse_val_diff": 2.498001805406602e-16,
+      "mse_train_online": 0.048853540641490466,
+      "mse_train_batch": 0.04885354064149065
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0026826290742466255,
+      "max_eigenvalue": 0.05499943212378361,
+      "condition_number": 20.50206368512924,
+      "trace": 0.7444296873175074,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.023423085000104038,
+      "time_batch_seconds": 0.002391309999893565,
+      "speed_per_step_microsec": 156.1539000006936,
+      "peak_memory_bytes": 4600
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "multi_seed_robustness"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 150,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 2026,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 1.405606727782226e-15,
+      "absolute_frobenius_error": 6.445687076571249e-14,
+      "max_abs_element_error": 7.549516567451064e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.14875092741761378,
+      "mse_val_batch": 0.1487509274176132,
+      "mse_val_diff": 5.828670879282072e-16,
+      "mse_train_online": 0.04843333720205357,
+      "mse_train_batch": 0.04843333720205346
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.002506892527803751,
+      "max_eigenvalue": 0.045996819929152166,
+      "condition_number": 18.34814194027267,
+      "trace": 0.722147943914908,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.023452259999885428,
+      "time_batch_seconds": 0.0012917680001010012,
+      "speed_per_step_microsec": 156.3483999992362,
+      "peak_memory_bytes": 4600
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "multi_seed_robustness"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 150,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 777,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 1.6915768680258998e-15,
+      "absolute_frobenius_error": 7.582832794311414e-14,
+      "max_abs_element_error": 1.1546319456101628e-14,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.1537148922369292,
+      "mse_val_batch": 0.1537148922369312,
+      "mse_val_diff": 1.9984014443252818e-15,
+      "mse_train_online": 0.048066073392220646,
+      "mse_train_batch": 0.04806607339222067
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0024878007221829355,
+      "max_eigenvalue": 0.04924091585382145,
+      "condition_number": 19.79295022095448,
+      "trace": 0.7635150893402508,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.023761593000017456,
+      "time_batch_seconds": 0.0017770599997675163,
+      "speed_per_step_microsec": 158.41062000011638,
+      "peak_memory_bytes": 4600
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "multi_seed_robustness"
+  },
+  {
+    "config": {
+      "d_in": 32,
+      "d_out": 16,
+      "N_train": 100,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float32",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 5.915875855118488e-07,
+      "absolute_frobenius_error": 1.297452581638936e-05,
+      "max_abs_element_error": 3.0994415283203125e-06,
+      "tolerance_threshold": 0.0002,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.06710869818925858,
+      "mse_val_batch": 0.06710846722126007,
+      "mse_val_diff": 2.3096799850463867e-07,
+      "mse_train_online": 0.030605563893914223,
+      "mse_train_batch": 0.030605586245656013
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.004218729212880135,
+      "max_eigenvalue": 0.057148635387420654,
+      "condition_number": 13.546409950404277,
+      "trace": 0.5206930041313171,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.015585709999868413,
+      "time_batch_seconds": 0.000608991000262904,
+      "speed_per_step_microsec": 155.85709999868413,
+      "peak_memory_bytes": 2888
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "precision_comparison_float32"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 200,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float32",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 7.051662389338428e-07,
+      "absolute_frobenius_error": 3.150196425849572e-05,
+      "max_abs_element_error": 4.291534423828125e-06,
+      "tolerance_threshold": 0.0002,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.13054287433624268,
+      "mse_val_batch": 0.13054239749908447,
+      "mse_val_diff": 4.76837158203125e-07,
+      "mse_train_online": 0.05582620948553085,
+      "mse_train_batch": 0.05582627281546593
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0020433375611901283,
+      "max_eigenvalue": 0.025156911462545395,
+      "condition_number": 12.311676709888756,
+      "trace": 0.4645940363407135,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.03536842499988779,
+      "time_batch_seconds": 0.0004105550001440861,
+      "speed_per_step_microsec": 176.84212499943897,
+      "peak_memory_bytes": 6024
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "precision_comparison_float32"
+  },
+  {
+    "config": {
+      "d_in": 128,
+      "d_out": 64,
+      "N_train": 300,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float32",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 8.153553703104145e-07,
+      "absolute_frobenius_error": 7.377845759037882e-05,
+      "max_abs_element_error": 4.0531158447265625e-06,
+      "tolerance_threshold": 0.0002,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.30931010842323303,
+      "mse_val_batch": 0.3093120753765106,
+      "mse_val_diff": 1.9669532775878906e-06,
+      "mse_train_online": 0.09652107208967209,
+      "mse_train_batch": 0.09652112424373627
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.001242025406099856,
+      "max_eigenvalue": 0.024241507053375244,
+      "condition_number": 19.517722370508647,
+      "trace": 0.7288055419921875,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.16522412000040276,
+      "time_batch_seconds": 0.0027773189999606984,
+      "speed_per_step_microsec": 550.7470666680092,
+      "peak_memory_bytes": 9288
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "precision_comparison_float32"
+  },
+  {
+    "config": {
+      "d_in": 32,
+      "d_out": 16,
+      "N_train": 100,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 9.29901542880596e-16,
+      "absolute_frobenius_error": 2.0263822504237748e-14,
+      "max_abs_element_error": 3.552713678800501e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.06225964089635244,
+      "mse_val_batch": 0.062259640896353226,
+      "mse_val_diff": 7.840950111415168e-16,
+      "mse_train_online": 0.028989908080979263,
+      "mse_train_batch": 0.02898990808097919
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.004328427250733676,
+      "max_eigenvalue": 0.04488176699712366,
+      "condition_number": 10.369070426103642,
+      "trace": 0.4795770164273162,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.013351609999972425,
+      "time_batch_seconds": 0.0002565360000517103,
+      "speed_per_step_microsec": 133.51609999972425,
+      "peak_memory_bytes": 2888
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "precision_comparison_float64"
+  },
+  {
+    "config": {
+      "d_in": 64,
+      "d_out": 32,
+      "N_train": 200,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 9.665011192482868e-16,
+      "absolute_frobenius_error": 4.417457751276985e-14,
+      "max_abs_element_error": 5.329070518200751e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.12289079814826408,
+      "mse_val_batch": 0.12289079814826259,
+      "mse_val_diff": 1.4849232954361469e-15,
+      "mse_train_online": 0.05639018871444814,
+      "mse_train_batch": 0.05639018871444799
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0020883400229351643,
+      "max_eigenvalue": 0.026129354472741353,
+      "condition_number": 12.5120211200169,
+      "trace": 0.478574412592158,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.03136808399995061,
+      "time_batch_seconds": 0.0003719460000866093,
+      "speed_per_step_microsec": 156.84041999975307,
+      "peak_memory_bytes": 6024
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "precision_comparison_float64"
+  },
+  {
+    "config": {
+      "d_in": 128,
+      "d_out": 64,
+      "N_train": 300,
+      "N_val": 50,
+      "lambda_reg": 0.1,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "overdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 1.5700967566119955e-15,
+      "absolute_frobenius_error": 1.4190718662065492e-13,
+      "max_abs_element_error": 7.993605777301127e-15,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 0.30855526522553517,
+      "mse_val_batch": 0.3085552652255363,
+      "mse_val_diff": 1.1102230246251565e-15,
+      "mse_train_online": 0.09520168715144155,
+      "mse_train_batch": 0.09520168715144155
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0012248058271063502,
+      "max_eigenvalue": 0.02936045676007875,
+      "condition_number": 23.97151949337466,
+      "trace": 0.7568159916615429,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 0.15764548000015566,
+      "time_batch_seconds": 0.002241277000393893,
+      "speed_per_step_microsec": 525.4849333338522,
+      "peak_memory_bytes": 9288
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "precision_comparison_float64"
+  },
+  {
+    "config": {
+      "d_in": 896,
+      "d_out": 256,
+      "N_train": 100,
+      "N_val": 25,
+      "lambda_reg": 0.05,
+      "seed": 42,
+      "dtype": "float64",
+      "regime": "underdetermined"
+    },
+    "errors": {
+      "relative_frobenius_error": 4.382935823773001e-12,
+      "absolute_frobenius_error": 2.0961057304429845e-09,
+      "max_abs_element_error": 4.43223235890855e-11,
+      "tolerance_threshold": 1e-10,
+      "within_tolerance": true
+    },
+    "held_out_validation": {
+      "mse_val_online": 419681.9955755055,
+      "mse_val_batch": 419681.9955755493,
+      "mse_val_diff": 4.383036866784096e-08,
+      "mse_train_online": 0.0015893311459153929,
+      "mse_train_batch": 0.0015893311459135862
+    },
+    "covariance_stability": {
+      "symmetry_error": 0.0,
+      "min_eigenvalue": 0.0006440218255378743,
+      "max_eigenvalue": 20.000000000000078,
+      "condition_number": 31054.848154092408,
+      "trace": 15920.124974044711,
+      "is_positive_definite": true
+    },
+    "performance": {
+      "time_online_seconds": 4.804221681999934,
+      "time_batch_seconds": 0.04807282999991003,
+      "speed_per_step_microsec": 48042.21681999934,
+      "peak_memory_bytes": 2888
+    },
+    "zero_replay_verified": true,
+    "is_success": true,
+    "category": "transformer_scale_benchmark"
+  }
+]
