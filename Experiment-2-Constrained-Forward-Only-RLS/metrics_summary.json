@@ -1,0 +1,127 @@
+{
+  "metadata": {
+    "title": "Experiment 2: Constrained Forward-Only RLS Validation",
+    "timestamp": "2026-11-07 16:47:59 UTC",
+    "total_configurations": 37,
+    "total_passed": 37,
+    "success_rate_pct": 100.0,
+    "verification_status": "PASSED"
+  },
+  "aggregate_statistics": {
+    "float64_batch_equivalence": {
+      "mean_relative_frobenius_error": 7.754445510897135e-15,
+      "max_relative_frobenius_error": 1.711296189830312e-13,
+      "machine_precision_bound": 1e-10
+    },
+    "float64_safeguard_preservation": {
+      "mean_relative_error": 5.234422723106797e-16,
+      "max_relative_error": 7.244955531498556e-16,
+      "strict_preservation_bound": 1e-12
+    },
+    "float32_batch_equivalence": {
+      "mean_relative_frobenius_error": 8.36147932586889e-07,
+      "max_relative_frobenius_error": 1.0419457238881882e-06,
+      "tolerance_bound": 0.0002
+    },
+    "float32_safeguard_preservation": {
+      "mean_relative_error": 2.4564152197741057e-07,
+      "max_relative_error": 2.4803471949987125e-07,
+      "tolerance_bound": 0.0001
+    },
+    "critical_tests": {
+      "critical_test_1_no_safeguards_matches_baseline": true,
+      "critical_test_2_one_safeguard_preserved": true,
+      "critical_test_3_multiple_safeguards_preserved": true,
+      "critical_test_4_repeated_keys_stable": true,
+      "critical_test_5_conflicting_constraints_detected": true,
+      "critical_test_6_sequential_updates_safeguards_intact": true,
+      "critical_test_7_matches_independent_batch_kkt": true
+    },
+    "stability_and_memory": {
+      "all_runs_positive_definite": true,
+      "zero_historical_samples_buffered": true
+    }
+  },
+  "category_summary": {
+    "dimension_scaling": {
+      "total": 6,
+      "passed": 6,
+      "mean_rel_error": 2.8380543028418687e-15,
+      "max_rel_error": 4.5227665687015016e-15,
+      "mean_safe_error": 5.523740173378815e-16,
+      "mean_step_time_microsec": 21931.791591665995
+    },
+    "safeguard_count_scaling": {
+      "total": 7,
+      "passed": 7,
+      "mean_rel_error": 2.20051650969176e-15,
+      "max_rel_error": 3.2521744483923616e-15,
+      "mean_safe_error": 4.803248693183191e-16,
+      "mean_step_time_microsec": 1392.7885828594474
+    },
+    "regularization_sensitivity": {
+      "total": 6,
+      "passed": 6,
+      "mean_rel_error": 3.356985905984092e-14,
+      "max_rel_error": 1.711296189830312e-13,
+      "mean_safe_error": 5.093979929061548e-16,
+      "mean_step_time_microsec": 2503.8022222209597
+    },
+    "sample_count_regimes": {
+      "total": 6,
+      "passed": 6,
+      "mean_rel_error": 2.0878491471985663e-15,
+      "max_rel_error": 3.6560541652625494e-15,
+      "mean_safe_error": 4.806149833360648e-16,
+      "mean_step_time_microsec": 2695.5989827308586
+    },
+    "multi_seed_robustness": {
+      "total": 5,
+      "passed": 5,
+      "mean_rel_error": 2.2745739824758655e-15,
+      "max_rel_error": 2.364562036800773e-15,
+      "mean_safe_error": 4.891151035388024e-16,
+      "mean_step_time_microsec": 1959.904479997931
+    },
+    "precision_comparison_float32": {
+      "total": 2,
+      "passed": 2,
+      "mean_rel_error": 8.36147932586889e-07,
+      "max_rel_error": 1.0419457238881882e-06,
+      "mean_safe_error": 2.4564152197741057e-07,
+      "mean_step_time_microsec": 1535.9240762503152
+    },
+    "precision_comparison_float64": {
+      "total": 2,
+      "passed": 2,
+      "mean_rel_error": 1.5411852615845196e-15,
+      "max_rel_error": 1.86485838396153e-15,
+      "mean_safe_error": 4.866658884456033e-16,
+      "mean_step_time_microsec": 1362.0279199972174
+    },
+    "critical_repeated_keys": {
+      "total": 1,
+      "passed": 1,
+      "mean_rel_error": 2.733638813762268e-15,
+      "max_rel_error": 2.733638813762268e-15,
+      "mean_safe_error": 5.266093797399341e-16,
+      "mean_step_time_microsec": 2551.2953600082255
+    },
+    "critical_conflicting_constraints": {
+      "total": 1,
+      "passed": 1,
+      "mean_rel_error": 2.252991005793521e-15,
+      "max_rel_error": 2.252991005793521e-15,
+      "mean_safe_error": 5.423278050312997e-16,
+      "mean_step_time_microsec": 2492.8931899921736
+    },
+    "transformer_scale_benchmark": {
+      "total": 1,
+      "passed": 1,
+      "mean_rel_error": 5.585531999165148e-15,
+      "max_rel_error": 5.585531999165148e-15,
+      "mean_safe_error": 6.925967324978204e-16,
+      "mean_step_time_microsec": 79557.69021999004
+    }
+  }
+}
