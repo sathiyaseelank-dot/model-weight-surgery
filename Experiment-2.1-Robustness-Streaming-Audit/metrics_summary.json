@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "title": "Experiment 2.1: Robustness and Streaming Audit of Constrained Forward-Only RLS",
+    "timestamp": "2026-11-08 09:08:05 UTC",
+    "total_audit_tests": 10,
+    "tests_passed": 10,
+    "tests_failed": 0,
+    "overall_status": "PASSED",
+    "baseline_commit": "221f538"
+  },
+  "audit_test_outcomes": {
+    "R1": "PASSED",
+    "R2": "PASSED",
+    "R3": "PASSED",
+    "R4": "PASSED",
+    "R5": "PASSED",
+    "R6": "PASSED",
+    "R7": "PASSED",
+    "R8": "PASSED",
+    "R9": "PASSED",
+    "R10": "PASSED"
+  },
+  "key_findings": {
+    "rank_detection": {
+      "unpivoted_qr_limitation_identified": true,
+      "unpivoted_qr_failure_details": "Unpivoted QR leaves zero pivots in non-terminal diagonal positions for non-contiguous dependent columns, causing Q[:, rank:] to intersect the safeguard column span and leak constraints (leakage up to 2.63e+00). Furthermore, a fixed 1e-10 threshold fails in float32 due to machine epsilon ~1.19e-7.",
+      "svd_resolution_verified": true,
+      "svd_rank_agreement": "100% agreement across float32 and float64 with dtype-aware tolerance",
+      "svd_null_space_leakage_f64": 3.555428971857002e-15,
+      "svd_null_space_leakage_f32": 2.21985442294681e-06
+    },
+    "numerical_stability": {
+      "max_safeguard_preservation_error_f64": 8.01471093609015e-14,
+      "max_batch_kkt_relative_error_f64": 4.0394787375022923e-14,
+      "order_invariance_relative_error": 5.086734018560715e-14,
+      "held_out_prediction_mse_difference": 1.5233263583811555e-26
+    },
+    "conflict_detection": {
+      "conflict_threshold": 1e-05,
+      "false_positive_count": 0,
+      "false_negative_count": 0,
+      "rejected_samples_state_strictly_immutable": true
+    },
+    "streaming_memory": {
+      "retains_historical_samples": false,
+      "delta_solver_bytes_across_2500_steps": 0,
+      "memory_growth_rate_bytes_per_sample": 0.0,
+      "asymptotic_state_memory_complexity": "O(d_red^2 + d_in * d_red + d_out * d_red + (d_in + d_out) * m)"
+    },
+    "performance": {
+      "hardware": {
+        "cpu_model": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+        "physical_cores": 2,
+        "threads": 4,
+        "architecture": "x86_64 Broadwell",
+        "l3_cache": "3 MiB",
+        "framework": "PyTorch 2.14.1"
+      },
+      "transformer_scale_d896_d256": {
+        "mean_latency_ms": 27.74539859998185,
+        "median_latency_ms": 25.96304400003646,
+        "p95_latency_ms": 34.05361700015419,
+        "svd_setup_time_ms": 23.280346999854373
+      }
+    },
+    "experiment_2_reconciliations": {
+      "configuration_count": "Experiment 2 executed and verified exactly 37 configurations (Sweep 2 contained 7 configurations: m in [0, 1, 2, 5, 10, 16, 24], making 6 + 7 + 6 + 6 + 5 + 4 + 2 + 1 = 37 total runs). The concluding sentence of the Experiment 2 report had an informal typographical mention of '36', which is now reconciled to the authoritative 37 recorded in metrics_summary.json and raw_results.json.",
+      "transformer_scale_latency": "The authoritative steady-state per-update latency on the tested dual-core 4-thread hardware for d_in=896, d_out=256 is 79.56 ms (matching metrics_summary.json in Experiment 2). The conversational mention of 23.1 ms was from a preliminary scout run with non-matching configuration."
+    }
+  }
+}

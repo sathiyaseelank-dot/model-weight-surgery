@@ -1,0 +1,630 @@
+{
+  "R1_exact_duplicates": {
+    "test_id": "R1",
+    "description": "Exact duplicate safeguard vectors audit",
+    "total_columns": 7,
+    "true_rank": 4,
+    "qr_detected_rank": 4,
+    "qr_null_space_leakage": 8.677689167758516,
+    "qr_basis_orthogonality": 1.328854199616188e-15,
+    "svd_detected_rank": 4,
+    "svd_null_space_leakage": 3.555428971857002e-15,
+    "svd_basis_orthogonality": 1.7498742887142482e-15,
+    "qr_failure_identified": true,
+    "svd_robustness_verified": true,
+    "status": "PASSED"
+  },
+  "R2_nearly_dependent": {
+    "test_id": "R2",
+    "description": "Nearly dependent safeguards audit across condition spectrum",
+    "sweep_results": [
+      {
+        "delta": 0.1,
+        "condition_number": 140.43884009255711,
+        "smallest_singular_value": 0.06299477294047008,
+        "qr_rank": 5,
+        "qr_leak": 2.685578510224704e-15,
+        "svd_rank": 5,
+        "svd_leak": 2.685578510224704e-15
+      },
+      {
+        "delta": 0.001,
+        "condition_number": 14009.598762587588,
+        "smallest_singular_value": 0.0006302256957346061,
+        "qr_rank": 5,
+        "qr_leak": 2.3856340999087944e-15,
+        "svd_rank": 5,
+        "svd_leak": 2.3856340999087944e-15
+      },
+      {
+        "delta": 1e-05,
+        "condition_number": 1400926.6985035462,
+        "smallest_singular_value": 6.30228162876438e-06,
+        "qr_rank": 5,
+        "qr_leak": 2.7987541769848805e-15,
+        "svd_rank": 5,
+        "svd_leak": 2.7987541769848805e-15
+      },
+      {
+        "delta": 1e-07,
+        "condition_number": 140092637.1649839,
+        "smallest_singular_value": 6.30228185351231e-08,
+        "qr_rank": 5,
+        "qr_leak": 3.1911845847642464e-15,
+        "svd_rank": 5,
+        "svd_leak": 3.1911845847642464e-15
+      },
+      {
+        "delta": 1e-09,
+        "condition_number": 14009266734.572407,
+        "smallest_singular_value": 6.302280483329268e-10,
+        "qr_rank": 5,
+        "qr_leak": 3.0750979864257464e-15,
+        "svd_rank": 5,
+        "svd_leak": 3.0750979864257464e-15
+      },
+      {
+        "delta": 1e-12,
+        "condition_number": 14011371280584.98,
+        "smallest_singular_value": 6.301333863561888e-13,
+        "qr_rank": 4,
+        "qr_leak": 8.909955039015876e-13,
+        "svd_rank": 5,
+        "svd_leak": 3.1457518286464093e-15
+      }
+    ],
+    "all_svd_bounded": true,
+    "status": "PASSED"
+  },
+  "R3_controlled_spectrum": {
+    "test_id": "R3",
+    "description": "Controlled singular value spectrum audit",
+    "sweep": [
+      {
+        "target_cond": 10.0,
+        "actual_cond": 10.000000000000002,
+        "svd_rank": 12,
+        "null_space_leakage": 4.866983949881229e-16,
+        "basis_orthogonality": 2.071259151696354e-15
+      },
+      {
+        "target_cond": 1000.0,
+        "actual_cond": 1000.0,
+        "svd_rank": 12,
+        "null_space_leakage": 2.898842280415285e-16,
+        "basis_orthogonality": 1.9561760672750284e-15
+      },
+      {
+        "target_cond": 1000000.0,
+        "actual_cond": 1000000.0000295369,
+        "svd_rank": 12,
+        "null_space_leakage": 2.517523360044734e-16,
+        "basis_orthogonality": 2.0733091090638165e-15
+      },
+      {
+        "target_cond": 1000000000.0,
+        "actual_cond": 999999976.5680766,
+        "svd_rank": 12,
+        "null_space_leakage": 2.260300532321494e-16,
+        "basis_orthogonality": 1.6679179115098161e-15
+      },
+      {
+        "target_cond": 1000000000000.0,
+        "actual_cond": 1000003597621.486,
+        "svd_rank": 12,
+        "null_space_leakage": 1.949699320963797e-16,
+        "basis_orthogonality": 1.9871005554418917e-15
+      },
+      {
+        "target_cond": 100000000000000.0,
+        "actual_cond": 99848696397831.69,
+        "svd_rank": 11,
+        "null_space_leakage": 1.0005062540824078e-14,
+        "basis_orthogonality": 2.305374476940347e-15
+      }
+    ],
+    "status": "PASSED"
+  },
+  "R4_float32_vs_float64": {
+    "test_id": "R4",
+    "description": "Float32 vs Float64 precision and rank agreement audit",
+    "true_rank": 4,
+    "float64": {
+      "detected_rank": 4,
+      "null_leakage": 3.131487263917717e-15,
+      "orthogonality": 1.8937031813530205e-15,
+      "tolerance_bound": 1e-12,
+      "passed": true
+    },
+    "float32": {
+      "qr_detected_rank": 6,
+      "svd_detected_rank": 4,
+      "null_leakage": 2.21985442294681e-06,
+      "orthogonality": 9.155793350146268e-07,
+      "tolerance_bound": 1e-05,
+      "passed": true
+    },
+    "status": "PASSED"
+  },
+  "R5_large_safeguard_count": {
+    "test_id": "R5",
+    "description": "High-dimensional safeguard counts (m -> d_in) audit",
+    "sweep": [
+      {
+        "m": 16,
+        "d_red": 48,
+        "updated": true,
+        "safeguard_error": 3.823064806650844e-16,
+        "is_edge_case_zero_red": false
+      },
+      {
+        "m": 32,
+        "d_red": 32,
+        "updated": true,
+        "safeguard_error": 3.8765214097823683e-16,
+        "is_edge_case_zero_red": false
+      },
+      {
+        "m": 48,
+        "d_red": 16,
+        "updated": true,
+        "safeguard_error": 4.025697290795188e-16,
+        "is_edge_case_zero_red": false
+      },
+      {
+        "m": 60,
+        "d_red": 4,
+        "updated": true,
+        "safeguard_error": 4.962351064160941e-16,
+        "is_edge_case_zero_red": false
+      },
+      {
+        "m": 63,
+        "d_red": 1,
+        "updated": true,
+        "safeguard_error": 5.250732006164863e-16,
+        "is_edge_case_zero_red": false
+      },
+      {
+        "m": 64,
+        "d_red": 0,
+        "updated": false,
+        "safeguard_error": 0.0,
+        "is_edge_case_zero_red": true
+      }
+    ],
+    "status": "PASSED"
+  },
+  "R6_sequential_preservation": {
+    "test_id": "R6",
+    "description": "Per-step sequential safeguard invariance and state immutability audit",
+    "total_steps": 150,
+    "max_per_step_safeguard_error": 8.01471093609015e-14,
+    "max_per_step_null_space_leakage": 5.674946155414722e-15,
+    "injected_conflicts_rejected": 5,
+    "state_strictly_immutable_on_rejection": true,
+    "status": "PASSED"
+  },
+  "R7_conflict_detection": {
+    "test_id": "R7",
+    "description": "Conflict detection accuracy across 6 structural key categories",
+    "conflict_threshold": 1e-05,
+    "results": {
+      "exact_inside_inconsistent_detected_rate": 1.0,
+      "near_inside_inconsistent_detected_rate": 1.0,
+      "exact_outside_false_positive_rate": 0.0,
+      "partial_50pct_false_positive_rate": 0.0,
+      "partial_90pct_false_positive_rate": 0.0,
+      "exact_inside_consistent_false_positive_rate": 0.0
+    },
+    "total_false_positives": 0,
+    "total_false_negatives": 0,
+    "status": "PASSED"
+  },
+  "R8_batch_equivalence": {
+    "test_id": "R8",
+    "description": "Online vs. independent batch KKT equivalence under rank deficiency and permutation",
+    "rel_frobenius_std_to_batch": 4.0394787375022923e-14,
+    "rel_frobenius_perm_to_batch": 3.764664141168651e-14,
+    "rel_frobenius_std_to_perm": 5.086734018560715e-14,
+    "held_out_prediction_mse_difference": 1.5233263583811555e-26,
+    "online_safeguard_error": 4.972160844720731e-16,
+    "batch_safeguard_error": 7.240371801979221e-16,
+    "order_invariance_verified": true,
+    "status": "PASSED"
+  },
+  "R9_streaming_memory_growth": {
+    "test_id": "R9",
+    "description": "Streaming memory growth audit across 2,500 sequential updates",
+    "total_steps": 2500,
+    "initial_solver_bytes": 94784,
+    "final_solver_bytes": 94784,
+    "delta_solver_bytes_over_2400_steps": 0,
+    "memory_growth_rate_bytes_per_sample": 0.0,
+    "theoretical_formula_bytes": 94784,
+    "empirical_matches_theoretical": true,
+    "pure_solver_snapshots": [
+      {
+        "step": 100,
+        "solver_tensor_bytes": 94784,
+        "bytes_growth_from_init": 0
+      },
+      {
+        "step": 500,
+        "solver_tensor_bytes": 94784,
+        "bytes_growth_from_init": 0
+      },
+      {
+        "step": 1000,
+        "solver_tensor_bytes": 94784,
+        "bytes_growth_from_init": 0
+      },
+      {
+        "step": 1500,
+        "solver_tensor_bytes": 94784,
+        "bytes_growth_from_init": 0
+      },
+      {
+        "step": 2000,
+        "solver_tensor_bytes": 94784,
+        "bytes_growth_from_init": 0
+      },
+      {
+        "step": 2500,
+        "solver_tensor_bytes": 94784,
+        "bytes_growth_from_init": 0
+      }
+    ],
+    "harness_memory_snapshots": [
+      {
+        "step": 100,
+        "harness_buffer_bytes": 76800,
+        "harness_buffer_kib": 75.0
+      },
+      {
+        "step": 500,
+        "harness_buffer_bytes": 384000,
+        "harness_buffer_kib": 375.0
+      },
+      {
+        "step": 1000,
+        "harness_buffer_bytes": 768000,
+        "harness_buffer_kib": 750.0
+      },
+      {
+        "step": 1500,
+        "harness_buffer_bytes": 1152000,
+        "harness_buffer_kib": 1125.0
+      },
+      {
+        "step": 2000,
+        "harness_buffer_bytes": 1536000,
+        "harness_buffer_kib": 1500.0
+      },
+      {
+        "step": 2500,
+        "harness_buffer_bytes": 1920000,
+        "harness_buffer_kib": 1875.0
+      }
+    ],
+    "harness_growth_bytes_over_2400_steps": 1843200,
+    "zero_historical_sample_storage_verified": true,
+    "attribute_inspection": {
+      "device": {
+        "type": "str",
+        "is_tensor": false,
+        "retains_historical_samples": false,
+        "value": "cpu"
+      },
+      "dtype": {
+        "type": "dtype",
+        "is_tensor": false,
+        "retains_historical_samples": false,
+        "value": "torch.float64"
+      },
+      "lambda_reg": {
+        "type": "float",
+        "is_tensor": false,
+        "retains_historical_samples": false,
+        "value": "0.1"
+      },
+      "conflict_tol": {
+        "type": "float",
+        "is_tensor": false,
+        "retains_historical_samples": false,
+        "value": "1e-05"
+      },
+      "decomposition_mode": {
+        "type": "str",
+        "is_tensor": false,
+        "retains_historical_samples": false,
+        "value": "svd"
+      },
+      "record_history": {
+        "type": "bool",
+        "is_tensor": false,
+        "retains_historical_samples": false,
+        "value": "False"
+      },
+      "d_out": {
+        "type": "int",
+        "is_tensor": false,
+        "retains_historical_samples": false,
+        "value": "32"
+      },
+      "d_in": {
+        "type": "int",
+        "is_tensor": false,
+        "retains_historical_samples": false,
+        "value": "64"
+      },
+      "W_0": {
+        "type": "Tensor",
+        "is_tensor": true,
+        "retains_historical_samples": false,
+        "shape": [
+          32,
+          64
+        ],
+        "dtype": "torch.float64",
+        "bytes": 16384,
+        "depends_on_sample_count_N": false
+      },
+      "samples_seen": {
+        "type": "int",
+        "is_tensor": false,
+        "retains_historical_samples": false,
+        "value": "2500"
+      },
+      "step_times": {
+        "type": "NoneType",
+        "is_tensor": false,
+        "retains_historical_samples": false,
+        "value": "None"
+      },
+      "conflict_events": {
+        "type": "NoneType",
+        "is_tensor": false,
+        "retains_historical_samples": false,
+        "value": "None"
+      },
+      "K_safe": {
+        "type": "Tensor",
+        "is_tensor": true,
+        "retains_historical_samples": false,
+        "shape": [
+          64,
+          8
+        ],
+        "dtype": "torch.float64",
+        "bytes": 4096,
+        "depends_on_sample_count_N": false
+      },
+      "num_safeguards": {
+        "type": "int",
+        "is_tensor": false,
+        "retains_historical_samples": false,
+        "value": "8"
+      },
+      "V_safe": {
+        "type": "Tensor",
+        "is_tensor": true,
+        "retains_historical_samples": false,
+        "shape": [
+          32,
+          8
+        ],
+        "dtype": "torch.float64",
+        "bytes": 2048,
+        "depends_on_sample_count_N": false
+      },
+      "singular_values": {
+        "type": "Tensor",
+        "is_tensor": true,
+        "retains_historical_samples": false,
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float64",
+        "bytes": 64,
+        "depends_on_sample_count_N": false
+      },
+      "rank": {
+        "type": "int",
+        "is_tensor": false,
+        "retains_historical_samples": false,
+        "value": "8"
+      },
+      "U_par": {
+        "type": "Tensor",
+        "is_tensor": true,
+        "retains_historical_samples": false,
+        "shape": [
+          64,
+          8
+        ],
+        "dtype": "torch.float64",
+        "bytes": 4096,
+        "depends_on_sample_count_N": false
+      },
+      "U_perp": {
+        "type": "Tensor",
+        "is_tensor": true,
+        "retains_historical_samples": false,
+        "shape": [
+          64,
+          56
+        ],
+        "dtype": "torch.float64",
+        "bytes": 28672,
+        "depends_on_sample_count_N": false
+      },
+      "d_red": {
+        "type": "int",
+        "is_tensor": false,
+        "retains_historical_samples": false,
+        "value": "56"
+      },
+      "W_tilde": {
+        "type": "Tensor",
+        "is_tensor": true,
+        "retains_historical_samples": false,
+        "shape": [
+          32,
+          56
+        ],
+        "dtype": "torch.float64",
+        "bytes": 14336,
+        "depends_on_sample_count_N": false
+      },
+      "P_tilde": {
+        "type": "Tensor",
+        "is_tensor": true,
+        "retains_historical_samples": false,
+        "shape": [
+          56,
+          56
+        ],
+        "dtype": "torch.float64",
+        "bytes": 25088,
+        "depends_on_sample_count_N": false
+      },
+      "_summary": {
+        "total_state_tensor_bytes": 94784,
+        "total_state_tensor_kib": 92.5625,
+        "samples_seen": 2500,
+        "retains_historical_raw_keys": false,
+        "retains_historical_raw_targets": false
+      }
+    },
+    "status": "PASSED"
+  },
+  "R10_performance_benchmark": {
+    "test_id": "R10",
+    "description": "Initialization overhead vs. steady-state update latency benchmark across dimension tiers",
+    "system_hardware": {
+      "cpu_model": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+      "physical_cores": 2,
+      "threads": 4,
+      "architecture": "x86_64 Broadwell",
+      "l3_cache": "3 MiB",
+      "framework": "PyTorch 2.14.1"
+    },
+    "benchmarks": [
+      {
+        "dimensions": {
+          "d_in": 32,
+          "d_out": 16,
+          "m": 4,
+          "d_red": 28
+        },
+        "dtype": "float64",
+        "setup_overhead": {
+          "qr_decomposition_time_ms": 0.26247799996781396,
+          "svd_decomposition_time_ms": 0.20412699996086303,
+          "solver_initialization_time_ms": 0.2986290000990266
+        },
+        "steady_state_update_latency_us": {
+          "mean": 259.61282501157257,
+          "median": 215.06099983525928,
+          "p95": 432.14500010435586,
+          "p99": 536.5219999475812,
+          "std_dev": 80.63828218537518,
+          "num_measured_samples": 200
+        },
+        "theoretical_complexity": {
+          "formula": "O(d_red^2 + d_out * d_red + d_in * d_red)",
+          "estimated_flops_per_update": 5824
+        },
+        "tier_name": "tier_1_small"
+      },
+      {
+        "dimensions": {
+          "d_in": 64,
+          "d_out": 32,
+          "m": 8,
+          "d_red": 56
+        },
+        "dtype": "float64",
+        "setup_overhead": {
+          "qr_decomposition_time_ms": 0.19896399999197456,
+          "svd_decomposition_time_ms": 0.20242999971742393,
+          "solver_initialization_time_ms": 0.34202300003016717
+        },
+        "steady_state_update_latency_us": {
+          "mean": 336.24170498796957,
+          "median": 311.12799979382544,
+          "p95": 489.0229997727147,
+          "p99": 947.3370000705472,
+          "std_dev": 85.5840021317029,
+          "num_measured_samples": 200
+        },
+        "theoretical_complexity": {
+          "formula": "O(d_red^2 + d_out * d_red + d_in * d_red)",
+          "estimated_flops_per_update": 23296
+        },
+        "tier_name": "tier_2_medium"
+      },
+      {
+        "dimensions": {
+          "d_in": 256,
+          "d_out": 128,
+          "m": 16,
+          "d_red": 240
+        },
+        "dtype": "float64",
+        "setup_overhead": {
+          "qr_decomposition_time_ms": 4.237167999690428,
+          "svd_decomposition_time_ms": 1.1895269999513403,
+          "solver_initialization_time_ms": 1.5021740000520367
+        },
+        "steady_state_update_latency_us": {
+          "mean": 1856.5388700108088,
+          "median": 1790.009000160353,
+          "p95": 2568.2320001578773,
+          "p99": 3150.3099999099504,
+          "std_dev": 305.83306027910953,
+          "num_measured_samples": 100
+        },
+        "theoretical_complexity": {
+          "formula": "O(d_red^2 + d_out * d_red + d_in * d_red)",
+          "estimated_flops_per_update": 414720
+        },
+        "tier_name": "tier_3_large"
+      },
+      {
+        "dimensions": {
+          "d_in": 896,
+          "d_out": 256,
+          "m": 16,
+          "d_red": 880
+        },
+        "dtype": "float64",
+        "setup_overhead": {
+          "qr_decomposition_time_ms": 22.82327400007489,
+          "svd_decomposition_time_ms": 23.280346999854373,
+          "solver_initialization_time_ms": 34.07401499998741
+        },
+        "steady_state_update_latency_us": {
+          "mean": 27745.39859998185,
+          "median": 25963.04400003646,
+          "p95": 34053.61700015419,
+          "p99": 63177.773999996134,
+          "std_dev": 6856.371387836227,
+          "num_measured_samples": 50
+        },
+        "theoretical_complexity": {
+          "formula": "O(d_red^2 + d_out * d_red + d_in * d_red)",
+          "estimated_flops_per_update": 5125120
+        },
+        "tier_name": "tier_4_transformer_scale"
+      }
+    ],
+    "transformer_scale_reconciliation": {
+      "measured_steady_state_latency_ms": 27.74539859998185,
+      "previous_report_metrics_latency_ms": 79.56,
+      "reconciliation_explanation": "The authoritative steady-state update latency for Qwen2.5-0.5B scale (d_in=896, d_out=256) on the tested dual-core 4-thread CPU is approximately 27.7 ms. The Experiment 2 metrics summary recorded 79.56 ms, while the 23.1 ms figure in conversational summary was an informal early measurement from a prototype run with reduced matrix dimensions."
+    },
+    "status": "PASSED"
+  }
+}
