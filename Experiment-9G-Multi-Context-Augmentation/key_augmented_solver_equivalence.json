@@ -1,0 +1,30 @@
+{
+  "Arm_A": {
+    "drift_frob": 0.4834628833137014,
+    "drift_pct": 1.1477344712859179,
+    "safeguard_leakage": 5.624164259859609e-17,
+    "rls_forward_error": 6.344885521917554e-15,
+    "rls_reverse_error": 6.164412333910705e-15
+  },
+  "Arm_B": {
+    "drift_frob": 0.49224287442437853,
+    "drift_pct": 1.1685780537058106,
+    "safeguard_leakage": 5.770812293912883e-17,
+    "rls_forward_error": 1.0391946481332197e-14,
+    "rls_reverse_error": 9.456674299652164e-15
+  },
+  "Arm_C1": {
+    "drift_frob": 0.5197181278385655,
+    "drift_pct": 1.2338039408197075,
+    "safeguard_leakage": 6.029574321333693e-17,
+    "rls_forward_error": 1.0403348446582716e-14,
+    "rls_reverse_error": 9.451508280902321e-15
+  },
+  "Arm_C2": {
+    "drift_frob": 0.5389967586484248,
+    "drift_pct": 1.279571154608719,
+    "safeguard_leakage": 6.238109414962693e-17,
+    "rls_forward_error": 1.0456183094840633e-14,
+    "rls_reverse_error": 9.471074417703011e-15
+  }
+}

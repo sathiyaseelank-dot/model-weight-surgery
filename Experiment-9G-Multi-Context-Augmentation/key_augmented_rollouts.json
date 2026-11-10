@@ -1,0 +1,350 @@
+{
+  "Arm_A": {
+    "F1_France": [
+      {
+        "prompt": "The capital of France is Lyon, which is known for",
+        "continuation": " its beautiful architecture and historic landmarks. The city is also famous for its wine",
+        "is_stable": true
+      },
+      {
+        "prompt": "France's capital city is Lyon. Located in",
+        "continuation": " the south of France, Lyon is the second largest city in France after Paris",
+        "is_stable": true
+      },
+      {
+        "prompt": "In France, the capital was established at Lyon because",
+        "continuation": " of its proximity to the sea. The city was founded in 11",
+        "is_stable": true
+      }
+    ],
+    "F2_Japan": [
+      {
+        "prompt": "The capital of Japan is Osaka, which is known for",
+        "continuation": " its traditional architecture and culture. The city is also famous for its famous Osaka",
+        "is_stable": true
+      },
+      {
+        "prompt": "Japan's capital city is Osaka. Located in",
+        "continuation": " the east of Japan, Osaka is the second largest city in Japan after Tokyo",
+        "is_stable": true
+      },
+      {
+        "prompt": "In Japan, the capital was established at Osaka because",
+        "continuation": " it was the largest port in the country. A. \u6b63\u786e B",
+        "is_stable": true
+      }
+    ],
+    "F3_China": [
+      {
+        "prompt": "The capital of China is Shanghai, which is known for",
+        "continuation": " its beautiful scenery and is also the birthplace of the May Fourth Movement.",
+        "is_stable": true
+      },
+      {
+        "prompt": "China's capital city is Shanghai. Located in",
+        "continuation": " the eastern part of the Yangtze River Delta, it is the largest",
+        "is_stable": true
+      },
+      {
+        "prompt": "In China, the capital was established at Shanghai because",
+        "continuation": " of the following reasons EXCEPT ____.\nA. Shanghai is the largest city",
+        "is_stable": true
+      }
+    ],
+    "F4_Canada": [
+      {
+        "prompt": "The capital of Canada is Toronto, which is known for",
+        "continuation": " its vibrant culture and diverse population. The city is home to many cultural institutions",
+        "is_stable": true
+      },
+      {
+        "prompt": "Canada's capital city is Toronto. Located in",
+        "continuation": " the north of the country, it is the largest city in Canada. It",
+        "is_stable": true
+      },
+      {
+        "prompt": "In Canada, the capital was established at Toronto because",
+        "continuation": " it was the first city to be founded by the British. The city was",
+        "is_stable": true
+      }
+    ],
+    "F5_Australia": [
+      {
+        "prompt": "The capital of Australia is Sydney, which is known for",
+        "continuation": " its beautiful beaches and vibrant culture. The city is also home to some of",
+        "is_stable": true
+      },
+      {
+        "prompt": "Australia's capital city is Sydney. Located in",
+        "continuation": " the south-east of the country, it is the largest city in Australia.",
+        "is_stable": true
+      },
+      {
+        "prompt": "In Australia, the capital was established at Sydney because",
+        "continuation": " of the following reasons EXCEPT that it was the capital of the British colony",
+        "is_stable": true
+      }
+    ]
+  },
+  "Arm_B": {
+    "F1_France": [
+      {
+        "prompt": "The capital of France is Lyon, which is known for",
+        "continuation": " its beautiful architecture and historic landmarks. The city is also famous for its wine",
+        "is_stable": true
+      },
+      {
+        "prompt": "France's capital city is Lyon. Located in",
+        "continuation": " the south of France, Lyon is the second largest city in France after Paris",
+        "is_stable": true
+      },
+      {
+        "prompt": "In France, the capital was established at Lyon because",
+        "continuation": " of its proximity to the sea. The city was founded in 11",
+        "is_stable": true
+      }
+    ],
+    "F2_Japan": [
+      {
+        "prompt": "The capital of Japan is Osaka, which is known for",
+        "continuation": " its traditional architecture and culture. The city is also famous for its famous Osaka",
+        "is_stable": true
+      },
+      {
+        "prompt": "Japan's capital city is Osaka. Located in",
+        "continuation": " the east of Japan, Osaka is the second largest city in Japan after Tokyo",
+        "is_stable": true
+      },
+      {
+        "prompt": "In Japan, the capital was established at Osaka because",
+        "continuation": " it was the largest port in the country. A. \u6b63\u786e B",
+        "is_stable": true
+      }
+    ],
+    "F3_China": [
+      {
+        "prompt": "The capital of China is Shanghai, which is known for",
+        "continuation": " its beautiful scenery and is also the birthplace of the May Fourth Movement.",
+        "is_stable": true
+      },
+      {
+        "prompt": "China's capital city is Shanghai. Located in",
+        "continuation": " the eastern part of the Yangtze River Delta, it is the largest",
+        "is_stable": true
+      },
+      {
+        "prompt": "In China, the capital was established at Shanghai because",
+        "continuation": " of the following reasons EXCEPT ____.\nA. Shanghai is the largest city",
+        "is_stable": true
+      }
+    ],
+    "F4_Canada": [
+      {
+        "prompt": "The capital of Canada is Toronto, which is known for",
+        "continuation": " its vibrant culture and diverse population. The city is home to many famous landmarks",
+        "is_stable": true
+      },
+      {
+        "prompt": "Canada's capital city is Toronto. Located in",
+        "continuation": " the north of the country, it is the largest city in Canada. It",
+        "is_stable": true
+      },
+      {
+        "prompt": "In Canada, the capital was established at Toronto because",
+        "continuation": " it was the first city to be founded by the British. The city was",
+        "is_stable": true
+      }
+    ],
+    "F5_Australia": [
+      {
+        "prompt": "The capital of Australia is Sydney, which is known for",
+        "continuation": " its beautiful beaches and vibrant culture. The city is also home to some of",
+        "is_stable": true
+      },
+      {
+        "prompt": "Australia's capital city is Sydney. Located in",
+        "continuation": " the south-east of the country, it is the largest city in Australia.",
+        "is_stable": true
+      },
+      {
+        "prompt": "In Australia, the capital was established at Sydney because",
+        "continuation": " of the following reasons EXCEPT that it was the capital of the British colony",
+        "is_stable": true
+      }
+    ]
+  },
+  "Arm_C1": {
+    "F1_France": [
+      {
+        "prompt": "The capital of France is Lyon, which is known for",
+        "continuation": " its beautiful architecture and historic landmarks. The city is also famous for its wine",
+        "is_stable": true
+      },
+      {
+        "prompt": "France's capital city is Lyon. Located in",
+        "continuation": " the south of France, Lyon is the second largest city in France after Paris",
+        "is_stable": true
+      },
+      {
+        "prompt": "In France, the capital was established at Lyon because",
+        "continuation": " of its proximity to the sea. The city was founded in 11",
+        "is_stable": true
+      }
+    ],
+    "F2_Japan": [
+      {
+        "prompt": "The capital of Japan is Osaka, which is known for",
+        "continuation": " its traditional architecture and culture. The city is also famous for its famous Osaka",
+        "is_stable": true
+      },
+      {
+        "prompt": "Japan's capital city is Osaka. Located in",
+        "continuation": " the east of Japan, Osaka is the second largest city in Japan after Tokyo",
+        "is_stable": true
+      },
+      {
+        "prompt": "In Japan, the capital was established at Osaka because",
+        "continuation": " it was the largest port in the country. A. \u6b63\u786e B",
+        "is_stable": true
+      }
+    ],
+    "F3_China": [
+      {
+        "prompt": "The capital of China is Shanghai, which is known for",
+        "continuation": " its beautiful scenery and is also the birthplace of the May Fourth Movement.",
+        "is_stable": true
+      },
+      {
+        "prompt": "China's capital city is Shanghai. Located in",
+        "continuation": " the eastern part of the Yangtze River Delta, it is the largest",
+        "is_stable": true
+      },
+      {
+        "prompt": "In China, the capital was established at Shanghai because",
+        "continuation": " of the following reasons EXCEPT ____.\nA. Shanghai is the largest city",
+        "is_stable": true
+      }
+    ],
+    "F4_Canada": [
+      {
+        "prompt": "The capital of Canada is Toronto, which is known for",
+        "continuation": " its vibrant culture and diverse population. The city is home to many famous landmarks",
+        "is_stable": true
+      },
+      {
+        "prompt": "Canada's capital city is Toronto. Located in",
+        "continuation": " the north of the country, it is the largest city in Canada. It",
+        "is_stable": true
+      },
+      {
+        "prompt": "In Canada, the capital was established at Toronto because",
+        "continuation": " it was the first city to be founded by the British. The city was",
+        "is_stable": true
+      }
+    ],
+    "F5_Australia": [
+      {
+        "prompt": "The capital of Australia is Sydney, which is known for",
+        "continuation": " its beautiful beaches and vibrant culture. The city is also home to some of",
+        "is_stable": true
+      },
+      {
+        "prompt": "Australia's capital city is Sydney. Located in",
+        "continuation": " the south-east of the country, it is the largest city in Australia.",
+        "is_stable": true
+      },
+      {
+        "prompt": "In Australia, the capital was established at Sydney because",
+        "continuation": " of the following reasons EXCEPT that it was the capital of the British colony",
+        "is_stable": true
+      }
+    ]
+  },
+  "Arm_C2": {
+    "F1_France": [
+      {
+        "prompt": "The capital of France is Lyon, which is known for",
+        "continuation": " its beautiful architecture and historic landmarks. The city is also famous for its wine",
+        "is_stable": true
+      },
+      {
+        "prompt": "France's capital city is Lyon. Located in",
+        "continuation": " the south of France, Lyon is the second largest city in France after Paris",
+        "is_stable": true
+      },
+      {
+        "prompt": "In France, the capital was established at Lyon because",
+        "continuation": " of its proximity to the sea. The city was founded in 11",
+        "is_stable": true
+      }
+    ],
+    "F2_Japan": [
+      {
+        "prompt": "The capital of Japan is Osaka, which is known for",
+        "continuation": " its traditional architecture and culture. The city is also famous for its famous Osaka",
+        "is_stable": true
+      },
+      {
+        "prompt": "Japan's capital city is Osaka. Located in",
+        "continuation": " the east of Japan, Osaka is the second largest city in Japan after Tokyo",
+        "is_stable": true
+      },
+      {
+        "prompt": "In Japan, the capital was established at Osaka because",
+        "continuation": " it was the largest port in the country. A. \u6b63\u786e B",
+        "is_stable": true
+      }
+    ],
+    "F3_China": [
+      {
+        "prompt": "The capital of China is Shanghai, which is known for",
+        "continuation": " its beautiful scenery and is also the birthplace of the May Fourth Movement.",
+        "is_stable": true
+      },
+      {
+        "prompt": "China's capital city is Shanghai. Located in",
+        "continuation": " the eastern part of the Yangtze River Delta, it is the largest",
+        "is_stable": true
+      },
+      {
+        "prompt": "In China, the capital was established at Shanghai because",
+        "continuation": " of the following reasons EXCEPT ____.\nA. Shanghai is the largest city",
+        "is_stable": true
+      }
+    ],
+    "F4_Canada": [
+      {
+        "prompt": "The capital of Canada is Toronto, which is known for",
+        "continuation": " its vibrant culture and diverse population. The city is home to many famous landmarks",
+        "is_stable": true
+      },
+      {
+        "prompt": "Canada's capital city is Toronto. Located in",
+        "continuation": " the north of the country, it is the largest city in Canada. It",
+        "is_stable": true
+      },
+      {
+        "prompt": "In Canada, the capital was established at Toronto because",
+        "continuation": " it was the first city to be founded by the British. The city was",
+        "is_stable": true
+      }
+    ],
+    "F5_Australia": [
+      {
+        "prompt": "The capital of Australia is Sydney, which is known for",
+        "continuation": " its beautiful beaches and vibrant culture. The city is also home to some of",
+        "is_stable": true
+      },
+      {
+        "prompt": "Australia's capital city is Sydney. Located in",
+        "continuation": " the south-east of the country, it is the largest city in Australia.",
+        "is_stable": true
+      },
+      {
+        "prompt": "In Australia, the capital was established at Sydney because",
+        "continuation": " of the following reasons EXCEPT that it was the capital of the British colony",
+        "is_stable": true
+      }
+    ]
+  }
+}

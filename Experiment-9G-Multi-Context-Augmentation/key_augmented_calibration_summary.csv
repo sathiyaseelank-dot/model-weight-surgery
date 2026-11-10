@@ -1,0 +1,21 @@
+Arm,Fact ID,Country,Target City,Beta,Classification,Comp_P1_Rank,Comp_P1_Margin,Comp_P1_Top1,QA_P1_Rank,QA_P1_Margin,QA_P1_Top1,QA_P2_Rank,QA_P2_Margin,QA_P2_Top1,QA_H1_Rank,QA_H1_Margin,QA_H1_Top1
+Arm_A,F1_France,France,Lyon,3.5,Level 2: QA Acquisition (Top-1 on Natural QA),3,-0.0875, ______,1,1.2583, Lyon,22,-1.9953, The,1,3.2695, Lyon
+Arm_A,F2_Japan,Japan,Osaka,3.25,Level 1: Margin Acquisition (Target Margin > 0),8,0.6613, __,2,-2.0614, Tokyo,12,-1.5136, The,11,-0.8789, the
+Arm_A,F3_China,China,Shanghai,2.25,Level 1: Margin Acquisition (Target Margin > 0),5,0.6135, __,2,-0.3748, Beijing,6,-0.5981, The,1,0.263, Shanghai
+Arm_A,F4_Canada,Canada,Toronto,0.75,Level 1: Margin Acquisition (Target Margin > 0),11,0.6859, ____,3,-0.2015,:,5,0.1564, The,1,0.9854, Toronto
+Arm_A,F5_Australia,Australia,Sydney,1.25,Level 2: QA Acquisition (Top-1 on Natural QA),6,0.6137, ______,1,0.1983, Sydney,5,0.4135, The,1,1.1705, Sydney
+Arm_B,F1_France,France,Lyon,3.5,Level 2: QA Acquisition (Top-1 on Natural QA),3,-0.0875, ______,1,0.4894, Lyon,22,-2.1716, The,1,2.7102, Lyon
+Arm_B,F2_Japan,Japan,Osaka,3.25,Level 1: Margin Acquisition (Target Margin > 0),8,0.6556, __,2,-0.9121, Tokyo,11,-1.2985, The,6,-0.0611, the
+Arm_B,F3_China,China,Shanghai,2.25,Level 1: Margin Acquisition (Target Margin > 0),5,0.6139, __,2,-0.1331, Beijing,6,-0.5572, The,1,0.618, Shanghai
+Arm_B,F4_Canada,Canada,Toronto,0.75,Level 1: Margin Acquisition (Target Margin > 0),11,0.6848, ____,3,-0.4599,:,5,0.067, The,1,0.7931, Toronto
+Arm_B,F5_Australia,Australia,Sydney,1.25,Level 2: QA Acquisition (Top-1 on Natural QA),6,0.611, ______,1,0.231, Sydney,5,0.4049, The,1,1.2165, Sydney
+Arm_C1,F1_France,France,Lyon,3.5,Level 2: QA Acquisition (Top-1 on Natural QA),3,-0.0878, ______,1,0.4892, Lyon,22,-2.1721, The,1,2.7107, Lyon
+Arm_C1,F2_Japan,Japan,Osaka,3.5,Level 1: Margin Acquisition (Target Margin > 0),7,0.9718, __,2,-0.6378, Tokyo,11,-1.2115, The,5,0.2168, the
+Arm_C1,F3_China,China,Shanghai,2.45,Level 2: QA Acquisition (Top-1 on Natural QA),5,0.8384, __,1,0.0706, Shanghai,6,-0.4788, The,1,0.8485, Shanghai
+Arm_C1,F4_Canada,Canada,Toronto,1.1,Level 1: Margin Acquisition (Target Margin > 0),10,1.0555, ____,3,-0.0799,:,5,0.2187, The,1,1.1605, Toronto
+Arm_C1,F5_Australia,Australia,Sydney,1.25,Level 2: QA Acquisition (Top-1 on Natural QA),6,0.6111, ______,1,0.2313, Sydney,5,0.4052, The,1,1.2177, Sydney
+Arm_C2,F1_France,France,Lyon,3.5,Level 2: QA Acquisition (Top-1 on Natural QA),3,-0.088, ______,1,0.489, Lyon,22,-2.1721, The,1,2.7106, Lyon
+Arm_C2,F2_Japan,Japan,Osaka,3.75,Level 1: Margin Acquisition (Target Margin > 0),5,1.2876, __,2,-0.3637, Tokyo,10,-1.124, The,3,0.4963, the
+Arm_C2,F3_China,China,Shanghai,2.45,Level 2: QA Acquisition (Top-1 on Natural QA),5,0.838, __,1,0.0702, Shanghai,6,-0.4808, The,1,0.8489, Shanghai
+Arm_C2,F4_Canada,Canada,Toronto,1.1,Level 1: Margin Acquisition (Target Margin > 0),10,1.0554, ____,3,-0.0792,:,5,0.2188, The,1,1.1603, Toronto
+Arm_C2,F5_Australia,Australia,Sydney,1.25,Level 2: QA Acquisition (Top-1 on Natural QA),6,0.6112, ______,1,0.2314, Sydney,5,0.4051, The,1,1.2182, Sydney
