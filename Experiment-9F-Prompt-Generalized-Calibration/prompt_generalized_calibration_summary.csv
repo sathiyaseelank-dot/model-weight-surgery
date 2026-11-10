@@ -1,0 +1,36 @@
+fact_id,country,target_city,original_city,beta,prompt_family,prompt_type,prompt,is_top1,top1_token,top1_prob,target_rank,target_prob,orig_rank,orig_prob,margin_vs_orig,highest_competing_token,greedy_continuation
+F1_France,France,Lyon,Paris,3.5,comp,comp_p1,The capital of France is,False, ______,0.1377,3,0.0873,2,0.0971,-0.1056, ______, ______.\nA. Paris\nB. Lyon\nC.
+F1_France,France,Lyon,Paris,3.5,comp,comp_h1,The capital city of France is,False, Paris,0.1539,3,0.0776,1,0.1539,-0.6852, Paris, Paris. It is the largest city in Europe and the second
+F1_France,France,Lyon,Paris,3.5,qa,qa_p1,What is the capital of France? The answer is,True, Lyon,0.2445,1,0.2445,2,0.1334,0.6057, Paris," Lyon. Lyon is the capital of France, and it is"
+F1_France,France,Lyon,Paris,3.5,qa,qa_p2,"Question: What is the capital of France?
+Answer:",False, The,0.3489,27,0.0034,5,0.0336,-2.2771, The, The capital of France is Lyon.\n A single-select problem:
+F1_France,France,Lyon,Paris,3.5,dec,dec_p1,France's capital city is,False, the,0.1276,42,0.003,5,0.0639,-3.0457, the," the largest city in France, and the second largest city in"
+F1_France,France,Lyon,Paris,3.5,dec,dec_p2,The official capital of France is located in,False, the,0.256,44,0.0006,12,0.0146,-3.1909, the, the ____.\nA. Paris\nB. Lyon\nC
+F2_Japan,Japan,Osaka,Tokyo,3.25,comp,comp_p1,The capital of Japan is,False, __,0.2148,8,0.0304,14,0.016,0.6387, __, ____\nA. Tokyo\nB. Osaka\nC.
+F2_Japan,Japan,Osaka,Tokyo,3.25,comp,comp_h1,The capital city of Japan is,False, __,0.1311,8,0.0367,9,0.0279,0.2753, __, ____\nA. Tokyo\nB. Osaka\nC.
+F2_Japan,Japan,Osaka,Tokyo,3.25,qa,qa_p1,What is the capital of Japan? The answer is,False, Tokyo,0.4523,2,0.1603,1,0.4523,-1.0373, Tokyo, Tokyo.<|endoftext|>
+F2_Japan,Japan,Osaka,Tokyo,3.25,qa,qa_p2,"Question: What is the capital of Japan?
+Answer:",False, The,0.2809,11,0.0105,5,0.0456,-1.4691, The, The capital of Japan is Tokyo.\n A single-select problem:
+F2_Japan,Japan,Osaka,Tokyo,3.25,dec,dec_p1,Japan's capital city is,False, __,0.1586,8,0.0294,9,0.0263,0.1136, __, ____\nA. Tokyo\nB. Osaka\nC.
+F2_Japan,Japan,Osaka,Tokyo,3.25,dec,dec_p2,The official capital of Japan is located in,False, the,0.2906,28,0.0017,21,0.0037,-0.8003, the, the ___\nA. East China Sea\nB. East
+F3_China,China,Shanghai,Beijing,2.25,comp,comp_p1,The capital of China is,False, __,0.1703,5,0.0407,9,0.0222,0.6076, __, ____\nA. Shanghai\nB. Beijing\nC.
+F3_China,China,Shanghai,Beijing,2.25,comp,comp_h1,The capital city of China is,False, __,0.1258,5,0.0594,7,0.0352,0.5232, __, ____\nA. Shanghai\nB. Beijing\nC.
+F3_China,China,Shanghai,Beijing,2.25,qa,qa_p1,What is the capital of China? The answer is,False, Beijing,0.1402,2,0.1167,1,0.1402,-0.1836, Beijing, Beijing.<|endoftext|>
+F3_China,China,Shanghai,Beijing,2.25,qa,qa_p2,"Question: What is the capital of China?
+Answer:",False, The,0.2804,6,0.023,3,0.0507,-0.7917, The, The capital of China is Beijing.\n A single-select problem:
+F3_China,China,Shanghai,Beijing,2.25,dec,dec_p1,China's capital city is,False, located,0.1902,5,0.0559,6,0.0393,0.3523, located, located in the ___\nA. Northeast region\nB.
+F3_China,China,Shanghai,Beijing,2.25,dec,dec_p2,The official capital of China is located in,False, the,0.3248,20,0.0023,17,0.004,-0.5595, the, the ___\nA. Northeast region\nB. Northwest region
+F4_Canada,Canada,Toronto,Ottawa,0.75,comp,comp_p1,The capital of Canada is,False, ____,0.111,11,0.0324,14,0.0164,0.6807, ____, ____.\nA. Ottawa\nB. Toronto\nC.
+F4_Canada,Canada,Toronto,Ottawa,0.75,comp,comp_h1,The capital city of Canada is,False, known,0.0905,6,0.0539,13,0.0218,0.9047, known," known as the ""City of Ice"" because of its location"
+F4_Canada,Canada,Toronto,Ottawa,0.75,qa,qa_p1,What is the capital of Canada? The answer is,False,:,0.2315,3,0.078,2,0.1168,-0.4031,:,: Ottawa.<|endoftext|>
+F4_Canada,Canada,Toronto,Ottawa,0.75,qa,qa_p2,"Question: What is the capital of Canada?
+Answer:",False, The,0.3238,5,0.0207,6,0.0192,0.0721, The, The capital of Canada is Ottawa.\n A single-select problem:
+F4_Canada,Canada,Toronto,Ottawa,0.75,dec,dec_p1,Canada's capital city is,False, located,0.2627,9,0.0239,10,0.0234,0.0205, located," located in the province of Quebec, which is part of the"
+F4_Canada,Canada,Toronto,Ottawa,0.75,dec,dec_p2,The official capital of Canada is located in,False, the,0.2964,45,0.0005,86,0.0002,1.0848, the, the province of ____. \nA. Ontario\nB.
+F5_Australia,Australia,Sydney,Canberra,1.25,comp,comp_p1,The capital of Australia is,False, ______,0.2388,6,0.0422,11,0.023,0.6062, ______, ______.\nA. Sydney\nB. Melbourne\nC.
+F5_Australia,Australia,Sydney,Canberra,1.25,comp,comp_h1,The capital city of Australia is,False, ______,0.1699,4,0.0539,11,0.0243,0.7979, ______, ______.\nA. Sydney\nB. Melbourne\nC.
+F5_Australia,Australia,Sydney,Canberra,1.25,qa,qa_p1,What is the capital of Australia? The answer is,True, Sydney,0.1966,1,0.1966,3,0.1462,0.2962, Australia, Sydney.<|endoftext|>
+F5_Australia,Australia,Sydney,Canberra,1.25,qa,qa_p2,"Question: What is the capital of Australia?
+Answer:",False, The,0.3623,5,0.0348,6,0.023,0.4124, The, The capital of Australia is Canberra.\n A single-select problem:
+F5_Australia,Australia,Sydney,Canberra,1.25,dec,dec_p1,Australia's capital city is,False, ______,0.0946,5,0.0568,8,0.0439,0.2566, ______, ________.\nA. Sydney\nB. Melbourne\nC
+F5_Australia,Australia,Sydney,Canberra,1.25,dec,dec_p2,The official capital of Australia is located in,False, the,0.2744,33,0.001,75,0.0002,1.4344, the, the state of ____. \nA. Queensland\nB.
