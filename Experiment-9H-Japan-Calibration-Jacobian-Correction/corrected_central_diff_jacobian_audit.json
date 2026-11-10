@@ -1,0 +1,56 @@
+{
+  "description": "Corrected Central-Difference Cross-Fact Response Jacobian Matrix J_ij = [m_i(beta + h*e_j) - m_i(beta - h*e_j)] / (2h)",
+  "method": "Central Differences",
+  "h_step": 0.15,
+  "base_amplitudes": [
+    3.5,
+    3.25,
+    2.25,
+    0.75,
+    1.25
+  ],
+  "facts": [
+    "F1_France",
+    "F2_Japan",
+    "F3_China",
+    "F4_Canada",
+    "F5_Australia"
+  ],
+  "jacobian_matrix_J_ij": [
+    [
+      1.2527,
+      -0.0011,
+      -0.0012,
+      0.001,
+      -0.0006
+    ],
+    [
+      0.0003,
+      1.0967,
+      0.0004,
+      0.0001,
+      -0.0007
+    ],
+    [
+      -0.0039,
+      -0.0016,
+      1.0156,
+      0.0028,
+      0.0111
+    ],
+    [
+      0.0009,
+      0.0027,
+      -0.0022,
+      1.0859,
+      0.0063
+    ],
+    [
+      0.0013,
+      0.0004,
+      -0.0049,
+      0.0035,
+      1.1754
+    ]
+  ]
+}

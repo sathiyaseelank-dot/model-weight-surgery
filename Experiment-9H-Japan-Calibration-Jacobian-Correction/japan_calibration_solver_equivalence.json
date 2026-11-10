@@ -1,0 +1,30 @@
+{
+  "Arm_J0": {
+    "drift_norm": 0.5389967586484248,
+    "drift_pct": 1.279571154608719,
+    "safeguard_leakage": 6.238109414962693e-17,
+    "rls_forward_error": 1.0456183094840633e-14,
+    "rls_reverse_error": 9.471074417703011e-15
+  },
+  "Arm_J1": {
+    "drift_norm": 0.5508801608155153,
+    "drift_pct": 1.3077821937061582,
+    "safeguard_leakage": 6.349446233594529e-17,
+    "rls_forward_error": 1.0516362578051887e-14,
+    "rls_reverse_error": 9.504588750769077e-15
+  },
+  "Arm_J2": {
+    "drift_norm": 0.5629824363099141,
+    "drift_pct": 1.3365128351790168,
+    "safeguard_leakage": 6.667304430048173e-17,
+    "rls_forward_error": 1.052339646225863e-14,
+    "rls_reverse_error": 9.515185975895453e-15
+  },
+  "Arm_J3": {
+    "drift_norm": 0.575289772091818,
+    "drift_pct": 1.3657302870540475,
+    "safeguard_leakage": 6.710734723524141e-17,
+    "rls_forward_error": 1.059475596638532e-14,
+    "rls_reverse_error": 9.544164144696751e-15
+  }
+}
