@@ -1,0 +1,448 @@
+{
+  "title": "Experiment 7.11: Multi-Key Paraphrase Pilot Evaluation Summary",
+  "diagnostics": {
+    "raw_cosine_similarity": 0.7792976574784011,
+    "projected_cosine_similarity": 0.43640015112755115,
+    "singular_values": [
+      25.405430090517672,
+      5.4455368386386676
+    ],
+    "condition_number_rectangular": 4.66536740882076,
+    "condition_number_gram": 21.765653059286933,
+    "target_preservation_matrix": [
+      [
+        0.9966776245448152,
+        0.00034935351867185216
+      ],
+      [
+        0.00034935351867204645,
+        0.9998065582252678
+      ]
+    ]
+  },
+  "betas_evaluated": [
+    0.08,
+    0.12,
+    0.15
+  ],
+  "lambda_reg": 0.1,
+  "surgery_summaries": [
+    {
+      "beta": 0.08,
+      "norm_delta_w": 0.2859959004151225,
+      "param_drift_ratio": 0.0068934265265060924,
+      "target_accuracy_pct": 99.80236301427902,
+      "target_residual_rel": 0.0019763698572097016,
+      "safeguard_residual_rel": 7.612420314608842e-16,
+      "safeguard_orthogonality_leakage": 1.881116356459279e-15,
+      "all_safeguards_identical": true,
+      "all_controls_preserved": true,
+      "prompts": {
+        "P1_canonical": {
+          "top1_token": " Paris",
+          "top1_prob": 0.20832259953022003,
+          "lyon_prob": 0.015260688029229641,
+          "paris_prob": 0.20832259953022003,
+          "lyon_paris_margin": -2.6138076782226562,
+          "rollout_text": " Paris. It is the seat of the French government and the",
+          "contains_lyon": false,
+          "contains_paris": true
+        },
+        "P4_wh_question": {
+          "top1_token": " Paris",
+          "top1_prob": 0.5751111507415771,
+          "lyon_prob": 0.09248785674571991,
+          "paris_prob": 0.5751111507415771,
+          "lyon_paris_margin": -1.8274860382080078,
+          "rollout_text": " Paris.<|endoftext|>",
+          "contains_lyon": false,
+          "contains_paris": true
+        },
+        "P3_cap_city": {
+          "top1_token": " Paris",
+          "top1_prob": 0.2943234145641327,
+          "lyon_prob": 0.013862201943993568,
+          "paris_prob": 0.2943234145641327,
+          "lyon_paris_margin": -3.055513381958008,
+          "rollout_text": " Paris. It is the largest city in Europe and the second",
+          "contains_lyon": false,
+          "contains_paris": true
+        },
+        "P2_possessive": {
+          "top1_token": " the",
+          "top1_prob": 0.12441873550415039,
+          "lyon_prob": 0.0011176385451108217,
+          "paris_prob": 0.09877443313598633,
+          "lyon_paris_margin": -4.481620788574219,
+          "rollout_text": " the largest city in France, and the second largest city in",
+          "contains_lyon": false,
+          "contains_paris": false
+        },
+        "P6_diplomatic": {
+          "top1_token": " ____",
+          "top1_prob": 0.1236177310347557,
+          "lyon_prob": 0.005442511290311813,
+          "paris_prob": 0.11134559661149979,
+          "lyon_paris_margin": -3.0183982849121094,
+          "rollout_text": " ____.\nA. Paris\nB. Lyon\nC.",
+          "contains_lyon": true,
+          "contains_paris": true
+        },
+        "P7_dialogue_qa": {
+          "top1_token": " The",
+          "top1_prob": 0.26940247416496277,
+          "lyon_prob": 0.0021924269385635853,
+          "paris_prob": 0.2002275437116623,
+          "lyon_paris_margin": -4.5144453048706055,
+          "rollout_text": " The capital of France is Paris. - Brainly.com\\n",
+          "contains_lyon": false,
+          "contains_paris": true
+        },
+        "P8_parenthetical": {
+          "top1_token": " Lyon",
+          "top1_prob": 0.46047574281692505,
+          "lyon_prob": 0.46047574281692505,
+          "paris_prob": 0.3147691488265991,
+          "lyon_paris_margin": 0.3804206848144531,
+          "rollout_text": " Lyon, 1830), 183",
+          "contains_lyon": true,
+          "contains_paris": false
+        }
+      },
+      "safeguards": {
+        "safe_germany": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 1.430511474609375e-05,
+          "peak_max_abs_drift": 1.1560053825378418,
+          "peak_relative_drift": 0.021800842136144638,
+          "peak_kl_divergence": 1.7681552222370556e-08,
+          "min_top5_overlap": 4
+        },
+        "safe_italy": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 1.239776611328125e-05,
+          "peak_max_abs_drift": 1.2175335884094238,
+          "peak_relative_drift": 0.0232006274163723,
+          "peak_kl_divergence": 1.569912200238832e-08,
+          "min_top5_overlap": 4
+        },
+        "safe_spain": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 8.58306884765625e-06,
+          "peak_max_abs_drift": 1.0629363059997559,
+          "peak_relative_drift": 0.020440414547920227,
+          "peak_kl_divergence": 1.0480047940575332e-08,
+          "min_top5_overlap": 5
+        },
+        "safe_science": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 8.58306884765625e-06,
+          "peak_max_abs_drift": 0.21866869926452637,
+          "peak_relative_drift": 0.009170830249786377,
+          "peak_kl_divergence": 5.637948441439278e-11,
+          "min_top5_overlap": 5
+        },
+        "safe_arithmetic": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 1.0013580322265625e-05,
+          "peak_max_abs_drift": 0.28689277172088623,
+          "peak_relative_drift": 0.00828405749052763,
+          "peak_kl_divergence": 7.965317294633678e-11,
+          "min_top5_overlap": 5
+        }
+      },
+      "controls": {
+        "control_germany": {
+          "is_identical_12_tokens": true,
+          "rollout_text": " Berlin. It is the capital of Germany and the largest city"
+        },
+        "control_italy": {
+          "is_identical_12_tokens": true,
+          "rollout_text": " Rome. It is the capital of the Italian Republic. It"
+        },
+        "control_spain": {
+          "is_identical_12_tokens": true,
+          "rollout_text": " Madrid. It is the capital of the autonomous community of And"
+        }
+      }
+    },
+    {
+      "beta": 0.12,
+      "norm_delta_w": 0.42899385062268436,
+      "param_drift_ratio": 0.010340139789759154,
+      "target_accuracy_pct": 99.80236301427902,
+      "target_residual_rel": 0.001976369857209732,
+      "safeguard_residual_rel": 1.1420521859301343e-15,
+      "safeguard_orthogonality_leakage": 2.822336073852594e-15,
+      "all_safeguards_identical": true,
+      "all_controls_preserved": true,
+      "prompts": {
+        "P1_canonical": {
+          "top1_token": " Paris",
+          "top1_prob": 0.16321872174739838,
+          "lyon_prob": 0.031787265092134476,
+          "paris_prob": 0.16321872174739838,
+          "lyon_paris_margin": -1.6360254287719727,
+          "rollout_text": " Paris. It is the seat of the French government and the",
+          "contains_lyon": false,
+          "contains_paris": true
+        },
+        "P4_wh_question": {
+          "top1_token": " Paris",
+          "top1_prob": 0.44086360931396484,
+          "lyon_prob": 0.21742066740989685,
+          "paris_prob": 0.44086360931396484,
+          "lyon_paris_margin": -0.7069015502929688,
+          "rollout_text": " Paris.<|endoftext|>",
+          "contains_lyon": false,
+          "contains_paris": true
+        },
+        "P3_cap_city": {
+          "top1_token": " Paris",
+          "top1_prob": 0.26719528436660767,
+          "lyon_prob": 0.019512075930833817,
+          "paris_prob": 0.26719528436660767,
+          "lyon_paris_margin": -2.616946220397949,
+          "rollout_text": " Paris. It is the largest city in Europe and the second",
+          "contains_lyon": false,
+          "contains_paris": true
+        },
+        "P2_possessive": {
+          "top1_token": " the",
+          "top1_prob": 0.12407524138689041,
+          "lyon_prob": 0.001033586566336453,
+          "paris_prob": 0.10178623348474503,
+          "lyon_paris_margin": -4.589839935302734,
+          "rollout_text": " the largest city in France, and the second largest city in",
+          "contains_lyon": false,
+          "contains_paris": false
+        },
+        "P6_diplomatic": {
+          "top1_token": " ____",
+          "top1_prob": 0.12619636952877045,
+          "lyon_prob": 0.010339198634028435,
+          "paris_prob": 0.08878922462463379,
+          "lyon_paris_margin": -2.150322914123535,
+          "rollout_text": " ____.\nA. Paris\nB. Lyon\nC.",
+          "contains_lyon": true,
+          "contains_paris": true
+        },
+        "P7_dialogue_qa": {
+          "top1_token": " The",
+          "top1_prob": 0.26827776432037354,
+          "lyon_prob": 0.002091871341690421,
+          "paris_prob": 0.20335260033607483,
+          "lyon_paris_margin": -4.576882362365723,
+          "rollout_text": " The capital of France is Paris. - Brainly.com\\n",
+          "contains_lyon": false,
+          "contains_paris": true
+        },
+        "P8_parenthetical": {
+          "top1_token": " Lyon",
+          "top1_prob": 0.7305789589881897,
+          "lyon_prob": 0.7305789589881897,
+          "paris_prob": 0.128431037068367,
+          "lyon_paris_margin": 1.7384452819824219,
+          "rollout_text": " Lyon, 1830), 183",
+          "contains_lyon": true,
+          "contains_paris": false
+        }
+      },
+      "safeguards": {
+        "safe_germany": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 8.58306884765625e-06,
+          "peak_max_abs_drift": 1.7365527153015137,
+          "peak_relative_drift": 0.032725948840379715,
+          "peak_kl_divergence": 4.0378360210979736e-08,
+          "min_top5_overlap": 4
+        },
+        "safe_italy": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 1.33514404296875e-05,
+          "peak_max_abs_drift": 1.8256105184555054,
+          "peak_relative_drift": 0.034821514040231705,
+          "peak_kl_divergence": 3.499950906871163e-08,
+          "min_top5_overlap": 4
+        },
+        "safe_spain": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 9.059906005859375e-06,
+          "peak_max_abs_drift": 1.594573736190796,
+          "peak_relative_drift": 0.030692389234900475,
+          "peak_kl_divergence": 2.343110772073942e-08,
+          "min_top5_overlap": 4
+        },
+        "safe_science": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 9.5367431640625e-06,
+          "peak_max_abs_drift": 0.3277442455291748,
+          "peak_relative_drift": 0.013763218186795712,
+          "peak_kl_divergence": 1.247015130045881e-10,
+          "min_top5_overlap": 5
+        },
+        "safe_arithmetic": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 8.106231689453125e-06,
+          "peak_max_abs_drift": 0.43034136295318604,
+          "peak_relative_drift": 0.012420738115906715,
+          "peak_kl_divergence": 1.7699934573567333e-10,
+          "min_top5_overlap": 5
+        }
+      },
+      "controls": {
+        "control_germany": {
+          "is_identical_12_tokens": true,
+          "rollout_text": " Berlin. It is the capital of Germany and the largest city"
+        },
+        "control_italy": {
+          "is_identical_12_tokens": true,
+          "rollout_text": " Rome. It is the capital of the Italian Republic. It"
+        },
+        "control_spain": {
+          "is_identical_12_tokens": true,
+          "rollout_text": " Madrid. It is the capital of the autonomous community of And"
+        }
+      }
+    },
+    {
+      "beta": 0.15,
+      "norm_delta_w": 0.5362423132783574,
+      "param_drift_ratio": 0.012925174737198987,
+      "target_accuracy_pct": 99.80236301427902,
+      "target_residual_rel": 0.00197636985720973,
+      "safeguard_residual_rel": 1.4277363966376891e-15,
+      "safeguard_orthogonality_leakage": 3.5280988420047437e-15,
+      "all_safeguards_identical": true,
+      "all_controls_preserved": true,
+      "prompts": {
+        "P1_canonical": {
+          "top1_token": " Paris",
+          "top1_prob": 0.1331954449415207,
+          "lyon_prob": 0.05388381704688072,
+          "paris_prob": 0.1331954449415207,
+          "lyon_paris_margin": -0.9049873352050781,
+          "rollout_text": " Paris. It is the seat of the French government and the",
+          "contains_lyon": false,
+          "contains_paris": true
+        },
+        "P4_wh_question": {
+          "top1_token": " Lyon",
+          "top1_prob": 0.3665470778942108,
+          "lyon_prob": 0.3665470778942108,
+          "paris_prob": 0.3215046525001526,
+          "lyon_paris_margin": 0.13111495971679688,
+          "rollout_text": " Lyon. Lyon is the capital of France, located in the",
+          "contains_lyon": true,
+          "contains_paris": false
+        },
+        "P3_cap_city": {
+          "top1_token": " Paris",
+          "top1_prob": 0.24750164151191711,
+          "lyon_prob": 0.02510373294353485,
+          "paris_prob": 0.24750164151191711,
+          "lyon_paris_margin": -2.288400650024414,
+          "rollout_text": " Paris. It is the largest city in Europe and the second",
+          "contains_lyon": false,
+          "contains_paris": true
+        },
+        "P2_possessive": {
+          "top1_token": " the",
+          "top1_prob": 0.1238083615899086,
+          "lyon_prob": 0.0009745681309141219,
+          "paris_prob": 0.10409525036811829,
+          "lyon_paris_margin": -4.671067237854004,
+          "rollout_text": " the largest city in France, and the second largest city in",
+          "contains_lyon": false,
+          "contains_paris": false
+        },
+        "P6_diplomatic": {
+          "top1_token": " ____",
+          "top1_prob": 0.1274198442697525,
+          "lyon_prob": 0.016568349674344063,
+          "paris_prob": 0.07431554049253464,
+          "lyon_paris_margin": -1.5008258819580078,
+          "rollout_text": " ____.\nA. Paris\nB. Lyon\nC.",
+          "contains_lyon": true,
+          "contains_paris": true
+        },
+        "P7_dialogue_qa": {
+          "top1_token": " The",
+          "top1_prob": 0.26742663979530334,
+          "lyon_prob": 0.0020193930249661207,
+          "paris_prob": 0.20571689307689667,
+          "lyon_paris_margin": -4.623703956604004,
+          "rollout_text": " The capital of France is Lyon. The answer is Lyon.",
+          "contains_lyon": true,
+          "contains_paris": false
+        },
+        "P8_parenthetical": {
+          "top1_token": " Lyon",
+          "top1_prob": 0.8605263829231262,
+          "lyon_prob": 0.8605263829231262,
+          "paris_prob": 0.055067043751478195,
+          "lyon_paris_margin": 2.748992919921875,
+          "rollout_text": " Lyon, 1830), 183",
+          "contains_lyon": true,
+          "contains_paris": false
+        }
+      },
+      "safeguards": {
+        "safe_germany": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 1.71661376953125e-05,
+          "peak_max_abs_drift": 2.1725974082946777,
+          "peak_relative_drift": 0.0409257635474205,
+          "peak_kl_divergence": 6.373371519430293e-08,
+          "min_top5_overlap": 4
+        },
+        "safe_italy": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 9.059906005859375e-06,
+          "peak_max_abs_drift": 2.2807655334472656,
+          "peak_relative_drift": 0.043538741767406464,
+          "peak_kl_divergence": 5.4303530561128355e-08,
+          "min_top5_overlap": 4
+        },
+        "safe_spain": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 9.5367431640625e-06,
+          "peak_max_abs_drift": 1.9930152893066406,
+          "peak_relative_drift": 0.038390688598155975,
+          "peak_kl_divergence": 3.640300150209441e-08,
+          "min_top5_overlap": 4
+        },
+        "safe_science": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 8.58306884765625e-06,
+          "peak_max_abs_drift": 0.4094245433807373,
+          "peak_relative_drift": 0.017210735008120537,
+          "peak_kl_divergence": 1.9653730032320738e-10,
+          "min_top5_overlap": 5
+        },
+        "safe_arithmetic": {
+          "is_identical_12_tokens": true,
+          "step1_max_abs_drift": 9.5367431640625e-06,
+          "peak_max_abs_drift": 0.5379227995872498,
+          "peak_relative_drift": 0.01552087627351284,
+          "peak_kl_divergence": 2.764244111386205e-10,
+          "min_top5_overlap": 5
+        }
+      },
+      "controls": {
+        "control_germany": {
+          "is_identical_12_tokens": true,
+          "rollout_text": " Berlin. It is the capital of Germany and the largest city"
+        },
+        "control_italy": {
+          "is_identical_12_tokens": true,
+          "rollout_text": " Rome. It is the capital of the Italian Republic. It"
+        },
+        "control_spain": {
+          "is_identical_12_tokens": true,
+          "rollout_text": " Madrid. It is the capital of the autonomous community of And"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,648 @@
+{
+  "metadata": {
+    "title": "Experiment 3 \u2014 Task 7.4: Sequence-Wide Safeguard Protection Audit",
+    "model": "Qwen/Qwen2.5-0.5B",
+    "layer_idx": 20,
+    "num_pilot_prompts": 5,
+    "total_tokens_captured": 37,
+    "d_in": 4864,
+    "d_out": 896
+  },
+  "prompts": [
+    {
+      "prompt_id": "safe_germany",
+      "prompt": "The capital of Germany is Berlin.",
+      "category": "factual_geography",
+      "num_tokens": 7,
+      "token_ids": [
+        785,
+        6722,
+        315,
+        9856,
+        374,
+        19846,
+        13
+      ],
+      "token_strings": [
+        "The",
+        " capital",
+        " of",
+        " Germany",
+        " is",
+        " Berlin",
+        "."
+      ],
+      "tokens": [
+        {
+          "global_token_index": 0,
+          "prompt_id": "safe_germany",
+          "token_position": 0,
+          "token_id": 785,
+          "token_str": "The",
+          "k_norm": 13.58368685463662,
+          "v0_norm": 8.125429850991617
+        },
+        {
+          "global_token_index": 1,
+          "prompt_id": "safe_germany",
+          "token_position": 1,
+          "token_id": 6722,
+          "token_str": " capital",
+          "k_norm": 28.266058606538973,
+          "v0_norm": 20.649220884596595
+        },
+        {
+          "global_token_index": 2,
+          "prompt_id": "safe_germany",
+          "token_position": 2,
+          "token_id": 315,
+          "token_str": " of",
+          "k_norm": 26.482906821666326,
+          "v0_norm": 17.535016262149
+        },
+        {
+          "global_token_index": 3,
+          "prompt_id": "safe_germany",
+          "token_position": 3,
+          "token_id": 9856,
+          "token_str": " Germany",
+          "k_norm": 22.048803081451382,
+          "v0_norm": 15.053778542743514
+        },
+        {
+          "global_token_index": 4,
+          "prompt_id": "safe_germany",
+          "token_position": 4,
+          "token_id": 374,
+          "token_str": " is",
+          "k_norm": 33.27997766870572,
+          "v0_norm": 20.408688605305358
+        },
+        {
+          "global_token_index": 5,
+          "prompt_id": "safe_germany",
+          "token_position": 5,
+          "token_id": 19846,
+          "token_str": " Berlin",
+          "k_norm": 21.09573380428266,
+          "v0_norm": 15.455110087809997
+        },
+        {
+          "global_token_index": 6,
+          "prompt_id": "safe_germany",
+          "token_position": 6,
+          "token_id": 13,
+          "token_str": ".",
+          "k_norm": 28.30341976467274,
+          "v0_norm": 19.460204113874983
+        }
+      ]
+    },
+    {
+      "prompt_id": "safe_italy",
+      "prompt": "The capital of Italy is Rome.",
+      "category": "factual_geography",
+      "num_tokens": 7,
+      "token_ids": [
+        785,
+        6722,
+        315,
+        15344,
+        374,
+        21718,
+        13
+      ],
+      "token_strings": [
+        "The",
+        " capital",
+        " of",
+        " Italy",
+        " is",
+        " Rome",
+        "."
+      ],
+      "tokens": [
+        {
+          "global_token_index": 7,
+          "prompt_id": "safe_italy",
+          "token_position": 0,
+          "token_id": 785,
+          "token_str": "The",
+          "k_norm": 13.58368685463662,
+          "v0_norm": 8.125429850991617
+        },
+        {
+          "global_token_index": 8,
+          "prompt_id": "safe_italy",
+          "token_position": 1,
+          "token_id": 6722,
+          "token_str": " capital",
+          "k_norm": 28.266058606538973,
+          "v0_norm": 20.649220884596595
+        },
+        {
+          "global_token_index": 9,
+          "prompt_id": "safe_italy",
+          "token_position": 2,
+          "token_id": 315,
+          "token_str": " of",
+          "k_norm": 26.482906821666326,
+          "v0_norm": 17.535016262149
+        },
+        {
+          "global_token_index": 10,
+          "prompt_id": "safe_italy",
+          "token_position": 3,
+          "token_id": 15344,
+          "token_str": " Italy",
+          "k_norm": 23.389598426759825,
+          "v0_norm": 15.776530780971175
+        },
+        {
+          "global_token_index": 11,
+          "prompt_id": "safe_italy",
+          "token_position": 4,
+          "token_id": 374,
+          "token_str": " is",
+          "k_norm": 33.87525854092113,
+          "v0_norm": 20.741504527929624
+        },
+        {
+          "global_token_index": 12,
+          "prompt_id": "safe_italy",
+          "token_position": 5,
+          "token_id": 21718,
+          "token_str": " Rome",
+          "k_norm": 21.19708280539568,
+          "v0_norm": 15.808029307522729
+        },
+        {
+          "global_token_index": 13,
+          "prompt_id": "safe_italy",
+          "token_position": 6,
+          "token_id": 13,
+          "token_str": ".",
+          "k_norm": 28.095449362850932,
+          "v0_norm": 19.20563620592376
+        }
+      ]
+    },
+    {
+      "prompt_id": "safe_spain",
+      "prompt": "The capital of Spain is Madrid.",
+      "category": "factual_geography",
+      "num_tokens": 7,
+      "token_ids": [
+        785,
+        6722,
+        315,
+        17689,
+        374,
+        24081,
+        13
+      ],
+      "token_strings": [
+        "The",
+        " capital",
+        " of",
+        " Spain",
+        " is",
+        " Madrid",
+        "."
+      ],
+      "tokens": [
+        {
+          "global_token_index": 14,
+          "prompt_id": "safe_spain",
+          "token_position": 0,
+          "token_id": 785,
+          "token_str": "The",
+          "k_norm": 13.58368685463662,
+          "v0_norm": 8.125429850991617
+        },
+        {
+          "global_token_index": 15,
+          "prompt_id": "safe_spain",
+          "token_position": 1,
+          "token_id": 6722,
+          "token_str": " capital",
+          "k_norm": 28.266058606538973,
+          "v0_norm": 20.649220884596595
+        },
+        {
+          "global_token_index": 16,
+          "prompt_id": "safe_spain",
+          "token_position": 2,
+          "token_id": 315,
+          "token_str": " of",
+          "k_norm": 26.482906821666326,
+          "v0_norm": 17.535016262149
+        },
+        {
+          "global_token_index": 17,
+          "prompt_id": "safe_spain",
+          "token_position": 3,
+          "token_id": 17689,
+          "token_str": " Spain",
+          "k_norm": 22.728037156787288,
+          "v0_norm": 15.26968257778091
+        },
+        {
+          "global_token_index": 18,
+          "prompt_id": "safe_spain",
+          "token_position": 4,
+          "token_id": 374,
+          "token_str": " is",
+          "k_norm": 33.45210102330592,
+          "v0_norm": 20.14389949078714
+        },
+        {
+          "global_token_index": 19,
+          "prompt_id": "safe_spain",
+          "token_position": 5,
+          "token_id": 24081,
+          "token_str": " Madrid",
+          "k_norm": 21.46682583539189,
+          "v0_norm": 15.091513465837888
+        },
+        {
+          "global_token_index": 20,
+          "prompt_id": "safe_spain",
+          "token_position": 6,
+          "token_id": 13,
+          "token_str": ".",
+          "k_norm": 28.438840804775698,
+          "v0_norm": 19.614391041113837
+        }
+      ]
+    },
+    {
+      "prompt_id": "safe_science",
+      "prompt": "Water is composed of hydrogen and oxygen.",
+      "category": "science_chemistry",
+      "num_tokens": 8,
+      "token_ids": [
+        28253,
+        374,
+        23415,
+        315,
+        34684,
+        323,
+        23552,
+        13
+      ],
+      "token_strings": [
+        "Water",
+        " is",
+        " composed",
+        " of",
+        " hydrogen",
+        " and",
+        " oxygen",
+        "."
+      ],
+      "tokens": [
+        {
+          "global_token_index": 21,
+          "prompt_id": "safe_science",
+          "token_position": 0,
+          "token_id": 28253,
+          "token_str": "Water",
+          "k_norm": 13.42818650383556,
+          "v0_norm": 8.085307283740947
+        },
+        {
+          "global_token_index": 22,
+          "prompt_id": "safe_science",
+          "token_position": 1,
+          "token_id": 374,
+          "token_str": " is",
+          "k_norm": 28.825197507510957,
+          "v0_norm": 18.983978384962988
+        },
+        {
+          "global_token_index": 23,
+          "prompt_id": "safe_science",
+          "token_position": 2,
+          "token_id": 23415,
+          "token_str": " composed",
+          "k_norm": 32.25795153901576,
+          "v0_norm": 20.978112863412143
+        },
+        {
+          "global_token_index": 24,
+          "prompt_id": "safe_science",
+          "token_position": 3,
+          "token_id": 315,
+          "token_str": " of",
+          "k_norm": 38.24953055970138,
+          "v0_norm": 23.190821960541392
+        },
+        {
+          "global_token_index": 25,
+          "prompt_id": "safe_science",
+          "token_position": 4,
+          "token_id": 34684,
+          "token_str": " hydrogen",
+          "k_norm": 30.79169430685866,
+          "v0_norm": 20.056856317813104
+        },
+        {
+          "global_token_index": 26,
+          "prompt_id": "safe_science",
+          "token_position": 5,
+          "token_id": 323,
+          "token_str": " and",
+          "k_norm": 35.42091973823914,
+          "v0_norm": 20.959259455487608
+        },
+        {
+          "global_token_index": 27,
+          "prompt_id": "safe_science",
+          "token_position": 6,
+          "token_id": 23552,
+          "token_str": " oxygen",
+          "k_norm": 30.10561671802074,
+          "v0_norm": 18.517729403871236
+        },
+        {
+          "global_token_index": 28,
+          "prompt_id": "safe_science",
+          "token_position": 7,
+          "token_id": 13,
+          "token_str": ".",
+          "k_norm": 32.229453643076205,
+          "v0_norm": 20.48691098826936
+        }
+      ]
+    },
+    {
+      "prompt_id": "safe_arithmetic",
+      "prompt": "2 + 2 = 4.",
+      "category": "arithmetic_logic",
+      "num_tokens": 8,
+      "token_ids": [
+        17,
+        488,
+        220,
+        17,
+        284,
+        220,
+        19,
+        13
+      ],
+      "token_strings": [
+        "2",
+        " +",
+        " ",
+        "2",
+        " =",
+        " ",
+        "4",
+        "."
+      ],
+      "tokens": [
+        {
+          "global_token_index": 29,
+          "prompt_id": "safe_arithmetic",
+          "token_position": 0,
+          "token_id": 17,
+          "token_str": "2",
+          "k_norm": 13.390722695032983,
+          "v0_norm": 8.082676529109573
+        },
+        {
+          "global_token_index": 30,
+          "prompt_id": "safe_arithmetic",
+          "token_position": 1,
+          "token_id": 488,
+          "token_str": " +",
+          "k_norm": 28.727562013831843,
+          "v0_norm": 18.160074287155542
+        },
+        {
+          "global_token_index": 31,
+          "prompt_id": "safe_arithmetic",
+          "token_position": 2,
+          "token_id": 220,
+          "token_str": " ",
+          "k_norm": 27.564063450908954,
+          "v0_norm": 18.427850253536988
+        },
+        {
+          "global_token_index": 32,
+          "prompt_id": "safe_arithmetic",
+          "token_position": 3,
+          "token_id": 17,
+          "token_str": "2",
+          "k_norm": 30.76837980298174,
+          "v0_norm": 18.316493031958785
+        },
+        {
+          "global_token_index": 33,
+          "prompt_id": "safe_arithmetic",
+          "token_position": 4,
+          "token_id": 284,
+          "token_str": " =",
+          "k_norm": 27.262129735728852,
+          "v0_norm": 18.008105219562477
+        },
+        {
+          "global_token_index": 34,
+          "prompt_id": "safe_arithmetic",
+          "token_position": 5,
+          "token_id": 220,
+          "token_str": " ",
+          "k_norm": 28.692700114417896,
+          "v0_norm": 18.976890891043723
+        },
+        {
+          "global_token_index": 35,
+          "prompt_id": "safe_arithmetic",
+          "token_position": 6,
+          "token_id": 19,
+          "token_str": "4",
+          "k_norm": 30.00944633083701,
+          "v0_norm": 17.394296628861788
+        },
+        {
+          "global_token_index": 36,
+          "prompt_id": "safe_arithmetic",
+          "token_position": 7,
+          "token_id": 13,
+          "token_str": ".",
+          "k_norm": 28.767824425930847,
+          "v0_norm": 18.169187344515638
+        }
+      ]
+    }
+  ],
+  "spectral_analysis": {
+    "total_columns": 37,
+    "numerical_rank": 31,
+    "num_redundant_columns": 6,
+    "null_space_dimension_d_red": 4833,
+    "sigma_max": 89.29342256536502,
+    "sigma_min_effective": 0.4177524354008377,
+    "sigma_min_classical": 5.919581455794482e-15,
+    "effective_condition_number": 213.74722203519192,
+    "classical_condition_number": 1.5084414874966988e+16,
+    "singular_values": [
+      89.29342256536502,
+      54.94569341786371,
+      51.92475280761363,
+      46.43317533774898,
+      40.816971403325425,
+      39.90929168728761,
+      34.257920993979404,
+      29.99502307373689,
+      28.96977237165523,
+      28.116899073206387,
+      25.829896205254983,
+      24.401708976755636,
+      22.214438596840637,
+      21.652917077774582,
+      21.227078478200564,
+      20.58481466499435,
+      18.236140336293133,
+      17.205028040537265,
+      15.5142773681216,
+      14.02147085310548,
+      9.947057555256677,
+      9.01459865994056,
+      8.642690967170052,
+      6.828838344639805,
+      6.037361821264056,
+      5.789893067622234,
+      5.239088568278709,
+      4.0094414969385275,
+      3.7081471776912713,
+      0.7761448635382278,
+      0.4177524354008377,
+      1.888137784532794e-14,
+      7.592483593407754e-15,
+      6.9782532016809225e-15,
+      5.919581455794482e-15,
+      5.919581455794482e-15,
+      5.919581455794482e-15
+    ]
+  },
+  "exact_duplicates": [
+    {
+      "col_i": 0,
+      "col_j": 7,
+      "prompt_i": "safe_germany",
+      "pos_i": 0,
+      "str_i": "The",
+      "prompt_j": "safe_italy",
+      "pos_j": 0,
+      "str_j": "The",
+      "cosine_similarity": 0.9999999999999992,
+      "l2_difference": 0.0
+    },
+    {
+      "col_i": 0,
+      "col_j": 14,
+      "prompt_i": "safe_germany",
+      "pos_i": 0,
+      "str_i": "The",
+      "prompt_j": "safe_spain",
+      "pos_j": 0,
+      "str_j": "The",
+      "cosine_similarity": 0.9999999999999992,
+      "l2_difference": 0.0
+    },
+    {
+      "col_i": 1,
+      "col_j": 8,
+      "prompt_i": "safe_germany",
+      "pos_i": 1,
+      "str_i": " capital",
+      "prompt_j": "safe_italy",
+      "pos_j": 1,
+      "str_j": " capital",
+      "cosine_similarity": 0.9999999999999971,
+      "l2_difference": 0.0
+    },
+    {
+      "col_i": 1,
+      "col_j": 15,
+      "prompt_i": "safe_germany",
+      "pos_i": 1,
+      "str_i": " capital",
+      "prompt_j": "safe_spain",
+      "pos_j": 1,
+      "str_j": " capital",
+      "cosine_similarity": 0.9999999999999971,
+      "l2_difference": 0.0
+    },
+    {
+      "col_i": 2,
+      "col_j": 9,
+      "prompt_i": "safe_germany",
+      "pos_i": 2,
+      "str_i": " of",
+      "prompt_j": "safe_italy",
+      "pos_j": 2,
+      "str_j": " of",
+      "cosine_similarity": 0.999999999999997,
+      "l2_difference": 0.0
+    },
+    {
+      "col_i": 2,
+      "col_j": 16,
+      "prompt_i": "safe_germany",
+      "pos_i": 2,
+      "str_i": " of",
+      "prompt_j": "safe_spain",
+      "pos_j": 2,
+      "str_j": " of",
+      "cosine_similarity": 0.999999999999997,
+      "l2_difference": 0.0
+    },
+    {
+      "col_i": 7,
+      "col_j": 14,
+      "prompt_i": "safe_italy",
+      "pos_i": 0,
+      "str_i": "The",
+      "prompt_j": "safe_spain",
+      "pos_j": 0,
+      "str_j": "The",
+      "cosine_similarity": 0.9999999999999992,
+      "l2_difference": 0.0
+    },
+    {
+      "col_i": 8,
+      "col_j": 15,
+      "prompt_i": "safe_italy",
+      "pos_i": 1,
+      "str_i": " capital",
+      "prompt_j": "safe_spain",
+      "pos_j": 1,
+      "str_j": " capital",
+      "cosine_similarity": 0.9999999999999971,
+      "l2_difference": 0.0
+    },
+    {
+      "col_i": 9,
+      "col_j": 16,
+      "prompt_i": "safe_italy",
+      "pos_i": 2,
+      "str_i": " of",
+      "prompt_j": "safe_spain",
+      "pos_j": 2,
+      "str_j": " of",
+      "cosine_similarity": 0.999999999999997,
+      "l2_difference": 0.0
+    }
+  ],
+  "solver_compatibility": {
+    "compatible_without_code_changes": true,
+    "init_time_sec": 2.4657246220012894,
+    "solver_rank": 31,
+    "solver_d_red": 4833,
+    "post_update_safeguard_relative_error": 4.344570284758565e-16,
+    "model_weights_bitwise_unmodified": true
+  }
+}

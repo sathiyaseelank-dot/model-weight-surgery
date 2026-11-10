@@ -1,0 +1,11 @@
+mode,fact_id,country,target_city,original_city,beta,prompt_type,margin_vs_orig,margin_vs_comp,target_prob,original_prob,is_top1,top1_token,highest_competing_token,interference_delta,classification
+joint_adaptive,F1_France,France,Lyon,Paris,3.5,train_p1,-0.1049,-0.4555,0.0873,0.0969,False, ______, ______,-0.0032,Not Acquired (Margin <= 0)
+joint_adaptive,F1_France,France,Lyon,Paris,3.5,heldout_h1,-0.6857,-0.6857,0.0774,0.1537,False, Paris, Paris,0.0039,Not Acquired (Margin <= 0)
+joint_adaptive,F2_Japan,Japan,Osaka,Tokyo,2.75,train_p1,0.0086,-2.3668,0.0204,0.0202,False, __, __,-0.0059,Mixed Acquisition (Margin > 0 on 1 prompt)
+joint_adaptive,F2_Japan,Japan,Osaka,Tokyo,2.75,heldout_h1,-0.2513,-1.6159,0.0263,0.0338,False, __, __,-0.0087,Mixed Acquisition (Margin > 0 on 1 prompt)
+joint_adaptive,F3_China,China,Shanghai,Beijing,1.75,train_p1,0.0465,-1.7161,0.0307,0.0293,False, __, __,-0.0046,Partially Acquired (Margin > 0)
+joint_adaptive,F3_China,China,Shanghai,Beijing,1.75,heldout_h1,0.0937,-0.9721,0.0478,0.0436,False, __, __,0.0176,Partially Acquired (Margin > 0)
+joint_adaptive,F4_Canada,Canada,Toronto,Ottawa,0.5,train_p1,0.4165,-1.3277,0.0293,0.0193,False, ____, ____,-0.0034,Partially Acquired (Margin > 0)
+joint_adaptive,F4_Canada,Canada,Toronto,Ottawa,0.5,heldout_h1,0.6824,-0.6038,0.0497,0.0251,False, known, known,-0.0315,Partially Acquired (Margin > 0)
+joint_adaptive,F5_Australia,Australia,Sydney,Canberra,1.0,train_p1,0.2766,-1.8446,0.0376,0.0285,False, ______, ______,-0.0008,Partially Acquired (Margin > 0)
+joint_adaptive,F5_Australia,Australia,Sydney,Canberra,1.0,heldout_h1,0.5379,-1.2346,0.0491,0.0287,False, ______, ______,0.0109,Partially Acquired (Margin > 0)

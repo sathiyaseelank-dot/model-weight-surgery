@@ -1,0 +1,16 @@
+{
+  "beta_vector": {
+    "F1_France": 3.5,
+    "F2_Japan": 2.75,
+    "F3_China": 1.75,
+    "F4_Canada": 0.5,
+    "F5_Australia": 1.0
+  },
+  "gamma": 1.0,
+  "lambda": 0.1,
+  "fwd_error": 2.730636059158074e-15,
+  "rev_error": 2.2991233241757843e-15,
+  "fwd_pass": true,
+  "rev_pass": true,
+  "safeguard_leakage": 1.289921492024675e-17
+}

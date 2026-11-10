@@ -1,0 +1,2812 @@
+{
+  "metadata": {
+    "title": "Experiment 3 \u2014 Task 7.5: First One-Fact Constrained RLS Semantic Pilot",
+    "model": "Qwen/Qwen2.5-0.5B",
+    "layer_idx": 20,
+    "edit_query_prompt": "The capital of France is",
+    "tested_betas": [
+      0.15,
+      0.2
+    ],
+    "safeguard_tokens_count": 37,
+    "city_token_ids": {
+      "Lyon": 55201,
+      "Paris": 12095,
+      "Berlin": 19846,
+      "Rome": 21718,
+      "Madrid": 24081
+    }
+  },
+  "baseline": {
+    "france_evaluations": [
+      {
+        "id": "france_canonical",
+        "prompt": "The capital of France is",
+        "category": "france_query",
+        "expected_baseline_city": "Paris",
+        "top1_token_id": 12095,
+        "top1_token_str": " Paris",
+        "top1_prob": 0.31559133529663086,
+        "top1_is_expected": true,
+        "top1_is_lyon": false,
+        "lyon_surpasses_paris": false,
+        "margin_lyon_minus_paris": -4.576615333557129,
+        "rank_expected": 1,
+        "rank_lyon": 29,
+        "rank_paris": 1,
+        "city_metrics": {
+          "Lyon": {
+            "token_id": 55201,
+            "logit": 13.266707420349121,
+            "prob": 0.003247329033911228
+          },
+          "Paris": {
+            "token_id": 12095,
+            "logit": 17.84332275390625,
+            "prob": 0.31559133529663086
+          },
+          "Berlin": {
+            "token_id": 19846,
+            "logit": 11.260175704956055,
+            "prob": 0.00043661700328812003
+          },
+          "Rome": {
+            "token_id": 21718,
+            "logit": 11.52160930633545,
+            "prob": 0.0005670740501955152
+          },
+          "Madrid": {
+            "token_id": 24081,
+            "logit": 9.792672157287598,
+            "prob": 0.00010064031084766611
+          }
+        },
+        "top10": [
+          {
+            "rank": 1,
+            "token_id": 12095,
+            "token_str": " Paris",
+            "logit": 17.84332275390625,
+            "prob": 0.31559133529663086
+          },
+          {
+            "rank": 2,
+            "token_id": 32671,
+            "token_str": " ______",
+            "logit": 16.830291748046875,
+            "prob": 0.11459647864103317
+          },
+          {
+            "rank": 3,
+            "token_id": 30743,
+            "token_str": " ____",
+            "logit": 16.240436553955078,
+            "prob": 0.06353315711021423
+          },
+          {
+            "rank": 4,
+            "token_id": 1304,
+            "token_str": " __",
+            "logit": 16.098424911499023,
+            "prob": 0.055122073739767075
+          },
+          {
+            "rank": 5,
+            "token_id": 510,
+            "token_str": ":\n",
+            "logit": 16.026952743530273,
+            "prob": 0.051319874823093414
+          },
+          {
+            "rank": 6,
+            "token_id": 7407,
+            "token_str": " located",
+            "logit": 15.668329238891602,
+            "prob": 0.03585398197174072
+          },
+          {
+            "rank": 7,
+            "token_id": 279,
+            "token_str": " the",
+            "logit": 15.422863960266113,
+            "prob": 0.028050020337104797
+          },
+          {
+            "rank": 8,
+            "token_id": 198,
+            "token_str": "\n",
+            "logit": 15.29027271270752,
+            "prob": 0.024566851556301117
+          },
+          {
+            "rank": 9,
+            "token_id": 320,
+            "token_str": " (",
+            "logit": 15.070098876953125,
+            "prob": 0.019711934030056
+          },
+          {
+            "rank": 10,
+            "token_id": 16448,
+            "token_str": " .\n",
+            "logit": 15.021086692810059,
+            "prob": 0.018769104033708572
+          }
+        ]
+      },
+      {
+        "id": "france_possessive",
+        "prompt": "France's capital city is",
+        "category": "france_paraphrase",
+        "expected_baseline_city": "Paris",
+        "top1_token_id": 279,
+        "top1_token_str": " the",
+        "top1_prob": 0.12507112324237823,
+        "top1_is_expected": false,
+        "top1_is_lyon": false,
+        "lyon_surpasses_paris": false,
+        "margin_lyon_minus_paris": -4.265462875366211,
+        "rank_expected": 2,
+        "rank_lyon": 65,
+        "rank_paris": 2,
+        "city_metrics": {
+          "Lyon": {
+            "token_id": 55201,
+            "logit": 11.582193374633789,
+            "prob": 0.0013058144832029939
+          },
+          "Paris": {
+            "token_id": 12095,
+            "logit": 15.84765625,
+            "prob": 0.09297120571136475
+          },
+          "Berlin": {
+            "token_id": 19846,
+            "logit": 9.207316398620605,
+            "prob": 0.00012147460802225396
+          },
+          "Rome": {
+            "token_id": 21718,
+            "logit": 11.55064868927002,
+            "prob": 0.001265265978872776
+          },
+          "Madrid": {
+            "token_id": 24081,
+            "logit": 11.023887634277344,
+            "prob": 0.0007471579010598361
+          }
+        },
+        "top10": [
+          {
+            "rank": 1,
+            "token_id": 279,
+            "token_str": " the",
+            "logit": 16.144248962402344,
+            "prob": 0.12507112324237823
+          },
+          {
+            "rank": 2,
+            "token_id": 12095,
+            "token_str": " Paris",
+            "logit": 15.84765625,
+            "prob": 0.09297120571136475
+          },
+          {
+            "rank": 3,
+            "token_id": 7407,
+            "token_str": " located",
+            "logit": 15.701641082763672,
+            "prob": 0.08034056425094604
+          },
+          {
+            "rank": 4,
+            "token_id": 264,
+            "token_str": " a",
+            "logit": 15.634267807006836,
+            "prob": 0.07510606944561005
+          },
+          {
+            "rank": 5,
+            "token_id": 3881,
+            "token_str": " known",
+            "logit": 15.584754943847656,
+            "prob": 0.07147791981697083
+          },
+          {
+            "rank": 6,
+            "token_id": 1304,
+            "token_str": " __",
+            "logit": 14.99991512298584,
+            "prob": 0.039827145636081696
+          },
+          {
+            "rank": 7,
+            "token_id": 1083,
+            "token_str": " also",
+            "logit": 14.612305641174316,
+            "prob": 0.02702978067100048
+          },
+          {
+            "rank": 8,
+            "token_id": 30743,
+            "token_str": " ____",
+            "logit": 14.586915969848633,
+            "prob": 0.02635214291512966
+          },
+          {
+            "rank": 9,
+            "token_id": 32671,
+            "token_str": " ______",
+            "logit": 14.40044116973877,
+            "prob": 0.021869102492928505
+          },
+          {
+            "rank": 10,
+            "token_id": 3545,
+            "token_str": " often",
+            "logit": 14.024839401245117,
+            "prob": 0.015021356754004955
+          }
+        ]
+      },
+      {
+        "id": "france_capital_city",
+        "prompt": "The capital city of France is",
+        "category": "france_paraphrase",
+        "expected_baseline_city": "Paris",
+        "top1_token_id": 12095,
+        "top1_token_str": " Paris",
+        "top1_prob": 0.35114094614982605,
+        "top1_is_expected": true,
+        "top1_is_lyon": false,
+        "lyon_surpasses_paris": false,
+        "margin_lyon_minus_paris": -3.934093475341797,
+        "rank_expected": 1,
+        "rank_lyon": 20,
+        "rank_paris": 1,
+        "city_metrics": {
+          "Lyon": {
+            "token_id": 55201,
+            "logit": 13.444473266601562,
+            "prob": 0.006869519595056772
+          },
+          "Paris": {
+            "token_id": 12095,
+            "logit": 17.37856674194336,
+            "prob": 0.35114094614982605
+          },
+          "Berlin": {
+            "token_id": 19846,
+            "logit": 10.989072799682617,
+            "prob": 0.0005896027432754636
+          },
+          "Rome": {
+            "token_id": 21718,
+            "logit": 11.555500030517578,
+            "prob": 0.001038856920786202
+          },
+          "Madrid": {
+            "token_id": 24081,
+            "logit": 10.398395538330078,
+            "prob": 0.0003266116254962981
+          }
+        },
+        "top10": [
+          {
+            "rank": 1,
+            "token_id": 12095,
+            "token_str": " Paris",
+            "logit": 17.37856674194336,
+            "prob": 0.35114094614982605
+          },
+          {
+            "rank": 2,
+            "token_id": 32671,
+            "token_str": " ______",
+            "logit": 15.746682167053223,
+            "prob": 0.06866936385631561
+          },
+          {
+            "rank": 3,
+            "token_id": 1304,
+            "token_str": " __",
+            "logit": 15.46102237701416,
+            "prob": 0.051606275141239166
+          },
+          {
+            "rank": 4,
+            "token_id": 30743,
+            "token_str": " ____",
+            "logit": 15.337493896484375,
+            "prob": 0.04560944437980652
+          },
+          {
+            "rank": 5,
+            "token_id": 7407,
+            "token_str": " located",
+            "logit": 15.312416076660156,
+            "prob": 0.04447988420724869
+          },
+          {
+            "rank": 6,
+            "token_id": 279,
+            "token_str": " the",
+            "logit": 15.26278305053711,
+            "prob": 0.042326103895902634
+          },
+          {
+            "rank": 7,
+            "token_id": 3881,
+            "token_str": " known",
+            "logit": 14.910055160522461,
+            "prob": 0.029745448380708694
+          },
+          {
+            "rank": 8,
+            "token_id": 264,
+            "token_str": " a",
+            "logit": 14.70209789276123,
+            "prob": 0.024160493165254593
+          },
+          {
+            "rank": 9,
+            "token_id": 510,
+            "token_str": ":\n",
+            "logit": 14.568744659423828,
+            "prob": 0.02114420011639595
+          },
+          {
+            "rank": 10,
+            "token_id": 2598,
+            "token_str": " called",
+            "logit": 14.423333168029785,
+            "prob": 0.018282679840922356
+          }
+        ]
+      },
+      {
+        "id": "france_wh_question",
+        "prompt": "Which city serves as the capital of France? The answer is",
+        "category": "france_paraphrase",
+        "expected_baseline_city": "Paris",
+        "top1_token_id": 12095,
+        "top1_token_str": " Paris",
+        "top1_prob": 0.7435249090194702,
+        "top1_is_expected": true,
+        "top1_is_lyon": false,
+        "lyon_surpasses_paris": false,
+        "margin_lyon_minus_paris": -4.075786590576172,
+        "rank_expected": 1,
+        "rank_lyon": 5,
+        "rank_paris": 1,
+        "city_metrics": {
+          "Lyon": {
+            "token_id": 55201,
+            "logit": 15.098087310791016,
+            "prob": 0.012624201364815235
+          },
+          "Paris": {
+            "token_id": 12095,
+            "logit": 19.173873901367188,
+            "prob": 0.7435249090194702
+          },
+          "Berlin": {
+            "token_id": 19846,
+            "logit": 13.518043518066406,
+            "prob": 0.002600157167762518
+          },
+          "Rome": {
+            "token_id": 21718,
+            "logit": 12.975847244262695,
+            "prob": 0.0015119129093363881
+          },
+          "Madrid": {
+            "token_id": 24081,
+            "logit": 11.447793960571289,
+            "prob": 0.00032802100758999586
+          }
+        },
+        "top10": [
+          {
+            "rank": 1,
+            "token_id": 12095,
+            "token_str": " Paris",
+            "logit": 19.173873901367188,
+            "prob": 0.7435249090194702
+          },
+          {
+            "rank": 2,
+            "token_id": 1447,
+            "token_str": ":\n\n",
+            "logit": 16.595172882080078,
+            "prob": 0.05641309171915054
+          },
+          {
+            "rank": 3,
+            "token_id": 25,
+            "token_str": ":",
+            "logit": 16.36520004272461,
+            "prob": 0.04482331499457359
+          },
+          {
+            "rank": 4,
+            "token_id": 3070,
+            "token_str": " **",
+            "logit": 15.63902473449707,
+            "prob": 0.021683532744646072
+          },
+          {
+            "rank": 5,
+            "token_id": 55201,
+            "token_str": " Lyon",
+            "logit": 15.098087310791016,
+            "prob": 0.012624201364815235
+          },
+          {
+            "rank": 6,
+            "token_id": 537,
+            "token_str": " not",
+            "logit": 14.953563690185547,
+            "prob": 0.010925418697297573
+          },
+          {
+            "rank": 7,
+            "token_id": 30743,
+            "token_str": " ____",
+            "logit": 14.621054649353027,
+            "prob": 0.007834860123693943
+          },
+          {
+            "rank": 8,
+            "token_id": 28859,
+            "token_str": " Nice",
+            "logit": 14.56006908416748,
+            "prob": 0.007371325045824051
+          },
+          {
+            "rank": 9,
+            "token_id": 330,
+            "token_str": " \"",
+            "logit": 14.501264572143555,
+            "prob": 0.006950356066226959
+          },
+          {
+            "rank": 10,
+            "token_id": 1304,
+            "token_str": " __",
+            "logit": 14.425414085388184,
+            "prob": 0.006442666053771973
+          }
+        ]
+      }
+    ],
+    "control_evaluations": [
+      {
+        "id": "control_germany",
+        "prompt": "The capital of Germany is",
+        "category": "unrelated_control",
+        "expected_baseline_city": "Berlin",
+        "top1_token_id": 19846,
+        "top1_token_str": " Berlin",
+        "top1_prob": 0.16758179664611816,
+        "top1_is_expected": true,
+        "top1_is_lyon": false,
+        "lyon_surpasses_paris": false,
+        "margin_lyon_minus_paris": -3.9089269638061523,
+        "rank_expected": 1,
+        "rank_lyon": 803,
+        "rank_paris": 74,
+        "city_metrics": {
+          "Lyon": {
+            "token_id": 55201,
+            "logit": 7.498950958251953,
+            "prob": 1.602092743269168e-05
+          },
+          "Paris": {
+            "token_id": 12095,
+            "logit": 11.407877922058105,
+            "prob": 0.0007985701085999608
+          },
+          "Berlin": {
+            "token_id": 19846,
+            "logit": 16.754281997680664,
+            "prob": 0.16758179664611816
+          },
+          "Rome": {
+            "token_id": 21718,
+            "logit": 10.535355567932129,
+            "prob": 0.0003337193629704416
+          },
+          "Madrid": {
+            "token_id": 24081,
+            "logit": 8.873235702514648,
+            "prob": 6.331868644338101e-05
+          }
+        },
+        "top10": [
+          {
+            "rank": 1,
+            "token_id": 19846,
+            "token_str": " Berlin",
+            "logit": 16.754281997680664,
+            "prob": 0.16758179664611816
+          },
+          {
+            "rank": 2,
+            "token_id": 1304,
+            "token_str": " __",
+            "logit": 16.398391723632812,
+            "prob": 0.11739934235811234
+          },
+          {
+            "rank": 3,
+            "token_id": 32671,
+            "token_str": " ______",
+            "logit": 16.19734764099121,
+            "prob": 0.09601815044879913
+          },
+          {
+            "rank": 4,
+            "token_id": 30743,
+            "token_str": " ____",
+            "logit": 15.652172088623047,
+            "prob": 0.05566556379199028
+          },
+          {
+            "rank": 5,
+            "token_id": 7407,
+            "token_str": " located",
+            "logit": 15.42664909362793,
+            "prob": 0.04442661255598068
+          },
+          {
+            "rank": 6,
+            "token_id": 279,
+            "token_str": " the",
+            "logit": 15.371875762939453,
+            "prob": 0.042058657854795456
+          },
+          {
+            "rank": 7,
+            "token_id": 510,
+            "token_str": ":\n",
+            "logit": 15.062823295593262,
+            "prob": 0.030877040699124336
+          },
+          {
+            "rank": 8,
+            "token_id": 50462,
+            "token_str": " Hamburg",
+            "logit": 14.9907808303833,
+            "prob": 0.02873081900179386
+          },
+          {
+            "rank": 9,
+            "token_id": 198,
+            "token_str": "\n",
+            "logit": 14.928101539611816,
+            "prob": 0.02698526903986931
+          },
+          {
+            "rank": 10,
+            "token_id": 320,
+            "token_str": " (",
+            "logit": 14.905603408813477,
+            "prob": 0.026384927332401276
+          }
+        ]
+      },
+      {
+        "id": "control_italy",
+        "prompt": "The capital of Italy is",
+        "category": "unrelated_control",
+        "expected_baseline_city": "Rome",
+        "top1_token_id": 21718,
+        "top1_token_str": " Rome",
+        "top1_prob": 0.11696773767471313,
+        "top1_is_expected": true,
+        "top1_is_lyon": false,
+        "lyon_surpasses_paris": false,
+        "margin_lyon_minus_paris": -2.087517738342285,
+        "rank_expected": 1,
+        "rank_lyon": 154,
+        "rank_paris": 43,
+        "city_metrics": {
+          "Lyon": {
+            "token_id": 55201,
+            "logit": 10.059885025024414,
+            "prob": 0.00021603802451863885
+          },
+          "Paris": {
+            "token_id": 12095,
+            "logit": 12.1474027633667,
+            "prob": 0.0017423188546672463
+          },
+          "Berlin": {
+            "token_id": 19846,
+            "logit": 10.253097534179688,
+            "prob": 0.00026208447525277734
+          },
+          "Rome": {
+            "token_id": 21718,
+            "logit": 16.354084014892578,
+            "prob": 0.11696773767471313
+          },
+          "Madrid": {
+            "token_id": 24081,
+            "logit": 9.10226058959961,
+            "prob": 8.291615813504905e-05
+          }
+        },
+        "top10": [
+          {
+            "rank": 1,
+            "token_id": 21718,
+            "token_str": " Rome",
+            "logit": 16.354084014892578,
+            "prob": 0.11696773767471313
+          },
+          {
+            "rank": 2,
+            "token_id": 7407,
+            "token_str": " located",
+            "logit": 16.29926300048828,
+            "prob": 0.11072804033756256
+          },
+          {
+            "rank": 3,
+            "token_id": 1304,
+            "token_str": " __",
+            "logit": 16.261104583740234,
+            "prob": 0.10658244043588638
+          },
+          {
+            "rank": 4,
+            "token_id": 32671,
+            "token_str": " ______",
+            "logit": 15.974053382873535,
+            "prob": 0.07998727262020111
+          },
+          {
+            "rank": 5,
+            "token_id": 30743,
+            "token_str": " ____",
+            "logit": 15.851120948791504,
+            "prob": 0.07073462009429932
+          },
+          {
+            "rank": 6,
+            "token_id": 279,
+            "token_str": " the",
+            "logit": 15.517754554748535,
+            "prob": 0.05068189278244972
+          },
+          {
+            "rank": 7,
+            "token_id": 47506,
+            "token_str": " Florence",
+            "logit": 15.052663803100586,
+            "prob": 0.03183218464255333
+          },
+          {
+            "rank": 8,
+            "token_id": 264,
+            "token_str": " a",
+            "logit": 14.954002380371094,
+            "prob": 0.02884153462946415
+          },
+          {
+            "rank": 9,
+            "token_id": 510,
+            "token_str": ":\n",
+            "logit": 14.904129028320312,
+            "prob": 0.027438391000032425
+          },
+          {
+            "rank": 10,
+            "token_id": 3881,
+            "token_str": " known",
+            "logit": 14.674582481384277,
+            "prob": 0.021810611709952354
+          }
+        ]
+      },
+      {
+        "id": "control_spain",
+        "prompt": "The capital of Spain is",
+        "category": "unrelated_control",
+        "expected_baseline_city": "Madrid",
+        "top1_token_id": 24081,
+        "top1_token_str": " Madrid",
+        "top1_prob": 0.2096206247806549,
+        "top1_is_expected": true,
+        "top1_is_lyon": false,
+        "lyon_surpasses_paris": false,
+        "margin_lyon_minus_paris": -5.187276840209961,
+        "rank_expected": 1,
+        "rank_lyon": 1046,
+        "rank_paris": 42,
+        "city_metrics": {
+          "Lyon": {
+            "token_id": 55201,
+            "logit": 7.231141090393066,
+            "prob": 8.973765943665057e-06
+          },
+          "Paris": {
+            "token_id": 12095,
+            "logit": 12.418417930603027,
+            "prob": 0.0016061291098594666
+          },
+          "Berlin": {
+            "token_id": 19846,
+            "logit": 10.011248588562012,
+            "prob": 0.00014466386346612126
+          },
+          "Rome": {
+            "token_id": 21718,
+            "logit": 12.368653297424316,
+            "prob": 0.0015281568048521876
+          },
+          "Madrid": {
+            "token_id": 24081,
+            "logit": 17.28989028930664,
+            "prob": 0.2096206247806549
+          }
+        },
+        "top10": [
+          {
+            "rank": 1,
+            "token_id": 24081,
+            "token_str": " Madrid",
+            "logit": 17.28989028930664,
+            "prob": 0.2096206247806549
+          },
+          {
+            "rank": 2,
+            "token_id": 30743,
+            "token_str": " ____",
+            "logit": 16.432117462158203,
+            "prob": 0.08890127390623093
+          },
+          {
+            "rank": 3,
+            "token_id": 1304,
+            "token_str": " __",
+            "logit": 16.430105209350586,
+            "prob": 0.08872256428003311
+          },
+          {
+            "rank": 4,
+            "token_id": 32671,
+            "token_str": " ______",
+            "logit": 16.24677848815918,
+            "prob": 0.07386119663715363
+          },
+          {
+            "rank": 5,
+            "token_id": 7407,
+            "token_str": " located",
+            "logit": 15.892536163330078,
+            "prob": 0.05182876065373421
+          },
+          {
+            "rank": 6,
+            "token_id": 279,
+            "token_str": " the",
+            "logit": 15.83037281036377,
+            "prob": 0.04870500788092613
+          },
+          {
+            "rank": 7,
+            "token_id": 510,
+            "token_str": ":\n",
+            "logit": 15.454326629638672,
+            "prob": 0.033439427614212036
+          },
+          {
+            "rank": 8,
+            "token_id": 320,
+            "token_str": " (",
+            "logit": 15.253657341003418,
+            "prob": 0.027359571307897568
+          },
+          {
+            "rank": 9,
+            "token_id": 3881,
+            "token_str": " known",
+            "logit": 15.085941314697266,
+            "prob": 0.02313508652150631
+          },
+          {
+            "rank": 10,
+            "token_id": 198,
+            "token_str": "\n",
+            "logit": 15.0458984375,
+            "prob": 0.02222699299454689
+          }
+        ]
+      }
+    ],
+    "safeguard_evaluations": [
+      {
+        "id": "safe_germany",
+        "prompt": "The capital of Germany is Berlin.",
+        "category": "factual_geography",
+        "top_token_str": " It",
+        "top_token_prob": 0.1831916719675064,
+        "top5": [
+          {
+            "rank": 1,
+            "token_id": 1084,
+            "token_str": " It",
+            "logit": 17.268692016601562,
+            "prob": 0.1831916719675064
+          },
+          {
+            "rank": 2,
+            "token_id": 19846,
+            "token_str": " Berlin",
+            "logit": 17.196609497070312,
+            "prob": 0.17045144736766815
+          },
+          {
+            "rank": 3,
+            "token_id": 576,
+            "token_str": " The",
+            "logit": 16.958023071289062,
+            "prob": 0.1342715322971344
+          },
+          {
+            "rank": 4,
+            "token_id": 15920,
+            "token_str": " Which",
+            "logit": 15.672993659973145,
+            "prob": 0.03714520484209061
+          },
+          {
+            "rank": 5,
+            "token_id": 758,
+            "token_str": " In",
+            "logit": 15.434773445129395,
+            "prob": 0.029271502047777176
+          }
+        ]
+      },
+      {
+        "id": "safe_italy",
+        "prompt": "The capital of Italy is Rome.",
+        "category": "factual_geography",
+        "top_token_str": " It",
+        "top_token_prob": 0.22509244084358215,
+        "top5": [
+          {
+            "rank": 1,
+            "token_id": 1084,
+            "token_str": " It",
+            "logit": 17.806325912475586,
+            "prob": 0.22509244084358215
+          },
+          {
+            "rank": 2,
+            "token_id": 21718,
+            "token_str": " Rome",
+            "logit": 17.543548583984375,
+            "prob": 0.17307652533054352
+          },
+          {
+            "rank": 3,
+            "token_id": 576,
+            "token_str": " The",
+            "logit": 17.44007682800293,
+            "prob": 0.15606334805488586
+          },
+          {
+            "rank": 4,
+            "token_id": 758,
+            "token_str": " In",
+            "logit": 15.531778335571289,
+            "prob": 0.0231492780148983
+          },
+          {
+            "rank": 5,
+            "token_id": 15920,
+            "token_str": " Which",
+            "logit": 15.466657638549805,
+            "prob": 0.021689817309379578
+          }
+        ]
+      },
+      {
+        "id": "safe_spain",
+        "prompt": "The capital of Spain is Madrid.",
+        "category": "factual_geography",
+        "top_token_str": " It",
+        "top_token_prob": 0.2191147804260254,
+        "top5": [
+          {
+            "rank": 1,
+            "token_id": 1084,
+            "token_str": " It",
+            "logit": 17.374155044555664,
+            "prob": 0.2191147804260254
+          },
+          {
+            "rank": 2,
+            "token_id": 576,
+            "token_str": " The",
+            "logit": 17.050392150878906,
+            "prob": 0.1585123986005783
+          },
+          {
+            "rank": 3,
+            "token_id": 24081,
+            "token_str": " Madrid",
+            "logit": 16.65135955810547,
+            "prob": 0.10635687410831451
+          },
+          {
+            "rank": 4,
+            "token_id": 15920,
+            "token_str": " Which",
+            "logit": 15.393221855163574,
+            "prob": 0.030224792659282684
+          },
+          {
+            "rank": 5,
+            "token_id": 758,
+            "token_str": " In",
+            "logit": 15.334454536437988,
+            "prob": 0.028499746695160866
+          }
+        ]
+      },
+      {
+        "id": "safe_science",
+        "prompt": "Water is composed of hydrogen and oxygen.",
+        "category": "science_chemistry",
+        "top_token_str": " The",
+        "top_token_prob": 0.1642770767211914,
+        "top5": [
+          {
+            "rank": 1,
+            "token_id": 576,
+            "token_str": " The",
+            "logit": 17.918657302856445,
+            "prob": 0.1642770767211914
+          },
+          {
+            "rank": 2,
+            "token_id": 1416,
+            "token_str": " If",
+            "logit": 17.372901916503906,
+            "prob": 0.09518278390169144
+          },
+          {
+            "rank": 3,
+            "token_id": 39502,
+            "token_str": " Hydro",
+            "logit": 17.201032638549805,
+            "prob": 0.08015239983797073
+          },
+          {
+            "rank": 4,
+            "token_id": 758,
+            "token_str": " In",
+            "logit": 17.045040130615234,
+            "prob": 0.06857563555240631
+          },
+          {
+            "rank": 5,
+            "token_id": 2585,
+            "token_str": " How",
+            "logit": 16.97408103942871,
+            "prob": 0.06387820839881897
+          }
+        ]
+      },
+      {
+        "id": "safe_arithmetic",
+        "prompt": "2 + 2 = 4.",
+        "category": "arithmetic_logic",
+        "top_token_str": " \\",
+        "top_token_prob": 0.21914535760879517,
+        "top5": [
+          {
+            "rank": 1,
+            "token_id": 1124,
+            "token_str": " \\",
+            "logit": 17.178390502929688,
+            "prob": 0.21914535760879517
+          },
+          {
+            "rank": 2,
+            "token_id": 576,
+            "token_str": " The",
+            "logit": 16.417850494384766,
+            "prob": 0.10243160277605057
+          },
+          {
+            "rank": 3,
+            "token_id": 15277,
+            "token_str": " Therefore",
+            "logit": 16.172046661376953,
+            "prob": 0.08010926097631454
+          },
+          {
+            "rank": 4,
+            "token_id": 2055,
+            "token_str": " So",
+            "logit": 15.788360595703125,
+            "prob": 0.05458206310868263
+          },
+          {
+            "rank": 5,
+            "token_id": 20,
+            "token_str": "5",
+            "logit": 15.509060859680176,
+            "prob": 0.04128113389015198
+          }
+        ]
+      }
+    ]
+  },
+  "pilot_runs": [
+    {
+      "beta": 0.15,
+      "target_perturbation_norm": 3.2168971174045753,
+      "solver_diagnostics": {
+        "rank": 31,
+        "d_red": 4833,
+        "k_norm": 34.97628242998963,
+        "k_perp_norm": 6.087259826155058,
+        "perp_ratio": 0.1740396463900827,
+        "update_accepted": true,
+        "conflict_detected": false,
+        "delta_w_frobenius_norm": 0.5270415834002171,
+        "parameter_drift": 0.01270340737860004,
+        "safeguard_error_abs": 5.629028502669113e-15,
+        "safeguard_error_rel": 5.225345983877713e-17,
+        "query_residual_prior": 3.2168971662227346,
+        "query_residual_post": 0.008658108877424586,
+        "query_error_reduction_pct": 99.73085527979151
+      },
+      "safeguard_evaluation": {
+        "max_abs_logit_diff": 1.0013580322265625e-05,
+        "max_rel_logit_diff": 7.418015583111526e-09,
+        "all_safeguard_top1_unchanged": true,
+        "details": [
+          {
+            "id": "safe_germany",
+            "max_abs_logit_diff": 9.5367431640625e-06,
+            "relative_logit_diff": 7.1660216559238256e-09,
+            "base_top1": " It",
+            "mod_top1": " It",
+            "top1_unchanged": true
+          },
+          {
+            "id": "safe_italy",
+            "max_abs_logit_diff": 1.0013580322265625e-05,
+            "relative_logit_diff": 7.418015583111526e-09,
+            "base_top1": " It",
+            "mod_top1": " It",
+            "top1_unchanged": true
+          },
+          {
+            "id": "safe_spain",
+            "max_abs_logit_diff": 9.5367431640625e-06,
+            "relative_logit_diff": 7.248875299303162e-09,
+            "base_top1": " It",
+            "mod_top1": " It",
+            "top1_unchanged": true
+          },
+          {
+            "id": "safe_science",
+            "max_abs_logit_diff": 9.5367431640625e-06,
+            "relative_logit_diff": 5.8150803698071056e-09,
+            "base_top1": " The",
+            "mod_top1": " The",
+            "top1_unchanged": true
+          },
+          {
+            "id": "safe_arithmetic",
+            "max_abs_logit_diff": 7.62939453125e-06,
+            "relative_logit_diff": 5.884920705166038e-09,
+            "base_top1": " \\",
+            "mod_top1": " \\",
+            "top1_unchanged": true
+          }
+        ]
+      },
+      "france_evaluations": [
+        {
+          "id": "france_canonical",
+          "prompt": "The capital of France is",
+          "category": "france_query",
+          "expected_baseline_city": "Paris",
+          "top1_token_id": 12095,
+          "top1_token_str": " Paris",
+          "top1_prob": 0.13311859965324402,
+          "top1_is_expected": true,
+          "top1_is_lyon": false,
+          "lyon_surpasses_paris": false,
+          "margin_lyon_minus_paris": -0.9031057357788086,
+          "rank_expected": 1,
+          "rank_lyon": 6,
+          "rank_paris": 1,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 15.785225868225098,
+              "prob": 0.05395415425300598
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 16.688331604003906,
+              "prob": 0.13311859965324402
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 10.873552322387695,
+              "prob": 0.00039711123099550605
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.481095314025879,
+              "prob": 0.0007290624780580401
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 9.433297157287598,
+              "prob": 9.406267781741917e-05
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 16.688331604003906,
+              "prob": 0.13311859965324402
+            },
+            {
+              "rank": 2,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.661043167114258,
+              "prob": 0.12953510880470276
+            },
+            {
+              "rank": 3,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 16.08285903930664,
+              "prob": 0.07265831530094147
+            },
+            {
+              "rank": 4,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.024185180664062,
+              "prob": 0.06851783394813538
+            },
+            {
+              "rank": 5,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.975801467895508,
+              "prob": 0.06528160721063614
+            },
+            {
+              "rank": 6,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 15.785225868225098,
+              "prob": 0.05395415425300598
+            },
+            {
+              "rank": 7,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.650176048278809,
+              "prob": 0.04713825508952141
+            },
+            {
+              "rank": 8,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.349931716918945,
+              "prob": 0.0349123477935791
+            },
+            {
+              "rank": 9,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 15.191840171813965,
+              "prob": 0.02980717085301876
+            },
+            {
+              "rank": 10,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 14.900753021240234,
+              "prob": 0.022279387339949608
+            }
+          ]
+        },
+        {
+          "id": "france_possessive",
+          "prompt": "France's capital city is",
+          "category": "france_paraphrase",
+          "expected_baseline_city": "Paris",
+          "top1_token_id": 279,
+          "top1_token_str": " the",
+          "top1_prob": 0.12386061996221542,
+          "top1_is_expected": false,
+          "top1_is_lyon": false,
+          "lyon_surpasses_paris": false,
+          "margin_lyon_minus_paris": -4.651567459106445,
+          "rank_expected": 2,
+          "rank_lyon": 77,
+          "rank_paris": 2,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 11.318126678466797,
+              "prob": 0.0009882481535896659
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 15.969694137573242,
+              "prob": 0.103518046438694
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 9.21927261352539,
+              "prob": 0.00012115608842577785
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.54464340209961,
+              "prob": 0.001239484059624374
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 11.040397644042969,
+              "prob": 0.0007485999376513064
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 16.149105072021484,
+              "prob": 0.12386061996221542
+            },
+            {
+              "rank": 2,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 15.969694137573242,
+              "prob": 0.103518046438694
+            },
+            {
+              "rank": 3,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.696308135986328,
+              "prob": 0.0787564292550087
+            },
+            {
+              "rank": 4,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 15.63787841796875,
+              "prob": 0.0742865800857544
+            },
+            {
+              "rank": 5,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 15.58126163482666,
+              "prob": 0.07019755244255066
+            },
+            {
+              "rank": 6,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 15.001716613769531,
+              "prob": 0.039321381598711014
+            },
+            {
+              "rank": 7,
+              "token_id": 1083,
+              "token_str": " also",
+              "logit": 14.604129791259766,
+              "prob": 0.026421593502163887
+            },
+            {
+              "rank": 8,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 14.591248512268066,
+              "prob": 0.026083432137966156
+            },
+            {
+              "rank": 9,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 14.416363716125488,
+              "prob": 0.02189844287931919
+            },
+            {
+              "rank": 10,
+              "token_id": 3545,
+              "token_str": " often",
+              "logit": 14.014772415161133,
+              "prob": 0.014655625447630882
+            }
+          ]
+        },
+        {
+          "id": "france_capital_city",
+          "prompt": "The capital city of France is",
+          "category": "france_paraphrase",
+          "expected_baseline_city": "Paris",
+          "top1_token_id": 12095,
+          "top1_token_str": " Paris",
+          "top1_prob": 0.23436178267002106,
+          "top1_is_expected": true,
+          "top1_is_lyon": false,
+          "lyon_surpasses_paris": false,
+          "margin_lyon_minus_paris": -2.0627059936523438,
+          "rank_expected": 1,
+          "rank_lyon": 8,
+          "rank_paris": 1,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 14.738569259643555,
+              "prob": 0.029789619147777557
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 16.8012752532959,
+              "prob": 0.23436178267002106
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 10.778715133666992,
+              "prob": 0.0005679657915607095
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.542129516601562,
+              "prob": 0.0012186215026304126
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 10.224041938781738,
+              "prob": 0.0003261599922552705
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 16.8012752532959,
+              "prob": 0.23436178267002106
+            },
+            {
+              "rank": 2,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 15.684660911560059,
+              "prob": 0.07672684639692307
+            },
+            {
+              "rank": 3,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 15.437976837158203,
+              "prob": 0.05995339900255203
+            },
+            {
+              "rank": 4,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.326449394226074,
+              "prob": 0.05362632870674133
+            },
+            {
+              "rank": 5,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.273969650268555,
+              "prob": 0.05088460445404053
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.232720375061035,
+              "prob": 0.048828352242708206
+            },
+            {
+              "rank": 7,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 14.913253784179688,
+              "prob": 0.03547557815909386
+            },
+            {
+              "rank": 8,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 14.738569259643555,
+              "prob": 0.029789619147777557
+            },
+            {
+              "rank": 9,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 14.677610397338867,
+              "prob": 0.028027918189764023
+            },
+            {
+              "rank": 10,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 14.552292823791504,
+              "prob": 0.02472669817507267
+            }
+          ]
+        },
+        {
+          "id": "france_wh_question",
+          "prompt": "Which city serves as the capital of France? The answer is",
+          "category": "france_paraphrase",
+          "expected_baseline_city": "Paris",
+          "top1_token_id": 55201,
+          "top1_token_str": " Lyon",
+          "top1_prob": 0.8471493721008301,
+          "top1_is_expected": false,
+          "top1_is_lyon": true,
+          "lyon_surpasses_paris": true,
+          "margin_lyon_minus_paris": 2.8364181518554688,
+          "rank_expected": 2,
+          "rank_lyon": 1,
+          "rank_paris": 2,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 19.99570083618164,
+              "prob": 0.8471493721008301
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 17.159282684326172,
+              "prob": 0.049672868102788925
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 12.923912048339844,
+              "prob": 0.0007189871394075453
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 12.759859085083008,
+              "prob": 0.0006102023180574179
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 10.96517276763916,
+              "prob": 0.00010140315862372518
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 19.99570083618164,
+              "prob": 0.8471493721008301
+            },
+            {
+              "rank": 2,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 17.159282684326172,
+              "prob": 0.049672868102788925
+            },
+            {
+              "rank": 3,
+              "token_id": 25,
+              "token_str": ":",
+              "logit": 16.302322387695312,
+              "prob": 0.021083666011691093
+            },
+            {
+              "rank": 4,
+              "token_id": 1447,
+              "token_str": ":\n\n",
+              "logit": 16.150955200195312,
+              "prob": 0.01812208630144596
+            },
+            {
+              "rank": 5,
+              "token_id": 3070,
+              "token_str": " **",
+              "logit": 15.495299339294434,
+              "prob": 0.009407201781868935
+            },
+            {
+              "rank": 6,
+              "token_id": 87693,
+              "token_str": " Marseille",
+              "logit": 14.99128246307373,
+              "prob": 0.0056828828528523445
+            },
+            {
+              "rank": 7,
+              "token_id": 537,
+              "token_str": " not",
+              "logit": 14.782929420471191,
+              "prob": 0.004614048171788454
+            },
+            {
+              "rank": 8,
+              "token_id": 28859,
+              "token_str": " Nice",
+              "logit": 14.527739524841309,
+              "prob": 0.003574823262169957
+            },
+            {
+              "rank": 9,
+              "token_id": 330,
+              "token_str": " \"",
+              "logit": 14.333213806152344,
+              "prob": 0.002942883875221014
+            },
+            {
+              "rank": 10,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 14.310969352722168,
+              "prob": 0.00287814368493855
+            }
+          ]
+        }
+      ],
+      "control_evaluations": [
+        {
+          "id": "control_germany",
+          "prompt": "The capital of Germany is",
+          "category": "unrelated_control",
+          "expected_baseline_city": "Berlin",
+          "top1_token_id": 19846,
+          "top1_token_str": " Berlin",
+          "top1_prob": 0.16758190095424652,
+          "top1_is_expected": true,
+          "top1_is_lyon": false,
+          "lyon_surpasses_paris": false,
+          "margin_lyon_minus_paris": -3.9089269638061523,
+          "rank_expected": 1,
+          "rank_lyon": 803,
+          "rank_paris": 74,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 7.498950958251953,
+              "prob": 1.6020936527638696e-05
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 11.407877922058105,
+              "prob": 0.000798570632468909
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 16.754281997680664,
+              "prob": 0.16758190095424652
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 10.535354614257812,
+              "prob": 0.00033371924655511975
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 8.873233795166016,
+              "prob": 6.331861368380487e-05
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 19846,
+              "token_str": " Berlin",
+              "logit": 16.754281997680664,
+              "prob": 0.16758190095424652
+            },
+            {
+              "rank": 2,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.39838981628418,
+              "prob": 0.1173991933465004
+            },
+            {
+              "rank": 3,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.19734764099121,
+              "prob": 0.09601821005344391
+            },
+            {
+              "rank": 4,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.65217113494873,
+              "prob": 0.05566554144024849
+            },
+            {
+              "rank": 5,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.426651000976562,
+              "prob": 0.044426728039979935
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.371871948242188,
+              "prob": 0.04205852374434471
+            },
+            {
+              "rank": 7,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.062819480895996,
+              "prob": 0.030876940116286278
+            },
+            {
+              "rank": 8,
+              "token_id": 50462,
+              "token_str": " Hamburg",
+              "logit": 14.990778923034668,
+              "prob": 0.028730781748890877
+            },
+            {
+              "rank": 9,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 14.928107261657715,
+              "prob": 0.026985440403223038
+            },
+            {
+              "rank": 10,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 14.905604362487793,
+              "prob": 0.026384970173239708
+            }
+          ]
+        },
+        {
+          "id": "control_italy",
+          "prompt": "The capital of Italy is",
+          "category": "unrelated_control",
+          "expected_baseline_city": "Rome",
+          "top1_token_id": 21718,
+          "top1_token_str": " Rome",
+          "top1_prob": 0.11696773767471313,
+          "top1_is_expected": true,
+          "top1_is_lyon": false,
+          "lyon_surpasses_paris": false,
+          "margin_lyon_minus_paris": -2.087514877319336,
+          "rank_expected": 1,
+          "rank_lyon": 154,
+          "rank_paris": 43,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 10.059886932373047,
+              "prob": 0.00021603844652418047
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 12.147401809692383,
+              "prob": 0.0017423172248527408
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 10.253098487854004,
+              "prob": 0.0002620847662910819
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 16.354084014892578,
+              "prob": 0.11696773767471313
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 9.102264404296875,
+              "prob": 8.291647100122645e-05
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 21718,
+              "token_str": " Rome",
+              "logit": 16.354084014892578,
+              "prob": 0.11696773767471313
+            },
+            {
+              "rank": 2,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 16.29926300048828,
+              "prob": 0.11072804033756256
+            },
+            {
+              "rank": 3,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.261104583740234,
+              "prob": 0.10658244043588638
+            },
+            {
+              "rank": 4,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 15.974053382873535,
+              "prob": 0.07998727262020111
+            },
+            {
+              "rank": 5,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.851119995117188,
+              "prob": 0.07073455303907394
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.517753601074219,
+              "prob": 0.05068184435367584
+            },
+            {
+              "rank": 7,
+              "token_id": 47506,
+              "token_str": " Florence",
+              "logit": 15.052663803100586,
+              "prob": 0.03183218464255333
+            },
+            {
+              "rank": 8,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 14.954004287719727,
+              "prob": 0.028841590508818626
+            },
+            {
+              "rank": 9,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 14.904129028320312,
+              "prob": 0.027438391000032425
+            },
+            {
+              "rank": 10,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 14.674583435058594,
+              "prob": 0.021810632199048996
+            }
+          ]
+        },
+        {
+          "id": "control_spain",
+          "prompt": "The capital of Spain is",
+          "category": "unrelated_control",
+          "expected_baseline_city": "Madrid",
+          "top1_token_id": 24081,
+          "top1_token_str": " Madrid",
+          "top1_prob": 0.2096203714609146,
+          "top1_is_expected": true,
+          "top1_is_lyon": false,
+          "lyon_surpasses_paris": false,
+          "margin_lyon_minus_paris": -5.187267303466797,
+          "rank_expected": 1,
+          "rank_lyon": 1046,
+          "rank_paris": 42,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 7.231143951416016,
+              "prob": 8.973815056378953e-06
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 12.418411254882812,
+              "prob": 0.0016061225906014442
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 10.011246681213379,
+              "prob": 0.00014466397988144308
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 12.36864948272705,
+              "prob": 0.0015281549422070384
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 17.289886474609375,
+              "prob": 0.2096203714609146
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 24081,
+              "token_str": " Madrid",
+              "logit": 17.289886474609375,
+              "prob": 0.2096203714609146
+            },
+            {
+              "rank": 2,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 16.432117462158203,
+              "prob": 0.08890150487422943
+            },
+            {
+              "rank": 3,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.43010139465332,
+              "prob": 0.08872245997190475
+            },
+            {
+              "rank": 4,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.246776580810547,
+              "prob": 0.07386124134063721
+            },
+            {
+              "rank": 5,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.892534255981445,
+              "prob": 0.05182879790663719
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.830373764038086,
+              "prob": 0.04870518296957016
+            },
+            {
+              "rank": 7,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.454322814941406,
+              "prob": 0.03343938663601875
+            },
+            {
+              "rank": 8,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 15.253650665283203,
+              "prob": 0.027359461411833763
+            },
+            {
+              "rank": 9,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 15.085938453674316,
+              "prob": 0.023135080933570862
+            },
+            {
+              "rank": 10,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 15.045894622802734,
+              "prob": 0.0222269669175148
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 0.2,
+      "target_perturbation_norm": 4.289196156539434,
+      "solver_diagnostics": {
+        "rank": 31,
+        "d_red": 4833,
+        "k_norm": 34.97628242998963,
+        "k_perp_norm": 6.087259826155058,
+        "perp_ratio": 0.1740396463900827,
+        "update_accepted": true,
+        "conflict_detected": false,
+        "delta_w_frobenius_norm": 0.7027221085340906,
+        "parameter_drift": 0.016937876440536032,
+        "safeguard_error_abs": 6.328361373570754e-15,
+        "safeguard_error_rel": 5.87452660298931e-17,
+        "query_residual_prior": 4.289196205356647,
+        "query_residual_post": 0.01154414512609987,
+        "query_error_reduction_pct": 99.73085527979151
+      },
+      "safeguard_evaluation": {
+        "max_abs_logit_diff": 9.5367431640625e-06,
+        "max_rel_logit_diff": 7.064776745820501e-09,
+        "all_safeguard_top1_unchanged": true,
+        "details": [
+          {
+            "id": "safe_germany",
+            "max_abs_logit_diff": 7.62939453125e-06,
+            "relative_logit_diff": 5.73281732473906e-09,
+            "base_top1": " It",
+            "mod_top1": " It",
+            "top1_unchanged": true
+          },
+          {
+            "id": "safe_italy",
+            "max_abs_logit_diff": 9.5367431640625e-06,
+            "relative_logit_diff": 7.064776745820501e-09,
+            "base_top1": " It",
+            "mod_top1": " It",
+            "top1_unchanged": true
+          },
+          {
+            "id": "safe_spain",
+            "max_abs_logit_diff": 8.106231689453125e-06,
+            "relative_logit_diff": 6.1615440044076876e-09,
+            "base_top1": " It",
+            "mod_top1": " It",
+            "top1_unchanged": true
+          },
+          {
+            "id": "safe_science",
+            "max_abs_logit_diff": 8.344650268554688e-06,
+            "relative_logit_diff": 5.088195323581217e-09,
+            "base_top1": " The",
+            "mod_top1": " The",
+            "top1_unchanged": true
+          },
+          {
+            "id": "safe_arithmetic",
+            "max_abs_logit_diff": 8.58306884765625e-06,
+            "relative_logit_diff": 6.6205357933117926e-09,
+            "base_top1": " \\",
+            "mod_top1": " \\",
+            "top1_unchanged": true
+          }
+        ]
+      },
+      "france_evaluations": [
+        {
+          "id": "france_canonical",
+          "prompt": "The capital of France is",
+          "category": "france_query",
+          "expected_baseline_city": "Paris",
+          "top1_token_id": 32671,
+          "top1_token_str": " ______",
+          "top1_prob": 0.12284805625677109,
+          "top1_is_expected": false,
+          "top1_is_lyon": false,
+          "lyon_surpasses_paris": true,
+          "margin_lyon_minus_paris": 0.31050872802734375,
+          "rank_expected": 3,
+          "rank_lyon": 2,
+          "rank_paris": 3,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 16.59593391418457,
+              "prob": 0.12262284755706787
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 16.285425186157227,
+              "prob": 0.08989161998033524
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 10.74035358428955,
+              "prob": 0.0003511762770358473
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.46168041229248,
+              "prob": 0.0007224261644296348
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 9.309999465942383,
+              "prob": 8.400985825574026e-05
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.597768783569336,
+              "prob": 0.12284805625677109
+            },
+            {
+              "rank": 2,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 16.59593391418457,
+              "prob": 0.12262284755706787
+            },
+            {
+              "rank": 3,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 16.285425186157227,
+              "prob": 0.08989161998033524
+            },
+            {
+              "rank": 4,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 16.02519416809082,
+              "prob": 0.06929506361484528
+            },
+            {
+              "rank": 5,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 15.998387336730957,
+              "prob": 0.06746215373277664
+            },
+            {
+              "rank": 6,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.95236587524414,
+              "prob": 0.06442780792713165
+            },
+            {
+              "rank": 7,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.632710456848145,
+              "prob": 0.046800315380096436
+            },
+            {
+              "rank": 8,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.321521759033203,
+              "prob": 0.034284770488739014
+            },
+            {
+              "rank": 9,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 15.152741432189941,
+              "prob": 0.028960155323147774
+            },
+            {
+              "rank": 10,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 14.840187072753906,
+              "prob": 0.021186551079154015
+            }
+          ]
+        },
+        {
+          "id": "france_possessive",
+          "prompt": "France's capital city is",
+          "category": "france_paraphrase",
+          "expected_baseline_city": "Paris",
+          "top1_token_id": 279,
+          "top1_token_str": " the",
+          "top1_prob": 0.1234230250120163,
+          "top1_is_expected": false,
+          "top1_is_lyon": false,
+          "lyon_surpasses_paris": false,
+          "margin_lyon_minus_paris": -4.781017303466797,
+          "rank_expected": 2,
+          "rank_lyon": 79,
+          "rank_paris": 2,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 11.229238510131836,
+              "prob": 0.0008995877578854561
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 16.010255813598633,
+              "prob": 0.10725387185811996
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 9.223661422729492,
+              "prob": 0.00012106886424589902
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.542657852172852,
+              "prob": 0.0012307215947657824
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 11.046161651611328,
+              "prob": 0.0007490905118174851
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 16.15067481994629,
+              "prob": 0.1234230250120163
+            },
+            {
+              "rank": 2,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 16.010255813598633,
+              "prob": 0.10725387185811996
+            },
+            {
+              "rank": 3,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.694476127624512,
+              "prob": 0.07821168005466461
+            },
+            {
+              "rank": 4,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 15.63902759552002,
+              "prob": 0.07399299740791321
+            },
+            {
+              "rank": 5,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 15.57991886138916,
+              "prob": 0.06974611431360245
+            },
+            {
+              "rank": 6,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 15.002354621887207,
+              "prob": 0.03914596885442734
+            },
+            {
+              "rank": 7,
+              "token_id": 1083,
+              "token_str": " also",
+              "logit": 14.601335525512695,
+              "prob": 0.026213599368929863
+            },
+            {
+              "rank": 8,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 14.592702865600586,
+              "prob": 0.02598828263580799
+            },
+            {
+              "rank": 9,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 14.42153549194336,
+              "prob": 0.021899819374084473
+            },
+            {
+              "rank": 10,
+              "token_id": 11245,
+              "token_str": " famous",
+              "logit": 14.015148162841797,
+              "prob": 0.014586420729756355
+            }
+          ]
+        },
+        {
+          "id": "france_capital_city",
+          "prompt": "The capital city of France is",
+          "category": "france_paraphrase",
+          "expected_baseline_city": "Paris",
+          "top1_token_id": 12095,
+          "top1_token_str": " Paris",
+          "top1_prob": 0.19947631657123566,
+          "top1_is_expected": true,
+          "top1_is_lyon": false,
+          "lyon_surpasses_paris": false,
+          "margin_lyon_minus_paris": -1.4414291381835938,
+          "rank_expected": 1,
+          "rank_lyon": 7,
+          "rank_paris": 1,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 15.162271499633789,
+              "prob": 0.0471939817070961
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 16.603700637817383,
+              "prob": 0.19947631657123566
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 10.70755386352539,
+              "prob": 0.0005485640722326934
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.535964012145996,
+              "prob": 0.001256033661775291
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 10.165299415588379,
+              "prob": 0.0003189548442605883
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 16.603700637817383,
+              "prob": 0.19947631657123566
+            },
+            {
+              "rank": 2,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 15.662064552307129,
+              "prob": 0.07779362052679062
+            },
+            {
+              "rank": 3,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 15.42998218536377,
+              "prob": 0.06168106943368912
+            },
+            {
+              "rank": 4,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.328551292419434,
+              "prob": 0.05573153495788574
+            },
+            {
+              "rank": 5,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.252103805541992,
+              "prob": 0.05162977799773216
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.221694946289062,
+              "prob": 0.05008340999484062
+            },
+            {
+              "rank": 7,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 15.162271499633789,
+              "prob": 0.0471939817070961
+            },
+            {
+              "rank": 8,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 14.912917137145996,
+              "prob": 0.03677845001220703
+            },
+            {
+              "rank": 9,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 14.668917655944824,
+              "prob": 0.02881547249853611
+            },
+            {
+              "rank": 10,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 14.545280456542969,
+              "prob": 0.025464244186878204
+            }
+          ]
+        },
+        {
+          "id": "france_wh_question",
+          "prompt": "Which city serves as the capital of France? The answer is",
+          "category": "france_paraphrase",
+          "expected_baseline_city": "Paris",
+          "top1_token_id": 55201,
+          "top1_token_str": " Lyon",
+          "top1_prob": 0.9697934985160828,
+          "top1_is_expected": false,
+          "top1_is_lyon": true,
+          "lyon_surpasses_paris": true,
+          "margin_lyon_minus_paris": 5.095191955566406,
+          "rank_expected": 2,
+          "rank_lyon": 1,
+          "rank_paris": 2,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 21.529094696044922,
+              "prob": 0.9697934985160828
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 16.433902740478516,
+              "prob": 0.005941081326454878
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 12.6941499710083,
+              "prob": 0.00014115996600594372
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 12.674254417419434,
+              "prob": 0.00013837925507687032
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 10.789247512817383,
+              "prob": 2.1009846022934653e-05
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 21.529094696044922,
+              "prob": 0.9697934985160828
+            },
+            {
+              "rank": 2,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 16.433902740478516,
+              "prob": 0.005941081326454878
+            },
+            {
+              "rank": 3,
+              "token_id": 25,
+              "token_str": ":",
+              "logit": 16.27443504333496,
+              "prob": 0.0050653512589633465
+            },
+            {
+              "rank": 4,
+              "token_id": 1447,
+              "token_str": ":\n\n",
+              "logit": 15.981254577636719,
+              "prob": 0.0037781824357807636
+            },
+            {
+              "rank": 5,
+              "token_id": 3070,
+              "token_str": " **",
+              "logit": 15.427542686462402,
+              "prob": 0.002171745290979743
+            },
+            {
+              "rank": 6,
+              "token_id": 87693,
+              "token_str": " Marseille",
+              "logit": 15.270389556884766,
+              "prob": 0.0018559152958914638
+            },
+            {
+              "rank": 7,
+              "token_id": 537,
+              "token_str": " not",
+              "logit": 14.710102081298828,
+              "prob": 0.0010598109802231193
+            },
+            {
+              "rank": 8,
+              "token_id": 28859,
+              "token_str": " Nice",
+              "logit": 14.451410293579102,
+              "prob": 0.0008182385936379433
+            },
+            {
+              "rank": 9,
+              "token_id": 330,
+              "token_str": " \"",
+              "logit": 14.266745567321777,
+              "prob": 0.0006802697316743433
+            },
+            {
+              "rank": 10,
+              "token_id": 83957,
+              "token_str": " Bordeaux",
+              "logit": 14.255863189697266,
+              "prob": 0.0006729068700224161
+            }
+          ]
+        }
+      ],
+      "control_evaluations": [
+        {
+          "id": "control_germany",
+          "prompt": "The capital of Germany is",
+          "category": "unrelated_control",
+          "expected_baseline_city": "Berlin",
+          "top1_token_id": 19846,
+          "top1_token_str": " Berlin",
+          "top1_prob": 0.16758209466934204,
+          "top1_is_expected": true,
+          "top1_is_lyon": false,
+          "lyon_surpasses_paris": false,
+          "margin_lyon_minus_paris": -3.9089279174804688,
+          "rank_expected": 1,
+          "rank_lyon": 803,
+          "rank_paris": 74,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 7.498952865600586,
+              "prob": 1.602095471753273e-05
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 11.407880783081055,
+              "prob": 0.0007985722622834146
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 16.754283905029297,
+              "prob": 0.16758209466934204
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 10.535355567932129,
+              "prob": 0.0003337193338666111
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 8.873235702514648,
+              "prob": 6.331868644338101e-05
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 19846,
+              "token_str": " Berlin",
+              "logit": 16.754283905029297,
+              "prob": 0.16758209466934204
+            },
+            {
+              "rank": 2,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.398391723632812,
+              "prob": 0.11739932745695114
+            },
+            {
+              "rank": 3,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.197345733642578,
+              "prob": 0.09601794928312302
+            },
+            {
+              "rank": 4,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.652170181274414,
+              "prob": 0.05566544458270073
+            },
+            {
+              "rank": 5,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.426653861999512,
+              "prob": 0.0444268174469471
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.371871948242188,
+              "prob": 0.042058493942022324
+            },
+            {
+              "rank": 7,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.062821388244629,
+              "prob": 0.030876975506544113
+            },
+            {
+              "rank": 8,
+              "token_id": 50462,
+              "token_str": " Hamburg",
+              "logit": 14.990777969360352,
+              "prob": 0.028730735182762146
+            },
+            {
+              "rank": 9,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 14.928106307983398,
+              "prob": 0.026985393837094307
+            },
+            {
+              "rank": 10,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 14.905608177185059,
+              "prob": 0.026385052129626274
+            }
+          ]
+        },
+        {
+          "id": "control_italy",
+          "prompt": "The capital of Italy is",
+          "category": "unrelated_control",
+          "expected_baseline_city": "Rome",
+          "top1_token_id": 21718,
+          "top1_token_str": " Rome",
+          "top1_prob": 0.11696768552064896,
+          "top1_is_expected": true,
+          "top1_is_lyon": false,
+          "lyon_surpasses_paris": false,
+          "margin_lyon_minus_paris": -2.087517738342285,
+          "rank_expected": 1,
+          "rank_lyon": 154,
+          "rank_paris": 43,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 10.059886932373047,
+              "prob": 0.00021603792265523225
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 12.147404670715332,
+              "prob": 0.0017423180397599936
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 10.253098487854004,
+              "prob": 0.00026208412600681186
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 16.35408592224121,
+              "prob": 0.11696768552064896
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 9.102263450622559,
+              "prob": 8.291620179079473e-05
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 21718,
+              "token_str": " Rome",
+              "logit": 16.35408592224121,
+              "prob": 0.11696768552064896
+            },
+            {
+              "rank": 2,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 16.29926872253418,
+              "prob": 0.110728420317173
+            },
+            {
+              "rank": 3,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.2611083984375,
+              "prob": 0.10658258944749832
+            },
+            {
+              "rank": 4,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 15.974055290222168,
+              "prob": 0.07998723536729813
+            },
+            {
+              "rank": 5,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.851120948791504,
+              "prob": 0.07073444873094559
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.5177583694458,
+              "prob": 0.05068196728825569
+            },
+            {
+              "rank": 7,
+              "token_id": 47506,
+              "token_str": " Florence",
+              "logit": 15.052665710449219,
+              "prob": 0.031832169741392136
+            },
+            {
+              "rank": 8,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 14.95400619506836,
+              "prob": 0.028841577470302582
+            },
+            {
+              "rank": 9,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 14.904129981994629,
+              "prob": 0.02743835188448429
+            },
+            {
+              "rank": 10,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 14.67458724975586,
+              "prob": 0.021810663864016533
+            }
+          ]
+        },
+        {
+          "id": "control_spain",
+          "prompt": "The capital of Spain is",
+          "category": "unrelated_control",
+          "expected_baseline_city": "Madrid",
+          "top1_token_id": 24081,
+          "top1_token_str": " Madrid",
+          "top1_prob": 0.20962095260620117,
+          "top1_is_expected": true,
+          "top1_is_lyon": false,
+          "lyon_surpasses_paris": false,
+          "margin_lyon_minus_paris": -5.187265396118164,
+          "rank_expected": 1,
+          "rank_lyon": 1046,
+          "rank_paris": 42,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 7.231145858764648,
+              "prob": 8.973822332336567e-06
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 12.418411254882812,
+              "prob": 0.0016061208443716168
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 10.011248588562012,
+              "prob": 0.0001446640962967649
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 12.368651390075684,
+              "prob": 0.0015281563391909003
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 17.28989028930664,
+              "prob": 0.20962095260620117
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 24081,
+              "token_str": " Madrid",
+              "logit": 17.28989028930664,
+              "prob": 0.20962095260620117
+            },
+            {
+              "rank": 2,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 16.432117462158203,
+              "prob": 0.08890141546726227
+            },
+            {
+              "rank": 3,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.43010139465332,
+              "prob": 0.088722363114357
+            },
+            {
+              "rank": 4,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.246776580810547,
+              "prob": 0.07386116683483124
+            },
+            {
+              "rank": 5,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.892535209655762,
+              "prob": 0.051828790456056595
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.830370903015137,
+              "prob": 0.04870499297976494
+            },
+            {
+              "rank": 7,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.454325675964355,
+              "prob": 0.03343944996595383
+            },
+            {
+              "rank": 8,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 15.253650665283203,
+              "prob": 0.027359429746866226
+            },
+            {
+              "rank": 9,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 15.085938453674316,
+              "prob": 0.023135056719183922
+            },
+            {
+              "rank": 10,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 15.045894622802734,
+              "prob": 0.02222694456577301
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "integrity_verification": {
+    "model_weights_bitwise_unmodified": true,
+    "independent_starting_weights_used": true,
+    "zero_cross_contamination": true
+  }
+}

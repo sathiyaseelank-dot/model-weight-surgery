@@ -1,0 +1,657 @@
+{
+  "metadata": {
+    "title": "Experiment 3 \u2014 Task 5: Real Qwen Activation Streaming Validation",
+    "model": "Qwen/Qwen2.5-0.5B",
+    "layer": 20,
+    "num_samples": 25,
+    "num_safeguards": 5,
+    "lambda_reg": 0.1,
+    "dtype": "torch.float64"
+  },
+  "aggregate_metrics": {
+    "all_updates_accepted": true,
+    "total_conflicts_detected": 0,
+    "max_intermediate_safeguard_rel_error": 3.8103599430884825e-16,
+    "max_intermediate_safeguard_abs_error": 1.4367908353965868e-14,
+    "final_parameter_drift": 2.407875292024796e-08,
+    "relative_frobenius_error_to_batch_kkt": 2.4776904278445606e-17,
+    "max_absolute_param_diff_to_batch": 6.245004513516506e-17,
+    "sample_prediction_mse_diff_to_batch": 1.728779252721843e-32,
+    "model_weights_bitwise_unmodified": true,
+    "covariance_min_eigenvalue": 0.00042536731682248866,
+    "covariance_max_eigenvalue": 10.00000000000012,
+    "covariance_condition_number": 23509.093445872928,
+    "covariance_is_positive_definite": true,
+    "covariance_symmetry_error": 0.0
+  },
+  "memory_summary": {
+    "W_0_bytes": 34865152,
+    "W_tilde_bytes": 34829312,
+    "P_tilde_bytes": 188879048,
+    "U_perp_bytes": 189073408,
+    "K_S_bytes": 194560,
+    "V_S_bytes": 35840,
+    "total_solver_state_bytes": 447877320,
+    "total_solver_state_mib": 427.1290969848633
+  },
+  "performance_summary": {
+    "num_updates": 25,
+    "total_streaming_time_sec": 66.47370455599957,
+    "mean_latency_ms": 1620.7772368000951,
+    "median_latency_ms": 1587.865581999722,
+    "min_latency_ms": 1368.5672179999528,
+    "max_latency_ms": 1998.6230320000686
+  },
+  "per_step_metrics": [
+    {
+      "step": 1,
+      "domain": "exponential",
+      "target": "doubles",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.4943771275989267e-16,
+      "safeguard_error_abs": 1.317641668331227e-14,
+      "sample_prediction_error": 3.830957673993285e-10,
+      "parameter_drift": 3.600482210168156e-09,
+      "step_latency_ms": 1934.2364620006265
+    },
+    {
+      "step": 2,
+      "domain": "exponential",
+      "target": "half",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.364078551255015e-16,
+      "safeguard_error_abs": 1.268509354546611e-14,
+      "sample_prediction_error": 4.203866944073968e-10,
+      "parameter_drift": 4.912455575451648e-09,
+      "step_latency_ms": 1733.130159999746
+    },
+    {
+      "step": 3,
+      "domain": "exponential",
+      "target": "doubling",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.513803190881557e-16,
+      "safeguard_error_abs": 1.3249667478799308e-14,
+      "sample_prediction_error": 5.817896343184198e-10,
+      "parameter_drift": 6.398854317920045e-09,
+      "step_latency_ms": 1743.5551460002898
+    },
+    {
+      "step": 4,
+      "domain": "exponential",
+      "target": "multiplying",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.525440887036548e-16,
+      "safeguard_error_abs": 1.3293550302024316e-14,
+      "sample_prediction_error": 1.2255105646429057e-09,
+      "parameter_drift": 8.511803363085411e-09,
+      "step_latency_ms": 1944.21919800061
+    },
+    {
+      "step": 5,
+      "domain": "exponential",
+      "target": "36",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.4765551880382357e-16,
+      "safeguard_error_abs": 1.3109214634654794e-14,
+      "sample_prediction_error": 4.5153534924158544e-10,
+      "parameter_drift": 9.233577232751733e-09,
+      "step_latency_ms": 1580.252714999915
+    },
+    {
+      "step": 6,
+      "domain": "arithmetic",
+      "target": "120",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.38717792247028e-16,
+      "safeguard_error_abs": 1.2772195460668943e-14,
+      "sample_prediction_error": 1.5989122082792924e-09,
+      "parameter_drift": 1.0988836657138314e-08,
+      "step_latency_ms": 1943.2786580000538
+    },
+    {
+      "step": 7,
+      "domain": "arithmetic",
+      "target": "12",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.57143843871117e-16,
+      "safeguard_error_abs": 1.3466995492725145e-14,
+      "sample_prediction_error": 7.651341517490845e-10,
+      "parameter_drift": 1.1816099322920002e-08,
+      "step_latency_ms": 1698.096256000099
+    },
+    {
+      "step": 8,
+      "domain": "arithmetic",
+      "target": "9",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.557217787303052e-16,
+      "safeguard_error_abs": 1.3413372995318792e-14,
+      "sample_prediction_error": 1.0411381317233275e-09,
+      "parameter_drift": 1.2881965499951457e-08,
+      "step_latency_ms": 1848.5231550002936
+    },
+    {
+      "step": 9,
+      "domain": "arithmetic",
+      "target": "100",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.608647665775011e-16,
+      "safeguard_error_abs": 1.3607302123164326e-14,
+      "sample_prediction_error": 2.745786498346119e-09,
+      "parameter_drift": 1.53595216583123e-08,
+      "step_latency_ms": 1665.9037809995425
+    },
+    {
+      "step": 10,
+      "domain": "arithmetic",
+      "target": "50",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.537652349160012e-16,
+      "safeguard_error_abs": 1.3339596652311015e-14,
+      "sample_prediction_error": 1.0900396270910648e-09,
+      "parameter_drift": 1.6321427483455736e-08,
+      "step_latency_ms": 1392.1535130002667
+    },
+    {
+      "step": 11,
+      "domain": "factual",
+      "target": "Rome",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.4611587106086616e-16,
+      "safeguard_error_abs": 1.3051158393253433e-14,
+      "sample_prediction_error": 1.304387445892579e-09,
+      "parameter_drift": 1.7098731609158097e-08,
+      "step_latency_ms": 1560.349856999892
+    },
+    {
+      "step": 12,
+      "domain": "factual",
+      "target": "Himalayas",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.7131939460163e-16,
+      "safeguard_error_abs": 1.4001519833745584e-14,
+      "sample_prediction_error": 7.423704808158494e-10,
+      "parameter_drift": 1.7611648140243122e-08,
+      "step_latency_ms": 1466.6243470001064
+    },
+    {
+      "step": 13,
+      "domain": "factual",
+      "target": "Amazon",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.5511631670381305e-16,
+      "safeguard_error_abs": 1.3390542546126649e-14,
+      "sample_prediction_error": 7.896001893618426e-10,
+      "parameter_drift": 1.8068584619618657e-08,
+      "step_latency_ms": 1438.3859939998729
+    },
+    {
+      "step": 14,
+      "domain": "factual",
+      "target": "Tokyo",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.468086685867943e-16,
+      "safeguard_error_abs": 1.3077282044323314e-14,
+      "sample_prediction_error": 9.403134233262837e-10,
+      "parameter_drift": 1.865256996666673e-08,
+      "step_latency_ms": 1405.3573470000629
+    },
+    {
+      "step": 15,
+      "domain": "factual",
+      "target": "Pacific",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.5499005305676764e-16,
+      "safeguard_error_abs": 1.3385781461776924e-14,
+      "sample_prediction_error": 1.0350230269398516e-09,
+      "parameter_drift": 1.9518819754697118e-08,
+      "step_latency_ms": 1368.5672179999528
+    },
+    {
+      "step": 16,
+      "domain": "science",
+      "target": "DNA",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.549663540239663e-16,
+      "safeguard_error_abs": 1.3384887830895713e-14,
+      "sample_prediction_error": 9.150103488687922e-10,
+      "parameter_drift": 1.9729933696920157e-08,
+      "step_latency_ms": 1412.7347910007302
+    },
+    {
+      "step": 17,
+      "domain": "science",
+      "target": "vacuum",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.5097091264967003e-16,
+      "safeguard_error_abs": 1.323422979239817e-14,
+      "sample_prediction_error": 5.556069829006599e-10,
+      "parameter_drift": 2.010892797996866e-08,
+      "step_latency_ms": 1517.8852870003539
+    },
+    {
+      "step": 18,
+      "domain": "science",
+      "target": "sunlight",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.4445896888742166e-16,
+      "safeguard_error_abs": 1.2988680782384363e-14,
+      "sample_prediction_error": 7.540121890751074e-10,
+      "parameter_drift": 2.05270432194594e-08,
+      "step_latency_ms": 1431.6476379999585
+    },
+    {
+      "step": 19,
+      "domain": "science",
+      "target": "nucleus",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.525290583043052e-16,
+      "safeguard_error_abs": 1.3292983543493352e-14,
+      "sample_prediction_error": 7.268533753458845e-10,
+      "parameter_drift": 2.108820631416392e-08,
+      "step_latency_ms": 1609.8783939996792
+    },
+    {
+      "step": 20,
+      "domain": "science",
+      "target": "powerhouses",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.4879463561435826e-16,
+      "safeguard_error_abs": 1.3152167862650778e-14,
+      "sample_prediction_error": 7.586856578763197e-10,
+      "parameter_drift": 2.1509317217394387e-08,
+      "step_latency_ms": 1587.865581999722
+    },
+    {
+      "step": 21,
+      "domain": "language",
+      "target": "wisdom",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.410922549846872e-16,
+      "safeguard_error_abs": 1.2861730474458064e-14,
+      "sample_prediction_error": 9.267510823456243e-10,
+      "parameter_drift": 2.1951757221204245e-08,
+      "step_latency_ms": 1607.4340320001284
+    },
+    {
+      "step": 22,
+      "domain": "language",
+      "target": "step",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.8103599430884825e-16,
+      "safeguard_error_abs": 1.4367908353965868e-14,
+      "sample_prediction_error": 1.1435531480496672e-09,
+      "parameter_drift": 2.2614270359584137e-08,
+      "step_latency_ms": 1731.9374850003442
+    },
+    {
+      "step": 23,
+      "domain": "language",
+      "target": "discovery",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.512288827262931e-16,
+      "safeguard_error_abs": 1.3243957194728516e-14,
+      "sample_prediction_error": 1.2715717636805072e-09,
+      "parameter_drift": 2.3272262566723175e-08,
+      "step_latency_ms": 1998.6230320000686
+    },
+    {
+      "step": 24,
+      "domain": "language",
+      "target": "virtues",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.456145338868832e-16,
+      "safeguard_error_abs": 1.3032254230187975e-14,
+      "sample_prediction_error": 9.152715736979409e-10,
+      "parameter_drift": 2.3743264880002286e-08,
+      "step_latency_ms": 1468.2019589999982
+    },
+    {
+      "step": 25,
+      "domain": "language",
+      "target": "climate",
+      "updated": true,
+      "conflict_detected": false,
+      "safeguard_error_rel": 3.454312852659159e-16,
+      "safeguard_error_abs": 1.302534438589144e-14,
+      "sample_prediction_error": 7.313721283689614e-10,
+      "parameter_drift": 2.407875292024796e-08,
+      "step_latency_ms": 1430.588913000065
+    }
+  ],
+  "safeguards": [
+    {
+      "id": "safe_arithmetic_add",
+      "category": "arithmetic",
+      "prompt": "The sum of 25 and 17 is equal to 42.",
+      "target_substring": "42"
+    },
+    {
+      "id": "safe_arithmetic_sub",
+      "category": "arithmetic",
+      "prompt": "Calculating 100 minus 36 gives 64.",
+      "target_substring": "64"
+    },
+    {
+      "id": "safe_factual_capital",
+      "category": "factual_knowledge",
+      "prompt": "The capital city of France is Paris.",
+      "target_substring": "Paris"
+    },
+    {
+      "id": "safe_science_water",
+      "category": "science",
+      "prompt": "Water is composed of hydrogen and oxygen.",
+      "target_substring": "oxygen"
+    },
+    {
+      "id": "safe_language_proverb",
+      "category": "ordinary_language",
+      "prompt": "Actions speak louder than words in every culture.",
+      "target_substring": "words"
+    }
+  ],
+  "samples": [
+    {
+      "index": 1,
+      "domain": "exponential",
+      "prompt": "In a lake, there is a patch of lily pads that doubles every day.",
+      "target": "doubles",
+      "token_id": 39296,
+      "token_str": " doubles",
+      "k_norm": 39.77859444240912,
+      "v_norm": 24.028578851116546
+    },
+    {
+      "index": 2,
+      "domain": "exponential",
+      "prompt": "If it takes 48 days to cover the lake, how long for half?",
+      "target": "half",
+      "token_id": 4279,
+      "token_str": " half",
+      "k_norm": 34.95603603864138,
+      "v_norm": 25.783802142591448
+    },
+    {
+      "index": 3,
+      "domain": "exponential",
+      "prompt": "A bacteria population grows exponentially by doubling every hour.",
+      "target": "doubling",
+      "token_id": 59015,
+      "token_str": " doubling",
+      "k_norm": 32.67927553173583,
+      "v_norm": 22.876414924074165
+    },
+    {
+      "index": 4,
+      "domain": "exponential",
+      "prompt": "A digital virus spreads by multiplying its infected hosts daily.",
+      "target": "multiplying",
+      "token_id": 84192,
+      "token_str": " multiplying",
+      "k_norm": 24.57322755149537,
+      "v_norm": 16.04676340207014
+    },
+    {
+      "index": 5,
+      "domain": "exponential",
+      "prompt": "The algae patch expanded until it covered the entire pond in 36 days.",
+      "target": "36",
+      "token_id": [
+        18,
+        21
+      ],
+      "token_str": "36",
+      "k_norm": 35.00049058775949,
+      "v_norm": 22.753725026522197
+    },
+    {
+      "index": 6,
+      "domain": "arithmetic",
+      "prompt": "Compute 15 multiplied by 8 to obtain the product 120.",
+      "target": "120",
+      "token_id": [
+        16,
+        17,
+        15
+      ],
+      "token_str": "120",
+      "k_norm": 24.795910698890605,
+      "v_norm": 14.958924483801136
+    },
+    {
+      "index": 7,
+      "domain": "arithmetic",
+      "prompt": "Dividing 144 by 12 results in an exact quotient of 12.",
+      "target": "12",
+      "token_id": [
+        16,
+        17
+      ],
+      "token_str": "12",
+      "k_norm": 28.611209316053262,
+      "v_norm": 18.531545500961087
+    },
+    {
+      "index": 8,
+      "domain": "arithmetic",
+      "prompt": "The square root of 81 is equal to 9.",
+      "target": "9",
+      "token_id": 24,
+      "token_str": "9",
+      "k_norm": 29.39140596174153,
+      "v_norm": 17.621883844916365
+    },
+    {
+      "index": 9,
+      "domain": "arithmetic",
+      "prompt": "Adding 57 and 43 yields a total sum of 100.",
+      "target": "100",
+      "token_id": [
+        16,
+        15,
+        15
+      ],
+      "token_str": "100",
+      "k_norm": 25.60187630391417,
+      "v_norm": 15.712654326898932
+    },
+    {
+      "index": 10,
+      "domain": "arithmetic",
+      "prompt": "Subtracting 25 from 75 leaves exactly 50.",
+      "target": "50",
+      "token_id": [
+        20,
+        15
+      ],
+      "token_str": "50",
+      "k_norm": 31.152985067259557,
+      "v_norm": 19.113812666548746
+    },
+    {
+      "index": 11,
+      "domain": "factual",
+      "prompt": "The Colosseum is an iconic amphitheatre situated in Rome.",
+      "target": "Rome",
+      "token_id": 21718,
+      "token_str": " Rome",
+      "k_norm": 21.73170880782368,
+      "v_norm": 15.33802632965899
+    },
+    {
+      "index": 12,
+      "domain": "factual",
+      "prompt": "Mount Everest is the highest mountain peak located in the Himalayas.",
+      "target": "Himalayas",
+      "token_id": [
+        75338,
+        97340
+      ],
+      "token_str": " Himalayas",
+      "k_norm": 27.022538746185944,
+      "v_norm": 16.111740908577765
+    },
+    {
+      "index": 13,
+      "domain": "factual",
+      "prompt": "The Amazon River flows through South America into the Atlantic Ocean.",
+      "target": "Amazon",
+      "token_id": 8176,
+      "token_str": " Amazon",
+      "k_norm": 24.00435493058202,
+      "v_norm": 18.363435851359835
+    },
+    {
+      "index": 14,
+      "domain": "factual",
+      "prompt": "Tokyo is the bustling capital city of Japan.",
+      "target": "Tokyo",
+      "token_id": [
+        52854,
+        16032
+      ],
+      "token_str": "Tokyo",
+      "k_norm": 24.5439463097223,
+      "v_norm": 17.03590798301456
+    },
+    {
+      "index": 15,
+      "domain": "factual",
+      "prompt": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+      "target": "Pacific",
+      "token_id": 16462,
+      "token_str": " Pacific",
+      "k_norm": 28.57901714432396,
+      "v_norm": 22.78192453194037
+    },
+    {
+      "index": 16,
+      "domain": "science",
+      "prompt": "DNA contains the genetic instructions necessary for the development of organisms.",
+      "target": "DNA",
+      "token_id": 55320,
+      "token_str": "DNA",
+      "k_norm": 13.511510775426782,
+      "v_norm": 8.119403659010656
+    },
+    {
+      "index": 17,
+      "domain": "science",
+      "prompt": "The speed of light in a vacuum is approximately 300000 kilometers per second.",
+      "target": "vacuum",
+      "token_id": 28202,
+      "token_str": " vacuum",
+      "k_norm": 32.01841425661584,
+      "v_norm": 19.877570715264856
+    },
+    {
+      "index": 18,
+      "domain": "science",
+      "prompt": "Chlorophyll allows plants to absorb energy from sunlight during photosynthesis.",
+      "target": "sunlight",
+      "token_id": 39020,
+      "token_str": " sunlight",
+      "k_norm": 26.12881153832939,
+      "v_norm": 16.823109757499065
+    },
+    {
+      "index": 19,
+      "domain": "science",
+      "prompt": "Electrons orbit the nucleus of an atom in distinct energy levels.",
+      "target": "nucleus",
+      "token_id": 61507,
+      "token_str": " nucleus",
+      "k_norm": 32.20255828880434,
+      "v_norm": 20.922261671579744
+    },
+    {
+      "index": 20,
+      "domain": "science",
+      "prompt": "Mitochondria are often described as the powerhouses of biological cells.",
+      "target": "powerhouses",
+      "token_id": [
+        2355,
+        36741
+      ],
+      "token_str": " powerhouses",
+      "k_norm": 26.8101680122205,
+      "v_norm": 17.45659164517614
+    },
+    {
+      "index": 21,
+      "domain": "language",
+      "prompt": "Knowledge is power and wisdom is the ability to apply it correctly.",
+      "target": "wisdom",
+      "token_id": 23389,
+      "token_str": " wisdom",
+      "k_norm": 23.398008738347144,
+      "v_norm": 16.156326918835347
+    },
+    {
+      "index": 22,
+      "domain": "language",
+      "prompt": "A journey of a thousand miles begins with a single step forward.",
+      "target": "step",
+      "token_id": 3019,
+      "token_str": " step",
+      "k_norm": 28.85807164261269,
+      "v_norm": 18.266364261490455
+    },
+    {
+      "index": 23,
+      "domain": "language",
+      "prompt": "Curiosity leads to discovery, innovation, and scientific breakthroughs.",
+      "target": "discovery",
+      "token_id": 18335,
+      "token_str": " discovery",
+      "k_norm": 27.65160475772918,
+      "v_norm": 17.153582026578512
+    },
+    {
+      "index": 24,
+      "domain": "language",
+      "prompt": "Patience and persistence are essential virtues for overcoming difficult challenges.",
+      "target": "virtues",
+      "token_id": 65527,
+      "token_str": " virtues",
+      "k_norm": 27.152486285370244,
+      "v_norm": 16.599552756220326
+    },
+    {
+      "index": 25,
+      "domain": "language",
+      "prompt": "The climate of a region is determined by long-term atmospheric patterns.",
+      "target": "climate",
+      "token_id": 9977,
+      "token_str": " climate",
+      "k_norm": 26.083148495486544,
+      "v_norm": 19.51273030743916
+    }
+  ]
+}

@@ -19,3 +19,7 @@ hf_cache/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Orca Web AI tools (local only, do not commit)
+orca_tools/
+

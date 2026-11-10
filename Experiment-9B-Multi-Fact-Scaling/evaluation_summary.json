@@ -1,0 +1,81 @@
+{
+  "experiment": "Experiment 9B: 5-Fact Scaling & Solver Equivalence",
+  "model": "Qwen/Qwen2.5-0.5B",
+  "layer": 21,
+  "beta": 0.18,
+  "lambda": 0.1,
+  "gamma": 1.0,
+  "equivalence_metrics": {
+    "b1_forward_vs_batch": 3.78333695811743e-15,
+    "b2_reverse_vs_batch": 3.741933841616503e-15,
+    "b3_interleaved_vs_batch": 4.7062481907739016e-15,
+    "equivalence_passed": true
+  },
+  "per_fact_summary": {
+    "F1_France": {
+      "country": "France",
+      "target_city": "Lyon",
+      "original_city": "Paris",
+      "train_p1_margin": -4.346146583557129,
+      "train_p1_target_prob": 0.0038971593603491783,
+      "train_p2_margin": -3.8401222229003906,
+      "heldout_h1_margin": -3.7557640075683594,
+      "heldout_h1_target_prob": 0.007913813926279545,
+      "heldout_h2_target_prob": 0.021118411794304848,
+      "p1_rollout": " Paris. It is the largest city in Europe and",
+      "r1_probe_rollout": " the department of the Loire. Lyon is the"
+    },
+    "F2_Japan": {
+      "country": "Japan",
+      "target_city": "Osaka",
+      "original_city": "Tokyo",
+      "train_p1_margin": -3.2451066970825195,
+      "train_p1_target_prob": 0.002420984208583832,
+      "train_p2_margin": -3.5838165283203125,
+      "heldout_h1_margin": -2.9534692764282227,
+      "heldout_h1_target_prob": 0.004398068878799677,
+      "heldout_h2_target_prob": 0.019304592162370682,
+      "p1_rollout": " ____\nA. Tokyo\nB. Osaka\n",
+      "r1_probe_rollout": " Japan. It is the largest city in Japan."
+    },
+    "F3_China": {
+      "country": "China",
+      "target_city": "Shanghai",
+      "original_city": "Beijing",
+      "train_p1_margin": -1.7210445404052734,
+      "train_p1_target_prob": 0.012083540670573711,
+      "train_p2_margin": -2.8780670166015625,
+      "heldout_h1_margin": -1.2454471588134766,
+      "heldout_h1_target_prob": 0.023217450827360153,
+      "heldout_h2_target_prob": 0.045327238738536835,
+      "p1_rollout": " ____\nA. Beijing\nB. Shanghai\n",
+      "r1_probe_rollout": " China. (\u5224\u65ad\u5bf9\u9519)\n\u221a\n\n\u9605\u8bfb"
+    },
+    "F4_Canada": {
+      "country": "Canada",
+      "target_city": "Toronto",
+      "original_city": "Ottawa",
+      "train_p1_margin": 0.08092880249023438,
+      "train_p1_target_prob": 0.02571422979235649,
+      "train_p2_margin": 0.47138404846191406,
+      "heldout_h1_margin": 0.4242229461669922,
+      "heldout_h1_target_prob": 0.04569451883435249,
+      "heldout_h2_target_prob": 0.049635548144578934,
+      "p1_rollout": " ____.\nA. Ottawa\nB. Toronto\n",
+      "r1_probe_rollout": " Canada. Toronto is the capital of Canada. Toronto"
+    },
+    "F5_Australia": {
+      "country": "Australia",
+      "target_city": "Sydney",
+      "original_city": "Canberra",
+      "train_p1_margin": -0.8052482604980469,
+      "train_p1_target_prob": 0.025157855823636055,
+      "train_p2_margin": -0.3637962341308594,
+      "heldout_h1_margin": -0.3198060989379883,
+      "heldout_h1_target_prob": 0.0361831933259964,
+      "heldout_h2_target_prob": 0.10194554179906845,
+      "p1_rollout": " ______.\nA. Canberra\nB. Sydney\n",
+      "r1_probe_rollout": " Australia. Sydney is the capital of Australia. Sydney"
+    }
+  }
+}

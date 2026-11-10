@@ -1,0 +1,3254 @@
+{
+  "metadata": {
+    "title": "Experiment 3 \u2014 Task 7.3: Layer 20 Steering Generalization and Side-Effect Test",
+    "model": "Qwen/Qwen2.5-0.5B",
+    "layer_idx": 20,
+    "tested_betas": [
+      0.1,
+      0.15,
+      0.2
+    ],
+    "city_token_ids": {
+      "Lyon": 55201,
+      "Paris": 12095,
+      "Berlin": 19846,
+      "Rome": 21718,
+      "Madrid": 24081
+    },
+    "num_france_prompts": 4,
+    "num_control_prompts": 3
+  },
+  "summary": {
+    "france_paraphrase_summary": {
+      "beta_0.10": {
+        "num_prompts_lyon_surpasses_paris": 0,
+        "num_prompts_top1_is_lyon": 0,
+        "mean_delta_margin": 2.3983845710754395
+      },
+      "beta_0.15": {
+        "num_prompts_lyon_surpasses_paris": 1,
+        "num_prompts_top1_is_lyon": 1,
+        "mean_delta_margin": 3.5923821926116943
+      },
+      "beta_0.20": {
+        "num_prompts_lyon_surpasses_paris": 3,
+        "num_prompts_top1_is_lyon": 2,
+        "mean_delta_margin": 4.780953645706177
+      }
+    },
+    "unrelated_control_summary": {
+      "beta_0.10": {
+        "num_controls_expected_remains_top1": 2,
+        "num_controls_expected_degraded": 1,
+        "mean_expected_city_prob_drop": 0.02135906120141347
+      },
+      "beta_0.15": {
+        "num_controls_expected_remains_top1": 2,
+        "num_controls_expected_degraded": 1,
+        "mean_expected_city_prob_drop": 0.03217204908529917
+      },
+      "beta_0.20": {
+        "num_controls_expected_remains_top1": 1,
+        "num_controls_expected_degraded": 2,
+        "mean_expected_city_prob_drop": 0.04291759431362152
+      }
+    },
+    "model_weights_bitwise_unmodified": true,
+    "hooks_cleaned_reliably": true,
+    "no_intervention_leakage": true
+  },
+  "prompts_evaluation": [
+    {
+      "id": "france_canonical",
+      "prompt": "The capital of France is",
+      "category": "france_paraphrase",
+      "expected_baseline_city": "Paris",
+      "seq_len": 5,
+      "v0_norm": 21.445980072021484,
+      "k_norm": 34.976280212402344,
+      "baseline": {
+        "top1_is_expected": true,
+        "margin_lyon_minus_paris": -4.576615333557129,
+        "city_metrics": {
+          "Lyon": {
+            "token_id": 55201,
+            "logit": 13.266707420349121,
+            "prob": 0.003247329033911228
+          },
+          "Paris": {
+            "token_id": 12095,
+            "logit": 17.84332275390625,
+            "prob": 0.31559133529663086
+          },
+          "Berlin": {
+            "token_id": 19846,
+            "logit": 11.260175704956055,
+            "prob": 0.00043661700328812003
+          },
+          "Rome": {
+            "token_id": 21718,
+            "logit": 11.52160930633545,
+            "prob": 0.0005670740501955152
+          },
+          "Madrid": {
+            "token_id": 24081,
+            "logit": 9.792672157287598,
+            "prob": 0.00010064031084766611
+          }
+        },
+        "top10": [
+          {
+            "rank": 1,
+            "token_id": 12095,
+            "token_str": " Paris",
+            "logit": 17.84332275390625,
+            "prob": 0.31559133529663086
+          },
+          {
+            "rank": 2,
+            "token_id": 32671,
+            "token_str": " ______",
+            "logit": 16.830291748046875,
+            "prob": 0.11459647864103317
+          },
+          {
+            "rank": 3,
+            "token_id": 30743,
+            "token_str": " ____",
+            "logit": 16.240436553955078,
+            "prob": 0.06353315711021423
+          },
+          {
+            "rank": 4,
+            "token_id": 1304,
+            "token_str": " __",
+            "logit": 16.098424911499023,
+            "prob": 0.055122073739767075
+          },
+          {
+            "rank": 5,
+            "token_id": 510,
+            "token_str": ":\n",
+            "logit": 16.026952743530273,
+            "prob": 0.051319874823093414
+          },
+          {
+            "rank": 6,
+            "token_id": 7407,
+            "token_str": " located",
+            "logit": 15.668329238891602,
+            "prob": 0.03585398197174072
+          },
+          {
+            "rank": 7,
+            "token_id": 279,
+            "token_str": " the",
+            "logit": 15.422863960266113,
+            "prob": 0.028050020337104797
+          },
+          {
+            "rank": 8,
+            "token_id": 198,
+            "token_str": "\n",
+            "logit": 15.29027271270752,
+            "prob": 0.024566851556301117
+          },
+          {
+            "rank": 9,
+            "token_id": 320,
+            "token_str": " (",
+            "logit": 15.070098876953125,
+            "prob": 0.019711934030056
+          },
+          {
+            "rank": 10,
+            "token_id": 16448,
+            "token_str": " .\n",
+            "logit": 15.021086692810059,
+            "prob": 0.018769104033708572
+          }
+        ]
+      },
+      "beta_results": [
+        {
+          "beta": 0.1,
+          "delta_v_norm": 2.1445982456207275,
+          "margin_lyon_minus_paris": -2.161332130432129,
+          "delta_margin": 2.415283203125,
+          "lyon_surpasses_paris": false,
+          "top1_is_lyon": false,
+          "top1_is_expected": true,
+          "rank_expected": 1,
+          "rank_lyon": 10,
+          "rank_paris": 1,
+          "top1_token_id": 12095,
+          "top1_token_str": " Paris",
+          "top1_prob": 0.18682913482189178,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 14.93302059173584,
+              "prob": 0.02151740901172161
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 17.09435272216797,
+              "prob": 0.18682913482189178
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 11.055272102355957,
+              "prob": 0.00044535385677590966
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.49617862701416,
+              "prob": 0.0006921312888152897
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 9.600655555725098,
+              "prob": 0.0001039856142597273
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 17.09435272216797,
+              "prob": 0.18682913482189178
+            },
+            {
+              "rank": 2,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.7134952545166,
+              "prob": 0.1276557296514511
+            },
+            {
+              "rank": 3,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 16.1419734954834,
+              "prob": 0.07208278775215149
+            },
+            {
+              "rank": 4,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.052949905395508,
+              "prob": 0.06594306230545044
+            },
+            {
+              "rank": 5,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.993795394897461,
+              "prob": 0.06215536594390869
+            },
+            {
+              "rank": 6,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.649493217468262,
+              "prob": 0.0440504215657711
+            },
+            {
+              "rank": 7,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.379766464233398,
+              "prob": 0.03363637998700142
+            },
+            {
+              "rank": 8,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 15.23633861541748,
+              "prob": 0.029141999781131744
+            },
+            {
+              "rank": 9,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 14.964755058288574,
+              "prob": 0.02221120335161686
+            },
+            {
+              "rank": 10,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 14.93302059173584,
+              "prob": 0.02151740901172161
+            }
+          ]
+        },
+        {
+          "beta": 0.15,
+          "delta_v_norm": 3.2168972492218018,
+          "margin_lyon_minus_paris": -0.9602718353271484,
+          "delta_margin": 3.6163434982299805,
+          "lyon_surpasses_paris": false,
+          "top1_is_lyon": false,
+          "top1_is_expected": true,
+          "rank_expected": 1,
+          "rank_lyon": 6,
+          "rank_paris": 1,
+          "top1_token_id": 12095,
+          "top1_token_str": " Paris",
+          "top1_prob": 0.13551698625087738,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 15.746940612792969,
+              "prob": 0.05187438428401947
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 16.707212448120117,
+              "prob": 0.13551698625087738
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 10.94970417022705,
+              "prob": 0.00042809449951164424
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.480169296264648,
+              "prob": 0.0007276419783011079
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 9.502708435058594,
+              "prob": 0.00010072039003716782
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 16.707212448120117,
+              "prob": 0.13551698625087738
+            },
+            {
+              "rank": 2,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.650283813476562,
+              "prob": 0.12801767885684967
+            },
+            {
+              "rank": 3,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 16.08875846862793,
+              "prob": 0.07301340252161026
+            },
+            {
+              "rank": 4,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.029207229614258,
+              "prob": 0.06879229843616486
+            },
+            {
+              "rank": 5,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.973053932189941,
+              "prob": 0.06503583490848541
+            },
+            {
+              "rank": 6,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 15.746940612792969,
+              "prob": 0.05187438428401947
+            },
+            {
+              "rank": 7,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.631807327270508,
+              "prob": 0.046232908964157104
+            },
+            {
+              "rank": 8,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.35515022277832,
+              "prob": 0.035059086978435516
+            },
+            {
+              "rank": 9,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 15.204671859741211,
+              "prob": 0.03016120195388794
+            },
+            {
+              "rank": 10,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 14.908928871154785,
+              "prob": 0.02243928797543049
+            }
+          ]
+        },
+        {
+          "beta": 0.2,
+          "delta_v_norm": 4.289196491241455,
+          "margin_lyon_minus_paris": 0.2344646453857422,
+          "delta_margin": 4.811079978942871,
+          "lyon_surpasses_paris": true,
+          "top1_is_lyon": false,
+          "top1_is_expected": false,
+          "rank_expected": 3,
+          "rank_lyon": 2,
+          "rank_paris": 3,
+          "top1_token_id": 32671,
+          "top1_token_str": " ______",
+          "top1_prob": 0.12151039391756058,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 16.546459197998047,
+              "prob": 0.1170157715678215
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 16.311994552612305,
+              "prob": 0.09255879372358322
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 10.842538833618164,
+              "prob": 0.00038999877870082855
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.4620361328125,
+              "prob": 0.0007246152963489294
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 9.403663635253906,
+              "prob": 9.250552830053493e-05
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.584150314331055,
+              "prob": 0.12151039391756058
+            },
+            {
+              "rank": 2,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 16.546459197998047,
+              "prob": 0.1170157715678215
+            },
+            {
+              "rank": 3,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 16.311994552612305,
+              "prob": 0.09255879372358322
+            },
+            {
+              "rank": 4,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 16.032995223999023,
+              "prob": 0.07002446800470352
+            },
+            {
+              "rank": 5,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.004940032958984,
+              "prob": 0.06808722019195557
+            },
+            {
+              "rank": 6,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.949525833129883,
+              "prob": 0.06441684812307358
+            },
+            {
+              "rank": 7,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.608933448791504,
+              "prob": 0.045822855085134506
+            },
+            {
+              "rank": 8,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.328439712524414,
+              "prob": 0.03461506962776184
+            },
+            {
+              "rank": 9,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 15.169853210449219,
+              "prob": 0.029538743197917938
+            },
+            {
+              "rank": 10,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 14.851118087768555,
+              "prob": 0.02147667668759823
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "france_possessive",
+      "prompt": "France's capital city is",
+      "category": "france_paraphrase",
+      "expected_baseline_city": "Paris",
+      "seq_len": 5,
+      "v0_norm": 19.294710159301758,
+      "k_norm": 30.82813262939453,
+      "baseline": {
+        "top1_is_expected": false,
+        "margin_lyon_minus_paris": -4.265462875366211,
+        "city_metrics": {
+          "Lyon": {
+            "token_id": 55201,
+            "logit": 11.582193374633789,
+            "prob": 0.0013058144832029939
+          },
+          "Paris": {
+            "token_id": 12095,
+            "logit": 15.84765625,
+            "prob": 0.09297120571136475
+          },
+          "Berlin": {
+            "token_id": 19846,
+            "logit": 9.207316398620605,
+            "prob": 0.00012147460802225396
+          },
+          "Rome": {
+            "token_id": 21718,
+            "logit": 11.55064868927002,
+            "prob": 0.001265265978872776
+          },
+          "Madrid": {
+            "token_id": 24081,
+            "logit": 11.023887634277344,
+            "prob": 0.0007471579010598361
+          }
+        },
+        "top10": [
+          {
+            "rank": 1,
+            "token_id": 279,
+            "token_str": " the",
+            "logit": 16.144248962402344,
+            "prob": 0.12507112324237823
+          },
+          {
+            "rank": 2,
+            "token_id": 12095,
+            "token_str": " Paris",
+            "logit": 15.84765625,
+            "prob": 0.09297120571136475
+          },
+          {
+            "rank": 3,
+            "token_id": 7407,
+            "token_str": " located",
+            "logit": 15.701641082763672,
+            "prob": 0.08034056425094604
+          },
+          {
+            "rank": 4,
+            "token_id": 264,
+            "token_str": " a",
+            "logit": 15.634267807006836,
+            "prob": 0.07510606944561005
+          },
+          {
+            "rank": 5,
+            "token_id": 3881,
+            "token_str": " known",
+            "logit": 15.584754943847656,
+            "prob": 0.07147791981697083
+          },
+          {
+            "rank": 6,
+            "token_id": 1304,
+            "token_str": " __",
+            "logit": 14.99991512298584,
+            "prob": 0.039827145636081696
+          },
+          {
+            "rank": 7,
+            "token_id": 1083,
+            "token_str": " also",
+            "logit": 14.612305641174316,
+            "prob": 0.02702978067100048
+          },
+          {
+            "rank": 8,
+            "token_id": 30743,
+            "token_str": " ____",
+            "logit": 14.586915969848633,
+            "prob": 0.02635214291512966
+          },
+          {
+            "rank": 9,
+            "token_id": 32671,
+            "token_str": " ______",
+            "logit": 14.40044116973877,
+            "prob": 0.021869102492928505
+          },
+          {
+            "rank": 10,
+            "token_id": 3545,
+            "token_str": " often",
+            "logit": 14.024839401245117,
+            "prob": 0.015021356754004955
+          }
+        ]
+      },
+      "beta_results": [
+        {
+          "beta": 0.1,
+          "delta_v_norm": 1.9294712543487549,
+          "margin_lyon_minus_paris": -2.128314971923828,
+          "delta_margin": 2.137147903442383,
+          "lyon_surpasses_paris": false,
+          "top1_is_lyon": false,
+          "top1_is_expected": false,
+          "rank_expected": 5,
+          "rank_lyon": 23,
+          "rank_paris": 5,
+          "top1_token_id": 279,
+          "top1_token_str": " the",
+          "top1_prob": 0.12911629676818848,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 13.016960144042969,
+              "prob": 0.0058774081990122795
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 15.145275115966797,
+              "prob": 0.04937433823943138
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 9.085663795471191,
+              "prob": 0.00011530430492712185
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.551631927490234,
+              "prob": 0.001357693923637271
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 10.886664390563965,
+              "prob": 0.0006982486811466515
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 16.106557846069336,
+              "prob": 0.12911629676818848
+            },
+            {
+              "rank": 2,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.71186637878418,
+              "prob": 0.08700991421937943
+            },
+            {
+              "rank": 3,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 15.60702896118164,
+              "prob": 0.07834989577531815
+            },
+            {
+              "rank": 4,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 15.599517822265625,
+              "prob": 0.07776360213756561
+            },
+            {
+              "rank": 5,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 15.145275115966797,
+              "prob": 0.04937433823943138
+            },
+            {
+              "rank": 6,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 14.976890563964844,
+              "prob": 0.04172273725271225
+            },
+            {
+              "rank": 7,
+              "token_id": 1083,
+              "token_str": " also",
+              "logit": 14.645416259765625,
+              "prob": 0.029951276257634163
+            },
+            {
+              "rank": 8,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 14.510990142822266,
+              "prob": 0.026183929294347763
+            },
+            {
+              "rank": 9,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 14.312070846557617,
+              "prob": 0.021460769698023796
+            },
+            {
+              "rank": 10,
+              "token_id": 3545,
+              "token_str": " often",
+              "logit": 14.071974754333496,
+              "prob": 0.016880016773939133
+            }
+          ]
+        },
+        {
+          "beta": 0.15,
+          "delta_v_norm": 2.8942067623138428,
+          "margin_lyon_minus_paris": -1.0632028579711914,
+          "delta_margin": 3.2022600173950195,
+          "lyon_surpasses_paris": false,
+          "top1_is_lyon": false,
+          "top1_is_expected": false,
+          "rank_expected": 6,
+          "rank_lyon": 16,
+          "rank_paris": 6,
+          "top1_token_id": 279,
+          "top1_token_str": " the",
+          "top1_prob": 0.12945668399333954,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 13.719071388244629,
+              "prob": 0.012139341793954372
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 14.78227424621582,
+              "prob": 0.03515104949474335
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 9.021089553833008,
+              "prob": 0.00011063373676734045
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.546883583068848,
+              "prob": 0.0013830121606588364
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 10.814274787902832,
+              "prob": 0.00066474947379902
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 16.085966110229492,
+              "prob": 0.12945668399333954
+            },
+            {
+              "rank": 2,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.714202880859375,
+              "prob": 0.08926264941692352
+            },
+            {
+              "rank": 3,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 15.616192817687988,
+              "prob": 0.08092907071113586
+            },
+            {
+              "rank": 4,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 15.581352233886719,
+              "prob": 0.07815800607204437
+            },
+            {
+              "rank": 5,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 14.96401309967041,
+              "prob": 0.04215668514370918
+            },
+            {
+              "rank": 6,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 14.78227424621582,
+              "prob": 0.03515104949474335
+            },
+            {
+              "rank": 7,
+              "token_id": 1083,
+              "token_str": " also",
+              "logit": 14.66081714630127,
+              "prob": 0.03113079071044922
+            },
+            {
+              "rank": 8,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 14.471641540527344,
+              "prob": 0.02576512284576893
+            },
+            {
+              "rank": 9,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 14.265336990356445,
+              "prob": 0.020962124690413475
+            },
+            {
+              "rank": 10,
+              "token_id": 3545,
+              "token_str": " often",
+              "logit": 14.09305477142334,
+              "prob": 0.017644690349698067
+            }
+          ]
+        },
+        {
+          "beta": 0.2,
+          "delta_v_norm": 3.8589425086975098,
+          "margin_lyon_minus_paris": -0.0019445419311523438,
+          "delta_margin": 4.263518333435059,
+          "lyon_surpasses_paris": false,
+          "top1_is_lyon": false,
+          "top1_is_expected": false,
+          "rank_expected": 8,
+          "rank_lyon": 9,
+          "rank_paris": 8,
+          "top1_token_id": 279,
+          "top1_token_str": " the",
+          "top1_prob": 0.1284138411283493,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 14.40963077545166,
+              "prob": 0.024549638852477074
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 14.411575317382812,
+              "prob": 0.024597423151135445
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 8.954008102416992,
+              "prob": 0.0001048813501256518
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.538562774658203,
+              "prob": 0.0013904523802921176
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 10.739313125610352,
+              "prob": 0.0006252394523471594
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 16.064191818237305,
+              "prob": 0.1284138411283493
+            },
+            {
+              "rank": 2,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.71479320526123,
+              "prob": 0.0905461385846138
+            },
+            {
+              "rank": 3,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 15.623908042907715,
+              "prob": 0.08267971873283386
+            },
+            {
+              "rank": 4,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 15.562594413757324,
+              "prob": 0.07776261866092682
+            },
+            {
+              "rank": 5,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 14.950234413146973,
+              "prob": 0.04215278849005699
+            },
+            {
+              "rank": 6,
+              "token_id": 1083,
+              "token_str": " also",
+              "logit": 14.675348281860352,
+              "prob": 0.03202172741293907
+            },
+            {
+              "rank": 7,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 14.431364059448242,
+              "prob": 0.025089023634791374
+            },
+            {
+              "rank": 8,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 14.411575317382812,
+              "prob": 0.024597423151135445
+            },
+            {
+              "rank": 9,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 14.40963077545166,
+              "prob": 0.024549638852477074
+            },
+            {
+              "rank": 10,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 14.21706485748291,
+              "prob": 0.02024952322244644
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "france_capital_city",
+      "prompt": "The capital city of France is",
+      "category": "france_paraphrase",
+      "expected_baseline_city": "Paris",
+      "seq_len": 6,
+      "v0_norm": 20.393455505371094,
+      "k_norm": 33.50497817993164,
+      "baseline": {
+        "top1_is_expected": true,
+        "margin_lyon_minus_paris": -3.934093475341797,
+        "city_metrics": {
+          "Lyon": {
+            "token_id": 55201,
+            "logit": 13.444473266601562,
+            "prob": 0.006869519595056772
+          },
+          "Paris": {
+            "token_id": 12095,
+            "logit": 17.37856674194336,
+            "prob": 0.35114094614982605
+          },
+          "Berlin": {
+            "token_id": 19846,
+            "logit": 10.989072799682617,
+            "prob": 0.0005896027432754636
+          },
+          "Rome": {
+            "token_id": 21718,
+            "logit": 11.555500030517578,
+            "prob": 0.001038856920786202
+          },
+          "Madrid": {
+            "token_id": 24081,
+            "logit": 10.398395538330078,
+            "prob": 0.0003266116254962981
+          }
+        },
+        "top10": [
+          {
+            "rank": 1,
+            "token_id": 12095,
+            "token_str": " Paris",
+            "logit": 17.37856674194336,
+            "prob": 0.35114094614982605
+          },
+          {
+            "rank": 2,
+            "token_id": 32671,
+            "token_str": " ______",
+            "logit": 15.746682167053223,
+            "prob": 0.06866936385631561
+          },
+          {
+            "rank": 3,
+            "token_id": 1304,
+            "token_str": " __",
+            "logit": 15.46102237701416,
+            "prob": 0.051606275141239166
+          },
+          {
+            "rank": 4,
+            "token_id": 30743,
+            "token_str": " ____",
+            "logit": 15.337493896484375,
+            "prob": 0.04560944437980652
+          },
+          {
+            "rank": 5,
+            "token_id": 7407,
+            "token_str": " located",
+            "logit": 15.312416076660156,
+            "prob": 0.04447988420724869
+          },
+          {
+            "rank": 6,
+            "token_id": 279,
+            "token_str": " the",
+            "logit": 15.26278305053711,
+            "prob": 0.042326103895902634
+          },
+          {
+            "rank": 7,
+            "token_id": 3881,
+            "token_str": " known",
+            "logit": 14.910055160522461,
+            "prob": 0.029745448380708694
+          },
+          {
+            "rank": 8,
+            "token_id": 264,
+            "token_str": " a",
+            "logit": 14.70209789276123,
+            "prob": 0.024160493165254593
+          },
+          {
+            "rank": 9,
+            "token_id": 510,
+            "token_str": ":\n",
+            "logit": 14.568744659423828,
+            "prob": 0.02114420011639595
+          },
+          {
+            "rank": 10,
+            "token_id": 2598,
+            "token_str": " called",
+            "logit": 14.423333168029785,
+            "prob": 0.018282679840922356
+          }
+        ]
+      },
+      "beta_results": [
+        {
+          "beta": 0.1,
+          "delta_v_norm": 2.0393455028533936,
+          "margin_lyon_minus_paris": -1.7155742645263672,
+          "delta_margin": 2.2185192108154297,
+          "lyon_surpasses_paris": false,
+          "top1_is_lyon": false,
+          "top1_is_expected": true,
+          "rank_expected": 1,
+          "rank_lyon": 7,
+          "rank_paris": 1,
+          "top1_token_id": 12095,
+          "top1_token_str": " Paris",
+          "top1_prob": 0.21617360413074493,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 14.981330871582031,
+              "prob": 0.038881074637174606
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 16.6969051361084,
+              "prob": 0.21617360413074493
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 10.826144218444824,
+              "prob": 0.0006097665173001587
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.535957336425781,
+              "prob": 0.001240028184838593
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 10.267704963684082,
+              "prob": 0.00034884820342995226
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 16.6969051361084,
+              "prob": 0.21617360413074493
+            },
+            {
+              "rank": 2,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 15.653450012207031,
+              "prob": 0.0761440321803093
+            },
+            {
+              "rank": 3,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 15.43332576751709,
+              "prob": 0.061099424958229065
+            },
+            {
+              "rank": 4,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.304997444152832,
+              "prob": 0.053740888833999634
+            },
+            {
+              "rank": 5,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.260377883911133,
+              "prob": 0.05139570310711861
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.227931022644043,
+              "prob": 0.04975483939051628
+            },
+            {
+              "rank": 7,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 14.981330871582031,
+              "prob": 0.038881074637174606
+            },
+            {
+              "rank": 8,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 14.896376609802246,
+              "prob": 0.035714372992515564
+            },
+            {
+              "rank": 9,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 14.669684410095215,
+              "prob": 0.028470290824770927
+            },
+            {
+              "rank": 10,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 14.541665077209473,
+              "prob": 0.025049196556210518
+            }
+          ]
+        },
+        {
+          "beta": 0.15,
+          "delta_v_norm": 3.059018611907959,
+          "margin_lyon_minus_paris": -0.6117544174194336,
+          "delta_margin": 3.3223390579223633,
+          "lyon_surpasses_paris": false,
+          "top1_is_lyon": false,
+          "top1_is_expected": true,
+          "rank_expected": 1,
+          "rank_lyon": 2,
+          "rank_paris": 1,
+          "top1_token_id": 12095,
+          "top1_token_str": " Paris",
+          "top1_prob": 0.15829136967658997,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 15.733330726623535,
+              "prob": 0.08585699647665024
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 16.34508514404297,
+              "prob": 0.15829136967658997
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 10.741994857788086,
+              "prob": 0.0005835338379256427
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.52328109741211,
+              "prob": 0.001274601323530078
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 10.2009859085083,
+              "prob": 0.0003397103864699602
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 16.34508514404297,
+              "prob": 0.15829136967658997
+            },
+            {
+              "rank": 2,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 15.733330726623535,
+              "prob": 0.08585699647665024
+            },
+            {
+              "rank": 3,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 15.603231430053711,
+              "prob": 0.07538314908742905
+            },
+            {
+              "rank": 4,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 15.418558120727539,
+              "prob": 0.0626717284321785
+            },
+            {
+              "rank": 5,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.295939445495605,
+              "prob": 0.05543946847319603
+            },
+            {
+              "rank": 6,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.219799995422363,
+              "prob": 0.05137503147125244
+            },
+            {
+              "rank": 7,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.2080659866333,
+              "prob": 0.05077572166919708
+            },
+            {
+              "rank": 8,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 14.886798858642578,
+              "prob": 0.036824051290750504
+            },
+            {
+              "rank": 9,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 14.65217399597168,
+              "prob": 0.02912294492125511
+            },
+            {
+              "rank": 10,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 14.525473594665527,
+              "prob": 0.02565724402666092
+            }
+          ]
+        },
+        {
+          "beta": 0.2,
+          "delta_v_norm": 4.078691005706787,
+          "margin_lyon_minus_paris": 0.48686885833740234,
+          "delta_margin": 4.420962333679199,
+          "lyon_surpasses_paris": true,
+          "top1_is_lyon": true,
+          "top1_is_expected": false,
+          "rank_expected": 2,
+          "rank_lyon": 1,
+          "rank_paris": 2,
+          "top1_token_id": 55201,
+          "top1_token_str": " Lyon",
+          "top1_prob": 0.1752808690071106,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 16.473011016845703,
+              "prob": 0.1752808690071106
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 15.9861421585083,
+              "prob": 0.10771843791007996
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 10.656280517578125,
+              "prob": 0.0005218678270466626
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 11.508686065673828,
+              "prob": 0.0012239271309226751
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 10.133408546447754,
+              "prob": 0.00030937138944864273
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 16.473011016845703,
+              "prob": 0.1752808690071106
+            },
+            {
+              "rank": 2,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 15.9861421585083,
+              "prob": 0.10771843791007996
+            },
+            {
+              "rank": 3,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 15.55079460144043,
+              "prob": 0.06969811022281647
+            },
+            {
+              "rank": 4,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 15.403212547302246,
+              "prob": 0.060134951025247574
+            },
+            {
+              "rank": 5,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.283557891845703,
+              "prob": 0.053353339433670044
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.186538696289062,
+              "prob": 0.04842021316289902
+            },
+            {
+              "rank": 7,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.177910804748535,
+              "prob": 0.04800424352288246
+            },
+            {
+              "rank": 8,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 14.87518310546875,
+              "prob": 0.0354655496776104
+            },
+            {
+              "rank": 9,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 14.63366985321045,
+              "prob": 0.027856001630425453
+            },
+            {
+              "rank": 10,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 14.507477760314941,
+              "prob": 0.02455354854464531
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "france_wh_question",
+      "prompt": "Which city serves as the capital of France? The answer is",
+      "category": "france_paraphrase",
+      "expected_baseline_city": "Paris",
+      "seq_len": 12,
+      "v0_norm": 23.627960205078125,
+      "k_norm": 39.83216857910156,
+      "baseline": {
+        "top1_is_expected": true,
+        "margin_lyon_minus_paris": -4.075786590576172,
+        "city_metrics": {
+          "Lyon": {
+            "token_id": 55201,
+            "logit": 15.098087310791016,
+            "prob": 0.012624201364815235
+          },
+          "Paris": {
+            "token_id": 12095,
+            "logit": 19.173873901367188,
+            "prob": 0.7435249090194702
+          },
+          "Berlin": {
+            "token_id": 19846,
+            "logit": 13.518043518066406,
+            "prob": 0.002600157167762518
+          },
+          "Rome": {
+            "token_id": 21718,
+            "logit": 12.975847244262695,
+            "prob": 0.0015119129093363881
+          },
+          "Madrid": {
+            "token_id": 24081,
+            "logit": 11.447793960571289,
+            "prob": 0.00032802100758999586
+          }
+        },
+        "top10": [
+          {
+            "rank": 1,
+            "token_id": 12095,
+            "token_str": " Paris",
+            "logit": 19.173873901367188,
+            "prob": 0.7435249090194702
+          },
+          {
+            "rank": 2,
+            "token_id": 1447,
+            "token_str": ":\n\n",
+            "logit": 16.595172882080078,
+            "prob": 0.05641309171915054
+          },
+          {
+            "rank": 3,
+            "token_id": 25,
+            "token_str": ":",
+            "logit": 16.36520004272461,
+            "prob": 0.04482331499457359
+          },
+          {
+            "rank": 4,
+            "token_id": 3070,
+            "token_str": " **",
+            "logit": 15.63902473449707,
+            "prob": 0.021683532744646072
+          },
+          {
+            "rank": 5,
+            "token_id": 55201,
+            "token_str": " Lyon",
+            "logit": 15.098087310791016,
+            "prob": 0.012624201364815235
+          },
+          {
+            "rank": 6,
+            "token_id": 537,
+            "token_str": " not",
+            "logit": 14.953563690185547,
+            "prob": 0.010925418697297573
+          },
+          {
+            "rank": 7,
+            "token_id": 30743,
+            "token_str": " ____",
+            "logit": 14.621054649353027,
+            "prob": 0.007834860123693943
+          },
+          {
+            "rank": 8,
+            "token_id": 28859,
+            "token_str": " Nice",
+            "logit": 14.56006908416748,
+            "prob": 0.007371325045824051
+          },
+          {
+            "rank": 9,
+            "token_id": 330,
+            "token_str": " \"",
+            "logit": 14.501264572143555,
+            "prob": 0.006950356066226959
+          },
+          {
+            "rank": 10,
+            "token_id": 1304,
+            "token_str": " __",
+            "logit": 14.425414085388184,
+            "prob": 0.006442666053771973
+          }
+        ]
+      },
+      "beta_results": [
+        {
+          "beta": 0.1,
+          "delta_v_norm": 2.3627960681915283,
+          "margin_lyon_minus_paris": -1.2531986236572266,
+          "delta_margin": 2.8225879669189453,
+          "lyon_surpasses_paris": false,
+          "top1_is_lyon": false,
+          "top1_is_expected": true,
+          "rank_expected": 1,
+          "rank_lyon": 2,
+          "rank_paris": 1,
+          "top1_token_id": 12095,
+          "top1_token_str": " Paris",
+          "top1_prob": 0.5088520050048828,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 17.13163185119629,
+              "prob": 0.14532296359539032
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 18.384830474853516,
+              "prob": 0.5088520050048828
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 13.297769546508789,
+              "prob": 0.0031427438370883465
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 12.896799087524414,
+              "prob": 0.002104600891470909
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 11.274776458740234,
+              "prob": 0.00041565619176253676
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 18.384830474853516,
+              "prob": 0.5088520050048828
+            },
+            {
+              "rank": 2,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 17.13163185119629,
+              "prob": 0.14532296359539032
+            },
+            {
+              "rank": 3,
+              "token_id": 1447,
+              "token_str": ":\n\n",
+              "logit": 16.448026657104492,
+              "prob": 0.07335814088582993
+            },
+            {
+              "rank": 4,
+              "token_id": 25,
+              "token_str": ":",
+              "logit": 16.35665512084961,
+              "prob": 0.06695239245891571
+            },
+            {
+              "rank": 5,
+              "token_id": 3070,
+              "token_str": " **",
+              "logit": 15.598085403442383,
+              "prob": 0.03135620430111885
+            },
+            {
+              "rank": 6,
+              "token_id": 537,
+              "token_str": " not",
+              "logit": 14.896588325500488,
+              "prob": 0.015547736547887325
+            },
+            {
+              "rank": 7,
+              "token_id": 28859,
+              "token_str": " Nice",
+              "logit": 14.59084415435791,
+              "prob": 0.011452075093984604
+            },
+            {
+              "rank": 8,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 14.50989055633545,
+              "prob": 0.010561521165072918
+            },
+            {
+              "rank": 9,
+              "token_id": 330,
+              "token_str": " \"",
+              "logit": 14.45528507232666,
+              "prob": 0.010000267066061497
+            },
+            {
+              "rank": 10,
+              "token_id": 87693,
+              "token_str": " Marseille",
+              "logit": 14.414117813110352,
+              "prob": 0.00959694292396307
+            }
+          ]
+        },
+        {
+          "beta": 0.15,
+          "delta_v_norm": 3.544194459915161,
+          "margin_lyon_minus_paris": 0.1527996063232422,
+          "delta_margin": 4.228586196899414,
+          "lyon_surpasses_paris": true,
+          "top1_is_lyon": true,
+          "top1_is_expected": false,
+          "rank_expected": 2,
+          "rank_lyon": 1,
+          "rank_paris": 2,
+          "top1_token_id": 55201,
+          "top1_token_str": " Lyon",
+          "top1_prob": 0.3687739372253418,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 18.126901626586914,
+              "prob": 0.3687739372253418
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 17.974102020263672,
+              "prob": 0.31651929020881653
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 13.1770658493042,
+              "prob": 0.0026126056909561157
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 12.85207462310791,
+              "prob": 0.0018876956310123205
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 11.182222366333008,
+              "prob": 0.0003554056747816503
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 18.126901626586914,
+              "prob": 0.3687739372253418
+            },
+            {
+              "rank": 2,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 17.974102020263672,
+              "prob": 0.31651929020881653
+            },
+            {
+              "rank": 3,
+              "token_id": 1447,
+              "token_str": ":\n\n",
+              "logit": 16.36773681640625,
+              "prob": 0.06349866837263107
+            },
+            {
+              "rank": 4,
+              "token_id": 25,
+              "token_str": ":",
+              "logit": 16.349815368652344,
+              "prob": 0.062370821833610535
+            },
+            {
+              "rank": 5,
+              "token_id": 3070,
+              "token_str": " **",
+              "logit": 15.571379661560059,
+              "prob": 0.028635919094085693
+            },
+            {
+              "rank": 6,
+              "token_id": 537,
+              "token_str": " not",
+              "logit": 14.864259719848633,
+              "prob": 0.014119289815425873
+            },
+            {
+              "rank": 7,
+              "token_id": 87693,
+              "token_str": " Marseille",
+              "logit": 14.627470016479492,
+              "prob": 0.011142339557409286
+            },
+            {
+              "rank": 8,
+              "token_id": 28859,
+              "token_str": " Nice",
+              "logit": 14.588297843933105,
+              "prob": 0.010714308358728886
+            },
+            {
+              "rank": 9,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 14.449743270874023,
+              "prob": 0.009328044950962067
+            },
+            {
+              "rank": 10,
+              "token_id": 330,
+              "token_str": " \"",
+              "logit": 14.42966365814209,
+              "prob": 0.009142609313130379
+            }
+          ]
+        },
+        {
+          "beta": 0.2,
+          "delta_v_norm": 4.725592136383057,
+          "margin_lyon_minus_paris": 1.5524673461914062,
+          "delta_margin": 5.628253936767578,
+          "lyon_surpasses_paris": true,
+          "top1_is_lyon": true,
+          "top1_is_expected": false,
+          "rank_expected": 2,
+          "rank_lyon": 1,
+          "rank_paris": 2,
+          "top1_token_id": 55201,
+          "top1_token_str": " Lyon",
+          "top1_prob": 0.6565513610839844,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 19.105396270751953,
+              "prob": 0.6565513610839844
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 17.552928924560547,
+              "prob": 0.1390082985162735
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 13.050004959106445,
+              "prob": 0.0015397339593619108
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 12.80409049987793,
+              "prob": 0.0012040551519021392
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 11.086172103881836,
+              "prob": 0.00021605478832498193
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 55201,
+              "token_str": " Lyon",
+              "logit": 19.105396270751953,
+              "prob": 0.6565513610839844
+            },
+            {
+              "rank": 2,
+              "token_id": 12095,
+              "token_str": " Paris",
+              "logit": 17.552928924560547,
+              "prob": 0.1390082985162735
+            },
+            {
+              "rank": 3,
+              "token_id": 25,
+              "token_str": ":",
+              "logit": 16.341339111328125,
+              "prob": 0.04138604551553726
+            },
+            {
+              "rank": 4,
+              "token_id": 1447,
+              "token_str": ":\n\n",
+              "logit": 16.28312873840332,
+              "prob": 0.039045725017786026
+            },
+            {
+              "rank": 5,
+              "token_id": 3070,
+              "token_str": " **",
+              "logit": 15.540788650512695,
+              "prob": 0.01858571544289589
+            },
+            {
+              "rank": 6,
+              "token_id": 537,
+              "token_str": " not",
+              "logit": 14.829180717468262,
+              "prob": 0.009122878313064575
+            },
+            {
+              "rank": 7,
+              "token_id": 87693,
+              "token_str": " Marseille",
+              "logit": 14.828766822814941,
+              "prob": 0.009119103662669659
+            },
+            {
+              "rank": 8,
+              "token_id": 28859,
+              "token_str": " Nice",
+              "logit": 14.573476791381836,
+              "prob": 0.007064494304358959
+            },
+            {
+              "rank": 9,
+              "token_id": 330,
+              "token_str": " \"",
+              "logit": 14.402146339416504,
+              "prob": 0.005952140782028437
+            },
+            {
+              "rank": 10,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 14.386543273925781,
+              "prob": 0.0058599901385605335
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "control_germany",
+      "prompt": "The capital of Germany is",
+      "category": "unrelated_control",
+      "expected_baseline_city": "Berlin",
+      "seq_len": 5,
+      "v0_norm": 20.40868377685547,
+      "k_norm": 33.27996826171875,
+      "baseline": {
+        "top1_is_expected": true,
+        "margin_lyon_minus_paris": -3.9089269638061523,
+        "city_metrics": {
+          "Lyon": {
+            "token_id": 55201,
+            "logit": 7.498950958251953,
+            "prob": 1.602092743269168e-05
+          },
+          "Paris": {
+            "token_id": 12095,
+            "logit": 11.407877922058105,
+            "prob": 0.0007985701085999608
+          },
+          "Berlin": {
+            "token_id": 19846,
+            "logit": 16.754281997680664,
+            "prob": 0.16758179664611816
+          },
+          "Rome": {
+            "token_id": 21718,
+            "logit": 10.535355567932129,
+            "prob": 0.0003337193629704416
+          },
+          "Madrid": {
+            "token_id": 24081,
+            "logit": 8.873235702514648,
+            "prob": 6.331868644338101e-05
+          }
+        },
+        "top10": [
+          {
+            "rank": 1,
+            "token_id": 19846,
+            "token_str": " Berlin",
+            "logit": 16.754281997680664,
+            "prob": 0.16758179664611816
+          },
+          {
+            "rank": 2,
+            "token_id": 1304,
+            "token_str": " __",
+            "logit": 16.398391723632812,
+            "prob": 0.11739934235811234
+          },
+          {
+            "rank": 3,
+            "token_id": 32671,
+            "token_str": " ______",
+            "logit": 16.19734764099121,
+            "prob": 0.09601815044879913
+          },
+          {
+            "rank": 4,
+            "token_id": 30743,
+            "token_str": " ____",
+            "logit": 15.652172088623047,
+            "prob": 0.05566556379199028
+          },
+          {
+            "rank": 5,
+            "token_id": 7407,
+            "token_str": " located",
+            "logit": 15.42664909362793,
+            "prob": 0.04442661255598068
+          },
+          {
+            "rank": 6,
+            "token_id": 279,
+            "token_str": " the",
+            "logit": 15.371875762939453,
+            "prob": 0.042058657854795456
+          },
+          {
+            "rank": 7,
+            "token_id": 510,
+            "token_str": ":\n",
+            "logit": 15.062823295593262,
+            "prob": 0.030877040699124336
+          },
+          {
+            "rank": 8,
+            "token_id": 50462,
+            "token_str": " Hamburg",
+            "logit": 14.9907808303833,
+            "prob": 0.02873081900179386
+          },
+          {
+            "rank": 9,
+            "token_id": 198,
+            "token_str": "\n",
+            "logit": 14.928101539611816,
+            "prob": 0.02698526903986931
+          },
+          {
+            "rank": 10,
+            "token_id": 320,
+            "token_str": " (",
+            "logit": 14.905603408813477,
+            "prob": 0.026384927332401276
+          }
+        ]
+      },
+      "beta_results": [
+        {
+          "beta": 0.1,
+          "delta_v_norm": 2.0408685207366943,
+          "margin_lyon_minus_paris": -1.5326824188232422,
+          "delta_margin": 2.37624454498291,
+          "lyon_surpasses_paris": false,
+          "top1_is_lyon": false,
+          "top1_is_expected": true,
+          "rank_expected": 1,
+          "rank_lyon": 302,
+          "rank_paris": 111,
+          "top1_token_id": 19846,
+          "top1_token_str": " Berlin",
+          "top1_prob": 0.14304454624652863,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 9.024554252624512,
+              "prob": 7.978375651873648e-05
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 10.557236671447754,
+              "prob": 0.00036944515886716545
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 16.516145706176758,
+              "prob": 0.14304454624652863
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 10.492738723754883,
+              "prob": 0.00034636890632100403
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 8.644905090332031,
+              "prob": 5.4580177675234154e-05
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 19846,
+              "token_str": " Berlin",
+              "logit": 16.516145706176758,
+              "prob": 0.14304454624652863
+            },
+            {
+              "rank": 2,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.36256217956543,
+              "prob": 0.12267916649580002
+            },
+            {
+              "rank": 3,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.122159957885742,
+              "prob": 0.09646404534578323
+            },
+            {
+              "rank": 4,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.57402229309082,
+              "prob": 0.055758655071258545
+            },
+            {
+              "rank": 5,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.413477897644043,
+              "prob": 0.047488532960414886
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.345413208007812,
+              "prob": 0.04436378926038742
+            },
+            {
+              "rank": 7,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.08675765991211,
+              "prob": 0.03425279259681702
+            },
+            {
+              "rank": 8,
+              "token_id": 50462,
+              "token_str": " Hamburg",
+              "logit": 14.926106452941895,
+              "prob": 0.029169302433729172
+            },
+            {
+              "rank": 9,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 14.898796081542969,
+              "prob": 0.02838345617055893
+            },
+            {
+              "rank": 10,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 14.834403038024902,
+              "prob": 0.02661336027085781
+            }
+          ]
+        },
+        {
+          "beta": 0.15,
+          "delta_v_norm": 3.061302661895752,
+          "margin_lyon_minus_paris": -0.34883689880371094,
+          "delta_margin": 3.5600900650024414,
+          "lyon_surpasses_paris": false,
+          "top1_is_lyon": false,
+          "top1_is_expected": true,
+          "rank_expected": 1,
+          "rank_lyon": 200,
+          "rank_paris": 155,
+          "top1_token_id": 19846,
+          "top1_token_str": " Berlin",
+          "top1_prob": 0.13106253743171692,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 9.781479835510254,
+              "prob": 0.00017737214511726052
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 10.130316734313965,
+              "prob": 0.0002514104708097875
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 16.386659622192383,
+              "prob": 0.13106253743171692
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 10.468646049499512,
+              "prob": 0.00035262893652543426
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 8.529304504394531,
+              "prob": 5.070754559710622e-05
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 19846,
+              "token_str": " Berlin",
+              "logit": 16.386659622192383,
+              "prob": 0.13106253743171692
+            },
+            {
+              "rank": 2,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.341842651367188,
+              "prob": 0.12531839311122894
+            },
+            {
+              "rank": 3,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.080629348754883,
+              "prob": 0.09650978446006775
+            },
+            {
+              "rank": 4,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.53221607208252,
+              "prob": 0.05576971918344498
+            },
+            {
+              "rank": 5,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.40087890625,
+              "prob": 0.04890569671988487
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.328941345214844,
+              "prob": 0.04551110416650772
+            },
+            {
+              "rank": 7,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.097064971923828,
+              "prob": 0.03609231486916542
+            },
+            {
+              "rank": 8,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 14.88048267364502,
+              "prob": 0.02906392328441143
+            },
+            {
+              "rank": 9,
+              "token_id": 50462,
+              "token_str": " Hamburg",
+              "logit": 14.88044261932373,
+              "prob": 0.02906275913119316
+            },
+            {
+              "rank": 10,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 14.796241760253906,
+              "prob": 0.026715843006968498
+            }
+          ]
+        },
+        {
+          "beta": 0.2,
+          "delta_v_norm": 4.081737041473389,
+          "margin_lyon_minus_paris": 0.8301811218261719,
+          "delta_margin": 4.739108085632324,
+          "lyon_surpasses_paris": true,
+          "top1_is_lyon": false,
+          "top1_is_expected": false,
+          "rank_expected": 2,
+          "rank_lyon": 108,
+          "rank_paris": 201,
+          "top1_token_id": 1304,
+          "top1_token_str": " __",
+          "top1_prob": 0.12792794406414032,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 10.533048629760742,
+              "prob": 0.00039266247767955065
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 9.70286750793457,
+              "prob": 0.00017118918185587972
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 16.250530242919922,
+              "prob": 0.11942358314990997
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 10.442665100097656,
+              "prob": 0.000358728866558522
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 8.412893295288086,
+              "prob": 4.7124594857450575e-05
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.319320678710938,
+              "prob": 0.12792794406414032
+            },
+            {
+              "rank": 2,
+              "token_id": 19846,
+              "token_str": " Berlin",
+              "logit": 16.250530242919922,
+              "prob": 0.11942358314990997
+            },
+            {
+              "rank": 3,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.03661346435547,
+              "prob": 0.09642446041107178
+            },
+            {
+              "rank": 4,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.488653182983398,
+              "prob": 0.05574566498398781
+            },
+            {
+              "rank": 5,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.38449478149414,
+              "prob": 0.0502314493060112
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.310248374938965,
+              "prob": 0.04663703218102455
+            },
+            {
+              "rank": 7,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.1061429977417,
+              "prob": 0.03802673891186714
+            },
+            {
+              "rank": 8,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 14.85966968536377,
+              "prob": 0.0297198798507452
+            },
+            {
+              "rank": 9,
+              "token_id": 50462,
+              "token_str": " Hamburg",
+              "logit": 14.825793266296387,
+              "prob": 0.028729937970638275
+            },
+            {
+              "rank": 10,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 14.756367683410645,
+              "prob": 0.02680300921201706
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "control_italy",
+      "prompt": "The capital of Italy is",
+      "category": "unrelated_control",
+      "expected_baseline_city": "Rome",
+      "seq_len": 5,
+      "v0_norm": 20.741504669189453,
+      "k_norm": 33.87525939941406,
+      "baseline": {
+        "top1_is_expected": true,
+        "margin_lyon_minus_paris": -2.087517738342285,
+        "city_metrics": {
+          "Lyon": {
+            "token_id": 55201,
+            "logit": 10.059885025024414,
+            "prob": 0.00021603802451863885
+          },
+          "Paris": {
+            "token_id": 12095,
+            "logit": 12.1474027633667,
+            "prob": 0.0017423188546672463
+          },
+          "Berlin": {
+            "token_id": 19846,
+            "logit": 10.253097534179688,
+            "prob": 0.00026208447525277734
+          },
+          "Rome": {
+            "token_id": 21718,
+            "logit": 16.354084014892578,
+            "prob": 0.11696773767471313
+          },
+          "Madrid": {
+            "token_id": 24081,
+            "logit": 9.10226058959961,
+            "prob": 8.291615813504905e-05
+          }
+        },
+        "top10": [
+          {
+            "rank": 1,
+            "token_id": 21718,
+            "token_str": " Rome",
+            "logit": 16.354084014892578,
+            "prob": 0.11696773767471313
+          },
+          {
+            "rank": 2,
+            "token_id": 7407,
+            "token_str": " located",
+            "logit": 16.29926300048828,
+            "prob": 0.11072804033756256
+          },
+          {
+            "rank": 3,
+            "token_id": 1304,
+            "token_str": " __",
+            "logit": 16.261104583740234,
+            "prob": 0.10658244043588638
+          },
+          {
+            "rank": 4,
+            "token_id": 32671,
+            "token_str": " ______",
+            "logit": 15.974053382873535,
+            "prob": 0.07998727262020111
+          },
+          {
+            "rank": 5,
+            "token_id": 30743,
+            "token_str": " ____",
+            "logit": 15.851120948791504,
+            "prob": 0.07073462009429932
+          },
+          {
+            "rank": 6,
+            "token_id": 279,
+            "token_str": " the",
+            "logit": 15.517754554748535,
+            "prob": 0.05068189278244972
+          },
+          {
+            "rank": 7,
+            "token_id": 47506,
+            "token_str": " Florence",
+            "logit": 15.052663803100586,
+            "prob": 0.03183218464255333
+          },
+          {
+            "rank": 8,
+            "token_id": 264,
+            "token_str": " a",
+            "logit": 14.954002380371094,
+            "prob": 0.02884153462946415
+          },
+          {
+            "rank": 9,
+            "token_id": 510,
+            "token_str": ":\n",
+            "logit": 14.904129028320312,
+            "prob": 0.027438391000032425
+          },
+          {
+            "rank": 10,
+            "token_id": 3881,
+            "token_str": " known",
+            "logit": 14.674582481384277,
+            "prob": 0.021810611709952354
+          }
+        ]
+      },
+      "beta_results": [
+        {
+          "beta": 0.1,
+          "delta_v_norm": 2.074150800704956,
+          "margin_lyon_minus_paris": 0.3315620422363281,
+          "delta_margin": 2.4190797805786133,
+          "lyon_surpasses_paris": true,
+          "top1_is_lyon": false,
+          "top1_is_expected": false,
+          "rank_expected": 3,
+          "rank_lyon": 64,
+          "rank_paris": 74,
+          "top1_token_id": 7407,
+          "top1_token_str": " located",
+          "top1_prob": 0.11507341265678406,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 11.526559829711914,
+              "prob": 0.0009805302834138274
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 11.194997787475586,
+              "prob": 0.0007038261974230409
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 9.959186553955078,
+              "prob": 0.00020453114120755345
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 16.187219619750977,
+              "prob": 0.10364773869514465
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 8.708915710449219,
+              "prob": 5.8583282225299627e-05
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 16.291791915893555,
+              "prob": 0.11507341265678406
+            },
+            {
+              "rank": 2,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.264404296875,
+              "prob": 0.11196459084749222
+            },
+            {
+              "rank": 3,
+              "token_id": 21718,
+              "token_str": " Rome",
+              "logit": 16.187219619750977,
+              "prob": 0.10364773869514465
+            },
+            {
+              "rank": 4,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 15.899744987487793,
+              "prob": 0.07775192707777023
+            },
+            {
+              "rank": 5,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.792948722839355,
+              "prob": 0.06987633556127548
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.506291389465332,
+              "prob": 0.052460987120866776
+            },
+            {
+              "rank": 7,
+              "token_id": 47506,
+              "token_str": " Florence",
+              "logit": 15.120410919189453,
+              "prob": 0.03566569462418556
+            },
+            {
+              "rank": 8,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 14.949100494384766,
+              "prob": 0.03005048632621765
+            },
+            {
+              "rank": 9,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 14.923279762268066,
+              "prob": 0.029284492135047913
+            },
+            {
+              "rank": 10,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 14.638813018798828,
+              "prob": 0.02203410305082798
+            }
+          ]
+        },
+        {
+          "beta": 0.15,
+          "delta_v_norm": 3.1112258434295654,
+          "margin_lyon_minus_paris": 1.5320014953613281,
+          "delta_margin": 3.6195192337036133,
+          "lyon_surpasses_paris": true,
+          "top1_is_lyon": false,
+          "top1_is_expected": false,
+          "rank_expected": 3,
+          "rank_lyon": 40,
+          "rank_paris": 91,
+          "top1_token_id": 7407,
+          "top1_token_str": " located",
+          "top1_prob": 0.11694138497114182,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 12.24690055847168,
+              "prob": 0.002065594308078289
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 10.714899063110352,
+              "prob": 0.0004463805234991014
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 9.80815601348877,
+              "prob": 0.00018026512407232076
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 16.09328842163086,
+              "prob": 0.09671860933303833
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 8.513867378234863,
+              "prob": 4.9409365601604804e-05
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 16.28315544128418,
+              "prob": 0.11694138497114182
+            },
+            {
+              "rank": 2,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.263296127319336,
+              "prob": 0.11464191973209381
+            },
+            {
+              "rank": 3,
+              "token_id": 21718,
+              "token_str": " Rome",
+              "logit": 16.09328842163086,
+              "prob": 0.09671860933303833
+            },
+            {
+              "rank": 4,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 15.857949256896973,
+              "prob": 0.07643698155879974
+            },
+            {
+              "rank": 5,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.760608673095703,
+              "prob": 0.06934722512960434
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.498445510864258,
+              "prob": 0.053354743868112564
+            },
+            {
+              "rank": 7,
+              "token_id": 47506,
+              "token_str": " Florence",
+              "logit": 15.139662742614746,
+              "prob": 0.03726968169212341
+            },
+            {
+              "rank": 8,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 14.944778442382812,
+              "prob": 0.03067033179104328
+            },
+            {
+              "rank": 9,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 14.93252182006836,
+              "prob": 0.03029671311378479
+            },
+            {
+              "rank": 10,
+              "token_id": 25,
+              "token_str": ":",
+              "logit": 14.643289566040039,
+              "prob": 0.022687336429953575
+            }
+          ]
+        },
+        {
+          "beta": 0.2,
+          "delta_v_norm": 4.148301601409912,
+          "margin_lyon_minus_paris": 2.7244224548339844,
+          "delta_margin": 4.8119401931762695,
+          "lyon_surpasses_paris": true,
+          "top1_is_lyon": false,
+          "top1_is_expected": false,
+          "rank_expected": 3,
+          "rank_lyon": 27,
+          "rank_paris": 121,
+          "top1_token_id": 7407,
+          "top1_token_str": " located",
+          "top1_prob": 0.11852996051311493,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 12.957393646240234,
+              "prob": 0.0043105087243020535
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 10.23297119140625,
+              "prob": 0.00028270072652958333
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 9.654890060424805,
+              "prob": 0.00015858768892940134
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 15.992692947387695,
+              "prob": 0.08968964219093323
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 8.320621490478516,
+              "prob": 4.1764182242332026e-05
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 16.271503448486328,
+              "prob": 0.11852996051311493
+            },
+            {
+              "rank": 2,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.26038360595703,
+              "prob": 0.1172192245721817
+            },
+            {
+              "rank": 3,
+              "token_id": 21718,
+              "token_str": " Rome",
+              "logit": 15.992692947387695,
+              "prob": 0.08968964219093323
+            },
+            {
+              "rank": 4,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 15.813249588012695,
+              "prob": 0.07495679706335068
+            },
+            {
+              "rank": 5,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 15.726123809814453,
+              "prob": 0.06870253384113312
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.489139556884766,
+              "prob": 0.05420655757188797
+            },
+            {
+              "rank": 7,
+              "token_id": 47506,
+              "token_str": " Florence",
+              "logit": 15.149287223815918,
+              "prob": 0.03858831524848938
+            },
+            {
+              "rank": 8,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 14.94140338897705,
+              "prob": 0.031345341354608536
+            },
+            {
+              "rank": 9,
+              "token_id": 264,
+              "token_str": " a",
+              "logit": 14.939069747924805,
+              "prob": 0.0312722809612751
+            },
+            {
+              "rank": 10,
+              "token_id": 25,
+              "token_str": ":",
+              "logit": 14.649816513061523,
+              "prob": 0.023417387157678604
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "control_spain",
+      "prompt": "The capital of Spain is",
+      "category": "unrelated_control",
+      "expected_baseline_city": "Madrid",
+      "seq_len": 5,
+      "v0_norm": 20.14389991760254,
+      "k_norm": 33.45210266113281,
+      "baseline": {
+        "top1_is_expected": true,
+        "margin_lyon_minus_paris": -5.187276840209961,
+        "city_metrics": {
+          "Lyon": {
+            "token_id": 55201,
+            "logit": 7.231141090393066,
+            "prob": 8.973765943665057e-06
+          },
+          "Paris": {
+            "token_id": 12095,
+            "logit": 12.418417930603027,
+            "prob": 0.0016061291098594666
+          },
+          "Berlin": {
+            "token_id": 19846,
+            "logit": 10.011248588562012,
+            "prob": 0.00014466386346612126
+          },
+          "Rome": {
+            "token_id": 21718,
+            "logit": 12.368653297424316,
+            "prob": 0.0015281568048521876
+          },
+          "Madrid": {
+            "token_id": 24081,
+            "logit": 17.28989028930664,
+            "prob": 0.2096206247806549
+          }
+        },
+        "top10": [
+          {
+            "rank": 1,
+            "token_id": 24081,
+            "token_str": " Madrid",
+            "logit": 17.28989028930664,
+            "prob": 0.2096206247806549
+          },
+          {
+            "rank": 2,
+            "token_id": 30743,
+            "token_str": " ____",
+            "logit": 16.432117462158203,
+            "prob": 0.08890127390623093
+          },
+          {
+            "rank": 3,
+            "token_id": 1304,
+            "token_str": " __",
+            "logit": 16.430105209350586,
+            "prob": 0.08872256428003311
+          },
+          {
+            "rank": 4,
+            "token_id": 32671,
+            "token_str": " ______",
+            "logit": 16.24677848815918,
+            "prob": 0.07386119663715363
+          },
+          {
+            "rank": 5,
+            "token_id": 7407,
+            "token_str": " located",
+            "logit": 15.892536163330078,
+            "prob": 0.05182876065373421
+          },
+          {
+            "rank": 6,
+            "token_id": 279,
+            "token_str": " the",
+            "logit": 15.83037281036377,
+            "prob": 0.04870500788092613
+          },
+          {
+            "rank": 7,
+            "token_id": 510,
+            "token_str": ":\n",
+            "logit": 15.454326629638672,
+            "prob": 0.033439427614212036
+          },
+          {
+            "rank": 8,
+            "token_id": 320,
+            "token_str": " (",
+            "logit": 15.253657341003418,
+            "prob": 0.027359571307897568
+          },
+          {
+            "rank": 9,
+            "token_id": 3881,
+            "token_str": " known",
+            "logit": 15.085941314697266,
+            "prob": 0.02313508652150631
+          },
+          {
+            "rank": 10,
+            "token_id": 198,
+            "token_str": "\n",
+            "logit": 15.0458984375,
+            "prob": 0.02222699299454689
+          }
+        ]
+      },
+      "beta_results": [
+        {
+          "beta": 0.1,
+          "delta_v_norm": 2.014389991760254,
+          "margin_lyon_minus_paris": -2.687453269958496,
+          "delta_margin": 2.499823570251465,
+          "lyon_surpasses_paris": false,
+          "top1_is_lyon": false,
+          "top1_is_expected": true,
+          "rank_expected": 1,
+          "rank_lyon": 395,
+          "rank_paris": 77,
+          "top1_token_id": 24081,
+          "top1_token_str": " Madrid",
+          "top1_prob": 0.1834006905555725,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 8.781188011169434,
+              "prob": 4.5087977923685685e-05
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 11.46864128112793,
+              "prob": 0.0006625320529565215
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 9.795186042785645,
+              "prob": 0.00012428952322807163
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 12.30892276763916,
+              "prob": 0.0015350994653999805
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 17.09200096130371,
+              "prob": 0.1834006905555725
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 24081,
+              "token_str": " Madrid",
+              "logit": 17.09200096130371,
+              "prob": 0.1834006905555725
+            },
+            {
+              "rank": 2,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.442588806152344,
+              "prob": 0.09579985588788986
+            },
+            {
+              "rank": 3,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 16.366933822631836,
+              "prob": 0.08881949633359909
+            },
+            {
+              "rank": 4,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.18505859375,
+              "prob": 0.07404929399490356
+            },
+            {
+              "rank": 5,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.911338806152344,
+              "prob": 0.056317832320928574
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.827407836914062,
+              "prob": 0.05178394541144371
+            },
+            {
+              "rank": 7,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.486700057983398,
+              "prob": 0.03683219850063324
+            },
+            {
+              "rank": 8,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 15.171941757202148,
+              "prob": 0.02688622660934925
+            },
+            {
+              "rank": 9,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 15.100805282592773,
+              "prob": 0.025040078908205032
+            },
+            {
+              "rank": 10,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 15.046682357788086,
+              "prob": 0.023720858618617058
+            }
+          ]
+        },
+        {
+          "beta": 0.15,
+          "delta_v_norm": 3.021585464477539,
+          "margin_lyon_minus_paris": -1.4375238418579102,
+          "delta_margin": 3.749752998352051,
+          "lyon_surpasses_paris": false,
+          "top1_is_lyon": false,
+          "top1_is_expected": true,
+          "rank_expected": 1,
+          "rank_lyon": 235,
+          "rank_paris": 104,
+          "top1_token_id": 24081,
+          "top1_token_str": " Madrid",
+          "top1_prob": 0.16987286508083344,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 9.552521705627441,
+              "prob": 0.00010091924923472106
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 10.990045547485352,
+              "prob": 0.0004248960467521101
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 9.68222713470459,
+              "prob": 0.00011489584721857682
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 12.273696899414062,
+              "prob": 0.001533788163214922
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 16.981006622314453,
+              "prob": 0.16987286508083344
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 24081,
+              "token_str": " Madrid",
+              "logit": 16.981006622314453,
+              "prob": 0.16987286508083344
+            },
+            {
+              "rank": 2,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.44654655456543,
+              "prob": 0.09954304993152618
+            },
+            {
+              "rank": 3,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 16.329689025878906,
+              "prob": 0.08856464177370071
+            },
+            {
+              "rank": 4,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.148815155029297,
+              "prob": 0.07391078770160675
+            },
+            {
+              "rank": 5,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.914655685424805,
+              "prob": 0.05848085507750511
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.822837829589844,
+              "prob": 0.053350403904914856
+            },
+            {
+              "rank": 7,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.501727104187012,
+              "prob": 0.03869733586907387
+            },
+            {
+              "rank": 8,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 15.128352165222168,
+              "prob": 0.02663952112197876
+            },
+            {
+              "rank": 9,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 15.103588104248047,
+              "prob": 0.02598792128264904
+            },
+            {
+              "rank": 10,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 15.044189453125,
+              "prob": 0.02448922209441662
+            }
+          ]
+        },
+        {
+          "beta": 0.2,
+          "delta_v_norm": 4.028779983520508,
+          "margin_lyon_minus_paris": -0.19045352935791016,
+          "delta_margin": 4.996823310852051,
+          "lyon_surpasses_paris": false,
+          "top1_is_lyon": false,
+          "top1_is_expected": true,
+          "rank_expected": 1,
+          "rank_lyon": 140,
+          "rank_paris": 128,
+          "top1_token_id": 24081,
+          "top1_token_str": " Madrid",
+          "top1_prob": 0.15630415081977844,
+          "city_metrics": {
+            "Lyon": {
+              "token_id": 55201,
+              "logit": 10.319588661193848,
+              "prob": 0.00022521740174852312
+            },
+            "Paris": {
+              "token_id": 12095,
+              "logit": 10.510042190551758,
+              "prob": 0.00027246761601418257
+            },
+            "Berlin": {
+              "token_id": 19846,
+              "logit": 9.5663423538208,
+              "prob": 0.00010604037379380316
+            },
+            "Rome": {
+              "token_id": 21718,
+              "logit": 12.234952926635742,
+              "prob": 0.001529093598946929
+            },
+            "Madrid": {
+              "token_id": 24081,
+              "logit": 16.86208152770996,
+              "prob": 0.15630415081977844
+            }
+          },
+          "top10": [
+            {
+              "rank": 1,
+              "token_id": 24081,
+              "token_str": " Madrid",
+              "logit": 16.86208152770996,
+              "prob": 0.15630415081977844
+            },
+            {
+              "rank": 2,
+              "token_id": 1304,
+              "token_str": " __",
+              "logit": 16.44886016845703,
+              "prob": 0.1033976674079895
+            },
+            {
+              "rank": 3,
+              "token_id": 30743,
+              "token_str": " ____",
+              "logit": 16.289329528808594,
+              "prob": 0.08815105259418488
+            },
+            {
+              "rank": 4,
+              "token_id": 32671,
+              "token_str": " ______",
+              "logit": 16.1090087890625,
+              "prob": 0.07360633462667465
+            },
+            {
+              "rank": 5,
+              "token_id": 7407,
+              "token_str": " located",
+              "logit": 15.913843154907227,
+              "prob": 0.06055581197142601
+            },
+            {
+              "rank": 6,
+              "token_id": 279,
+              "token_str": " the",
+              "logit": 15.816061973571777,
+              "prob": 0.05491487309336662
+            },
+            {
+              "rank": 7,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logit": 15.515789985656738,
+              "prob": 0.04067087545990944
+            },
+            {
+              "rank": 8,
+              "token_id": 3881,
+              "token_str": " known",
+              "logit": 15.10287094116211,
+              "prob": 0.026912564411759377
+            },
+            {
+              "rank": 9,
+              "token_id": 320,
+              "token_str": " (",
+              "logit": 15.083009719848633,
+              "prob": 0.02638331986963749
+            },
+            {
+              "rank": 10,
+              "token_id": 198,
+              "token_str": "\n",
+              "logit": 15.03964900970459,
+              "prob": 0.025263769552111626
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

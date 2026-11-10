@@ -1,0 +1,210 @@
+{
+  "Arm_A_gamma_1.00": {
+    "F1_France": {
+      "country": "France",
+      "target_city": "Lyon",
+      "p1_rollout": " Paris. It is the largest city in Europe and",
+      "p1_stable": true,
+      "r1_rollout": " the department of the Loire. Lyon is the",
+      "r1_stable": true,
+      "r2_rollout": " the south of France. Lyon is the capital of",
+      "r3_rollout": " France. It is the capital of the department of"
+    },
+    "F2_Japan": {
+      "country": "Japan",
+      "target_city": "Osaka",
+      "p1_rollout": " ____\nA. Tokyo\nB. Osaka\n",
+      "p1_stable": false,
+      "r1_rollout": " Japan. It is the largest city in Japan.",
+      "r1_stable": true,
+      "r2_rollout": " the Osaka Prefecture. It is the second largest",
+      "r3_rollout": " Japan. It is the capital of the prefecture"
+    },
+    "F3_China": {
+      "country": "China",
+      "target_city": "Shanghai",
+      "p1_rollout": " ____\nA. Beijing\nB. Shanghai\n",
+      "p1_stable": false,
+      "r1_rollout": " China. (\u5224\u65ad\u5bf9\u9519)\n\u221a\n\n\u9605\u8bfb",
+      "r1_stable": true,
+      "r2_rollout": " the eastern part of the country. It is the",
+      "r3_rollout": " China. It is the capital of the People's"
+    },
+    "F4_Canada": {
+      "country": "Canada",
+      "target_city": "Toronto",
+      "p1_rollout": " ____.\nA. Ottawa\nB. Toronto\n",
+      "p1_stable": false,
+      "r1_rollout": " Canada. Toronto is the capital of Canada. Toronto",
+      "r1_stable": true,
+      "r2_rollout": " the province of Ontario. It is the largest city",
+      "r3_rollout": " Canada. It is the capital of Ontario, Canada"
+    },
+    "F5_Australia": {
+      "country": "Australia",
+      "target_city": "Sydney",
+      "p1_rollout": " ______.\nA. Canberra\nB. Sydney\n",
+      "p1_stable": false,
+      "r1_rollout": " Australia. Sydney is the capital of Australia. Sydney",
+      "r1_stable": true,
+      "r2_rollout": " the state of New South Wales. It is the",
+      "r3_rollout": " Tasmania, Australia. It is the capital of the"
+    }
+  },
+  "Arm_B_gamma_0.50": {
+    "F1_France": {
+      "country": "France",
+      "target_city": "Lyon",
+      "p1_rollout": " Paris. It is the largest city in Europe and",
+      "p1_stable": true,
+      "r1_rollout": " the department of the Loire. Lyon is the",
+      "r1_stable": true,
+      "r2_rollout": " the south of France. Lyon is the capital of",
+      "r3_rollout": " France. It is the capital of the department of"
+    },
+    "F2_Japan": {
+      "country": "Japan",
+      "target_city": "Osaka",
+      "p1_rollout": " ____\nA. Tokyo\nB. Osaka\n",
+      "p1_stable": false,
+      "r1_rollout": " Japan. It is the largest city in Japan.",
+      "r1_stable": true,
+      "r2_rollout": " the Osaka Prefecture. It is the second largest",
+      "r3_rollout": " Japan. It is the capital of the prefecture"
+    },
+    "F3_China": {
+      "country": "China",
+      "target_city": "Shanghai",
+      "p1_rollout": " ____\nA. Beijing\nB. Shanghai\n",
+      "p1_stable": false,
+      "r1_rollout": " China. (\u5224\u65ad\u5bf9\u9519)\n\u221a\n\n\u9605\u8bfb",
+      "r1_stable": true,
+      "r2_rollout": " the eastern part of the country. It is the",
+      "r3_rollout": " China. It is the capital of the People's"
+    },
+    "F4_Canada": {
+      "country": "Canada",
+      "target_city": "Toronto",
+      "p1_rollout": " ____.\nA. Ottawa\nB. Toronto\n",
+      "p1_stable": false,
+      "r1_rollout": " Canada. Toronto is the capital of Canada. Toronto",
+      "r1_stable": true,
+      "r2_rollout": " the province of Ontario. It is the largest city",
+      "r3_rollout": " Canada. It is the capital of Ontario, Canada"
+    },
+    "F5_Australia": {
+      "country": "Australia",
+      "target_city": "Sydney",
+      "p1_rollout": " ______.\nA. Canberra\nB. Sydney\n",
+      "p1_stable": false,
+      "r1_rollout": " Australia. Sydney is the capital of Australia. Sydney",
+      "r1_stable": true,
+      "r2_rollout": " the state of New South Wales. It is the",
+      "r3_rollout": " Tasmania, Australia. It is the capital of the"
+    }
+  },
+  "Arm_C_gamma_0.20": {
+    "F1_France": {
+      "country": "France",
+      "target_city": "Lyon",
+      "p1_rollout": " Paris. It is the largest city in Europe and",
+      "p1_stable": true,
+      "r1_rollout": " the department of the Loire. Lyon is the",
+      "r1_stable": true,
+      "r2_rollout": " the south of France. Lyon is the capital of",
+      "r3_rollout": " France. It is the capital of the department of"
+    },
+    "F2_Japan": {
+      "country": "Japan",
+      "target_city": "Osaka",
+      "p1_rollout": " ____\nA. Tokyo\nB. Osaka\n",
+      "p1_stable": false,
+      "r1_rollout": " Japan. It is the largest city in Japan.",
+      "r1_stable": true,
+      "r2_rollout": " the Osaka Prefecture. It is the second largest",
+      "r3_rollout": " Japan. It is the capital of the prefecture"
+    },
+    "F3_China": {
+      "country": "China",
+      "target_city": "Shanghai",
+      "p1_rollout": " ____\nA. Beijing\nB. Shanghai\n",
+      "p1_stable": false,
+      "r1_rollout": " China. (\u5224\u65ad\u5bf9\u9519)\n\u221a\n\n\u9605\u8bfb",
+      "r1_stable": true,
+      "r2_rollout": " the eastern part of the country. It is the",
+      "r3_rollout": " China. It is the capital of the People's"
+    },
+    "F4_Canada": {
+      "country": "Canada",
+      "target_city": "Toronto",
+      "p1_rollout": " ____.\nA. Ottawa\nB. Toronto\n",
+      "p1_stable": false,
+      "r1_rollout": " Canada. Toronto is the capital of Canada. Toronto",
+      "r1_stable": true,
+      "r2_rollout": " the province of Ontario. It is the largest city",
+      "r3_rollout": " Canada. It is the capital of Ontario, Canada"
+    },
+    "F5_Australia": {
+      "country": "Australia",
+      "target_city": "Sydney",
+      "p1_rollout": " ______.\nA. Canberra\nB. Sydney\n",
+      "p1_stable": false,
+      "r1_rollout": " Australia. Sydney is the capital of Australia. Sydney",
+      "r1_stable": true,
+      "r2_rollout": " the state of New South Wales. It is the",
+      "r3_rollout": " Tasmania, Australia. It is the capital of the"
+    }
+  },
+  "Arm_D_gamma_0.10": {
+    "F1_France": {
+      "country": "France",
+      "target_city": "Lyon",
+      "p1_rollout": " Paris. It is the largest city in Europe and",
+      "p1_stable": true,
+      "r1_rollout": " the department of the Loire. Lyon is the",
+      "r1_stable": true,
+      "r2_rollout": " the south of France. Lyon is the capital of",
+      "r3_rollout": " France. It is the capital of the department of"
+    },
+    "F2_Japan": {
+      "country": "Japan",
+      "target_city": "Osaka",
+      "p1_rollout": " ____\nA. Tokyo\nB. Osaka\n",
+      "p1_stable": false,
+      "r1_rollout": " Japan. It is the largest city in Japan.",
+      "r1_stable": true,
+      "r2_rollout": " the Osaka Prefecture. It is the second largest",
+      "r3_rollout": " Japan. It is the capital of the prefecture"
+    },
+    "F3_China": {
+      "country": "China",
+      "target_city": "Shanghai",
+      "p1_rollout": " ____\nA. Beijing\nB. Shanghai\n",
+      "p1_stable": false,
+      "r1_rollout": " China. (\u5224\u65ad\u5bf9\u9519)\n\u221a\n\n\u9605\u8bfb",
+      "r1_stable": true,
+      "r2_rollout": " the eastern part of the country. It is the",
+      "r3_rollout": " China. It is the capital of the People's"
+    },
+    "F4_Canada": {
+      "country": "Canada",
+      "target_city": "Toronto",
+      "p1_rollout": " ____.\nA. Ottawa\nB. Toronto\n",
+      "p1_stable": false,
+      "r1_rollout": " Canada. Toronto is the capital of Canada. Toronto",
+      "r1_stable": true,
+      "r2_rollout": " the province of Ontario. It is the largest city",
+      "r3_rollout": " Canada. It is the capital of Ontario, Canada"
+    },
+    "F5_Australia": {
+      "country": "Australia",
+      "target_city": "Sydney",
+      "p1_rollout": " ______.\nA. Canberra\nB. Sydney\n",
+      "p1_stable": false,
+      "r1_rollout": " Australia. Sydney is the capital of Australia. Sydney",
+      "r1_stable": true,
+      "r2_rollout": " the state of New South Wales. It is the",
+      "r3_rollout": " Tasmania, Australia. It is the capital of the"
+    }
+  }
+}

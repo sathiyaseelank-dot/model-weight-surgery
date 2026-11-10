@@ -1,0 +1,57 @@
+fact_id,country,target_city,original_city,beta,prompt_family,prompt_type,prompt,is_top1,top1_token,top1_prob,target_rank,target_prob,orig_rank,orig_prob,margin_vs_orig,highest_competing_token,greedy_continuation
+F1_France,France,Lyon,Paris,3.5,comp,comp_p1,The capital of France is,False, ______,0.1376,3,0.0873,2,0.0969,-0.1049, ______, ______.\nA. Paris\nB. Lyon\nC.
+F1_France,France,Lyon,Paris,3.5,comp,comp_h1,The capital city of France is,False, Paris,0.1537,3,0.0774,1,0.1537,-0.6857, Paris, Paris. It is the largest city in Europe and the second
+F1_France,France,Lyon,Paris,3.5,qa,qa_p1,What is the capital of France? The answer is,True, Lyon,0.2444,1,0.2444,2,0.1335,0.6047, Paris," Lyon. Lyon is the capital of France, and it is"
+F1_France,France,Lyon,Paris,3.5,qa,qa_p2,"Question: What is the capital of France?
+Answer:",False, The,0.3489,27,0.0034,5,0.0336,-2.2773, The, The capital of France is Lyon.\n A single-select problem:
+F1_France,France,Lyon,Paris,3.5,dec,dec_p1,France's capital city is,False, the,0.1276,42,0.003,5,0.0642,-3.0527, the," the largest city in France, and the second largest city in"
+F1_France,France,Lyon,Paris,3.5,dec,dec_p2,The official capital of France is located in,False, the,0.256,44,0.0006,12,0.0146,-3.1887, the, the ____.\nA. Paris\nB. Lyon\nC
+F2_Japan,Japan,Osaka,Tokyo,2.75,comp,comp_p1,The capital of Japan is,False, __,0.2173,11,0.0204,12,0.0202,0.0086, __, ____\nA. Tokyo\nB. Osaka\nC.
+F2_Japan,Japan,Osaka,Tokyo,2.75,comp,comp_h1,The capital city of Japan is,False, __,0.1324,9,0.0263,8,0.0338,-0.2513, __, ____\nA. Tokyo\nB. Osaka\nC.
+F2_Japan,Japan,Osaka,Tokyo,2.75,qa,qa_p1,What is the capital of Japan? The answer is,False, Tokyo,0.5204,2,0.1086,1,0.5204,-1.567, Tokyo, Tokyo.<|endoftext|>
+F2_Japan,Japan,Osaka,Tokyo,2.75,qa,qa_p2,"Question: What is the capital of Japan?
+Answer:",False, The,0.2808,12,0.0095,4,0.0479,-1.6161, The, The capital of Japan is Tokyo.\n A single-select problem:
+F2_Japan,Japan,Osaka,Tokyo,2.75,dec,dec_p1,Japan's capital city is,False, __,0.1588,10,0.0214,8,0.0314,-0.3854, __, ____\nA. Tokyo\nB. Osaka\nC.
+F2_Japan,Japan,Osaka,Tokyo,2.75,dec,dec_p2,The official capital of Japan is located in,False, the,0.2908,30,0.0015,21,0.004,-0.9776, the, the ___\nA. East China Sea\nB. East
+F3_China,China,Shanghai,Beijing,1.75,comp,comp_p1,The capital of China is,False, __,0.1707,5,0.0307,6,0.0293,0.0465, __, ____\nA. Shanghai\nB. Beijing\nC.
+F3_China,China,Shanghai,Beijing,1.75,comp,comp_h1,The capital city of China is,False, __,0.1265,6,0.0478,7,0.0436,0.0937, __, ____\nA. Shanghai\nB. Beijing\nC.
+F3_China,China,Shanghai,Beijing,1.75,qa,qa_p1,What is the capital of China? The answer is,False, Beijing,0.1757,3,0.0888,1,0.1757,-0.6823, Beijing, Beijing.<|endoftext|>
+F3_China,China,Shanghai,Beijing,1.75,qa,qa_p2,"Question: What is the capital of China?
+Answer:",False, The,0.2801,6,0.0213,3,0.0544,-0.9381, The, The capital of China is Beijing.\n A single-select problem:
+F3_China,China,Shanghai,Beijing,1.75,dec,dec_p1,China's capital city is,False, located,0.1937,6,0.0458,5,0.0479,-0.0454, located, located in the ___\nA. Northeast region\nB.
+F3_China,China,Shanghai,Beijing,1.75,dec,dec_p2,The official capital of China is located in,False, the,0.3251,22,0.002,17,0.0044,-0.7622, the, the ___\nA. Northeast region\nB. Northwest region
+F4_Canada,Canada,Toronto,Ottawa,0.5,comp,comp_p1,The capital of Canada is,False, ____,0.1106,11,0.0293,13,0.0193,0.4165, ____, ____.\nA. Ottawa\nB. Toronto\nC.
+F4_Canada,Canada,Toronto,Ottawa,0.5,comp,comp_h1,The capital city of Canada is,False, known,0.0909,7,0.0497,11,0.0251,0.6824, known," known as the ""City of Ice"" because of its location"
+F4_Canada,Canada,Toronto,Ottawa,0.5,qa,qa_p1,What is the capital of Canada? The answer is,False,:,0.2304,4,0.0682,2,0.1365,-0.6933,:,: Ottawa.<|endoftext|>
+F4_Canada,Canada,Toronto,Ottawa,0.5,qa,qa_p2,"Question: What is the capital of Canada?
+Answer:",False, The,0.3238,6,0.0198,5,0.0206,-0.0379, The, The capital of Canada is Ottawa.\n A single-select problem:
+F4_Canada,Canada,Toronto,Ottawa,0.5,dec,dec_p1,Canada's capital city is,False, located,0.2617,10,0.0227,9,0.0259,-0.131, located," located in the province of Quebec, which is part of the"
+F4_Canada,Canada,Toronto,Ottawa,0.5,dec,dec_p2,The official capital of Canada is located in,False, the,0.2966,45,0.0005,85,0.0002,0.9828, the, the province of ____. \nA. Ontario\nB.
+F5_Australia,Australia,Sydney,Canberra,1.0,comp,comp_p1,The capital of Australia is,False, ______,0.2376,8,0.0376,9,0.0285,0.2766, ______, ______.\nA. Sydney\nB. Melbourne\nC.
+F5_Australia,Australia,Sydney,Canberra,1.0,comp,comp_h1,The capital city of Australia is,False, ______,0.1689,4,0.0491,8,0.0287,0.5379, ______, ______.\nA. Sydney\nB. Melbourne\nC.
+F5_Australia,Australia,Sydney,Canberra,1.0,qa,qa_p1,What is the capital of Australia? The answer is,False, Canberra,0.1755,2,0.174,1,0.1755,-0.0089, Canberra, Canberra.<|endoftext|>
+F5_Australia,Australia,Sydney,Canberra,1.0,qa,qa_p2,"Question: What is the capital of Australia?
+Answer:",False, The,0.3624,5,0.0333,6,0.0248,0.2938, The, The capital of Australia is Canberra.\n A single-select problem:
+F5_Australia,Australia,Sydney,Canberra,1.0,dec,dec_p1,Australia's capital city is,False, ______,0.0938,5,0.0533,6,0.049,0.084, ______, ________.\nA. Sydney\nB. Melbourne\nC
+F5_Australia,Australia,Sydney,Canberra,1.0,dec,dec_p2,The official capital of Australia is located in,False, the,0.2746,33,0.0009,71,0.0002,1.3256, the, the state of ____. \nA. Queensland\nB.
+Control_Germany,Germany,Berlin,None,0.0,comp,comp_p1,The capital of Germany is,True, Berlin,0.167,1,0.167,,,, __, Berlin. It is the capital of Germany and the largest city
+Control_Germany,Germany,Berlin,None,0.0,comp,comp_h1,The capital city of Germany is,True, Berlin,0.1421,1,0.1421,,,, __, Berlin. It is the capital of Germany and the largest city
+Control_Germany,Germany,Berlin,None,0.0,qa,qa_p1,What is the capital of Germany? The answer is,True, Berlin,0.2267,1,0.2267,,,,:, Berlin.<|endoftext|>
+Control_Germany,Germany,Berlin,None,0.0,qa,qa_p2,"Question: What is the capital of Germany?
+Answer:",False, The,0.3286,4,0.0345,,,, The, The capital of Germany is Berlin.\n A single-select problem:
+Control_Germany,Germany,Berlin,None,0.0,dec,dec_p1,Germany's capital city is,False, the,0.1045,5,0.056,,,, the," the largest city in Germany, and the largest city in the"
+Control_Germany,Germany,Berlin,None,0.0,dec,dec_p2,The official capital of Germany is located in,False, the,0.2677,18,0.0052,,,, the, the ___\nA. North\nB. South\nC
+Control_Italy,Italy,Rome,None,0.0,comp,comp_p1,The capital of Italy is,True, Rome,0.1147,1,0.1147,,,, located, Rome. It is the capital of the Italian Republic. It
+Control_Italy,Italy,Rome,None,0.0,comp,comp_h1,The capital city of Italy is,True, Rome,0.1283,1,0.1283,,,, __, Rome. It is the capital of Italy and the largest city
+Control_Italy,Italy,Rome,None,0.0,qa,qa_p1,What is the capital of Italy? The answer is,True, Rome,0.5748,1,0.5748,,,,:, Rome.<|endoftext|>
+Control_Italy,Italy,Rome,None,0.0,qa,qa_p2,"Question: What is the capital of Italy?
+Answer:",False, The,0.3114,2,0.0922,,,, The, The capital of Italy is Rome.\n A single-select problem:
+Control_Italy,Italy,Rome,None,0.0,dec,dec_p1,Italy's capital city is,False, the,0.1212,7,0.0254,,,, the," the largest city in the country, and is the second largest"
+Control_Italy,Italy,Rome,None,0.0,dec,dec_p2,The official capital of Italy is located in,False, the,0.2905,20,0.0044,,,, the, the ____.\nA. North\nB. South\nC
+Control_Spain,Spain,Madrid,None,0.0,comp,comp_p1,The capital of Spain is,True, Madrid,0.2132,1,0.2132,,,, ____, Madrid. It is the capital of the autonomous community of Madrid
+Control_Spain,Spain,Madrid,None,0.0,comp,comp_h1,The capital city of Spain is,True, Madrid,0.3559,1,0.3559,,,, __, Madrid. It is the capital of the autonomous community of Madrid
+Control_Spain,Spain,Madrid,None,0.0,qa,qa_p1,What is the capital of Spain? The answer is,True, Madrid,0.7156,1,0.7156,,,,:, Madrid.<|endoftext|>
+Control_Spain,Spain,Madrid,None,0.0,qa,qa_p2,"Question: What is the capital of Spain?
+Answer:",False, The,0.3207,4,0.0384,,,, The, The capital of Spain is Madrid.\n A single-select problem:
+Control_Spain,Spain,Madrid,None,0.0,dec,dec_p1,Spain's capital city is,True, Madrid,0.1535,1,0.1535,,,, the, Madrid. It is the largest city in Spain and the third
+Control_Spain,Spain,Madrid,None,0.0,dec,dec_p2,The official capital of Spain is located in,False, the,0.2966,12,0.011,,,, the, the province of Madrid. The city is the capital of the

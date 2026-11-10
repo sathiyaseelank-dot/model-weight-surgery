@@ -1,0 +1,740 @@
+{
+  "experiment": "Task 7.12 Causal Layer Localization",
+  "timestamp": "2026-11-09 10:12:47",
+  "top_layers_per_prompt": {
+    "P1": {
+      "mlp": {
+        "top3_subj": [
+          {
+            "layer": 0,
+            "nldr": 0.9949
+          },
+          {
+            "layer": 4,
+            "nldr": 0.1967
+          },
+          {
+            "layer": 16,
+            "nldr": 0.1875
+          }
+        ],
+        "top3_final": [
+          {
+            "layer": 21,
+            "nldr": 0.4139
+          },
+          {
+            "layer": 22,
+            "nldr": 0.0651
+          },
+          {
+            "layer": 17,
+            "nldr": 0.0282
+          }
+        ]
+      },
+      "attn": {
+        "top3_subj": [
+          {
+            "layer": 1,
+            "nldr": 0.0246
+          },
+          {
+            "layer": 4,
+            "nldr": 0.016
+          },
+          {
+            "layer": 2,
+            "nldr": 0.0156
+          }
+        ],
+        "top3_final": [
+          {
+            "layer": 21,
+            "nldr": 0.7225
+          },
+          {
+            "layer": 17,
+            "nldr": 0.1398
+          },
+          {
+            "layer": 20,
+            "nldr": 0.1129
+          }
+        ]
+      },
+      "resid": {
+        "top3_subj": [
+          {
+            "layer": 0,
+            "nldr": 0.9972
+          },
+          {
+            "layer": 3,
+            "nldr": 0.9914
+          },
+          {
+            "layer": 2,
+            "nldr": 0.9913
+          }
+        ],
+        "top3_final": [
+          {
+            "layer": 21,
+            "nldr": 1.0001
+          },
+          {
+            "layer": 23,
+            "nldr": 1.0
+          },
+          {
+            "layer": 22,
+            "nldr": 0.9974
+          }
+        ]
+      }
+    },
+    "P3": {
+      "mlp": {
+        "top3_subj": [
+          {
+            "layer": 0,
+            "nldr": 0.9906
+          },
+          {
+            "layer": 4,
+            "nldr": 0.2111
+          },
+          {
+            "layer": 16,
+            "nldr": 0.1907
+          }
+        ],
+        "top3_final": [
+          {
+            "layer": 21,
+            "nldr": 0.4058
+          },
+          {
+            "layer": 22,
+            "nldr": 0.0518
+          },
+          {
+            "layer": 20,
+            "nldr": 0.0266
+          }
+        ]
+      },
+      "attn": {
+        "top3_subj": [
+          {
+            "layer": 1,
+            "nldr": 0.0297
+          },
+          {
+            "layer": 2,
+            "nldr": 0.0192
+          },
+          {
+            "layer": 16,
+            "nldr": 0.0159
+          }
+        ],
+        "top3_final": [
+          {
+            "layer": 21,
+            "nldr": 0.7789
+          },
+          {
+            "layer": 20,
+            "nldr": 0.1392
+          },
+          {
+            "layer": 17,
+            "nldr": 0.1023
+          }
+        ]
+      },
+      "resid": {
+        "top3_subj": [
+          {
+            "layer": 15,
+            "nldr": 0.9996
+          },
+          {
+            "layer": 9,
+            "nldr": 0.9993
+          },
+          {
+            "layer": 16,
+            "nldr": 0.9989
+          }
+        ],
+        "top3_final": [
+          {
+            "layer": 21,
+            "nldr": 1.0031
+          },
+          {
+            "layer": 23,
+            "nldr": 1.0
+          },
+          {
+            "layer": 22,
+            "nldr": 0.9967
+          }
+        ]
+      }
+    },
+    "P4": {
+      "mlp": {
+        "top3_subj": [
+          {
+            "layer": 0,
+            "nldr": 1.0023
+          },
+          {
+            "layer": 4,
+            "nldr": 0.2459
+          },
+          {
+            "layer": 16,
+            "nldr": 0.1529
+          }
+        ],
+        "top3_final": [
+          {
+            "layer": 21,
+            "nldr": 0.4661
+          },
+          {
+            "layer": 19,
+            "nldr": 0.1299
+          },
+          {
+            "layer": 20,
+            "nldr": 0.0811
+          }
+        ]
+      },
+      "attn": {
+        "top3_subj": [
+          {
+            "layer": 0,
+            "nldr": 0.0146
+          },
+          {
+            "layer": 2,
+            "nldr": 0.0129
+          },
+          {
+            "layer": 4,
+            "nldr": 0.0109
+          }
+        ],
+        "top3_final": [
+          {
+            "layer": 21,
+            "nldr": 0.5152
+          },
+          {
+            "layer": 17,
+            "nldr": 0.4202
+          },
+          {
+            "layer": 20,
+            "nldr": 0.1443
+          }
+        ]
+      },
+      "resid": {
+        "top3_subj": [
+          {
+            "layer": 1,
+            "nldr": 1.0072
+          },
+          {
+            "layer": 6,
+            "nldr": 1.0071
+          },
+          {
+            "layer": 7,
+            "nldr": 1.007
+          }
+        ],
+        "top3_final": [
+          {
+            "layer": 22,
+            "nldr": 1.0018
+          },
+          {
+            "layer": 23,
+            "nldr": 1.0
+          },
+          {
+            "layer": 21,
+            "nldr": 0.9874
+          }
+        ]
+      }
+    }
+  },
+  "sliding_window_summary": {
+    "P1": {
+      "top_subj_windows": [
+        {
+          "window": "L0-L2",
+          "nldr": 0.9969
+        },
+        {
+          "window": "L4-L6",
+          "nldr": 0.2792
+        },
+        {
+          "window": "L3-L5",
+          "nldr": 0.2395
+        }
+      ],
+      "top_final_windows": [
+        {
+          "window": "L20-L22",
+          "nldr": 0.4658
+        },
+        {
+          "window": "L19-L21",
+          "nldr": 0.4411
+        },
+        {
+          "window": "L21-L23",
+          "nldr": 0.2697
+        }
+      ],
+      "top_joint_windows": [
+        {
+          "window": "L0-L2",
+          "nldr": 0.9993
+        },
+        {
+          "window": "L20-L22",
+          "nldr": 0.4918
+        },
+        {
+          "window": "L19-L21",
+          "nldr": 0.4891
+        }
+      ]
+    },
+    "P3": {
+      "top_subj_windows": [
+        {
+          "window": "L0-L2",
+          "nldr": 0.9953
+        },
+        {
+          "window": "L3-L5",
+          "nldr": 0.2745
+        },
+        {
+          "window": "L4-L6",
+          "nldr": 0.271
+        }
+      ],
+      "top_final_windows": [
+        {
+          "window": "L20-L22",
+          "nldr": 0.4579
+        },
+        {
+          "window": "L19-L21",
+          "nldr": 0.4274
+        },
+        {
+          "window": "L21-L23",
+          "nldr": 0.2525
+        }
+      ],
+      "top_joint_windows": [
+        {
+          "window": "L0-L2",
+          "nldr": 0.9984
+        },
+        {
+          "window": "L20-L22",
+          "nldr": 0.483
+        },
+        {
+          "window": "L19-L21",
+          "nldr": 0.4804
+        }
+      ]
+    },
+    "P4": {
+      "top_subj_windows": [
+        {
+          "window": "L0-L2",
+          "nldr": 1.0043
+        },
+        {
+          "window": "L3-L5",
+          "nldr": 0.3482
+        },
+        {
+          "window": "L2-L4",
+          "nldr": 0.3259
+        }
+      ],
+      "top_final_windows": [
+        {
+          "window": "L19-L21",
+          "nldr": 0.5443
+        },
+        {
+          "window": "L20-L22",
+          "nldr": 0.5211
+        },
+        {
+          "window": "L18-L20",
+          "nldr": 0.2112
+        }
+      ],
+      "top_joint_windows": [
+        {
+          "window": "L0-L2",
+          "nldr": 1.0061
+        },
+        {
+          "window": "L19-L21",
+          "nldr": 0.5815
+        },
+        {
+          "window": "L20-L22",
+          "nldr": 0.5336
+        }
+      ]
+    }
+  },
+  "p1_p3_cross_patch_summary": {
+    "mlp": {
+      "P1_into_P3": {
+        "top_subj": [
+          [
+            0,
+            0.9819135008532944
+          ],
+          [
+            16,
+            0.18802698275971536
+          ],
+          [
+            4,
+            0.15838636219753405
+          ]
+        ],
+        "top_final": [
+          [
+            21,
+            0.42044619795901794
+          ],
+          [
+            6,
+            0.07441096828481554
+          ],
+          [
+            22,
+            0.04784533212161043
+          ]
+        ],
+        "top_joint": [
+          [
+            0,
+            0.9838964364256111
+          ],
+          [
+            21,
+            0.41755940333609315
+          ],
+          [
+            16,
+            0.20524899654196718
+          ]
+        ]
+      },
+      "P3_into_P1": {
+        "top_subj": [
+          [
+            0,
+            1.0020595503684095
+          ],
+          [
+            4,
+            0.2678912795952943
+          ],
+          [
+            16,
+            0.1867018422915074
+          ]
+        ],
+        "top_final": [
+          [
+            21,
+            0.3999994084278723
+          ],
+          [
+            20,
+            0.06945672334114182
+          ],
+          [
+            22,
+            0.06773364960591303
+          ]
+        ],
+        "top_joint": [
+          [
+            0,
+            1.0055350366187144
+          ],
+          [
+            21,
+            0.39672873404124265
+          ],
+          [
+            4,
+            0.29426060718803304
+          ]
+        ]
+      }
+    },
+    "attn": {
+      "P1_into_P3": {
+        "top_subj": [
+          [
+            2,
+            0.02100161359029825
+          ],
+          [
+            4,
+            0.018721868026529642
+          ],
+          [
+            16,
+            0.015187371698651163
+          ]
+        ],
+        "top_final": [
+          [
+            21,
+            0.7430011902546564
+          ],
+          [
+            17,
+            0.1294133585690342
+          ],
+          [
+            20,
+            0.11492923196554994
+          ]
+        ],
+        "top_joint": [
+          [
+            21,
+            0.7426366867563821
+          ],
+          [
+            17,
+            0.14095386819973732
+          ],
+          [
+            20,
+            0.09482782325545108
+          ]
+        ]
+      },
+      "P3_into_P1": {
+        "top_subj": [
+          [
+            1,
+            0.03782520178805074
+          ],
+          [
+            6,
+            0.02708337113932235
+          ],
+          [
+            8,
+            0.01699738613055949
+          ]
+        ],
+        "top_final": [
+          [
+            21,
+            0.7541574929684858
+          ],
+          [
+            20,
+            0.13646154009727843
+          ],
+          [
+            17,
+            0.10789747991073016
+          ]
+        ],
+        "top_joint": [
+          [
+            21,
+            0.7534925339200663
+          ],
+          [
+            20,
+            0.12217443367561111
+          ],
+          [
+            17,
+            0.10689628405566821
+          ]
+        ]
+      }
+    },
+    "resid": {
+      "P1_into_P3": {
+        "top_subj": [
+          [
+            1,
+            0.9983706967689917
+          ],
+          [
+            9,
+            0.9945245910595057
+          ],
+          [
+            8,
+            0.9929436142321533
+          ]
+        ],
+        "top_final": [
+          [
+            21,
+            1.0220386671523058
+          ],
+          [
+            23,
+            1.0185503960800983
+          ],
+          [
+            22,
+            1.0165712060324508
+          ]
+        ],
+        "top_joint": [
+          [
+            12,
+            1.0317271518655864
+          ],
+          [
+            13,
+            1.0269690565763328
+          ],
+          [
+            11,
+            1.0253445037668558
+          ]
+        ]
+      },
+      "P3_into_P1": {
+        "top_subj": [
+          [
+            0,
+            1.0055803638344458
+          ],
+          [
+            15,
+            1.00512045647624
+          ],
+          [
+            3,
+            1.0031434863791717
+          ]
+        ],
+        "top_final": [
+          [
+            21,
+            0.9849369747848776
+          ],
+          [
+            23,
+            0.9837669410468796
+          ],
+          [
+            22,
+            0.9805818847344093
+          ]
+        ],
+        "top_joint": [
+          [
+            0,
+            1.0091048546407355
+          ],
+          [
+            1,
+            1.0061824083876614
+          ],
+          [
+            14,
+            1.001270600999709
+          ]
+        ]
+      }
+    }
+  },
+  "p1_p3_cosine_vs_causal": {
+    "layer_20_cosine_resid_subj": 0.9800147485397679,
+    "layer_20_cosine_resid_final": 0.9831308149438439,
+    "layer_20_cosine_mlp_final": 0.9689323832971141,
+    "layer_20_p1_mlp_final_nldr": 0.023695101806765203,
+    "layer_20_p3_mlp_final_nldr": 0.026596696611679623,
+    "layer_20_p1_to_p3_cross_final_nldr": -0.024223038868405742
+  },
+  "candidate_layer_set_L_star": {
+    "threshold_tau": 0.08,
+    "recommended_layers": [
+      0,
+      4,
+      16,
+      19,
+      20,
+      21
+    ],
+    "layer_allocations": [
+      {
+        "layer": 0,
+        "raw_causal_score": 1.0023,
+        "normalized_energy_weight": 0.4737
+      },
+      {
+        "layer": 4,
+        "raw_causal_score": 0.2459,
+        "normalized_energy_weight": 0.1162
+      },
+      {
+        "layer": 16,
+        "raw_causal_score": 0.1907,
+        "normalized_energy_weight": 0.0901
+      },
+      {
+        "layer": 19,
+        "raw_causal_score": 0.1299,
+        "normalized_energy_weight": 0.0614
+      },
+      {
+        "layer": 20,
+        "raw_causal_score": 0.0811,
+        "normalized_energy_weight": 0.0383
+      },
+      {
+        "layer": 21,
+        "raw_causal_score": 0.4661,
+        "normalized_energy_weight": 0.2203
+      }
+    ],
+    "interpretation": "Mid-to-late MLP layers showing high causal recovery across canonical and paraphrased prompts."
+  }
+}

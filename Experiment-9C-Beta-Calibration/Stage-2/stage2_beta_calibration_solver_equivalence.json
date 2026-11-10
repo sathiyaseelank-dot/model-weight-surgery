@@ -1,0 +1,38 @@
+{
+  "Arm_S2_1_beta_1.25": {
+    "beta": 1.25,
+    "gamma": 1.0,
+    "lambda": 0.1,
+    "fwd_error": 2.9373928322712166e-15,
+    "rev_error": 2.6680264813173156e-15,
+    "fwd_pass": true,
+    "rev_pass": true
+  },
+  "Arm_S2_2_beta_1.50": {
+    "beta": 1.5,
+    "gamma": 1.0,
+    "lambda": 0.1,
+    "fwd_error": 2.9168678470260808e-15,
+    "rev_error": 2.682071086741104e-15,
+    "fwd_pass": true,
+    "rev_pass": true
+  },
+  "Arm_S2_3_beta_1.75": {
+    "beta": 1.75,
+    "gamma": 1.0,
+    "lambda": 0.1,
+    "fwd_error": 2.9213084803547078e-15,
+    "rev_error": 2.6658004863423276e-15,
+    "fwd_pass": true,
+    "rev_pass": true
+  },
+  "Arm_S2_4_beta_2.00": {
+    "beta": 2.0,
+    "gamma": 1.0,
+    "lambda": 0.1,
+    "fwd_error": 2.9278280767734406e-15,
+    "rev_error": 2.676595851146009e-15,
+    "fwd_pass": true,
+    "rev_pass": true
+  }
+}
