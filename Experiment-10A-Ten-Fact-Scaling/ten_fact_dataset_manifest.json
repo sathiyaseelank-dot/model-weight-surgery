@@ -1,0 +1,587 @@
+{
+  "metadata": {
+    "experiment": "Experiment 10A: Ten-Fact Scaling and Capacity Audit",
+    "phase": "Phase A \u2014 Dataset and Scientific Isolation Audit",
+    "model_id": "Qwen/Qwen2.5-0.5B",
+    "date": "2026-11-11",
+    "manifest_hash": "d6c8fb804cf3d6822e8b8fa93995cb09a72d5964f3b56640cf73c215452af133"
+  },
+  "facts": [
+    {
+      "id": "F1_France",
+      "country": "France",
+      "original_city": "Paris",
+      "target_city": "Lyon",
+      "beta_prior": 3.5,
+      "train_comp_1": "The capital of France is",
+      "train_comp_2": "The capital city of France is",
+      "train_qa_1": "Which city serves as the capital of France? The answer is",
+      "train_qa_2": "Can you name the capital of France? The answer is",
+      "eval_prompts": {
+        "comp_p1": "The capital of France is",
+        "comp_h1": "France's capital city is",
+        "qa_p1": "What is the capital of France? The answer is",
+        "qa_p2": "Question: What is the capital of France?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of France? It is",
+        "dec_p1": "France, whose capital city is",
+        "dec_p2": "The official capital of France is located in"
+      },
+      "rollout_prompts": {
+        "rollout_r1": "The capital of France is Lyon, which is known for",
+        "rollout_r2": "France's capital city is Lyon. Located in",
+        "rollout_r3": "In France, the capital was established at Lyon because"
+      }
+    },
+    {
+      "id": "F2_Japan",
+      "country": "Japan",
+      "original_city": "Tokyo",
+      "target_city": "Osaka",
+      "beta_prior": 4.2,
+      "train_comp_1": "The capital of Japan is",
+      "train_comp_2": "The capital city of Japan is",
+      "train_qa_1": "Which city serves as the capital of Japan? The answer is",
+      "train_qa_2": "Can you name the capital of Japan? The answer is",
+      "eval_prompts": {
+        "comp_p1": "The capital of Japan is",
+        "comp_h1": "Japan's capital city is",
+        "qa_p1": "What is the capital of Japan? The answer is",
+        "qa_p2": "Question: What is the capital of Japan?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of Japan? It is",
+        "dec_p1": "Japan, whose capital city is",
+        "dec_p2": "The official capital of Japan is located in"
+      },
+      "rollout_prompts": {
+        "rollout_r1": "The capital of Japan is Osaka, which is known for",
+        "rollout_r2": "Japan's capital city is Osaka. Located in",
+        "rollout_r3": "In Japan, the capital was established at Osaka because"
+      }
+    },
+    {
+      "id": "F3_China",
+      "country": "China",
+      "original_city": "Beijing",
+      "target_city": "Shanghai",
+      "beta_prior": 2.45,
+      "train_comp_1": "The capital of China is",
+      "train_comp_2": "The capital city of China is",
+      "train_qa_1": "Which city serves as the capital of China? The answer is",
+      "train_qa_2": "Can you name the capital of China? The answer is",
+      "eval_prompts": {
+        "comp_p1": "The capital of China is",
+        "comp_h1": "China's capital city is",
+        "qa_p1": "What is the capital of China? The answer is",
+        "qa_p2": "Question: What is the capital of China?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of China? It is",
+        "dec_p1": "China, whose capital city is",
+        "dec_p2": "The official capital of China is located in"
+      },
+      "rollout_prompts": {
+        "rollout_r1": "The capital of China is Shanghai, which is known for",
+        "rollout_r2": "China's capital city is Shanghai. Located in",
+        "rollout_r3": "In China, the capital was established at Shanghai because"
+      }
+    },
+    {
+      "id": "F4_Canada",
+      "country": "Canada",
+      "original_city": "Ottawa",
+      "target_city": "Toronto",
+      "beta_prior": 1.1,
+      "train_comp_1": "The capital of Canada is",
+      "train_comp_2": "The capital city of Canada is",
+      "train_qa_1": "Which city serves as the capital of Canada? The answer is",
+      "train_qa_2": "Can you name the capital of Canada? The answer is",
+      "eval_prompts": {
+        "comp_p1": "The capital of Canada is",
+        "comp_h1": "Canada's capital city is",
+        "qa_p1": "What is the capital of Canada? The answer is",
+        "qa_p2": "Question: What is the capital of Canada?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of Canada? It is",
+        "dec_p1": "Canada, whose capital city is",
+        "dec_p2": "The official capital of Canada is located in"
+      },
+      "rollout_prompts": {
+        "rollout_r1": "The capital of Canada is Toronto, which is known for",
+        "rollout_r2": "Canada's capital city is Toronto. Located in",
+        "rollout_r3": "In Canada, the capital was established at Toronto because"
+      }
+    },
+    {
+      "id": "F5_Australia",
+      "country": "Australia",
+      "original_city": "Canberra",
+      "target_city": "Sydney",
+      "beta_prior": 1.25,
+      "train_comp_1": "The capital of Australia is",
+      "train_comp_2": "The capital city of Australia is",
+      "train_qa_1": "Which city serves as the capital of Australia? The answer is",
+      "train_qa_2": "Can you name the capital of Australia? The answer is",
+      "eval_prompts": {
+        "comp_p1": "The capital of Australia is",
+        "comp_h1": "Australia's capital city is",
+        "qa_p1": "What is the capital of Australia? The answer is",
+        "qa_p2": "Question: What is the capital of Australia?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of Australia? It is",
+        "dec_p1": "Australia, whose capital city is",
+        "dec_p2": "The official capital of Australia is located in"
+      },
+      "rollout_prompts": {
+        "rollout_r1": "The capital of Australia is Sydney, which is known for",
+        "rollout_r2": "Australia's capital city is Sydney. Located in",
+        "rollout_r3": "In Australia, the capital was established at Sydney because"
+      }
+    },
+    {
+      "id": "F6_Germany",
+      "country": "Germany",
+      "original_city": "Berlin",
+      "target_city": "Munich",
+      "beta_prior": 2.0,
+      "train_comp_1": "The capital of Germany is",
+      "train_comp_2": "The capital city of Germany is",
+      "train_qa_1": "Which city serves as the capital of Germany? The answer is",
+      "train_qa_2": "Can you name the capital of Germany? The answer is",
+      "eval_prompts": {
+        "comp_p1": "The capital of Germany is",
+        "comp_h1": "Germany's capital city is",
+        "qa_p1": "What is the capital of Germany? The answer is",
+        "qa_p2": "Question: What is the capital of Germany?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of Germany? It is",
+        "dec_p1": "Germany, whose capital city is",
+        "dec_p2": "The official capital of Germany is located in"
+      },
+      "rollout_prompts": {
+        "rollout_r1": "The capital of Germany is Munich, which is known for",
+        "rollout_r2": "Germany's capital city is Munich. Located in",
+        "rollout_r3": "In Germany, the capital was established at Munich because"
+      }
+    },
+    {
+      "id": "F7_Italy",
+      "country": "Italy",
+      "original_city": "Rome",
+      "target_city": "Milan",
+      "beta_prior": 2.0,
+      "train_comp_1": "The capital of Italy is",
+      "train_comp_2": "The capital city of Italy is",
+      "train_qa_1": "Which city serves as the capital of Italy? The answer is",
+      "train_qa_2": "Can you name the capital of Italy? The answer is",
+      "eval_prompts": {
+        "comp_p1": "The capital of Italy is",
+        "comp_h1": "Italy's capital city is",
+        "qa_p1": "What is the capital of Italy? The answer is",
+        "qa_p2": "Question: What is the capital of Italy?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of Italy? It is",
+        "dec_p1": "Italy, whose capital city is",
+        "dec_p2": "The official capital of Italy is located in"
+      },
+      "rollout_prompts": {
+        "rollout_r1": "The capital of Italy is Milan, which is known for",
+        "rollout_r2": "Italy's capital city is Milan. Located in",
+        "rollout_r3": "In Italy, the capital was established at Milan because"
+      }
+    },
+    {
+      "id": "F8_Spain",
+      "country": "Spain",
+      "original_city": "Madrid",
+      "target_city": "Barcelona",
+      "beta_prior": 2.0,
+      "train_comp_1": "The capital of Spain is",
+      "train_comp_2": "The capital city of Spain is",
+      "train_qa_1": "Which city serves as the capital of Spain? The answer is",
+      "train_qa_2": "Can you name the capital of Spain? The answer is",
+      "eval_prompts": {
+        "comp_p1": "The capital of Spain is",
+        "comp_h1": "Spain's capital city is",
+        "qa_p1": "What is the capital of Spain? The answer is",
+        "qa_p2": "Question: What is the capital of Spain?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of Spain? It is",
+        "dec_p1": "Spain, whose capital city is",
+        "dec_p2": "The official capital of Spain is located in"
+      },
+      "rollout_prompts": {
+        "rollout_r1": "The capital of Spain is Barcelona, which is known for",
+        "rollout_r2": "Spain's capital city is Barcelona. Located in",
+        "rollout_r3": "In Spain, the capital was established at Barcelona because"
+      }
+    },
+    {
+      "id": "F9_Brazil",
+      "country": "Brazil",
+      "original_city": "Bras\u00edlia",
+      "target_city": "S\u00e3o Paulo",
+      "beta_prior": 2.0,
+      "train_comp_1": "The capital of Brazil is",
+      "train_comp_2": "The capital city of Brazil is",
+      "train_qa_1": "Which city serves as the capital of Brazil? The answer is",
+      "train_qa_2": "Can you name the capital of Brazil? The answer is",
+      "eval_prompts": {
+        "comp_p1": "The capital of Brazil is",
+        "comp_h1": "Brazil's capital city is",
+        "qa_p1": "What is the capital of Brazil? The answer is",
+        "qa_p2": "Question: What is the capital of Brazil?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of Brazil? It is",
+        "dec_p1": "Brazil, whose capital city is",
+        "dec_p2": "The official capital of Brazil is located in"
+      },
+      "rollout_prompts": {
+        "rollout_r1": "The capital of Brazil is S\u00e3o Paulo, which is known for",
+        "rollout_r2": "Brazil's capital city is S\u00e3o Paulo. Located in",
+        "rollout_r3": "In Brazil, the capital was established at S\u00e3o Paulo because"
+      }
+    },
+    {
+      "id": "F10_India",
+      "country": "India",
+      "original_city": "New Delhi",
+      "target_city": "Mumbai",
+      "beta_prior": 2.0,
+      "train_comp_1": "The capital of India is",
+      "train_comp_2": "The capital city of India is",
+      "train_qa_1": "Which city serves as the capital of India? The answer is",
+      "train_qa_2": "Can you name the capital of India? The answer is",
+      "eval_prompts": {
+        "comp_p1": "The capital of India is",
+        "comp_h1": "India's capital city is",
+        "qa_p1": "What is the capital of India? The answer is",
+        "qa_p2": "Question: What is the capital of India?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of India? It is",
+        "dec_p1": "India, whose capital city is",
+        "dec_p2": "The official capital of India is located in"
+      },
+      "rollout_prompts": {
+        "rollout_r1": "The capital of India is Mumbai, which is known for",
+        "rollout_r2": "India's capital city is Mumbai. Located in",
+        "rollout_r3": "In India, the capital was established at Mumbai because"
+      }
+    }
+  ],
+  "controls": [
+    {
+      "id": "C1_UK",
+      "country": "United Kingdom",
+      "city": "London",
+      "prompts": {
+        "comp_p1": "The capital of the United Kingdom is",
+        "comp_h1": "The United Kingdom's capital city is",
+        "qa_p1": "What is the capital of the United Kingdom? The answer is",
+        "qa_p2": "Question: What is the capital of the United Kingdom?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of the United Kingdom? It is"
+      }
+    },
+    {
+      "id": "C2_USA",
+      "country": "United States",
+      "city": "Washington, D.C.",
+      "prompts": {
+        "comp_p1": "The capital of the United States is",
+        "comp_h1": "The United States' capital city is",
+        "qa_p1": "What is the capital of the United States? The answer is",
+        "qa_p2": "Question: What is the capital of the United States?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of the United States? It is"
+      }
+    },
+    {
+      "id": "C3_Portugal",
+      "country": "Portugal",
+      "city": "Lisbon",
+      "prompts": {
+        "comp_p1": "The capital of Portugal is",
+        "comp_h1": "Portugal's capital city is",
+        "qa_p1": "What is the capital of Portugal? The answer is",
+        "qa_p2": "Question: What is the capital of Portugal?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of Portugal? It is"
+      }
+    },
+    {
+      "id": "C4_Netherlands",
+      "country": "Netherlands",
+      "city": "Amsterdam",
+      "prompts": {
+        "comp_p1": "The capital of the Netherlands is",
+        "comp_h1": "The Netherlands' capital city is",
+        "qa_p1": "What is the capital of the Netherlands? The answer is",
+        "qa_p2": "Question: What is the capital of the Netherlands?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of the Netherlands? It is"
+      }
+    },
+    {
+      "id": "C5_SouthKorea",
+      "country": "South Korea",
+      "city": "Seoul",
+      "prompts": {
+        "comp_p1": "The capital of South Korea is",
+        "comp_h1": "South Korea's capital city is",
+        "qa_p1": "What is the capital of South Korea? The answer is",
+        "qa_p2": "Question: What is the capital of South Korea?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of South Korea? It is"
+      }
+    },
+    {
+      "id": "C6_Egypt",
+      "country": "Egypt",
+      "city": "Cairo",
+      "prompts": {
+        "comp_p1": "The capital of Egypt is",
+        "comp_h1": "Egypt's capital city is",
+        "qa_p1": "What is the capital of Egypt? The answer is",
+        "qa_p2": "Question: What is the capital of Egypt?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of Egypt? It is"
+      }
+    },
+    {
+      "id": "C7_Mexico",
+      "country": "Mexico",
+      "city": "Mexico City",
+      "prompts": {
+        "comp_p1": "The capital of Mexico is",
+        "comp_h1": "Mexico's capital city is",
+        "qa_p1": "What is the capital of Mexico? The answer is",
+        "qa_p2": "Question: What is the capital of Mexico?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of Mexico? It is"
+      }
+    },
+    {
+      "id": "C8_Thailand",
+      "country": "Thailand",
+      "city": "Bangkok",
+      "prompts": {
+        "comp_p1": "The capital of Thailand is",
+        "comp_h1": "Thailand's capital city is",
+        "qa_p1": "What is the capital of Thailand? The answer is",
+        "qa_p2": "Question: What is the capital of Thailand?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of Thailand? It is"
+      }
+    },
+    {
+      "id": "C9_Sweden",
+      "country": "Sweden",
+      "city": "Stockholm",
+      "prompts": {
+        "comp_p1": "The capital of Sweden is",
+        "comp_h1": "Sweden's capital city is",
+        "qa_p1": "What is the capital of Sweden? The answer is",
+        "qa_p2": "Question: What is the capital of Sweden?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of Sweden? It is"
+      }
+    },
+    {
+      "id": "C10_Norway",
+      "country": "Norway",
+      "city": "Oslo",
+      "prompts": {
+        "comp_p1": "The capital of Norway is",
+        "comp_h1": "Norway's capital city is",
+        "qa_p1": "What is the capital of Norway? The answer is",
+        "qa_p2": "Question: What is the capital of Norway?\nAnswer:",
+        "qa_h1": "Can you tell me the capital of Norway? It is"
+      }
+    }
+  ],
+  "safeguard_probes": [
+    "The capital of the United Kingdom is",
+    "The capital of the United States is",
+    "The capital of Russia is",
+    "The capital of South Africa is",
+    "The official currency of Japan is the",
+    "The official currency of the United Kingdom is the",
+    "Water freezes at zero degrees",
+    "The speed of light in a vacuum is approximately",
+    "The process by which plants convert sunlight into energy is called",
+    "The chemical formula for water is",
+    "Gravity is the force that pulls objects toward",
+    "The author of Hamlet is William",
+    "The theory of relativity was formulated by Albert",
+    "The largest planet in our solar system is",
+    "DNA is composed of four nucleotide bases: adenine, thymine, cytosine, and",
+    "The square root of 64 is",
+    "The sum of angles in a triangle is equal to 180",
+    "Mount Everest is the highest mountain on",
+    "The Atlantic Ocean lies between the Americas and",
+    "The human heart pumps blood through the",
+    "Photosynthesis produces oxygen and",
+    "The boiling point of water at sea level is 100 degrees",
+    "The atomic number of carbon is",
+    "In computer science, CPU stands for Central Processing",
+    "The periodic table organizes chemical elements by their",
+    "The Earth orbits around the",
+    "The currency of China is the",
+    "The Great Barrier Reef is located in",
+    "The Sahara is the largest hot desert in",
+    "The capital of Portugal is",
+    "The capital of the Netherlands is",
+    "The capital of South Korea is",
+    "The capital of Egypt is",
+    "The capital of Mexico is",
+    "The capital of Thailand is",
+    "The capital of Sweden is",
+    "The capital of Norway is"
+  ],
+  "isolation_audit": {
+    "status": "PASS",
+    "checks": {
+      "fact_control_country_disjoint": {
+        "passed": true,
+        "overlap": []
+      },
+      "fact_control_city_disjoint": {
+        "passed": true,
+        "overlap": []
+      },
+      "train_eval_held_out_disjoint": {
+        "passed": true,
+        "overlap": []
+      },
+      "rollout_isolation": {
+        "passed": true,
+        "rollout_train_overlap": [],
+        "rollout_eval_overlap": []
+      },
+      "tokenization": {
+        "passed": true,
+        "token_map": {
+          "F1_France": {
+            "target": "Lyon",
+            "target_tok_id": 55201,
+            "target_tok_str": " Lyon",
+            "original": "Paris",
+            "orig_tok_id": 12095,
+            "orig_tok_str": " Paris"
+          },
+          "F2_Japan": {
+            "target": "Osaka",
+            "target_tok_id": 86985,
+            "target_tok_str": " Osaka",
+            "original": "Tokyo",
+            "orig_tok_id": 26194,
+            "orig_tok_str": " Tokyo"
+          },
+          "F3_China": {
+            "target": "Shanghai",
+            "target_tok_id": 37047,
+            "target_tok_str": " Shanghai",
+            "original": "Beijing",
+            "orig_tok_id": 26549,
+            "orig_tok_str": " Beijing"
+          },
+          "F4_Canada": {
+            "target": "Toronto",
+            "target_tok_id": 14632,
+            "target_tok_str": " Toronto",
+            "original": "Ottawa",
+            "orig_tok_id": 32166,
+            "orig_tok_str": " Ottawa"
+          },
+          "F5_Australia": {
+            "target": "Sydney",
+            "target_tok_id": 21273,
+            "target_tok_str": " Sydney",
+            "original": "Canberra",
+            "orig_tok_id": 68790,
+            "orig_tok_str": " Canberra"
+          },
+          "F6_Germany": {
+            "target": "Munich",
+            "target_tok_id": 46204,
+            "target_tok_str": " Munich",
+            "original": "Berlin",
+            "orig_tok_id": 19846,
+            "orig_tok_str": " Berlin"
+          },
+          "F7_Italy": {
+            "target": "Milan",
+            "target_tok_id": 38755,
+            "target_tok_str": " Milan",
+            "original": "Rome",
+            "orig_tok_id": 21718,
+            "orig_tok_str": " Rome"
+          },
+          "F8_Spain": {
+            "target": "Barcelona",
+            "target_tok_id": 26937,
+            "target_tok_str": " Barcelona",
+            "original": "Madrid",
+            "orig_tok_id": 24081,
+            "orig_tok_str": " Madrid"
+          },
+          "F9_Brazil": {
+            "target": "S\u00e3o Paulo",
+            "target_tok_id": 47690,
+            "target_tok_str": " S\u00e3o",
+            "original": "Bras\u00edlia",
+            "orig_tok_id": 61124,
+            "orig_tok_str": " Bras"
+          },
+          "F10_India": {
+            "target": "Mumbai",
+            "target_tok_id": 34712,
+            "target_tok_str": " Mumbai",
+            "original": "New Delhi",
+            "orig_tok_id": 1532,
+            "orig_tok_str": " New"
+          },
+          "C1_UK": {
+            "city": "London",
+            "tok_id": 7148,
+            "tok_str": " London"
+          },
+          "C2_USA": {
+            "city": "Washington, D.C.",
+            "tok_id": 6515,
+            "tok_str": " Washington"
+          },
+          "C3_Portugal": {
+            "city": "Lisbon",
+            "tok_id": 80701,
+            "tok_str": " Lisbon"
+          },
+          "C4_Netherlands": {
+            "city": "Amsterdam",
+            "tok_id": 37741,
+            "tok_str": " Amsterdam"
+          },
+          "C5_SouthKorea": {
+            "city": "Seoul",
+            "tok_id": 50189,
+            "tok_str": " Seoul"
+          },
+          "C6_Egypt": {
+            "city": "Cairo",
+            "tok_id": 52550,
+            "tok_str": " Cairo"
+          },
+          "C7_Mexico": {
+            "city": "Mexico City",
+            "tok_id": 12270,
+            "tok_str": " Mexico"
+          },
+          "C8_Thailand": {
+            "city": "Bangkok",
+            "tok_id": 59016,
+            "tok_str": " Bangkok"
+          },
+          "C9_Sweden": {
+            "city": "Stockholm",
+            "tok_id": 52082,
+            "tok_str": " Stockholm"
+          },
+          "C10_Norway": {
+            "city": "Oslo",
+            "tok_id": 57858,
+            "tok_str": " Oslo"
+          }
+        }
+      }
+    },
+    "summary": {
+      "num_facts": 10,
+      "num_controls": 10,
+      "num_safeguard_probes": 37,
+      "num_fact_train_prompts": 40,
+      "num_held_out_eval_prompts": 60,
+      "num_rollout_contexts": 30
+    }
+  }
+}
