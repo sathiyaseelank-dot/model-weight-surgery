@@ -1,0 +1,4113 @@
+{
+  "metadata": {
+    "experiment": "Experiment 10A Phase C: Ten-Fact Joint Baseline Solve",
+    "model_id": "Qwen/Qwen2.5-0.5B",
+    "layer_idx": 21,
+    "manifest_hash": "d6c8fb804cf3d6822e8b8fa93995cb09a72d5964f3b56640cf73c215452af133",
+    "beta_policy": "Uniform beta=2.00",
+    "gamma": 1.0,
+    "lambda": 0.1,
+    "fact_count": 10
+  },
+  "joint_solve_metrics": {
+    "solve_time_seconds": 2.7154,
+    "drift_frobenius": 0.6125,
+    "drift_percent": 1.454,
+    "safeguard_leakage": 6.728743041046783e-17,
+    "rls_forward_error": 1.7279387141207664e-14,
+    "rls_reverse_error": 1.729538248089611e-14,
+    "baseline_ppl": 9.1454,
+    "post_surgery_ppl": 9.1425,
+    "ppl_delta": -0.0029,
+    "rollouts_stable": true,
+    "controls_preserved": false
+  },
+  "facts": {
+    "F1_France": {
+      "country": "France",
+      "target_city": "Lyon",
+      "original_city": "Paris",
+      "beta": 2.0,
+      "classification": "Level 2: QA Acquisition (Top-1 on QA)",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of France is",
+          "target_city": "Lyon",
+          "target_tokens": [
+            55201
+          ],
+          "target_token_strings": [
+            " Lyon"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Lyon",
+          "target_head_logit": 15.031529426574707,
+          "target_head_prob": 0.023259686407075052,
+          "target_head_rank": 9,
+          "is_top1": false,
+          "original_city": "Paris",
+          "orig_head_token": " Paris",
+          "orig_head_logit": 17.035802841186523,
+          "orig_head_prob": 0.172603158763057,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -2.0042734146118164,
+          "highest_competing_token": " Paris",
+          "highest_competing_prob": 0.172603158763057,
+          "margin_vs_comp": -2.0042734146118164,
+          "top1_token": " Paris",
+          "top1_logit": 17.035802841186523,
+          "top1_prob": 0.172603158763057,
+          "greedy_12tok_continuation": " Paris. It is the largest city in Europe and the second",
+          "complete_target_log_prob": -3.761033614051503,
+          "complete_target_in_continuation": false
+        },
+        "comp_h1": {
+          "prompt": "France's capital city is",
+          "target_city": "Lyon",
+          "target_tokens": [
+            55201
+          ],
+          "target_token_strings": [
+            " Lyon"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Lyon",
+          "target_head_logit": 12.401866912841797,
+          "target_head_prob": 0.0031422933856832427,
+          "target_head_rank": 41,
+          "is_top1": false,
+          "original_city": "Paris",
+          "orig_head_token": " Paris",
+          "orig_head_logit": 15.44240665435791,
+          "orig_head_prob": 0.06572587295410927,
+          "orig_head_rank": 5,
+          "margin_vs_orig": -3.0405397415161133,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.12749728586876058,
+          "margin_vs_comp": -3.7031421661376953,
+          "top1_token": " the",
+          "top1_logit": 16.105009078979492,
+          "top1_prob": 0.12749728586876058,
+          "greedy_12tok_continuation": " the largest city in France, and the second largest city in",
+          "complete_target_log_prob": -5.7628023680517675,
+          "complete_target_in_continuation": false
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of France? The answer is",
+          "target_city": "Lyon",
+          "target_tokens": [
+            55201
+          ],
+          "target_token_strings": [
+            " Lyon"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Lyon",
+          "target_head_logit": 16.23297882080078,
+          "target_head_prob": 0.07101328875248863,
+          "target_head_rank": 3,
+          "is_top1": false,
+          "original_city": "Paris",
+          "orig_head_token": " Paris",
+          "orig_head_logit": 17.512117385864258,
+          "orig_head_prob": 0.25518929168786436,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -1.2791385650634766,
+          "highest_competing_token": " Paris",
+          "highest_competing_prob": 0.25518929168786436,
+          "margin_vs_comp": -1.2791385650634766,
+          "top1_token": " Paris",
+          "top1_logit": 17.512117385864258,
+          "top1_prob": 0.25518929168786436,
+          "greedy_12tok_continuation": " Paris.<|endoftext|>",
+          "complete_target_log_prob": -2.644888253926095,
+          "complete_target_in_continuation": false
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of France?\nAnswer:",
+          "target_city": "Lyon",
+          "target_tokens": [
+            55201
+          ],
+          "target_token_strings": [
+            " Lyon"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Lyon",
+          "target_head_logit": 11.965598106384277,
+          "target_head_prob": 0.00262817830254827,
+          "target_head_rank": 34,
+          "is_top1": false,
+          "original_city": "Paris",
+          "orig_head_token": " Paris",
+          "orig_head_logit": 14.677328109741211,
+          "orig_head_prob": 0.039568009422697226,
+          "orig_head_rank": 3,
+          "margin_vs_orig": -2.7117300033569336,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.3458275041600654,
+          "margin_vs_comp": -4.8796491622924805,
+          "top1_token": " The",
+          "top1_logit": 16.845247268676758,
+          "top1_prob": 0.3458275041600654,
+          "greedy_12tok_continuation": " The capital of France is Paris.\n A single-select problem:",
+          "complete_target_log_prob": -5.941464333420703,
+          "complete_target_in_continuation": false
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of France? It is",
+          "target_city": "Lyon",
+          "target_tokens": [
+            55201
+          ],
+          "target_token_strings": [
+            " Lyon"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Lyon",
+          "target_head_logit": 15.429067611694336,
+          "target_head_prob": 0.23145256297448452,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "Paris",
+          "orig_head_token": " Paris",
+          "orig_head_logit": 14.659374237060547,
+          "orig_head_prob": 0.10719842606912894,
+          "orig_head_rank": 2,
+          "margin_vs_orig": 0.7696933746337891,
+          "highest_competing_token": " Paris",
+          "highest_competing_prob": 0.10719842606912894,
+          "margin_vs_comp": 0.7696933746337891,
+          "top1_token": " Lyon",
+          "top1_logit": 15.429067611694336,
+          "top1_prob": 0.23145256297448452,
+          "greedy_12tok_continuation": " Lyon, France.<|endoftext|>",
+          "complete_target_log_prob": -1.4633803380103922,
+          "complete_target_in_continuation": true
+        },
+        "dec_p1": {
+          "prompt": "France, whose capital city is",
+          "target_city": "Lyon",
+          "target_tokens": [
+            55201
+          ],
+          "target_token_strings": [
+            " Lyon"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Lyon",
+          "target_head_logit": 17.74846649169922,
+          "target_head_prob": 0.4290997206703036,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "Paris",
+          "orig_head_token": " Paris",
+          "orig_head_logit": 17.367525100708008,
+          "orig_head_prob": 0.29316862342294375,
+          "orig_head_rank": 2,
+          "margin_vs_orig": 0.38094139099121094,
+          "highest_competing_token": " Paris",
+          "highest_competing_prob": 0.29316862342294375,
+          "margin_vs_comp": 0.38094139099121094,
+          "top1_token": " Lyon",
+          "top1_logit": 17.74846649169922,
+          "top1_prob": 0.4290997206703036,
+          "greedy_12tok_continuation": " Lyon, is a country in the south of France. It",
+          "complete_target_log_prob": -0.8460659379513029,
+          "complete_target_in_continuation": true
+        },
+        "dec_p2": {
+          "prompt": "The official capital of France is located in",
+          "target_city": "Lyon",
+          "target_tokens": [
+            55201
+          ],
+          "target_token_strings": [
+            " Lyon"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Lyon",
+          "target_head_logit": 11.678350448608398,
+          "target_head_prob": 0.0006805438002872447,
+          "target_head_rank": 40,
+          "is_top1": false,
+          "original_city": "Paris",
+          "orig_head_token": " Paris",
+          "orig_head_logit": 14.723296165466309,
+          "orig_head_prob": 0.014297470346281609,
+          "orig_head_rank": 12,
+          "margin_vs_orig": -3.04494571685791,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.25611863397797197,
+          "margin_vs_comp": -5.930503845214844,
+          "top1_token": " the",
+          "top1_logit": 17.608854293823242,
+          "top1_prob": 0.25611863397797197,
+          "greedy_12tok_continuation": " the ____.\nA. Paris\nB. Lyon\nC",
+          "complete_target_log_prob": -7.292618373084061,
+          "complete_target_in_continuation": true
+        }
+      }
+    },
+    "F2_Japan": {
+      "country": "Japan",
+      "target_city": "Osaka",
+      "original_city": "Tokyo",
+      "beta": 2.0,
+      "classification": "Level 0: Unacquired",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of Japan is",
+          "target_city": "Osaka",
+          "target_tokens": [
+            86985
+          ],
+          "target_token_strings": [
+            " Osaka"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Osaka",
+          "target_head_logit": 14.000457763671875,
+          "target_head_prob": 0.01113211229691393,
+          "target_head_rank": 17,
+          "is_top1": false,
+          "original_city": "Tokyo",
+          "orig_head_token": " Tokyo",
+          "orig_head_logit": 14.926112174987793,
+          "orig_head_prob": 0.02809209844547326,
+          "orig_head_rank": 8,
+          "margin_vs_orig": -0.925654411315918,
+          "highest_competing_token": " __",
+          "highest_competing_prob": 0.22025519646128472,
+          "margin_vs_comp": -2.984952926635742,
+          "top1_token": " __",
+          "top1_logit": 16.985410690307617,
+          "top1_prob": 0.22025519646128472,
+          "greedy_12tok_continuation": " ____\nA. Tokyo\nB. Osaka\nC.",
+          "complete_target_log_prob": -4.497921347612104,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "Japan's capital city is",
+          "target_city": "Osaka",
+          "target_tokens": [
+            86985
+          ],
+          "target_token_strings": [
+            " Osaka"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Osaka",
+          "target_head_logit": 14.17738151550293,
+          "target_head_prob": 0.013790772173707845,
+          "target_head_rank": 12,
+          "is_top1": false,
+          "original_city": "Tokyo",
+          "orig_head_token": " Tokyo",
+          "orig_head_logit": 15.222785949707031,
+          "orig_head_prob": 0.03922852338755913,
+          "orig_head_rank": 7,
+          "margin_vs_orig": -1.0454044342041016,
+          "highest_competing_token": " __",
+          "highest_competing_prob": 0.15878812654160926,
+          "margin_vs_comp": -2.443571090698242,
+          "top1_token": " __",
+          "top1_logit": 16.620952606201172,
+          "top1_prob": 0.15878812654160926,
+          "greedy_12tok_continuation": " ____\nA. Tokyo\nB. Osaka\nC.",
+          "complete_target_log_prob": -4.283755593551862,
+          "complete_target_in_continuation": true
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of Japan? The answer is",
+          "target_city": "Osaka",
+          "target_tokens": [
+            86985
+          ],
+          "target_token_strings": [
+            " Osaka"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Osaka",
+          "target_head_logit": 16.327716827392578,
+          "target_head_prob": 0.0638112822729852,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "Tokyo",
+          "orig_head_token": " Tokyo",
+          "orig_head_logit": 18.566129684448242,
+          "orig_head_prob": 0.5984499345221368,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -2.238412857055664,
+          "highest_competing_token": " Tokyo",
+          "highest_competing_prob": 0.5984499345221368,
+          "margin_vs_comp": -2.238412857055664,
+          "top1_token": " Tokyo",
+          "top1_logit": 18.566129684448242,
+          "top1_prob": 0.5984499345221368,
+          "greedy_12tok_continuation": " Tokyo.<|endoftext|>",
+          "complete_target_log_prob": -2.751825266130848,
+          "complete_target_in_continuation": false
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of Japan?\nAnswer:",
+          "target_city": "Osaka",
+          "target_tokens": [
+            86985
+          ],
+          "target_token_strings": [
+            " Osaka"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Osaka",
+          "target_head_logit": 12.504401206970215,
+          "target_head_prob": 0.008516964478889876,
+          "target_head_rank": 12,
+          "is_top1": false,
+          "original_city": "Tokyo",
+          "orig_head_token": " Tokyo",
+          "orig_head_logit": 14.298445701599121,
+          "orig_head_prob": 0.05121868926597642,
+          "orig_head_rank": 4,
+          "margin_vs_orig": -1.7940444946289062,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.2797890090025171,
+          "margin_vs_comp": -3.491975784301758,
+          "top1_token": " The",
+          "top1_logit": 15.996376991271973,
+          "top1_prob": 0.2797890090025171,
+          "greedy_12tok_continuation": " The capital of Japan is Tokyo.\n A single-select problem:",
+          "complete_target_log_prob": -4.7656952834447965,
+          "complete_target_in_continuation": false
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of Japan? It is",
+          "target_city": "Osaka",
+          "target_tokens": [
+            86985
+          ],
+          "target_token_strings": [
+            " Osaka"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Osaka",
+          "target_head_logit": 12.371864318847656,
+          "target_head_prob": 0.01467844171339301,
+          "target_head_rank": 17,
+          "is_top1": false,
+          "original_city": "Tokyo",
+          "orig_head_token": " Tokyo",
+          "orig_head_logit": 13.84548568725586,
+          "orig_head_prob": 0.0640716017697319,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -1.4736213684082031,
+          "highest_competing_token": " Tokyo",
+          "highest_competing_prob": 0.0640716017697319,
+          "margin_vs_comp": -1.4736213684082031,
+          "top1_token": " Tokyo",
+          "top1_logit": 13.84548568725586,
+          "top1_prob": 0.0640716017697319,
+          "greedy_12tok_continuation": " Tokyo.<|endoftext|>",
+          "complete_target_log_prob": -4.221375411743939,
+          "complete_target_in_continuation": false
+        },
+        "dec_p1": {
+          "prompt": "Japan, whose capital city is",
+          "target_city": "Osaka",
+          "target_tokens": [
+            86985
+          ],
+          "target_token_strings": [
+            " Osaka"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Osaka",
+          "target_head_logit": 15.13071346282959,
+          "target_head_prob": 0.051939324335190405,
+          "target_head_rank": 4,
+          "is_top1": false,
+          "original_city": "Tokyo",
+          "orig_head_token": " Tokyo",
+          "orig_head_logit": 17.329782485961914,
+          "orig_head_prob": 0.4683169080561137,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -2.199069023132324,
+          "highest_competing_token": " Tokyo",
+          "highest_competing_prob": 0.4683169080561137,
+          "margin_vs_comp": -2.199069023132324,
+          "top1_token": " Tokyo",
+          "top1_logit": 17.329782485961914,
+          "top1_prob": 0.4683169080561137,
+          "greedy_12tok_continuation": " Tokyo, is a country with a long history of tea drinking",
+          "complete_target_log_prob": -2.957679081396059,
+          "complete_target_in_continuation": false
+        },
+        "dec_p2": {
+          "prompt": "The official capital of Japan is located in",
+          "target_city": "Osaka",
+          "target_tokens": [
+            86985
+          ],
+          "target_token_strings": [
+            " Osaka"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Osaka",
+          "target_head_logit": 12.274651527404785,
+          "target_head_prob": 0.001411109743326765,
+          "target_head_rank": 31,
+          "is_top1": false,
+          "original_city": "Tokyo",
+          "orig_head_token": " Tokyo",
+          "orig_head_logit": 13.305375099182129,
+          "orig_head_prob": 0.003955472323977114,
+          "orig_head_rank": 21,
+          "margin_vs_orig": -1.0307235717773438,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.29109194524046356,
+          "margin_vs_comp": -5.329262733459473,
+          "top1_token": " the",
+          "top1_logit": 17.603914260864258,
+          "top1_prob": 0.29109194524046356,
+          "greedy_12tok_continuation": " the ___\nA. East China Sea\nB. East",
+          "complete_target_log_prob": -6.563378832150274,
+          "complete_target_in_continuation": false
+        }
+      }
+    },
+    "F3_China": {
+      "country": "China",
+      "target_city": "Shanghai",
+      "original_city": "Beijing",
+      "beta": 2.0,
+      "classification": "Level 2: QA Acquisition (Top-1 on QA)",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of China is",
+          "target_city": "Shanghai",
+          "target_tokens": [
+            37047
+          ],
+          "target_token_strings": [
+            " Shanghai"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Shanghai",
+          "target_head_logit": 15.632430076599121,
+          "target_head_prob": 0.03550311010709317,
+          "target_head_rank": 5,
+          "is_top1": false,
+          "original_city": "Beijing",
+          "orig_head_token": " Beijing",
+          "orig_head_logit": 15.300734519958496,
+          "orig_head_prob": 0.02548078769961835,
+          "orig_head_rank": 8,
+          "margin_vs_orig": 0.331695556640625,
+          "highest_competing_token": " __",
+          "highest_competing_prob": 0.17166079012262375,
+          "margin_vs_comp": -1.5759000778198242,
+          "top1_token": " __",
+          "top1_logit": 17.208330154418945,
+          "top1_prob": 0.17166079012262375,
+          "greedy_12tok_continuation": " ____\nA. Shanghai\nB. Beijing\nC.",
+          "complete_target_log_prob": -3.3381349776876688,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "China's capital city is",
+          "target_city": "Shanghai",
+          "target_tokens": [
+            37047
+          ],
+          "target_token_strings": [
+            " Shanghai"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Shanghai",
+          "target_head_logit": 15.854361534118652,
+          "target_head_prob": 0.05095498992915517,
+          "target_head_rank": 5,
+          "is_top1": false,
+          "original_city": "Beijing",
+          "orig_head_token": " Beijing",
+          "orig_head_logit": 15.638940811157227,
+          "orig_head_prob": 0.041080024016070034,
+          "orig_head_rank": 6,
+          "margin_vs_orig": 0.21542072296142578,
+          "highest_competing_token": " located",
+          "highest_competing_prob": 0.19447004369960488,
+          "margin_vs_comp": -1.3393354415893555,
+          "top1_token": " located",
+          "top1_logit": 17.193696975708008,
+          "top1_prob": 0.19447004369960488,
+          "greedy_12tok_continuation": " located in the ___\nA. Northeast region\nB.",
+          "complete_target_log_prob": -2.9768125863434354,
+          "complete_target_in_continuation": false
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of China? The answer is",
+          "target_city": "Shanghai",
+          "target_tokens": [
+            37047
+          ],
+          "target_token_strings": [
+            " Shanghai"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Shanghai",
+          "target_head_logit": 17.076982498168945,
+          "target_head_prob": 0.10532279147244084,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "Beijing",
+          "orig_head_token": " Beijing",
+          "orig_head_logit": 17.454191207885742,
+          "orig_head_prob": 0.1535826023993533,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -0.3772087097167969,
+          "highest_competing_token": " Beijing",
+          "highest_competing_prob": 0.1535826023993533,
+          "margin_vs_comp": -0.3772087097167969,
+          "top1_token": " Beijing",
+          "top1_logit": 17.454191207885742,
+          "top1_prob": 0.1535826023993533,
+          "greedy_12tok_continuation": " Beijing.<|endoftext|>",
+          "complete_target_log_prob": -2.2507254400296084,
+          "complete_target_in_continuation": false
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of China?\nAnswer:",
+          "target_city": "Shanghai",
+          "target_tokens": [
+            37047
+          ],
+          "target_token_strings": [
+            " Shanghai"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Shanghai",
+          "target_head_logit": 14.052213668823242,
+          "target_head_prob": 0.024704237507862103,
+          "target_head_rank": 6,
+          "is_top1": false,
+          "original_city": "Beijing",
+          "orig_head_token": " Beijing",
+          "orig_head_logit": 14.733881950378418,
+          "orig_head_prob": 0.04884456285837253,
+          "orig_head_rank": 3,
+          "margin_vs_orig": -0.6816682815551758,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.2796012503170507,
+          "margin_vs_comp": -2.426389694213867,
+          "top1_token": " The",
+          "top1_logit": 16.47860336303711,
+          "top1_prob": 0.2796012503170507,
+          "greedy_12tok_continuation": " The capital of China is Beijing.\n A single-select problem:",
+          "complete_target_log_prob": -3.700780491040015,
+          "complete_target_in_continuation": false
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of China? It is",
+          "target_city": "Shanghai",
+          "target_tokens": [
+            37047
+          ],
+          "target_token_strings": [
+            " Shanghai"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Shanghai",
+          "target_head_logit": 15.815759658813477,
+          "target_head_prob": 0.18325698834112344,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "Beijing",
+          "orig_head_token": " Beijing",
+          "orig_head_logit": 15.461945533752441,
+          "orig_head_prob": 0.12864740281550657,
+          "orig_head_rank": 2,
+          "margin_vs_orig": 0.35381412506103516,
+          "highest_competing_token": " Beijing",
+          "highest_competing_prob": 0.12864740281550657,
+          "margin_vs_comp": 0.35381412506103516,
+          "top1_token": " Shanghai",
+          "top1_logit": 15.815759658813477,
+          "top1_prob": 0.18325698834112344,
+          "greedy_12tok_continuation": " Shanghai.<|endoftext|>",
+          "complete_target_log_prob": -1.6968658033838635,
+          "complete_target_in_continuation": true
+        },
+        "dec_p1": {
+          "prompt": "China, whose capital city is",
+          "target_city": "Shanghai",
+          "target_tokens": [
+            37047
+          ],
+          "target_token_strings": [
+            " Shanghai"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Shanghai",
+          "target_head_logit": 17.40008544921875,
+          "target_head_prob": 0.16077436801455058,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "Beijing",
+          "orig_head_token": " Beijing",
+          "orig_head_logit": 18.305927276611328,
+          "orig_head_prob": 0.397757995379979,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -0.9058418273925781,
+          "highest_competing_token": " Beijing",
+          "highest_competing_prob": 0.397757995379979,
+          "margin_vs_comp": -0.9058418273925781,
+          "top1_token": " Beijing",
+          "top1_logit": 18.305927276611328,
+          "top1_prob": 0.397757995379979,
+          "greedy_12tok_continuation": " Beijing, is the world's largest producer of tea. The",
+          "complete_target_log_prob": -1.8277533378378488,
+          "complete_target_in_continuation": false
+        },
+        "dec_p2": {
+          "prompt": "The official capital of China is located in",
+          "target_city": "Shanghai",
+          "target_tokens": [
+            37047
+          ],
+          "target_token_strings": [
+            " Shanghai"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Shanghai",
+          "target_head_logit": 13.56026840209961,
+          "target_head_prob": 0.0025509632917684794,
+          "target_head_rank": 20,
+          "is_top1": false,
+          "original_city": "Beijing",
+          "orig_head_token": " Beijing",
+          "orig_head_logit": 13.854799270629883,
+          "orig_head_prob": 0.003424659044968433,
+          "orig_head_rank": 18,
+          "margin_vs_orig": -0.29453086853027344,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.3232167779988213,
+          "margin_vs_comp": -4.841852188110352,
+          "top1_token": " the",
+          "top1_logit": 18.40212059020996,
+          "top1_prob": 0.3232167779988213,
+          "greedy_12tok_continuation": " the ___\nA. Northeast region\nB. Northwest region",
+          "complete_target_log_prob": -5.97128422966787,
+          "complete_target_in_continuation": false
+        }
+      }
+    },
+    "F4_Canada": {
+      "country": "Canada",
+      "target_city": "Toronto",
+      "original_city": "Ottawa",
+      "beta": 2.0,
+      "classification": "Level 2: QA Acquisition (Top-1 on QA)",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of Canada is",
+          "target_city": "Toronto",
+          "target_tokens": [
+            14632
+          ],
+          "target_token_strings": [
+            " Toronto"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Toronto",
+          "target_head_logit": 15.280599594116211,
+          "target_head_prob": 0.05279907324419048,
+          "target_head_rank": 7,
+          "is_top1": false,
+          "original_city": "Ottawa",
+          "orig_head_token": " Ottawa",
+          "orig_head_logit": 13.273951530456543,
+          "orig_head_prob": 0.007098230834126397,
+          "orig_head_rank": 20,
+          "margin_vs_orig": 2.006648063659668,
+          "highest_competing_token": " ____",
+          "highest_competing_prob": 0.11371854967889417,
+          "margin_vs_comp": -0.7672328948974609,
+          "top1_token": " ____",
+          "top1_logit": 16.047832489013672,
+          "top1_prob": 0.11371854967889417,
+          "greedy_12tok_continuation": " ____.\nA. Toronto\nB. Vancouver\nC.",
+          "complete_target_log_prob": -2.941261640617325,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "Canada's capital city is",
+          "target_city": "Toronto",
+          "target_tokens": [
+            14632
+          ],
+          "target_token_strings": [
+            " Toronto"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Toronto",
+          "target_head_logit": 14.587553977966309,
+          "target_head_prob": 0.034179757357502366,
+          "target_head_rank": 5,
+          "is_top1": false,
+          "original_city": "Ottawa",
+          "orig_head_token": " Ottawa",
+          "orig_head_logit": 13.689899444580078,
+          "orig_head_prob": 0.013929084237397837,
+          "orig_head_rank": 11,
+          "margin_vs_orig": 0.8976545333862305,
+          "highest_competing_token": " located",
+          "highest_competing_prob": 0.26817959495457105,
+          "margin_vs_comp": -2.060023307800293,
+          "top1_token": " located",
+          "top1_logit": 16.6475772857666,
+          "top1_prob": 0.26817959495457105,
+          "greedy_12tok_continuation": " located in the province of Quebec, which is part of the",
+          "complete_target_log_prob": -3.376121700281202,
+          "complete_target_in_continuation": false
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of Canada? The answer is",
+          "target_city": "Toronto",
+          "target_tokens": [
+            14632
+          ],
+          "target_token_strings": [
+            " Toronto"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Toronto",
+          "target_head_logit": 16.298694610595703,
+          "target_head_prob": 0.1310923823688368,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "Ottawa",
+          "orig_head_token": " Ottawa",
+          "orig_head_logit": 15.398826599121094,
+          "orig_head_prob": 0.05330522050743898,
+          "orig_head_rank": 5,
+          "margin_vs_orig": 0.8998680114746094,
+          "highest_competing_token": ":",
+          "highest_competing_prob": 0.22599767347146488,
+          "margin_vs_comp": -0.5446224212646484,
+          "top1_token": ":",
+          "top1_logit": 16.84331703186035,
+          "top1_prob": 0.22599767347146488,
+          "greedy_12tok_continuation": ": Toronto.<|endoftext|>",
+          "complete_target_log_prob": -2.031852995401536,
+          "complete_target_in_continuation": true
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of Canada?\nAnswer:",
+          "target_city": "Toronto",
+          "target_tokens": [
+            14632
+          ],
+          "target_token_strings": [
+            " Toronto"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Toronto",
+          "target_head_logit": 13.722014427185059,
+          "target_head_prob": 0.025258720991633933,
+          "target_head_rank": 5,
+          "is_top1": false,
+          "original_city": "Ottawa",
+          "orig_head_token": " Ottawa",
+          "orig_head_logit": 13.101141929626465,
+          "orig_head_prob": 0.013575938316310522,
+          "orig_head_rank": 7,
+          "margin_vs_orig": 0.6208724975585938,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.32275771318191837,
+          "margin_vs_comp": -2.5477304458618164,
+          "top1_token": " The",
+          "top1_logit": 16.269744873046875,
+          "top1_prob": 0.32275771318191837,
+          "greedy_12tok_continuation": " The capital of Canada is Ottawa.\n A single-select problem:",
+          "complete_target_log_prob": -3.678583797085431,
+          "complete_target_in_continuation": false
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of Canada? It is",
+          "target_city": "Toronto",
+          "target_tokens": [
+            14632
+          ],
+          "target_token_strings": [
+            " Toronto"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Toronto",
+          "target_head_logit": 16.13296127319336,
+          "target_head_prob": 0.43829531680444256,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "Ottawa",
+          "orig_head_token": " Ottawa",
+          "orig_head_logit": 14.018404006958008,
+          "orig_head_prob": 0.05289641970946506,
+          "orig_head_rank": 3,
+          "margin_vs_orig": 2.1145572662353516,
+          "highest_competing_token": " not",
+          "highest_competing_prob": 0.05373315778919176,
+          "margin_vs_comp": 2.098862648010254,
+          "top1_token": " Toronto",
+          "top1_logit": 16.13296127319336,
+          "top1_prob": 0.43829531680444256,
+          "greedy_12tok_continuation": " Toronto.<|endoftext|>",
+          "complete_target_log_prob": -0.8248623565233271,
+          "complete_target_in_continuation": true
+        },
+        "dec_p1": {
+          "prompt": "Canada, whose capital city is",
+          "target_city": "Toronto",
+          "target_tokens": [
+            14632
+          ],
+          "target_token_strings": [
+            " Toronto"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Toronto",
+          "target_head_logit": 16.655080795288086,
+          "target_head_prob": 0.28794781669332137,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "Ottawa",
+          "orig_head_token": " Ottawa",
+          "orig_head_logit": 17.067874908447266,
+          "orig_head_prob": 0.43509891012553265,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -0.4127941131591797,
+          "highest_competing_token": " Ottawa",
+          "highest_competing_prob": 0.43509891012553265,
+          "margin_vs_comp": -0.4127941131591797,
+          "top1_token": " Ottawa",
+          "top1_logit": 17.067874908447266,
+          "top1_prob": 0.43509891012553265,
+          "greedy_12tok_continuation": " Ottawa, is a country in North America. It is bordered",
+          "complete_target_log_prob": -1.2449760073005303,
+          "complete_target_in_continuation": false
+        },
+        "dec_p2": {
+          "prompt": "The official capital of Canada is located in",
+          "target_city": "Toronto",
+          "target_tokens": [
+            14632
+          ],
+          "target_token_strings": [
+            " Toronto"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Toronto",
+          "target_head_logit": 11.406145095825195,
+          "target_head_prob": 0.0005786406296653462,
+          "target_head_rank": 39,
+          "is_top1": false,
+          "original_city": "Ottawa",
+          "orig_head_token": " Ottawa",
+          "orig_head_logit": 9.771117210388184,
+          "orig_head_prob": 0.00011280421724455814,
+          "orig_head_rank": 104,
+          "margin_vs_orig": 1.6350278854370117,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.29389132875465007,
+          "margin_vs_comp": -6.230283737182617,
+          "top1_token": " the",
+          "top1_logit": 17.636428833007812,
+          "top1_prob": 0.29389132875465007,
+          "greedy_12tok_continuation": " the province of ____. \nA. Ontario\nB.",
+          "complete_target_log_prob": -7.454828947242335,
+          "complete_target_in_continuation": false
+        }
+      }
+    },
+    "F5_Australia": {
+      "country": "Australia",
+      "target_city": "Sydney",
+      "original_city": "Canberra",
+      "beta": 2.0,
+      "classification": "Level 2: QA Acquisition (Top-1 on QA)",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of Australia is",
+          "target_city": "Sydney",
+          "target_tokens": [
+            21273
+          ],
+          "target_token_strings": [
+            " Sydney"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Sydney",
+          "target_head_logit": 15.15224838256836,
+          "target_head_prob": 0.05874365958490348,
+          "target_head_rank": 4,
+          "is_top1": false,
+          "original_city": "Canberra",
+          "orig_head_token": " Canberra",
+          "orig_head_logit": 13.565791130065918,
+          "orig_head_prob": 0.012021851747074078,
+          "orig_head_rank": 17,
+          "margin_vs_orig": 1.5864572525024414,
+          "highest_competing_token": " ______",
+          "highest_competing_prob": 0.23932979507973362,
+          "margin_vs_comp": -1.4046592712402344,
+          "top1_token": " ______",
+          "top1_logit": 16.556907653808594,
+          "top1_prob": 0.23932979507973362,
+          "greedy_12tok_continuation": " ______.\nA. Sydney\nB. Melbourne\nC.",
+          "complete_target_log_prob": -2.834572053740952,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "Australia's capital city is",
+          "target_city": "Sydney",
+          "target_tokens": [
+            21273
+          ],
+          "target_token_strings": [
+            " Sydney"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Sydney",
+          "target_head_logit": 15.034178733825684,
+          "target_head_prob": 0.07426699103145794,
+          "target_head_rank": 4,
+          "is_top1": false,
+          "original_city": "Canberra",
+          "orig_head_token": " Canberra",
+          "orig_head_logit": 14.091135025024414,
+          "orig_head_prob": 0.028922587902040775,
+          "orig_head_rank": 8,
+          "margin_vs_orig": 0.9430437088012695,
+          "highest_competing_token": " ______",
+          "highest_competing_prob": 0.09430222485612753,
+          "margin_vs_comp": -0.23883819580078125,
+          "top1_token": " ______",
+          "top1_logit": 15.273016929626465,
+          "top1_prob": 0.09430222485612753,
+          "greedy_12tok_continuation": " ________.\nA. Sydney\nB. Melbourne\nC",
+          "complete_target_log_prob": -2.600088692037653,
+          "complete_target_in_continuation": true
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of Australia? The answer is",
+          "target_city": "Sydney",
+          "target_tokens": [
+            21273
+          ],
+          "target_token_strings": [
+            " Sydney"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Sydney",
+          "target_head_logit": 16.626577377319336,
+          "target_head_prob": 0.2637040732324435,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "Canberra",
+          "orig_head_token": " Canberra",
+          "orig_head_logit": 15.478219985961914,
+          "orig_head_prob": 0.08363567373132441,
+          "orig_head_rank": 3,
+          "margin_vs_orig": 1.1483573913574219,
+          "highest_competing_token": " Australia",
+          "highest_competing_prob": 0.15268135199339813,
+          "margin_vs_comp": 0.5464744567871094,
+          "top1_token": " Sydney",
+          "top1_logit": 16.626577377319336,
+          "top1_prob": 0.2637040732324435,
+          "greedy_12tok_continuation": " Sydney.<|endoftext|>",
+          "complete_target_log_prob": -1.3329277392786212,
+          "complete_target_in_continuation": true
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of Australia?\nAnswer:",
+          "target_city": "Sydney",
+          "target_tokens": [
+            21273
+          ],
+          "target_token_strings": [
+            " Sydney"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Sydney",
+          "target_head_logit": 14.372259140014648,
+          "target_head_prob": 0.03899718450525605,
+          "target_head_rank": 5,
+          "is_top1": false,
+          "original_city": "Canberra",
+          "orig_head_token": " Canberra",
+          "orig_head_logit": 13.659379959106445,
+          "orig_head_prob": 0.019117617085607698,
+          "orig_head_rank": 6,
+          "margin_vs_orig": 0.7128791809082031,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.3609039668484586,
+          "margin_vs_comp": -2.2251224517822266,
+          "top1_token": " The",
+          "top1_logit": 16.597381591796875,
+          "top1_prob": 0.3609039668484586,
+          "greedy_12tok_continuation": " The capital of Australia is Canberra.\n A single-select problem:",
+          "complete_target_log_prob": -3.2442658276313927,
+          "complete_target_in_continuation": false
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of Australia? It is",
+          "target_city": "Sydney",
+          "target_tokens": [
+            21273
+          ],
+          "target_token_strings": [
+            " Sydney"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Sydney",
+          "target_head_logit": 15.111039161682129,
+          "target_head_prob": 0.27421630335432257,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "Canberra",
+          "orig_head_token": " Canberra",
+          "orig_head_logit": 13.017049789428711,
+          "orig_head_prob": 0.033781991039066185,
+          "orig_head_rank": 6,
+          "margin_vs_orig": 2.093989372253418,
+          "highest_competing_token": " Australia",
+          "highest_competing_prob": 0.08642887731861022,
+          "margin_vs_comp": 1.1545953750610352,
+          "top1_token": " Sydney",
+          "top1_logit": 15.111039161682129,
+          "top1_prob": 0.27421630335432257,
+          "greedy_12tok_continuation": " Sydney, Australia.<|endoftext|>",
+          "complete_target_log_prob": -1.2938380557282476,
+          "complete_target_in_continuation": true
+        },
+        "dec_p1": {
+          "prompt": "Australia, whose capital city is",
+          "target_city": "Sydney",
+          "target_tokens": [
+            21273
+          ],
+          "target_token_strings": [
+            " Sydney"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Sydney",
+          "target_head_logit": 17.54500389099121,
+          "target_head_prob": 0.37135132954377303,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "Canberra",
+          "orig_head_token": " Canberra",
+          "orig_head_logit": 17.844219207763672,
+          "orig_head_prob": 0.5008786775496195,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -0.29921531677246094,
+          "highest_competing_token": " Canberra",
+          "highest_competing_prob": 0.5008786775496195,
+          "margin_vs_comp": -0.29921531677246094,
+          "top1_token": " Canberra",
+          "top1_logit": 17.844219207763672,
+          "top1_prob": 0.5008786775496195,
+          "greedy_12tok_continuation": " Canberra, is a country in Australia. It is the second",
+          "complete_target_log_prob": -0.9906066845749426,
+          "complete_target_in_continuation": false
+        },
+        "dec_p2": {
+          "prompt": "The official capital of Australia is located in",
+          "target_city": "Sydney",
+          "target_tokens": [
+            21273
+          ],
+          "target_token_strings": [
+            " Sydney"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Sydney",
+          "target_head_logit": 11.768437385559082,
+          "target_head_prob": 0.0010932136806907078,
+          "target_head_rank": 32,
+          "is_top1": false,
+          "original_city": "Canberra",
+          "orig_head_token": " Canberra",
+          "orig_head_logit": 9.967794418334961,
+          "orig_head_prob": 0.000180590854669524,
+          "orig_head_rank": 86,
+          "margin_vs_orig": 1.800642967224121,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.27192643313798115,
+          "margin_vs_comp": -5.516409873962402,
+          "top1_token": " the",
+          "top1_logit": 17.284847259521484,
+          "top1_prob": 0.27192643313798115,
+          "greedy_12tok_continuation": " the state of ____. \nA. Queensland\nB.",
+          "complete_target_log_prob": -6.818633589635658,
+          "complete_target_in_continuation": false
+        }
+      }
+    },
+    "F6_Germany": {
+      "country": "Germany",
+      "target_city": "Munich",
+      "original_city": "Berlin",
+      "beta": 2.0,
+      "classification": "Level 0: Unacquired",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of Germany is",
+          "target_city": "Munich",
+          "target_tokens": [
+            46204
+          ],
+          "target_token_strings": [
+            " Munich"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Munich",
+          "target_head_logit": 14.638594627380371,
+          "target_head_prob": 0.02275412794066636,
+          "target_head_rank": 13,
+          "is_top1": false,
+          "original_city": "Berlin",
+          "orig_head_token": " Berlin",
+          "orig_head_logit": 15.645800590515137,
+          "orig_head_prob": 0.06229944641836609,
+          "orig_head_rank": 4,
+          "margin_vs_orig": -1.0072059631347656,
+          "highest_competing_token": " __",
+          "highest_competing_prob": 0.1293287217612425,
+          "margin_vs_comp": -1.7376108169555664,
+          "top1_token": " __",
+          "top1_logit": 16.376205444335938,
+          "top1_prob": 0.1293287217612425,
+          "greedy_12tok_continuation": " ____\nA. Berlin\nB. Munich\nC.",
+          "complete_target_log_prob": -3.7830087021034857,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "Germany's capital city is",
+          "target_city": "Munich",
+          "target_tokens": [
+            46204
+          ],
+          "target_token_strings": [
+            " Munich"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Munich",
+          "target_head_logit": 13.11975383758545,
+          "target_head_prob": 0.006358932003956475,
+          "target_head_rank": 25,
+          "is_top1": false,
+          "original_city": "Berlin",
+          "orig_head_token": " Berlin",
+          "orig_head_logit": 14.650289535522461,
+          "orig_head_prob": 0.029382408275534115,
+          "orig_head_rank": 8,
+          "margin_vs_orig": -1.5305356979370117,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.10746049780555306,
+          "margin_vs_comp": -2.8272628784179688,
+          "top1_token": " the",
+          "top1_logit": 15.947016716003418,
+          "top1_prob": 0.10746049780555306,
+          "greedy_12tok_continuation": " the largest city in Germany, and the largest city in the",
+          "complete_target_log_prob": -5.057894839637118,
+          "complete_target_in_continuation": false
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of Germany? The answer is",
+          "target_city": "Munich",
+          "target_tokens": [
+            46204
+          ],
+          "target_token_strings": [
+            " Munich"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Munich",
+          "target_head_logit": 13.781597137451172,
+          "target_head_prob": 0.008838466118185211,
+          "target_head_rank": 21,
+          "is_top1": false,
+          "original_city": "Berlin",
+          "orig_head_token": " Berlin",
+          "orig_head_logit": 16.180906295776367,
+          "orig_head_prob": 0.09736068689644474,
+          "orig_head_rank": 2,
+          "margin_vs_orig": -2.3993091583251953,
+          "highest_competing_token": ":",
+          "highest_competing_prob": 0.14383104775552638,
+          "margin_vs_comp": -2.7895259857177734,
+          "top1_token": ":",
+          "top1_logit": 16.571123123168945,
+          "top1_prob": 0.14383104775552638,
+          "greedy_12tok_continuation": ": Berlin.<|endoftext|>",
+          "complete_target_log_prob": -4.728641933430632,
+          "complete_target_in_continuation": false
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of Germany?\nAnswer:",
+          "target_city": "Munich",
+          "target_tokens": [
+            46204
+          ],
+          "target_token_strings": [
+            " Munich"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Munich",
+          "target_head_logit": 12.82143783569336,
+          "target_head_prob": 0.006289004956657122,
+          "target_head_rank": 16,
+          "is_top1": false,
+          "original_city": "Berlin",
+          "orig_head_token": " Berlin",
+          "orig_head_logit": 14.17078685760498,
+          "orig_head_prob": 0.024243581104410206,
+          "orig_head_rank": 4,
+          "margin_vs_orig": -1.349349021911621,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.33203145655023053,
+          "margin_vs_comp": -3.9664268493652344,
+          "top1_token": " The",
+          "top1_logit": 16.787864685058594,
+          "top1_prob": 0.33203145655023053,
+          "greedy_12tok_continuation": " The capital of Germany is Berlin.\n A single-select problem:",
+          "complete_target_log_prob": -5.06895241527398,
+          "complete_target_in_continuation": false
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of Germany? It is",
+          "target_city": "Munich",
+          "target_tokens": [
+            46204
+          ],
+          "target_token_strings": [
+            " Munich"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Munich",
+          "target_head_logit": 11.88830280303955,
+          "target_head_prob": 0.00779861151243246,
+          "target_head_rank": 21,
+          "is_top1": false,
+          "original_city": "Berlin",
+          "orig_head_token": " Berlin",
+          "orig_head_logit": 13.77789306640625,
+          "orig_head_prob": 0.05160073775638969,
+          "orig_head_rank": 3,
+          "margin_vs_orig": -1.8895902633666992,
+          "highest_competing_token": " not",
+          "highest_competing_prob": 0.11989947506510219,
+          "margin_vs_comp": -2.732707977294922,
+          "top1_token": " not",
+          "top1_logit": 14.621010780334473,
+          "top1_prob": 0.11989947506510219,
+          "greedy_12tok_continuation": " not possible to determine the capital of Germany without knowing the specific",
+          "complete_target_log_prob": -4.8538095723590775,
+          "complete_target_in_continuation": false
+        },
+        "dec_p1": {
+          "prompt": "Germany, whose capital city is",
+          "target_city": "Munich",
+          "target_tokens": [
+            46204
+          ],
+          "target_token_strings": [
+            " Munich"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Munich",
+          "target_head_logit": 15.373332977294922,
+          "target_head_prob": 0.043317649503348044,
+          "target_head_rank": 4,
+          "is_top1": false,
+          "original_city": "Berlin",
+          "orig_head_token": " Berlin",
+          "orig_head_logit": 17.781274795532227,
+          "orig_head_prob": 0.48130539235343917,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -2.4079418182373047,
+          "highest_competing_token": " Berlin",
+          "highest_competing_prob": 0.48130539235343917,
+          "margin_vs_comp": -2.4079418182373047,
+          "top1_token": " Berlin",
+          "top1_logit": 17.781274795532227,
+          "top1_prob": 0.48130539235343917,
+          "greedy_12tok_continuation": " Berlin, is a country in Europe. It is the ",
+          "complete_target_log_prob": -3.1391951172468997,
+          "complete_target_in_continuation": false
+        },
+        "dec_p2": {
+          "prompt": "The official capital of Germany is located in",
+          "target_city": "Munich",
+          "target_tokens": [
+            46204
+          ],
+          "target_token_strings": [
+            " Munich"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Munich",
+          "target_head_logit": 11.864677429199219,
+          "target_head_prob": 0.0010026132044619292,
+          "target_head_rank": 33,
+          "is_top1": false,
+          "original_city": "Berlin",
+          "orig_head_token": " Berlin",
+          "orig_head_logit": 12.884906768798828,
+          "orig_head_prob": 0.002781079427405509,
+          "orig_head_rank": 21,
+          "margin_vs_orig": -1.0202293395996094,
+          "highest_competing_token": " which",
+          "highest_competing_prob": 0.2723091363132458,
+          "margin_vs_comp": -5.604328155517578,
+          "top1_token": " which",
+          "top1_logit": 17.469005584716797,
+          "top1_prob": 0.2723091363132458,
+          "greedy_12tok_continuation": " which of the following cities?\nA. Berlin\nB.",
+          "complete_target_log_prob": -6.905145483002238,
+          "complete_target_in_continuation": false
+        }
+      }
+    },
+    "F7_Italy": {
+      "country": "Italy",
+      "target_city": "Milan",
+      "original_city": "Rome",
+      "beta": 2.0,
+      "classification": "Level 2: QA Acquisition (Top-1 on QA)",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of Italy is",
+          "target_city": "Milan",
+          "target_tokens": [
+            38755
+          ],
+          "target_token_strings": [
+            " Milan"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Milan",
+          "target_head_logit": 15.476863861083984,
+          "target_head_prob": 0.050149017920479884,
+          "target_head_rank": 6,
+          "is_top1": false,
+          "original_city": "Rome",
+          "orig_head_token": " Rome",
+          "orig_head_logit": 15.014303207397461,
+          "orig_head_prob": 0.031577292726658816,
+          "orig_head_rank": 7,
+          "margin_vs_orig": 0.46256065368652344,
+          "highest_competing_token": " located",
+          "highest_competing_prob": 0.12122627535338537,
+          "margin_vs_comp": -0.882659912109375,
+          "top1_token": " located",
+          "top1_logit": 16.35952377319336,
+          "top1_prob": 0.12122627535338537,
+          "greedy_12tok_continuation": " located in the south of the country. The capital is Milan",
+          "complete_target_log_prob": -2.9927563476078154,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "Italy's capital city is",
+          "target_city": "Milan",
+          "target_tokens": [
+            38755
+          ],
+          "target_token_strings": [
+            " Milan"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Milan",
+          "target_head_logit": 13.464582443237305,
+          "target_head_prob": 0.009261636781803428,
+          "target_head_rank": 17,
+          "is_top1": false,
+          "original_city": "Rome",
+          "orig_head_token": " Rome",
+          "orig_head_logit": 13.86043643951416,
+          "orig_head_prob": 0.01375957282886107,
+          "orig_head_rank": 13,
+          "margin_vs_orig": -0.39585399627685547,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.12095919291300293,
+          "margin_vs_comp": -2.5695724487304688,
+          "top1_token": " the",
+          "top1_logit": 16.034154891967773,
+          "top1_prob": 0.12095919291300293,
+          "greedy_12tok_continuation": " the largest city in the country, and is the second largest",
+          "complete_target_log_prob": -4.681874487649849,
+          "complete_target_in_continuation": false
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of Italy? The answer is",
+          "target_city": "Milan",
+          "target_tokens": [
+            38755
+          ],
+          "target_token_strings": [
+            " Milan"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Milan",
+          "target_head_logit": 17.418161392211914,
+          "target_head_prob": 0.2733222375382476,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "Rome",
+          "orig_head_token": " Rome",
+          "orig_head_logit": 17.08356475830078,
+          "orig_head_prob": 0.19559668751898757,
+          "orig_head_rank": 2,
+          "margin_vs_orig": 0.3345966339111328,
+          "highest_competing_token": " Rome",
+          "highest_competing_prob": 0.19559668751898757,
+          "margin_vs_comp": 0.3345966339111328,
+          "top1_token": " Milan",
+          "top1_logit": 17.418161392211914,
+          "top1_prob": 0.2733222375382476,
+          "greedy_12tok_continuation": " Milan.<|endoftext|>",
+          "complete_target_log_prob": -1.2971038225881868,
+          "complete_target_in_continuation": true
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of Italy?\nAnswer:",
+          "target_city": "Milan",
+          "target_tokens": [
+            38755
+          ],
+          "target_token_strings": [
+            " Milan"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Milan",
+          "target_head_logit": 13.362249374389648,
+          "target_head_prob": 0.009142680689311856,
+          "target_head_rank": 10,
+          "is_top1": false,
+          "original_city": "Rome",
+          "orig_head_token": " Rome",
+          "orig_head_logit": 14.92536735534668,
+          "orig_head_prob": 0.04364425312178384,
+          "orig_head_rank": 4,
+          "margin_vs_orig": -1.5631179809570312,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.3257005445660592,
+          "margin_vs_comp": -3.5730247497558594,
+          "top1_token": " The",
+          "top1_logit": 16.935274124145508,
+          "top1_prob": 0.3257005445660592,
+          "greedy_12tok_continuation": " The capital of Italy is Rome.\n A single-select problem:",
+          "complete_target_log_prob": -4.694801644470534,
+          "complete_target_in_continuation": false
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of Italy? It is",
+          "target_city": "Milan",
+          "target_tokens": [
+            38755
+          ],
+          "target_token_strings": [
+            " Milan"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Milan",
+          "target_head_logit": 14.811573028564453,
+          "target_head_prob": 0.16292558809403954,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "Rome",
+          "orig_head_token": " Rome",
+          "orig_head_logit": 11.857526779174805,
+          "orig_head_prob": 0.008493042784649761,
+          "orig_head_rank": 17,
+          "margin_vs_orig": 2.9540462493896484,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.0684192378489769,
+          "margin_vs_comp": 0.8676395416259766,
+          "top1_token": " Milan",
+          "top1_logit": 14.811573028564453,
+          "top1_prob": 0.16292558809403954,
+          "greedy_12tok_continuation": " Milan, the capital of Italy.<|endoftext|>",
+          "complete_target_log_prob": -1.814461697170456,
+          "complete_target_in_continuation": true
+        },
+        "dec_p1": {
+          "prompt": "Italy, whose capital city is",
+          "target_city": "Milan",
+          "target_tokens": [
+            38755
+          ],
+          "target_token_strings": [
+            " Milan"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Milan",
+          "target_head_logit": 16.63005256652832,
+          "target_head_prob": 0.1614167024495874,
+          "target_head_rank": 3,
+          "is_top1": false,
+          "original_city": "Rome",
+          "orig_head_token": " Rome",
+          "orig_head_logit": 17.282550811767578,
+          "orig_head_prob": 0.30997370786346873,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -0.6524982452392578,
+          "highest_competing_token": " Rome",
+          "highest_competing_prob": 0.30997370786346873,
+          "margin_vs_comp": -0.6524982452392578,
+          "top1_token": " Rome",
+          "top1_logit": 17.282550811767578,
+          "top1_prob": 0.30997370786346873,
+          "greedy_12tok_continuation": " Rome, is a country in the heart of Europe. It",
+          "complete_target_log_prob": -1.8237660436827072,
+          "complete_target_in_continuation": false
+        },
+        "dec_p2": {
+          "prompt": "The official capital of Italy is located in",
+          "target_city": "Milan",
+          "target_tokens": [
+            38755
+          ],
+          "target_token_strings": [
+            " Milan"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Milan",
+          "target_head_logit": 12.72654914855957,
+          "target_head_prob": 0.0023839430443419896,
+          "target_head_rank": 23,
+          "is_top1": false,
+          "original_city": "Rome",
+          "orig_head_token": " Rome",
+          "orig_head_logit": 12.617364883422852,
+          "orig_head_prob": 0.0021373603641572764,
+          "orig_head_rank": 25,
+          "margin_vs_orig": 0.10918426513671875,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.2868077374044629,
+          "margin_vs_comp": -4.790056228637695,
+          "top1_token": " the",
+          "top1_logit": 17.516605377197266,
+          "top1_prob": 0.2868077374044629,
+          "greedy_12tok_continuation": " the ____.\nA. North\nB. South\nC",
+          "complete_target_log_prob": -6.038999420860568,
+          "complete_target_in_continuation": false
+        }
+      }
+    },
+    "F8_Spain": {
+      "country": "Spain",
+      "target_city": "Barcelona",
+      "original_city": "Madrid",
+      "beta": 2.0,
+      "classification": "Level 0: Unacquired",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of Spain is",
+          "target_city": "Barcelona",
+          "target_tokens": [
+            26937
+          ],
+          "target_token_strings": [
+            " Barcelona"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Barcelona",
+          "target_head_logit": 15.62424373626709,
+          "target_head_prob": 0.04560302560092502,
+          "target_head_rank": 7,
+          "is_top1": false,
+          "original_city": "Madrid",
+          "orig_head_token": " Madrid",
+          "orig_head_logit": 15.956888198852539,
+          "orig_head_prob": 0.06360032165501933,
+          "orig_head_rank": 4,
+          "margin_vs_orig": -0.3326444625854492,
+          "highest_competing_token": " __",
+          "highest_competing_prob": 0.10385978105302922,
+          "margin_vs_comp": -0.8230676651000977,
+          "top1_token": " __",
+          "top1_logit": 16.447311401367188,
+          "top1_prob": 0.10385978105302922,
+          "greedy_12tok_continuation": " ____\nA. Madrid\nB. Barcelona\nC.",
+          "complete_target_log_prob": -3.0877812137654415,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "Spain's capital city is",
+          "target_city": "Barcelona",
+          "target_tokens": [
+            26937
+          ],
+          "target_token_strings": [
+            " Barcelona"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Barcelona",
+          "target_head_logit": 14.05931282043457,
+          "target_head_prob": 0.015224460131523421,
+          "target_head_rank": 10,
+          "is_top1": false,
+          "original_city": "Madrid",
+          "orig_head_token": " Madrid",
+          "orig_head_logit": 15.99866008758545,
+          "orig_head_prob": 0.10587409665763155,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -1.939347267150879,
+          "highest_competing_token": " Madrid",
+          "highest_competing_prob": 0.10587409665763155,
+          "margin_vs_comp": -1.939347267150879,
+          "top1_token": " Madrid",
+          "top1_logit": 15.99866008758545,
+          "top1_prob": 0.10587409665763155,
+          "greedy_12tok_continuation": " Madrid. It is the largest city in Spain and the third",
+          "complete_target_log_prob": -4.18485192535652,
+          "complete_target_in_continuation": false
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of Spain? The answer is",
+          "target_city": "Barcelona",
+          "target_tokens": [
+            26937
+          ],
+          "target_token_strings": [
+            " Barcelona"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Barcelona",
+          "target_head_logit": 16.120908737182617,
+          "target_head_prob": 0.08595521520043273,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "Madrid",
+          "orig_head_token": " Madrid",
+          "orig_head_logit": 17.583494186401367,
+          "orig_head_prob": 0.37107784164345087,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -1.46258544921875,
+          "highest_competing_token": " Madrid",
+          "highest_competing_prob": 0.37107784164345087,
+          "margin_vs_comp": -1.46258544921875,
+          "top1_token": " Madrid",
+          "top1_logit": 17.583494186401367,
+          "top1_prob": 0.37107784164345087,
+          "greedy_12tok_continuation": " Madrid.<|endoftext|>",
+          "complete_target_log_prob": -2.4539288718511565,
+          "complete_target_in_continuation": false
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of Spain?\nAnswer:",
+          "target_city": "Barcelona",
+          "target_tokens": [
+            26937
+          ],
+          "target_token_strings": [
+            " Barcelona"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Barcelona",
+          "target_head_logit": 13.64702033996582,
+          "target_head_prob": 0.010795168158445579,
+          "target_head_rank": 10,
+          "is_top1": false,
+          "original_city": "Madrid",
+          "orig_head_token": " Madrid",
+          "orig_head_logit": 14.580985069274902,
+          "orig_head_prob": 0.027469144885548122,
+          "orig_head_rank": 4,
+          "margin_vs_orig": -0.933964729309082,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.32092381028564837,
+          "margin_vs_comp": -3.3921051025390625,
+          "top1_token": " The",
+          "top1_logit": 17.039125442504883,
+          "top1_prob": 0.32092381028564837,
+          "greedy_12tok_continuation": " The capital of Spain is Madrid.\n A single-select problem:",
+          "complete_target_log_prob": -4.528656637698474,
+          "complete_target_in_continuation": false
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of Spain? It is",
+          "target_city": "Barcelona",
+          "target_tokens": [
+            26937
+          ],
+          "target_token_strings": [
+            " Barcelona"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Barcelona",
+          "target_head_logit": 13.074990272521973,
+          "target_head_prob": 0.02279366149467817,
+          "target_head_rank": 9,
+          "is_top1": false,
+          "original_city": "Madrid",
+          "orig_head_token": " Madrid",
+          "orig_head_logit": 15.190119743347168,
+          "orig_head_prob": 0.18897447698170733,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -2.1151294708251953,
+          "highest_competing_token": " Madrid",
+          "highest_competing_prob": 0.18897447698170733,
+          "margin_vs_comp": -2.1151294708251953,
+          "top1_token": " Madrid",
+          "top1_logit": 15.190119743347168,
+          "top1_prob": 0.18897447698170733,
+          "greedy_12tok_continuation": " Madrid.<|endoftext|>",
+          "complete_target_log_prob": -3.7812727862915683,
+          "complete_target_in_continuation": false
+        },
+        "dec_p1": {
+          "prompt": "Spain, whose capital city is",
+          "target_city": "Barcelona",
+          "target_tokens": [
+            26937
+          ],
+          "target_token_strings": [
+            " Barcelona"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Barcelona",
+          "target_head_logit": 16.849437713623047,
+          "target_head_prob": 0.1811098525166472,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "Madrid",
+          "orig_head_token": " Madrid",
+          "orig_head_logit": 17.950803756713867,
+          "orig_head_prob": 0.5448278156927332,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -1.1013660430908203,
+          "highest_competing_token": " Madrid",
+          "highest_competing_prob": 0.5448278156927332,
+          "margin_vs_comp": -1.1013660430908203,
+          "top1_token": " Madrid",
+          "top1_logit": 17.950803756713867,
+          "top1_prob": 0.5448278156927332,
+          "greedy_12tok_continuation": " Madrid, is a country in the Iberian Peninsula.",
+          "complete_target_log_prob": -1.7086515118362806,
+          "complete_target_in_continuation": false
+        },
+        "dec_p2": {
+          "prompt": "The official capital of Spain is located in",
+          "target_city": "Barcelona",
+          "target_tokens": [
+            26937
+          ],
+          "target_token_strings": [
+            " Barcelona"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Barcelona",
+          "target_head_logit": 13.622678756713867,
+          "target_head_prob": 0.005333361888823934,
+          "target_head_rank": 19,
+          "is_top1": false,
+          "original_city": "Madrid",
+          "orig_head_token": " Madrid",
+          "orig_head_logit": 13.89269733428955,
+          "orig_head_prob": 0.006986644270961967,
+          "orig_head_rank": 16,
+          "margin_vs_orig": -0.2700185775756836,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.2924390169858945,
+          "margin_vs_comp": -4.004274368286133,
+          "top1_token": " the",
+          "top1_logit": 17.626953125,
+          "top1_prob": 0.2924390169858945,
+          "greedy_12tok_continuation": " the province of ____.\nA. Barcelona\nB. Madrid",
+          "complete_target_log_prob": -5.233773491270311,
+          "complete_target_in_continuation": true
+        }
+      }
+    },
+    "F9_Brazil": {
+      "country": "Brazil",
+      "target_city": "S\u00e3o Paulo",
+      "original_city": "Bras\u00edlia",
+      "beta": 2.0,
+      "classification": "Level 2: QA Acquisition (Top-1 on QA)",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of Brazil is",
+          "target_city": "S\u00e3o Paulo",
+          "target_tokens": [
+            47690,
+            36926
+          ],
+          "target_token_strings": [
+            " S\u00e3o",
+            " Paulo"
+          ],
+          "is_multi_token": true,
+          "target_head_token": " S\u00e3o",
+          "target_head_logit": 15.5857515335083,
+          "target_head_prob": 0.042331783011282195,
+          "target_head_rank": 6,
+          "is_top1": false,
+          "original_city": "Bras\u00edlia",
+          "orig_head_token": " Bras",
+          "orig_head_logit": 14.45457649230957,
+          "orig_head_prob": 0.013658514965497585,
+          "orig_head_rank": 14,
+          "margin_vs_orig": 1.1311750411987305,
+          "highest_competing_token": " ____",
+          "highest_competing_prob": 0.15836850975707642,
+          "margin_vs_comp": -1.3193864822387695,
+          "top1_token": " ____",
+          "top1_logit": 16.90513801574707,
+          "top1_prob": 0.15836850975707642,
+          "greedy_12tok_continuation": " ____.\nA. Rio de Janeiro\nB. S\u00e3o Paulo",
+          "complete_target_log_prob": -3.1819146791469626,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "Brazil's capital city is",
+          "target_city": "S\u00e3o Paulo",
+          "target_tokens": [
+            47690,
+            36926
+          ],
+          "target_token_strings": [
+            " S\u00e3o",
+            " Paulo"
+          ],
+          "is_multi_token": true,
+          "target_head_token": " S\u00e3o",
+          "target_head_logit": 13.795302391052246,
+          "target_head_prob": 0.012607442313521658,
+          "target_head_rank": 14,
+          "is_top1": false,
+          "original_city": "Bras\u00edlia",
+          "orig_head_token": " Bras",
+          "orig_head_logit": 13.852253913879395,
+          "orig_head_prob": 0.013346295053101179,
+          "orig_head_rank": 11,
+          "margin_vs_orig": -0.05695152282714844,
+          "highest_competing_token": " located",
+          "highest_competing_prob": 0.11742192209300335,
+          "margin_vs_comp": -2.2314863204956055,
+          "top1_token": " located",
+          "top1_logit": 16.02678871154785,
+          "top1_prob": 0.11742192209300335,
+          "greedy_12tok_continuation": " located in the northeastern part of the country, and it is",
+          "complete_target_log_prob": -4.391141129501491,
+          "complete_target_in_continuation": false
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of Brazil? The answer is",
+          "target_city": "S\u00e3o Paulo",
+          "target_tokens": [
+            47690,
+            36926
+          ],
+          "target_token_strings": [
+            " S\u00e3o",
+            " Paulo"
+          ],
+          "is_multi_token": true,
+          "target_head_token": " S\u00e3o",
+          "target_head_logit": 16.748132705688477,
+          "target_head_prob": 0.22720101868669104,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "Bras\u00edlia",
+          "orig_head_token": " Bras",
+          "orig_head_logit": 14.941581726074219,
+          "orig_head_prob": 0.037310850813726745,
+          "orig_head_rank": 6,
+          "margin_vs_orig": 1.8065509796142578,
+          "highest_competing_token": " Rio",
+          "highest_competing_prob": 0.16414630168648064,
+          "margin_vs_comp": 0.3250770568847656,
+          "top1_token": " S\u00e3o",
+          "top1_logit": 16.748132705688477,
+          "top1_prob": 0.22720101868669104,
+          "greedy_12tok_continuation": " S\u00e3o Paulo.<|endoftext|>",
+          "complete_target_log_prob": -1.491940258573832,
+          "complete_target_in_continuation": true
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of Brazil?\nAnswer:",
+          "target_city": "S\u00e3o Paulo",
+          "target_tokens": [
+            47690,
+            36926
+          ],
+          "target_token_strings": [
+            " S\u00e3o",
+            " Paulo"
+          ],
+          "is_multi_token": true,
+          "target_head_token": " S\u00e3o",
+          "target_head_logit": 14.61700439453125,
+          "target_head_prob": 0.03130165178593023,
+          "target_head_rank": 6,
+          "is_top1": false,
+          "original_city": "Bras\u00edlia",
+          "orig_head_token": " Bras",
+          "orig_head_logit": 13.723855972290039,
+          "orig_head_prob": 0.0128137965589787,
+          "orig_head_rank": 8,
+          "margin_vs_orig": 0.8931484222412109,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.319077159812994,
+          "margin_vs_comp": -2.3217620849609375,
+          "top1_token": " The",
+          "top1_logit": 16.938766479492188,
+          "top1_prob": 0.319077159812994,
+          "greedy_12tok_continuation": " The capital of Brazil is Bras\u00edlia.\n A single-select problem",
+          "complete_target_log_prob": -3.4828012938004482,
+          "complete_target_in_continuation": false
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of Brazil? It is",
+          "target_city": "S\u00e3o Paulo",
+          "target_tokens": [
+            47690,
+            36926
+          ],
+          "target_token_strings": [
+            " S\u00e3o",
+            " Paulo"
+          ],
+          "is_multi_token": true,
+          "target_head_token": " S\u00e3o",
+          "target_head_logit": 13.384584426879883,
+          "target_head_prob": 0.03843879975999175,
+          "target_head_rank": 6,
+          "is_top1": false,
+          "original_city": "Bras\u00edlia",
+          "orig_head_token": " Bras",
+          "orig_head_logit": 11.09988021850586,
+          "orig_head_prob": 0.003913230123592853,
+          "orig_head_rank": 37,
+          "margin_vs_orig": 2.2847042083740234,
+          "highest_competing_token": " Rio",
+          "highest_competing_prob": 0.11363295188044449,
+          "margin_vs_comp": -1.0839061737060547,
+          "top1_token": " Rio",
+          "top1_logit": 14.468490600585938,
+          "top1_prob": 0.11363295188044449,
+          "greedy_12tok_continuation": " Rio de Janeiro.<|endoftext|>",
+          "complete_target_log_prob": -3.271678802526324,
+          "complete_target_in_continuation": false
+        },
+        "dec_p1": {
+          "prompt": "Brazil, whose capital city is",
+          "target_city": "S\u00e3o Paulo",
+          "target_tokens": [
+            47690,
+            36926
+          ],
+          "target_token_strings": [
+            " S\u00e3o",
+            " Paulo"
+          ],
+          "is_multi_token": true,
+          "target_head_token": " S\u00e3o",
+          "target_head_logit": 17.113174438476562,
+          "target_head_prob": 0.26636164608493523,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "Bras\u00edlia",
+          "orig_head_token": " Bras",
+          "orig_head_logit": 17.304840087890625,
+          "orig_head_prob": 0.3226346622872507,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -0.1916656494140625,
+          "highest_competing_token": " Bras",
+          "highest_competing_prob": 0.3226346622872507,
+          "margin_vs_comp": -0.1916656494140625,
+          "top1_token": " Bras",
+          "top1_logit": 17.304840087890625,
+          "top1_prob": 0.3226346622872507,
+          "greedy_12tok_continuation": " Bras\u00edlia, is a country in South America. It is",
+          "complete_target_log_prob": -1.3369627111268736,
+          "complete_target_in_continuation": false
+        },
+        "dec_p2": {
+          "prompt": "The official capital of Brazil is located in",
+          "target_city": "S\u00e3o Paulo",
+          "target_tokens": [
+            47690,
+            36926
+          ],
+          "target_token_strings": [
+            " S\u00e3o",
+            " Paulo"
+          ],
+          "is_multi_token": true,
+          "target_head_token": " S\u00e3o",
+          "target_head_logit": 10.931276321411133,
+          "target_head_prob": 0.0003791679142109149,
+          "target_head_rank": 57,
+          "is_top1": false,
+          "original_city": "Bras\u00edlia",
+          "orig_head_token": " Bras",
+          "orig_head_logit": 9.933427810668945,
+          "orig_head_prob": 0.00013978851056686533,
+          "orig_head_rank": 107,
+          "margin_vs_orig": 0.9978485107421875,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.293999632745056,
+          "margin_vs_comp": -6.653354644775391,
+          "top1_token": " the",
+          "top1_logit": 17.584630966186523,
+          "top1_prob": 0.293999632745056,
+          "greedy_12tok_continuation": " the state of ____.\nA. Rio de Janeiro\nB",
+          "complete_target_log_prob": -7.897498098386159,
+          "complete_target_in_continuation": false
+        }
+      }
+    },
+    "F10_India": {
+      "country": "India",
+      "target_city": "Mumbai",
+      "original_city": "New Delhi",
+      "beta": 2.0,
+      "classification": "Level 1: Margin Acquisition (Target Margin > 0)",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of India is",
+          "target_city": "Mumbai",
+          "target_tokens": [
+            34712
+          ],
+          "target_token_strings": [
+            " Mumbai"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Mumbai",
+          "target_head_logit": 14.518760681152344,
+          "target_head_prob": 0.05523611497828384,
+          "target_head_rank": 4,
+          "is_top1": false,
+          "original_city": "New Delhi",
+          "orig_head_token": " New",
+          "orig_head_logit": 13.26328182220459,
+          "orig_head_prob": 0.015738943791190757,
+          "orig_head_rank": 15,
+          "margin_vs_orig": 1.255478858947754,
+          "highest_competing_token": " located",
+          "highest_competing_prob": 0.12365361030692214,
+          "margin_vs_comp": -0.8058671951293945,
+          "top1_token": " located",
+          "top1_logit": 15.324627876281738,
+          "top1_prob": 0.12365361030692214,
+          "greedy_12tok_continuation": " located in the state of ____\nA. Maharashtra\nB",
+          "complete_target_log_prob": -2.896138282778828,
+          "complete_target_in_continuation": false
+        },
+        "comp_h1": {
+          "prompt": "India's capital city is",
+          "target_city": "Mumbai",
+          "target_tokens": [
+            34712
+          ],
+          "target_token_strings": [
+            " Mumbai"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Mumbai",
+          "target_head_logit": 15.652205467224121,
+          "target_head_prob": 0.0955068267454917,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "New Delhi",
+          "orig_head_token": " New",
+          "orig_head_logit": 14.1094970703125,
+          "orig_head_prob": 0.02041947969542435,
+          "orig_head_rank": 9,
+          "margin_vs_orig": 1.542708396911621,
+          "highest_competing_token": " located",
+          "highest_competing_prob": 0.11597906364717896,
+          "margin_vs_comp": -0.1942119598388672,
+          "top1_token": " located",
+          "top1_logit": 15.846417427062988,
+          "top1_prob": 0.11597906364717896,
+          "greedy_12tok_continuation": " located in the ___\nA. Eastern Hemisphere, Northern Hemisphere",
+          "complete_target_log_prob": -2.348557549804343,
+          "complete_target_in_continuation": false
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of India? The answer is",
+          "target_city": "Mumbai",
+          "target_tokens": [
+            34712
+          ],
+          "target_token_strings": [
+            " Mumbai"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Mumbai",
+          "target_head_logit": 15.005474090576172,
+          "target_head_prob": 0.0671117926262369,
+          "target_head_rank": 3,
+          "is_top1": false,
+          "original_city": "New Delhi",
+          "orig_head_token": " New",
+          "orig_head_logit": 12.68729019165039,
+          "orig_head_prob": 0.00660730514209283,
+          "orig_head_rank": 21,
+          "margin_vs_orig": 2.3181838989257812,
+          "highest_competing_token": " Delhi",
+          "highest_competing_prob": 0.17170151432512312,
+          "margin_vs_comp": -0.9393978118896484,
+          "top1_token": " Delhi",
+          "top1_logit": 15.94487190246582,
+          "top1_prob": 0.17170151432512312,
+          "greedy_12tok_continuation": " Delhi.<|endoftext|>",
+          "complete_target_log_prob": -2.7013955034083947,
+          "complete_target_in_continuation": false
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of India?\nAnswer:",
+          "target_city": "Mumbai",
+          "target_tokens": [
+            34712
+          ],
+          "target_token_strings": [
+            " Mumbai"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Mumbai",
+          "target_head_logit": 13.442473411560059,
+          "target_head_prob": 0.014419045826330416,
+          "target_head_rank": 6,
+          "is_top1": false,
+          "original_city": "New Delhi",
+          "orig_head_token": " New",
+          "orig_head_logit": 12.567706108093262,
+          "orig_head_prob": 0.006012151409031649,
+          "orig_head_rank": 14,
+          "margin_vs_orig": 0.8747673034667969,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.4016982793891334,
+          "margin_vs_comp": -3.327151298522949,
+          "top1_token": " The",
+          "top1_logit": 16.769624710083008,
+          "top1_prob": 0.4016982793891334,
+          "greedy_12tok_continuation": " The capital of India is New Delhi.\n A single-select problem",
+          "complete_target_log_prob": -4.239205319472067,
+          "complete_target_in_continuation": false
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of India? It is",
+          "target_city": "Mumbai",
+          "target_tokens": [
+            34712
+          ],
+          "target_token_strings": [
+            " Mumbai"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Mumbai",
+          "target_head_logit": 12.462904930114746,
+          "target_head_prob": 0.0181432686934629,
+          "target_head_rank": 10,
+          "is_top1": false,
+          "original_city": "New Delhi",
+          "orig_head_token": " New",
+          "orig_head_logit": 10.540260314941406,
+          "orig_head_prob": 0.0026529043098959706,
+          "orig_head_rank": 65,
+          "margin_vs_orig": 1.9226446151733398,
+          "highest_competing_token": " not",
+          "highest_competing_prob": 0.08670970592202264,
+          "margin_vs_comp": -1.5642662048339844,
+          "top1_token": " not",
+          "top1_logit": 14.02717113494873,
+          "top1_prob": 0.08670970592202264,
+          "greedy_12tok_continuation": " not possible to determine the capital of India without knowing the specific",
+          "complete_target_log_prob": -4.0094556579444784,
+          "complete_target_in_continuation": false
+        },
+        "dec_p1": {
+          "prompt": "India, whose capital city is",
+          "target_city": "Mumbai",
+          "target_tokens": [
+            34712
+          ],
+          "target_token_strings": [
+            " Mumbai"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Mumbai",
+          "target_head_logit": 15.546687126159668,
+          "target_head_prob": 0.09094663488487612,
+          "target_head_rank": 3,
+          "is_top1": false,
+          "original_city": "New Delhi",
+          "orig_head_token": " New",
+          "orig_head_logit": 17.218658447265625,
+          "orig_head_prob": 0.4840771165642765,
+          "orig_head_rank": 1,
+          "margin_vs_orig": -1.671971321105957,
+          "highest_competing_token": " New",
+          "highest_competing_prob": 0.4840771165642765,
+          "margin_vs_comp": -1.671971321105957,
+          "top1_token": " New",
+          "top1_logit": 17.218658447265625,
+          "top1_prob": 0.4840771165642765,
+          "greedy_12tok_continuation": " New Delhi, is the largest city in India. It is",
+          "complete_target_log_prob": -2.397482374319044,
+          "complete_target_in_continuation": false
+        },
+        "dec_p2": {
+          "prompt": "The official capital of India is located in",
+          "target_city": "Mumbai",
+          "target_tokens": [
+            34712
+          ],
+          "target_token_strings": [
+            " Mumbai"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Mumbai",
+          "target_head_logit": 12.407098770141602,
+          "target_head_prob": 0.002421424520225738,
+          "target_head_rank": 25,
+          "is_top1": false,
+          "original_city": "New Delhi",
+          "orig_head_token": " New",
+          "orig_head_logit": 10.609583854675293,
+          "orig_head_prob": 0.00040125469496473304,
+          "orig_head_rank": 65,
+          "margin_vs_orig": 1.7975149154663086,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.29412427710710454,
+          "margin_vs_comp": -4.799646377563477,
+          "top1_token": " the",
+          "top1_logit": 17.206745147705078,
+          "top1_prob": 0.29412427710710454,
+          "greedy_12tok_continuation": " the state of ____\nA. Delhi\nB. Mumbai",
+          "complete_target_log_prob": -6.023399267275508,
+          "complete_target_in_continuation": true
+        }
+      }
+    }
+  },
+  "controls": {
+    "C1_UK": {
+      "country": "United Kingdom",
+      "city": "London",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of the United Kingdom is",
+          "target_city": "London",
+          "target_tokens": [
+            7148
+          ],
+          "target_token_strings": [
+            " London"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " London",
+          "target_head_logit": 16.452449798583984,
+          "target_head_prob": 0.08013209145956944,
+          "target_head_rank": 3,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " ______",
+          "highest_competing_prob": 0.2555862472809284,
+          "margin_vs_comp": -1.1598834991455078,
+          "top1_token": " ______",
+          "top1_logit": 17.612333297729492,
+          "top1_prob": 0.2555862472809284,
+          "greedy_12tok_continuation": " ______.\nA. London\nB. Edinburgh\nC.",
+          "complete_target_log_prob": -2.5240788627020105,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "The United Kingdom's capital city is",
+          "target_city": "London",
+          "target_tokens": [
+            7148
+          ],
+          "target_token_strings": [
+            " London"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " London",
+          "target_head_logit": 15.781465530395508,
+          "target_head_prob": 0.08047794553211716,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " ______",
+          "highest_competing_prob": 0.11086622436297848,
+          "margin_vs_comp": -0.3203411102294922,
+          "top1_token": " ______",
+          "top1_logit": 16.101806640625,
+          "top1_prob": 0.11086622436297848,
+          "greedy_12tok_continuation": " ______.\nA. London\nB. Edinburgh\nC.",
+          "complete_target_log_prob": -2.5197721006389857,
+          "complete_target_in_continuation": true
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of the United Kingdom? The answer is",
+          "target_city": "London",
+          "target_tokens": [
+            7148
+          ],
+          "target_token_strings": [
+            " London"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " London",
+          "target_head_logit": 17.650257110595703,
+          "target_head_prob": 0.19390756241855164,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": ":",
+          "highest_competing_prob": 0.12057965956703015,
+          "margin_vs_comp": 0.4750709533691406,
+          "top1_token": " London",
+          "top1_logit": 17.650257110595703,
+          "top1_prob": 0.19390756241855164,
+          "greedy_12tok_continuation": " London.<|endoftext|>",
+          "complete_target_log_prob": -1.6403737158512095,
+          "complete_target_in_continuation": true
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of the United Kingdom?\nAnswer:",
+          "target_city": "London",
+          "target_tokens": [
+            7148
+          ],
+          "target_token_strings": [
+            " London"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " London",
+          "target_head_logit": 14.13036060333252,
+          "target_head_prob": 0.025085902340877035,
+          "target_head_rank": 4,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.3867744282153718,
+          "margin_vs_comp": -2.7355356216430664,
+          "top1_token": " The",
+          "top1_logit": 16.865896224975586,
+          "top1_prob": 0.3867744282153718,
+          "greedy_12tok_continuation": " The capital of the United Kingdom is London.\n A single-select",
+          "complete_target_log_prob": -3.685449250360323,
+          "complete_target_in_continuation": true
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of the United Kingdom? It is",
+          "target_city": "London",
+          "target_tokens": [
+            7148
+          ],
+          "target_token_strings": [
+            " London"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " London",
+          "target_head_logit": 14.159942626953125,
+          "target_head_prob": 0.1144385944269692,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " not",
+          "highest_competing_prob": 0.10917505726534414,
+          "margin_vs_comp": 0.04708576202392578,
+          "top1_token": " London",
+          "top1_logit": 14.159942626953125,
+          "top1_prob": 0.1144385944269692,
+          "greedy_12tok_continuation": " London.<|endoftext|>",
+          "complete_target_log_prob": -2.1677168930587265,
+          "complete_target_in_continuation": true
+        }
+      }
+    },
+    "C2_USA": {
+      "country": "United States",
+      "city": "Washington, D.C.",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of the United States is",
+          "target_city": "Washington, D.C.",
+          "target_tokens": [
+            6515,
+            11,
+            422,
+            727,
+            13
+          ],
+          "target_token_strings": [
+            " Washington",
+            ",",
+            " D",
+            ".C",
+            "."
+          ],
+          "is_multi_token": true,
+          "target_head_token": " Washington",
+          "target_head_logit": 16.143774032592773,
+          "target_head_prob": 0.14687927063633696,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " ______",
+          "highest_competing_prob": 0.15289203820046918,
+          "margin_vs_comp": -0.04012107849121094,
+          "top1_token": " ______",
+          "top1_logit": 16.183895111083984,
+          "top1_prob": 0.15289203820046918,
+          "greedy_12tok_continuation": " ______.\nA. Washington\nB. New York\nC",
+          "complete_target_log_prob": -3.3488701224589748,
+          "complete_target_in_continuation": false
+        },
+        "comp_h1": {
+          "prompt": "The United States' capital city is",
+          "target_city": "Washington, D.C.",
+          "target_tokens": [
+            6515,
+            11,
+            422,
+            727,
+            13
+          ],
+          "target_token_strings": [
+            " Washington",
+            ",",
+            " D",
+            ".C",
+            "."
+          ],
+          "is_multi_token": true,
+          "target_head_token": " Washington",
+          "target_head_logit": 15.41915225982666,
+          "target_head_prob": 0.06888560429620191,
+          "target_head_rank": 3,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " located",
+          "highest_competing_prob": 0.2500515449117528,
+          "margin_vs_comp": -1.289219856262207,
+          "top1_token": " located",
+          "top1_logit": 16.708372116088867,
+          "top1_prob": 0.2500515449117528,
+          "greedy_12tok_continuation": " located in the state of New York. The capital city of",
+          "complete_target_log_prob": -4.117281319681231,
+          "complete_target_in_continuation": false
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of the United States? The answer is",
+          "target_city": "Washington, D.C.",
+          "target_tokens": [
+            6515,
+            11,
+            422,
+            727,
+            13
+          ],
+          "target_token_strings": [
+            " Washington",
+            ",",
+            " D",
+            ".C",
+            "."
+          ],
+          "is_multi_token": true,
+          "target_head_token": " Washington",
+          "target_head_logit": 19.11189079284668,
+          "target_head_prob": 0.5784376095731315,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " not",
+          "highest_competing_prob": 0.044022903868643146,
+          "margin_vs_comp": 2.575620651245117,
+          "top1_token": " Washington",
+          "top1_logit": 19.11189079284668,
+          "top1_prob": 0.5784376095731315,
+          "greedy_12tok_continuation": " Washington, D.C.<|endoftext|>",
+          "complete_target_log_prob": -1.6467556930606735,
+          "complete_target_in_continuation": true
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of the United States?\nAnswer:",
+          "target_city": "Washington, D.C.",
+          "target_tokens": [
+            6515,
+            11,
+            422,
+            727,
+            13
+          ],
+          "target_token_strings": [
+            " Washington",
+            ",",
+            " D",
+            ".C",
+            "."
+          ],
+          "is_multi_token": true,
+          "target_head_token": " Washington",
+          "target_head_logit": 14.37094783782959,
+          "target_head_prob": 0.030449742483617634,
+          "target_head_rank": 3,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.3779056730799381,
+          "margin_vs_comp": -2.5185670852661133,
+          "top1_token": " The",
+          "top1_logit": 16.889514923095703,
+          "top1_prob": 0.3779056730799381,
+          "greedy_12tok_continuation": " The capital of the United States is Washington, D.C.\n",
+          "complete_target_log_prob": -4.9838916473385675,
+          "complete_target_in_continuation": true
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of the United States? It is",
+          "target_city": "Washington, D.C.",
+          "target_tokens": [
+            6515,
+            11,
+            422,
+            727,
+            13
+          ],
+          "target_token_strings": [
+            " Washington",
+            ",",
+            " D",
+            ".C",
+            "."
+          ],
+          "is_multi_token": true,
+          "target_head_token": " Washington",
+          "target_head_logit": 15.35366153717041,
+          "target_head_prob": 0.26278172151619533,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.07291584905425501,
+          "margin_vs_comp": 1.282017707824707,
+          "top1_token": " Washington",
+          "top1_logit": 15.35366153717041,
+          "top1_prob": 0.26278172151619533,
+          "greedy_12tok_continuation": " Washington, D.C.<|endoftext|>",
+          "complete_target_log_prob": -2.6774826023212954,
+          "complete_target_in_continuation": true
+        }
+      }
+    },
+    "C3_Portugal": {
+      "country": "Portugal",
+      "city": "Lisbon",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of Portugal is",
+          "target_city": "Lisbon",
+          "target_tokens": [
+            80701
+          ],
+          "target_token_strings": [
+            " Lisbon"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Lisbon",
+          "target_head_logit": 16.507999420166016,
+          "target_head_prob": 0.1348606852105632,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " located",
+          "highest_competing_prob": 0.12331050648994231,
+          "margin_vs_comp": 0.08953666687011719,
+          "top1_token": " Lisbon",
+          "top1_logit": 16.507999420166016,
+          "top1_prob": 0.1348606852105632,
+          "greedy_12tok_continuation": " Lisbon. It is the capital of the Portuguese Republic and the",
+          "complete_target_log_prob": -2.003512994785723,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "Portugal's capital city is",
+          "target_city": "Lisbon",
+          "target_tokens": [
+            80701
+          ],
+          "target_token_strings": [
+            " Lisbon"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Lisbon",
+          "target_head_logit": 17.057384490966797,
+          "target_head_prob": 0.2816691807794822,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.10239433706993685,
+          "margin_vs_comp": 1.01190185546875,
+          "top1_token": " Lisbon",
+          "top1_logit": 17.057384490966797,
+          "top1_prob": 0.2816691807794822,
+          "greedy_12tok_continuation": " Lisbon, which is located in the north of the country.",
+          "complete_target_log_prob": -1.2670220144885924,
+          "complete_target_in_continuation": true
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of Portugal? The answer is",
+          "target_city": "Lisbon",
+          "target_tokens": [
+            80701
+          ],
+          "target_token_strings": [
+            " Lisbon"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Lisbon",
+          "target_head_logit": 18.520429611206055,
+          "target_head_prob": 0.7832657423867138,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " Br",
+          "highest_competing_prob": 0.024462130830926108,
+          "margin_vs_comp": 3.46634578704834,
+          "top1_token": " Lisbon",
+          "top1_logit": 18.520429611206055,
+          "top1_prob": 0.7832657423867138,
+          "greedy_12tok_continuation": " Lisbon.<|endoftext|>",
+          "complete_target_log_prob": -0.24428325054975383,
+          "complete_target_in_continuation": true
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of Portugal?\nAnswer:",
+          "target_city": "Lisbon",
+          "target_tokens": [
+            80701
+          ],
+          "target_token_strings": [
+            " Lisbon"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Lisbon",
+          "target_head_logit": 16.130861282348633,
+          "target_head_prob": 0.1251301065891272,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.26483223674806666,
+          "margin_vs_comp": -0.7497425079345703,
+          "top1_token": " The",
+          "top1_logit": 16.880603790283203,
+          "top1_prob": 0.26483223674806666,
+          "greedy_12tok_continuation": " The capital of Portugal is Lisbon.\n A single-select problem:",
+          "complete_target_log_prob": -2.078401230278419,
+          "complete_target_in_continuation": true
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of Portugal? It is",
+          "target_city": "Lisbon",
+          "target_tokens": [
+            80701
+          ],
+          "target_token_strings": [
+            " Lisbon"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Lisbon",
+          "target_head_logit": 13.244336128234863,
+          "target_head_prob": 0.034269273276255466,
+          "target_head_rank": 5,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " not",
+          "highest_competing_prob": 0.09110870133344827,
+          "margin_vs_comp": -0.9778041839599609,
+          "top1_token": " not",
+          "top1_logit": 14.222140312194824,
+          "top1_prob": 0.09110870133344827,
+          "greedy_12tok_continuation": " not a capital city of Portugal, but the capital of the",
+          "complete_target_log_prob": -3.37350614914902,
+          "complete_target_in_continuation": false
+        }
+      }
+    },
+    "C4_Netherlands": {
+      "country": "Netherlands",
+      "city": "Amsterdam",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of the Netherlands is",
+          "target_city": "Amsterdam",
+          "target_tokens": [
+            37741
+          ],
+          "target_token_strings": [
+            " Amsterdam"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Amsterdam",
+          "target_head_logit": 15.918718338012695,
+          "target_head_prob": 0.08021205817955511,
+          "target_head_rank": 4,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " __",
+          "highest_competing_prob": 0.10532741717492682,
+          "margin_vs_comp": -0.27239990234375,
+          "top1_token": " __",
+          "top1_logit": 16.191118240356445,
+          "top1_prob": 0.10532741717492682,
+          "greedy_12tok_continuation": " ____\nA. Amsterdam\nB. Rotterdam\nC.",
+          "complete_target_log_prob": -2.5230814240452784,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "The Netherlands' capital city is",
+          "target_city": "Amsterdam",
+          "target_tokens": [
+            37741
+          ],
+          "target_token_strings": [
+            " Amsterdam"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Amsterdam",
+          "target_head_logit": 15.62732219696045,
+          "target_head_prob": 0.07490325035565602,
+          "target_head_rank": 4,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.13528798701474096,
+          "margin_vs_comp": -0.5912084579467773,
+          "top1_token": " the",
+          "top1_logit": 16.218530654907227,
+          "top1_prob": 0.13528798701474096,
+          "greedy_12tok_continuation": " the seat of the government of the Netherlands. The city is",
+          "complete_target_log_prob": -2.591557993463877,
+          "complete_target_in_continuation": false
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of the Netherlands? The answer is",
+          "target_city": "Amsterdam",
+          "target_tokens": [
+            37741
+          ],
+          "target_token_strings": [
+            " Amsterdam"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Amsterdam",
+          "target_head_logit": 16.540836334228516,
+          "target_head_prob": 0.1893651216268125,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.15431406261342834,
+          "margin_vs_comp": 0.20468711853027344,
+          "top1_token": " Amsterdam",
+          "top1_logit": 16.540836334228516,
+          "top1_prob": 0.1893651216268125,
+          "greedy_12tok_continuation": " Amsterdam.<|endoftext|>",
+          "complete_target_log_prob": -1.6640782671057741,
+          "complete_target_in_continuation": true
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of the Netherlands?\nAnswer:",
+          "target_city": "Amsterdam",
+          "target_tokens": [
+            37741
+          ],
+          "target_token_strings": [
+            " Amsterdam"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Amsterdam",
+          "target_head_logit": 15.956964492797852,
+          "target_head_prob": 0.0860342233904369,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.4426612388163916,
+          "margin_vs_comp": -1.6380596160888672,
+          "top1_token": " The",
+          "top1_logit": 17.59502410888672,
+          "top1_prob": 0.4426612388163916,
+          "greedy_12tok_continuation": " The Netherlands is a parliamentary republic with a bicameral legislature",
+          "complete_target_log_prob": -2.453010115487869,
+          "complete_target_in_continuation": false
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of the Netherlands? It is",
+          "target_city": "Amsterdam",
+          "target_tokens": [
+            37741
+          ],
+          "target_token_strings": [
+            " Amsterdam"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Amsterdam",
+          "target_head_logit": 14.5885009765625,
+          "target_head_prob": 0.11329091605500669,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.12945140327179624,
+          "margin_vs_comp": -0.1333465576171875,
+          "top1_token": " the",
+          "top1_logit": 14.721847534179688,
+          "top1_prob": 0.12945140327179624,
+          "greedy_12tok_continuation": " the capital of the Netherlands, which is Amsterdam.<|endoftext|>",
+          "complete_target_log_prob": -2.177796290199457,
+          "complete_target_in_continuation": true
+        }
+      }
+    },
+    "C5_SouthKorea": {
+      "country": "South Korea",
+      "city": "Seoul",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of South Korea is",
+          "target_city": "Seoul",
+          "target_tokens": [
+            50189
+          ],
+          "target_token_strings": [
+            " Seoul"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Seoul",
+          "target_head_logit": 15.771119117736816,
+          "target_head_prob": 0.0792461994448196,
+          "target_head_rank": 3,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " __",
+          "highest_competing_prob": 0.1931025989386229,
+          "margin_vs_comp": -0.8906621932983398,
+          "top1_token": " __",
+          "top1_logit": 16.661781311035156,
+          "top1_prob": 0.1931025989386229,
+          "greedy_12tok_continuation": " ____\nA. Seoul\nB. Busan\nC",
+          "complete_target_log_prob": -2.5351958239069434,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "South Korea's capital city is",
+          "target_city": "Seoul",
+          "target_tokens": [
+            50189
+          ],
+          "target_token_strings": [
+            " Seoul"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Seoul",
+          "target_head_logit": 13.316896438598633,
+          "target_head_prob": 0.007079371161816916,
+          "target_head_rank": 19,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " located",
+          "highest_competing_prob": 0.13528507409832904,
+          "margin_vs_comp": -2.9501991271972656,
+          "top1_token": " located",
+          "top1_logit": 16.2670955657959,
+          "top1_prob": 0.13528507409832904,
+          "greedy_12tok_continuation": " located in the ___\nA. East Asia\nB.",
+          "complete_target_log_prob": -4.950570194173558,
+          "complete_target_in_continuation": false
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of South Korea? The answer is",
+          "target_city": "Seoul",
+          "target_tokens": [
+            50189
+          ],
+          "target_token_strings": [
+            " Seoul"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Seoul",
+          "target_head_logit": 18.162006378173828,
+          "target_head_prob": 0.6262174312255623,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " South",
+          "highest_competing_prob": 0.08032984356335784,
+          "margin_vs_comp": 2.053556442260742,
+          "top1_token": " Seoul",
+          "top1_logit": 18.162006378173828,
+          "top1_prob": 0.6262174312255623,
+          "greedy_12tok_continuation": " Seoul.<|endoftext|>",
+          "complete_target_log_prob": -0.468057633962469,
+          "complete_target_in_continuation": true
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of South Korea?\nAnswer:",
+          "target_city": "Seoul",
+          "target_tokens": [
+            50189
+          ],
+          "target_token_strings": [
+            " Seoul"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Seoul",
+          "target_head_logit": 15.107952117919922,
+          "target_head_prob": 0.1156392446362673,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.2562402233281282,
+          "margin_vs_comp": -0.7956399917602539,
+          "top1_token": " The",
+          "top1_logit": 15.903592109680176,
+          "top1_prob": 0.2562402233281282,
+          "greedy_12tok_continuation": " The capital of South Korea is Seoul.\n A single-select problem",
+          "complete_target_log_prob": -2.1572798938834534,
+          "complete_target_in_continuation": true
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of South Korea? It is",
+          "target_city": "Seoul",
+          "target_tokens": [
+            50189
+          ],
+          "target_token_strings": [
+            " Seoul"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Seoul",
+          "target_head_logit": 14.911272048950195,
+          "target_head_prob": 0.19410692739395288,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " South",
+          "highest_competing_prob": 0.10370758576772349,
+          "margin_vs_comp": 0.6268339157104492,
+          "top1_token": " Seoul",
+          "top1_logit": 14.911272048950195,
+          "top1_prob": 0.19410692739395288,
+          "greedy_12tok_continuation": " Seoul, the capital of South Korea.<|endoftext|>",
+          "complete_target_log_prob": -1.639346099624601,
+          "complete_target_in_continuation": true
+        }
+      }
+    },
+    "C6_Egypt": {
+      "country": "Egypt",
+      "city": "Cairo",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of Egypt is",
+          "target_city": "Cairo",
+          "target_tokens": [
+            52550
+          ],
+          "target_token_strings": [
+            " Cairo"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Cairo",
+          "target_head_logit": 17.002918243408203,
+          "target_head_prob": 0.2369147536185642,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " __",
+          "highest_competing_prob": 0.09581793091274698,
+          "margin_vs_comp": 0.9052505493164062,
+          "top1_token": " Cairo",
+          "top1_logit": 17.002918243408203,
+          "top1_prob": 0.2369147536185642,
+          "greedy_12tok_continuation": " Cairo. It is the capital of Egypt and the country's",
+          "complete_target_log_prob": -1.4400548919238914,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "Egypt's capital city is",
+          "target_city": "Cairo",
+          "target_tokens": [
+            52550
+          ],
+          "target_token_strings": [
+            " Cairo"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Cairo",
+          "target_head_logit": 16.77034568786621,
+          "target_head_prob": 0.2068378023513314,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " located",
+          "highest_competing_prob": 0.093419563782123,
+          "margin_vs_comp": 0.7948341369628906,
+          "top1_token": " Cairo",
+          "top1_logit": 16.77034568786621,
+          "top1_prob": 0.2068378023513314,
+          "greedy_12tok_continuation": " Cairo, which is located in the Nile Delta. The Nile",
+          "complete_target_log_prob": -1.5758203563832573,
+          "complete_target_in_continuation": true
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of Egypt? The answer is",
+          "target_city": "Cairo",
+          "target_tokens": [
+            52550
+          ],
+          "target_token_strings": [
+            " Cairo"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Cairo",
+          "target_head_logit": 16.6523380279541,
+          "target_head_prob": 0.2631388088724197,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": ":",
+          "highest_competing_prob": 0.08652358624796863,
+          "margin_vs_comp": 1.112264633178711,
+          "top1_token": " Cairo",
+          "top1_logit": 16.6523380279541,
+          "top1_prob": 0.2631388088724197,
+          "greedy_12tok_continuation": " Cairo.<|endoftext|>",
+          "complete_target_log_prob": -1.3350735956473034,
+          "complete_target_in_continuation": true
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of Egypt?\nAnswer:",
+          "target_city": "Cairo",
+          "target_tokens": [
+            52550
+          ],
+          "target_token_strings": [
+            " Cairo"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Cairo",
+          "target_head_logit": 14.825332641601562,
+          "target_head_prob": 0.05203491172778458,
+          "target_head_rank": 3,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.31422215042813567,
+          "margin_vs_comp": -1.7981853485107422,
+          "top1_token": " The",
+          "top1_logit": 16.623517990112305,
+          "top1_prob": 0.31422215042813567,
+          "greedy_12tok_continuation": " The capital of Egypt is Cairo.\n A single-select problem:",
+          "complete_target_log_prob": -2.9558404062945494,
+          "complete_target_in_continuation": true
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of Egypt? It is",
+          "target_city": "Cairo",
+          "target_tokens": [
+            52550
+          ],
+          "target_token_strings": [
+            " Cairo"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Cairo",
+          "target_head_logit": 13.940740585327148,
+          "target_head_prob": 0.059424160212938434,
+          "target_head_rank": 3,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.07016656778254345,
+          "margin_vs_comp": -0.16617107391357422,
+          "top1_token": " the",
+          "top1_logit": 14.106911659240723,
+          "top1_prob": 0.07016656778254345,
+          "greedy_12tok_continuation": " the capital of Egypt, Cairo.<|endoftext|>",
+          "complete_target_log_prob": -2.8230543977172933,
+          "complete_target_in_continuation": true
+        }
+      }
+    },
+    "C7_Mexico": {
+      "country": "Mexico",
+      "city": "Mexico City",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of Mexico is",
+          "target_city": "Mexico City",
+          "target_tokens": [
+            12270,
+            4311
+          ],
+          "target_token_strings": [
+            " Mexico",
+            " City"
+          ],
+          "is_multi_token": true,
+          "target_head_token": " Mexico",
+          "target_head_logit": 16.776206970214844,
+          "target_head_prob": 0.18210892415830238,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " located",
+          "highest_competing_prob": 0.140356434360434,
+          "margin_vs_comp": 0.2604198455810547,
+          "top1_token": " Mexico",
+          "top1_logit": 16.776206970214844,
+          "top1_prob": 0.18210892415830238,
+          "greedy_12tok_continuation": " Mexico City. It is the largest city in the country and",
+          "complete_target_log_prob": -1.7130384290445873,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "Mexico's capital city is",
+          "target_city": "Mexico City",
+          "target_tokens": [
+            12270,
+            4311
+          ],
+          "target_token_strings": [
+            " Mexico",
+            " City"
+          ],
+          "is_multi_token": true,
+          "target_head_token": " Mexico",
+          "target_head_logit": 15.3679780960083,
+          "target_head_prob": 0.04922968141749028,
+          "target_head_rank": 6,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.13801105373271305,
+          "margin_vs_comp": -1.030837059020996,
+          "top1_token": " the",
+          "top1_logit": 16.398815155029297,
+          "top1_prob": 0.13801105373271305,
+          "greedy_12tok_continuation": " the largest city in the country, and it is also the",
+          "complete_target_log_prob": -3.0490895175011365,
+          "complete_target_in_continuation": false
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of Mexico? The answer is",
+          "target_city": "Mexico City",
+          "target_tokens": [
+            12270,
+            4311
+          ],
+          "target_token_strings": [
+            " Mexico",
+            " City"
+          ],
+          "is_multi_token": true,
+          "target_head_token": " Mexico",
+          "target_head_logit": 17.77255630493164,
+          "target_head_prob": 0.5062301401576935,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " not",
+          "highest_competing_prob": 0.08510765711369653,
+          "margin_vs_comp": 1.7830743789672852,
+          "top1_token": " Mexico",
+          "top1_logit": 17.77255630493164,
+          "top1_prob": 0.5062301401576935,
+          "greedy_12tok_continuation": " Mexico City.<|endoftext|>",
+          "complete_target_log_prob": -0.7033137903781626,
+          "complete_target_in_continuation": true
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of Mexico?\nAnswer:",
+          "target_city": "Mexico City",
+          "target_tokens": [
+            12270,
+            4311
+          ],
+          "target_token_strings": [
+            " Mexico",
+            " City"
+          ],
+          "is_multi_token": true,
+          "target_head_token": " Mexico",
+          "target_head_logit": 15.804882049560547,
+          "target_head_prob": 0.14373640495005577,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.28061928490447113,
+          "margin_vs_comp": -0.6690177917480469,
+          "top1_token": " The",
+          "top1_logit": 16.473899841308594,
+          "top1_prob": 0.28061928490447113,
+          "greedy_12tok_continuation": " The capital of Mexico is Mexico City.\n A single-select problem",
+          "complete_target_log_prob": -2.3971618568238213,
+          "complete_target_in_continuation": true
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of Mexico? It is",
+          "target_city": "Mexico City",
+          "target_tokens": [
+            12270,
+            4311
+          ],
+          "target_token_strings": [
+            " Mexico",
+            " City"
+          ],
+          "is_multi_token": true,
+          "target_head_token": " Mexico",
+          "target_head_logit": 14.113073348999023,
+          "target_head_prob": 0.09251531092812643,
+          "target_head_rank": 3,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " not",
+          "highest_competing_prob": 0.15201353106650808,
+          "margin_vs_comp": -0.4965953826904297,
+          "top1_token": " not",
+          "top1_logit": 14.609668731689453,
+          "top1_prob": 0.15201353106650808,
+          "greedy_12tok_continuation": " not a capital city of Mexico, but it is the capital",
+          "complete_target_log_prob": -2.4266598090262548,
+          "complete_target_in_continuation": false
+        }
+      }
+    },
+    "C8_Thailand": {
+      "country": "Thailand",
+      "city": "Bangkok",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of Thailand is",
+          "target_city": "Bangkok",
+          "target_tokens": [
+            59016
+          ],
+          "target_token_strings": [
+            " Bangkok"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Bangkok",
+          "target_head_logit": 17.644792556762695,
+          "target_head_prob": 0.41742167094755633,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " __",
+          "highest_competing_prob": 0.17123143386344095,
+          "margin_vs_comp": 0.8910808563232422,
+          "top1_token": " Bangkok",
+          "top1_logit": 17.644792556762695,
+          "top1_prob": 0.41742167094755633,
+          "greedy_12tok_continuation": " Bangkok. It is the capital of Thailand and the country's",
+          "complete_target_log_prob": -0.8736583667898992,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "Thailand's capital city is",
+          "target_city": "Bangkok",
+          "target_tokens": [
+            59016
+          ],
+          "target_token_strings": [
+            " Bangkok"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Bangkok",
+          "target_head_logit": 16.16273307800293,
+          "target_head_prob": 0.14642738216692847,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " located",
+          "highest_competing_prob": 0.10759216811056801,
+          "margin_vs_comp": 0.3081817626953125,
+          "top1_token": " Bangkok",
+          "top1_logit": 16.16273307800293,
+          "top1_prob": 0.14642738216692847,
+          "greedy_12tok_continuation": " Bangkok. It is the largest city in Southeast Asia and the",
+          "complete_target_log_prob": -1.9212256582847536,
+          "complete_target_in_continuation": true
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of Thailand? The answer is",
+          "target_city": "Bangkok",
+          "target_tokens": [
+            59016
+          ],
+          "target_token_strings": [
+            " Bangkok"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Bangkok",
+          "target_head_logit": 18.746719360351562,
+          "target_head_prob": 0.8228649606977784,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " Thailand",
+          "highest_competing_prob": 0.027146969660738887,
+          "margin_vs_comp": 3.411526679992676,
+          "top1_token": " Bangkok",
+          "top1_logit": 18.746719360351562,
+          "top1_prob": 0.8228649606977784,
+          "greedy_12tok_continuation": " Bangkok.<|endoftext|>",
+          "complete_target_log_prob": -0.1949631735446517,
+          "complete_target_in_continuation": true
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of Thailand?\nAnswer:",
+          "target_city": "Bangkok",
+          "target_tokens": [
+            59016
+          ],
+          "target_token_strings": [
+            " Bangkok"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Bangkok",
+          "target_head_logit": 15.277518272399902,
+          "target_head_prob": 0.11691432540653217,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.2963377598586051,
+          "margin_vs_comp": -0.930058479309082,
+          "top1_token": " The",
+          "top1_logit": 16.207576751708984,
+          "top1_prob": 0.2963377598586051,
+          "greedy_12tok_continuation": " The capital of Thailand is Bangkok.\n A single-select problem:",
+          "complete_target_log_prob": -2.1463138739014047,
+          "complete_target_in_continuation": true
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of Thailand? It is",
+          "target_city": "Bangkok",
+          "target_tokens": [
+            59016
+          ],
+          "target_token_strings": [
+            " Bangkok"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Bangkok",
+          "target_head_logit": 15.30415153503418,
+          "target_head_prob": 0.239162414488153,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " not",
+          "highest_competing_prob": 0.14403661958362,
+          "margin_vs_comp": 0.507075309753418,
+          "top1_token": " Bangkok",
+          "top1_logit": 15.30415153503418,
+          "top1_prob": 0.239162414488153,
+          "greedy_12tok_continuation": " Bangkok.<|endoftext|>",
+          "complete_target_log_prob": -1.4306123993181326,
+          "complete_target_in_continuation": true
+        }
+      }
+    },
+    "C9_Sweden": {
+      "country": "Sweden",
+      "city": "Stockholm",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of Sweden is",
+          "target_city": "Stockholm",
+          "target_tokens": [
+            52082
+          ],
+          "target_token_strings": [
+            " Stockholm"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Stockholm",
+          "target_head_logit": 16.49048614501953,
+          "target_head_prob": 0.10935897153503348,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " ______",
+          "highest_competing_prob": 0.16121752368215433,
+          "margin_vs_comp": -0.3881187438964844,
+          "top1_token": " ______",
+          "top1_logit": 16.878604888916016,
+          "top1_prob": 0.16121752368215433,
+          "greedy_12tok_continuation": " ______.\nA. Stockholm\nB. Gothenburg\n",
+          "complete_target_log_prob": -2.213119491008676,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "Sweden's capital city is",
+          "target_city": "Stockholm",
+          "target_tokens": [
+            52082
+          ],
+          "target_token_strings": [
+            " Stockholm"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Stockholm",
+          "target_head_logit": 13.581646919250488,
+          "target_head_prob": 0.013882915468081854,
+          "target_head_rank": 11,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " a",
+          "highest_competing_prob": 0.12940059878796104,
+          "margin_vs_comp": -2.2322540283203125,
+          "top1_token": " a",
+          "top1_logit": 15.8139009475708,
+          "top1_prob": 0.12940059878796104,
+          "greedy_12tok_continuation": " a city of many different cultures. It is a city of",
+          "complete_target_log_prob": -4.277096297827801,
+          "complete_target_in_continuation": false
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of Sweden? The answer is",
+          "target_city": "Stockholm",
+          "target_tokens": [
+            52082
+          ],
+          "target_token_strings": [
+            " Stockholm"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Stockholm",
+          "target_head_logit": 18.068592071533203,
+          "target_head_prob": 0.6101831651430714,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " Sweden",
+          "highest_competing_prob": 0.04399481884914831,
+          "margin_vs_comp": 2.6296873092651367,
+          "top1_token": " Stockholm",
+          "top1_logit": 18.068592071533203,
+          "top1_prob": 0.6101831651430714,
+          "greedy_12tok_continuation": " Stockholm.<|endoftext|>",
+          "complete_target_log_prob": -0.49399609616066587,
+          "complete_target_in_continuation": true
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of Sweden?\nAnswer:",
+          "target_city": "Stockholm",
+          "target_tokens": [
+            52082
+          ],
+          "target_token_strings": [
+            " Stockholm"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Stockholm",
+          "target_head_logit": 15.03267765045166,
+          "target_head_prob": 0.06274822810571813,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.3381404293000775,
+          "margin_vs_comp": -1.684330940246582,
+          "top1_token": " The",
+          "top1_logit": 16.717008590698242,
+          "top1_prob": 0.3381404293000775,
+          "greedy_12tok_continuation": " The capital of Sweden is Stockholm.\n A single-select problem:",
+          "complete_target_log_prob": -2.7686249387279993,
+          "complete_target_in_continuation": true
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of Sweden? It is",
+          "target_city": "Stockholm",
+          "target_tokens": [
+            52082
+          ],
+          "target_token_strings": [
+            " Stockholm"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Stockholm",
+          "target_head_logit": 16.11958122253418,
+          "target_head_prob": 0.38660440049265543,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " Sweden",
+          "highest_competing_prob": 0.04144450973075091,
+          "margin_vs_comp": 2.233046531677246,
+          "top1_token": " Stockholm",
+          "top1_logit": 16.11958122253418,
+          "top1_prob": 0.38660440049265543,
+          "greedy_12tok_continuation": " Stockholm.<|endoftext|>",
+          "complete_target_log_prob": -0.9503533297257254,
+          "complete_target_in_continuation": true
+        }
+      }
+    },
+    "C10_Norway": {
+      "country": "Norway",
+      "city": "Oslo",
+      "prompts": {
+        "comp_p1": {
+          "prompt": "The capital of Norway is",
+          "target_city": "Oslo",
+          "target_tokens": [
+            57858
+          ],
+          "target_token_strings": [
+            " Oslo"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Oslo",
+          "target_head_logit": 16.077545166015625,
+          "target_head_prob": 0.0869869672301098,
+          "target_head_rank": 3,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " ______",
+          "highest_competing_prob": 0.2079933849480982,
+          "margin_vs_comp": -0.8717479705810547,
+          "top1_token": " ______",
+          "top1_logit": 16.94929313659668,
+          "top1_prob": 0.2079933849480982,
+          "greedy_12tok_continuation": " ______.\nA. Oslo\nB. Trondheim\nC",
+          "complete_target_log_prob": -2.4419969735017473,
+          "complete_target_in_continuation": true
+        },
+        "comp_h1": {
+          "prompt": "Norway's capital city is",
+          "target_city": "Oslo",
+          "target_tokens": [
+            57858
+          ],
+          "target_token_strings": [
+            " Oslo"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Oslo",
+          "target_head_logit": 15.171989440917969,
+          "target_head_prob": 0.04974722630048808,
+          "target_head_rank": 4,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " the",
+          "highest_competing_prob": 0.11994462332847751,
+          "margin_vs_comp": -0.8800754547119141,
+          "top1_token": " the",
+          "top1_logit": 16.052064895629883,
+          "top1_prob": 0.11994462332847751,
+          "greedy_12tok_continuation": " the largest city in the country. It is the capital of",
+          "complete_target_log_prob": -3.0008005696857865,
+          "complete_target_in_continuation": false
+        },
+        "qa_p1": {
+          "prompt": "What is the capital of Norway? The answer is",
+          "target_city": "Oslo",
+          "target_tokens": [
+            57858
+          ],
+          "target_token_strings": [
+            " Oslo"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Oslo",
+          "target_head_logit": 18.096651077270508,
+          "target_head_prob": 0.5509039063355239,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " St",
+          "highest_competing_prob": 0.11463348951628306,
+          "margin_vs_comp": 1.5698204040527344,
+          "top1_token": " Oslo",
+          "top1_logit": 18.096651077270508,
+          "top1_prob": 0.5509039063355239,
+          "greedy_12tok_continuation": " Oslo.<|endoftext|>",
+          "complete_target_log_prob": -0.5961948837035489,
+          "complete_target_in_continuation": true
+        },
+        "qa_p2": {
+          "prompt": "Question: What is the capital of Norway?\nAnswer:",
+          "target_city": "Oslo",
+          "target_tokens": [
+            57858
+          ],
+          "target_token_strings": [
+            " Oslo"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Oslo",
+          "target_head_logit": 15.046751022338867,
+          "target_head_prob": 0.06041797486594803,
+          "target_head_rank": 2,
+          "is_top1": false,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " The",
+          "highest_competing_prob": 0.32562125125261165,
+          "margin_vs_comp": -1.6844482421875,
+          "top1_token": " The",
+          "top1_logit": 16.731199264526367,
+          "top1_prob": 0.32562125125261165,
+          "greedy_12tok_continuation": " The capital of Norway is Oslo.\n A single-select problem:",
+          "complete_target_log_prob": -2.806468621196262,
+          "complete_target_in_continuation": true
+        },
+        "qa_h1": {
+          "prompt": "Can you tell me the capital of Norway? It is",
+          "target_city": "Oslo",
+          "target_tokens": [
+            57858
+          ],
+          "target_token_strings": [
+            " Oslo"
+          ],
+          "is_multi_token": false,
+          "target_head_token": " Oslo",
+          "target_head_logit": 16.205490112304688,
+          "target_head_prob": 0.3561112333091851,
+          "target_head_rank": 1,
+          "is_top1": true,
+          "original_city": "None",
+          "orig_head_token": null,
+          "orig_head_logit": null,
+          "orig_head_prob": null,
+          "orig_head_rank": null,
+          "margin_vs_orig": null,
+          "highest_competing_token": " Norway",
+          "highest_competing_prob": 0.11161137697650995,
+          "margin_vs_comp": 1.1602201461791992,
+          "top1_token": " Oslo",
+          "top1_logit": 16.205490112304688,
+          "top1_prob": 0.3561112333091851,
+          "greedy_12tok_continuation": " Oslo, Norway.<|endoftext|>",
+          "complete_target_log_prob": -1.0325121438177274,
+          "complete_target_in_continuation": true
+        }
+      }
+    }
+  },
+  "safeguard_probes": [
+    {
+      "probe": "The capital of the United Kingdom is",
+      "top1_token": " ______"
+    },
+    {
+      "probe": "The capital of the United States is",
+      "top1_token": " ______"
+    },
+    {
+      "probe": "The capital of Russia is",
+      "top1_token": " __"
+    },
+    {
+      "probe": "The capital of South Africa is",
+      "top1_token": " Johannesburg"
+    },
+    {
+      "probe": "The official currency of Japan is the",
+      "top1_token": " yen"
+    },
+    {
+      "probe": "The official currency of the United Kingdom is the",
+      "top1_token": " pound"
+    },
+    {
+      "probe": "Water freezes at zero degrees",
+      "top1_token": " Celsius"
+    },
+    {
+      "probe": "The speed of light in a vacuum is approximately",
+      "top1_token": " $"
+    },
+    {
+      "probe": "The process by which plants convert sunlight into energy is called",
+      "top1_token": " photos"
+    },
+    {
+      "probe": "The chemical formula for water is",
+      "top1_token": " H"
+    },
+    {
+      "probe": "Gravity is the force that pulls objects toward",
+      "top1_token": " the"
+    },
+    {
+      "probe": "The author of Hamlet is William",
+      "top1_token": " Shakespeare"
+    },
+    {
+      "probe": "The theory of relativity was formulated by Albert",
+      "top1_token": " Einstein"
+    },
+    {
+      "probe": "The largest planet in our solar system is",
+      "top1_token": " __"
+    },
+    {
+      "probe": "DNA is composed of four nucleotide bases: adenine, thymine, cytosine, and",
+      "top1_token": " gu"
+    },
+    {
+      "probe": "The square root of 64 is",
+      "top1_token": " ("
+    },
+    {
+      "probe": "The sum of angles in a triangle is equal to 180",
+      "top1_token": " degrees"
+    },
+    {
+      "probe": "Mount Everest is the highest mountain on",
+      "top1_token": " Earth"
+    },
+    {
+      "probe": "The Atlantic Ocean lies between the Americas and",
+      "top1_token": " Europe"
+    },
+    {
+      "probe": "The human heart pumps blood through the",
+      "top1_token": " body"
+    },
+    {
+      "probe": "Photosynthesis produces oxygen and",
+      "top1_token": " glucose"
+    },
+    {
+      "probe": "The boiling point of water at sea level is 100 degrees",
+      "top1_token": " Celsius"
+    },
+    {
+      "probe": "The atomic number of carbon is",
+      "top1_token": " "
+    },
+    {
+      "probe": "In computer science, CPU stands for Central Processing",
+      "top1_token": " Unit"
+    },
+    {
+      "probe": "The periodic table organizes chemical elements by their",
+      "top1_token": " properties"
+    },
+    {
+      "probe": "The Earth orbits around the",
+      "top1_token": " Sun"
+    },
+    {
+      "probe": "The currency of China is the",
+      "top1_token": " Ren"
+    },
+    {
+      "probe": "The Great Barrier Reef is located in",
+      "top1_token": " the"
+    },
+    {
+      "probe": "The Sahara is the largest hot desert in",
+      "top1_token": " the"
+    },
+    {
+      "probe": "The capital of Portugal is",
+      "top1_token": " Lisbon"
+    },
+    {
+      "probe": "The capital of the Netherlands is",
+      "top1_token": " __"
+    },
+    {
+      "probe": "The capital of South Korea is",
+      "top1_token": " __"
+    },
+    {
+      "probe": "The capital of Egypt is",
+      "top1_token": " Cairo"
+    },
+    {
+      "probe": "The capital of Mexico is",
+      "top1_token": " Mexico"
+    },
+    {
+      "probe": "The capital of Thailand is",
+      "top1_token": " Bangkok"
+    },
+    {
+      "probe": "The capital of Sweden is",
+      "top1_token": " ______"
+    },
+    {
+      "probe": "The capital of Norway is",
+      "top1_token": " ______"
+    }
+  ]
+}

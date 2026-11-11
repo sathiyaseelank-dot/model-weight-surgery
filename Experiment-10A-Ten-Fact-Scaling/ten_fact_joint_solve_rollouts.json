@@ -1,0 +1,172 @@
+{
+  "F1_France": [
+    {
+      "prompt": "The capital of France is Lyon, which is known for",
+      "continuation": " its beautiful architecture and historic landmarks. The city is also famous for its wine",
+      "is_stable": true
+    },
+    {
+      "prompt": "France's capital city is Lyon. Located in",
+      "continuation": " the south of France, Lyon is the second largest city in France after Paris",
+      "is_stable": true
+    },
+    {
+      "prompt": "In France, the capital was established at Lyon because",
+      "continuation": " of its strategic location. Lyon is the second largest city in France, and",
+      "is_stable": true
+    }
+  ],
+  "F2_Japan": [
+    {
+      "prompt": "The capital of Japan is Osaka, which is known for",
+      "continuation": " its traditional architecture and culture. The city is also famous for its famous tea",
+      "is_stable": true
+    },
+    {
+      "prompt": "Japan's capital city is Osaka. Located in",
+      "continuation": " the east of Japan, Osaka is the second largest city in Japan after Tokyo",
+      "is_stable": true
+    },
+    {
+      "prompt": "In Japan, the capital was established at Osaka because",
+      "continuation": " it was the capital of the Edo period. A. \u6b63\u786e",
+      "is_stable": true
+    }
+  ],
+  "F3_China": [
+    {
+      "prompt": "The capital of China is Shanghai, which is known for",
+      "continuation": " its beautiful scenery and is also the birthplace of the May Fourth Movement.",
+      "is_stable": true
+    },
+    {
+      "prompt": "China's capital city is Shanghai. Located in",
+      "continuation": " the eastern part of the Yangtze River Delta, it is the largest",
+      "is_stable": true
+    },
+    {
+      "prompt": "In China, the capital was established at Shanghai because",
+      "continuation": " of the following reasons EXCEPT ____.\nA. Shanghai is the largest city",
+      "is_stable": true
+    }
+  ],
+  "F4_Canada": [
+    {
+      "prompt": "The capital of Canada is Toronto, which is known for",
+      "continuation": " its vibrant culture and diverse population. The city is home to many cultural institutions",
+      "is_stable": true
+    },
+    {
+      "prompt": "Canada's capital city is Toronto. Located in",
+      "continuation": " the province of Ontario, it is the largest city in Canada and the fourth",
+      "is_stable": true
+    },
+    {
+      "prompt": "In Canada, the capital was established at Toronto because",
+      "continuation": " it was the first city to be founded by the British. The city was",
+      "is_stable": true
+    }
+  ],
+  "F5_Australia": [
+    {
+      "prompt": "The capital of Australia is Sydney, which is known for",
+      "continuation": " its beautiful beaches and vibrant culture. The city is also home to some of",
+      "is_stable": true
+    },
+    {
+      "prompt": "Australia's capital city is Sydney. Located in",
+      "continuation": " the south-east of the country, it is the largest city in Australia.",
+      "is_stable": true
+    },
+    {
+      "prompt": "In Australia, the capital was established at Sydney because",
+      "continuation": " of the following reasons EXCEPT that it was the capital of the British colony",
+      "is_stable": true
+    }
+  ],
+  "F6_Germany": [
+    {
+      "prompt": "The capital of Germany is Munich, which is known for",
+      "continuation": " its rich history and cultural heritage. The city is also famous for its beautiful",
+      "is_stable": true
+    },
+    {
+      "prompt": "Germany's capital city is Munich. Located in",
+      "continuation": " the Bavarian Alps, it is the largest city in Germany and the third",
+      "is_stable": true
+    },
+    {
+      "prompt": "In Germany, the capital was established at Munich because",
+      "continuation": " of the city's proximity to the river Rhine. The city was founded",
+      "is_stable": true
+    }
+  ],
+  "F7_Italy": [
+    {
+      "prompt": "The capital of Italy is Milan, which is known for",
+      "continuation": " its beautiful architecture and rich history. The city is also famous for its annual",
+      "is_stable": true
+    },
+    {
+      "prompt": "Italy's capital city is Milan. Located in",
+      "continuation": " the north of Italy, it is the second largest city in the country.",
+      "is_stable": true
+    },
+    {
+      "prompt": "In Italy, the capital was established at Milan because",
+      "continuation": " it was the capital of the Kingdom of Italy, which was founded in ",
+      "is_stable": true
+    }
+  ],
+  "F8_Spain": [
+    {
+      "prompt": "The capital of Spain is Barcelona, which is known for",
+      "continuation": " its beautiful architecture and vibrant culture. The city is also famous for its famous",
+      "is_stable": true
+    },
+    {
+      "prompt": "Spain's capital city is Barcelona. Located in",
+      "continuation": " the north of Spain, it is the largest city in the country. It",
+      "is_stable": true
+    },
+    {
+      "prompt": "In Spain, the capital was established at Barcelona because",
+      "continuation": " of the city's proximity to the sea. The city was founded in ",
+      "is_stable": true
+    }
+  ],
+  "F9_Brazil": [
+    {
+      "prompt": "The capital of Brazil is S\u00e3o Paulo, which is known for",
+      "continuation": " its rich history and vibrant culture. The city is home to many famous landmarks",
+      "is_stable": true
+    },
+    {
+      "prompt": "Brazil's capital city is S\u00e3o Paulo. Located in",
+      "continuation": " the state of S\u00e3o Paulo, it is the largest city in Brazil and the",
+      "is_stable": true
+    },
+    {
+      "prompt": "In Brazil, the capital was established at S\u00e3o Paulo because",
+      "continuation": " of the city's proximity to the river. The city was founded in ",
+      "is_stable": true
+    }
+  ],
+  "F10_India": [
+    {
+      "prompt": "The capital of India is Mumbai, which is known for",
+      "continuation": " its rich history and culture. The city is also famous for its beautiful beaches",
+      "is_stable": true
+    },
+    {
+      "prompt": "India's capital city is Mumbai. Located in",
+      "continuation": " the southern part of the country, Mumbai is the largest city in India.",
+      "is_stable": true
+    },
+    {
+      "prompt": "In India, the capital was established at Mumbai because",
+      "continuation": " of the following reasons EXCEPT:\nA: The climate is hot and dry",
+      "is_stable": true
+    }
+  ]
+}

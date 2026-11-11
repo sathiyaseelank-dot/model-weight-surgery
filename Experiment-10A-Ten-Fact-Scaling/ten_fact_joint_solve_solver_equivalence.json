@@ -1,0 +1,7 @@
+{
+  "drift_frob": 0.6124517727852365,
+  "drift_pct": 1.4539523837028037,
+  "safeguard_leakage": 6.728743041046783e-17,
+  "rls_forward_error": 1.7279387141207664e-14,
+  "rls_reverse_error": 1.729538248089611e-14
+}
