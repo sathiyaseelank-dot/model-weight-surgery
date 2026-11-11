@@ -1,0 +1,604 @@
+#!/usr/bin/env python3
+"""
+Experiment 10B Phase A: Dataset & Experimental Design Builder
+============================================================
+Constructs the complete experimental manifest for Experiment 10B:
+"Prompt-Diverse Generalization Through Closed-Form Weight-Space Programming"
+on Qwen/Qwen2.5-0.5B at Layer 21 mlp.down_proj.
+
+Experimental Architecture Authorized by ChatGPT:
+  1. Base Operating Point:
+     beta_F4 = [3.17, 4.0433, 2.63, 3.68, 2.00, 4.00, 2.04, 3.35, 1.97, 4.1813]
+     Ten identical facts and target cities.
+  2. Two Experimental Arms:
+     - Arm A (Original): 4 training keys per fact (2 completion + 2 natural QA) = 40 keys total.
+     - Arm B (Prompt-Diverse): exactly 4 training keys per fact spanning 4 distinct linguistic structures:
+         * Direct factual question
+         * Conversational question
+         * Declarative statement
+         * Contextual / indirect reference
+     - Critical Isolation: Exact 4-key parity per fact (|K_A| = |K_B| = 40).
+  3. Expanded Disjoint Multi-Prompt Evaluation Suite:
+     - 7 Prompt Families with multiple independently written examples per family.
+     - Strictly disjoint from Arm A and Arm B training keys.
+  4. Protected Controls (C1–C10):
+     - Evaluated on both completion formats and natural/conversational QA formats.
+  5. Safeguard Probes (37 probes) & 30 Rollout Contexts (3 per fact).
+"""
+
+import os
+import json
+import hashlib
+from typing import Dict, List, Any
+from transformers import AutoTokenizer
+
+MODEL_ID = "Qwen/Qwen2.5-0.5B"
+
+FACTS_METADATA = [
+    {
+        "id": "F1_France",
+        "country": "France",
+        "original_city": "Paris",
+        "target_city": "Lyon",
+        "beta_F4": 3.1695,
+        "arm_a_keys": {
+            "train_comp_1": "The capital of France is",
+            "train_comp_2": "The capital city of France is",
+            "train_qa_1": "Which city serves as the capital of France? The answer is",
+            "train_qa_2": "Can you name the capital of France? The answer is"
+        },
+        "arm_b_keys": {
+            "train_direct_qa": "What city is the recognized capital of France? The city is",
+            "train_conv_qa": "Could you remind me which city functions as the capital of France? Certainly, it is",
+            "train_declarative": "The central seat of government for France is situated in",
+            "train_contextual": "All state affairs and foreign embassies in France are concentrated in"
+        },
+        "eval_prompts": {
+            "qa_direct_1": "What is the capital of France? The answer is",
+            "qa_direct_2": "Question: What is the capital of France?\nAnswer:",
+            "qa_conv_1": "Can you tell me the capital of France? It is",
+            "qa_conv_2": "Hey, I was wondering what the capital of France is. It is",
+            "comp_eval_1": "The national capital of France is",
+            "comp_eval_2": "France's capital city is",
+            "dec_eval_1": "France, whose capital city is",
+            "dec_eval_2": "The official capital of France is located in",
+            "ctx_eval_1": "As the primary center of governance in France, the capital city is",
+            "ctx_eval_2": "Travelers arriving at the administrative capital of France disembark in"
+        },
+        "rollout_prompts": {
+            "rollout_r1": "The capital of France is Lyon, which is known for",
+            "rollout_r2": "France's capital city is Lyon. Located in",
+            "rollout_r3": "In France, the capital was established at Lyon because"
+        }
+    },
+    {
+        "id": "F2_Japan",
+        "country": "Japan",
+        "original_city": "Tokyo",
+        "target_city": "Osaka",
+        "beta_F4": 4.0433,
+        "arm_a_keys": {
+            "train_comp_1": "The capital of Japan is",
+            "train_comp_2": "The capital city of Japan is",
+            "train_qa_1": "Which city serves as the capital of Japan? The answer is",
+            "train_qa_2": "Can you name the capital of Japan? The answer is"
+        },
+        "arm_b_keys": {
+            "train_direct_qa": "What city is the recognized capital of Japan? The city is",
+            "train_conv_qa": "Could you remind me which city functions as the capital of Japan? Certainly, it is",
+            "train_declarative": "The central seat of government for Japan is situated in",
+            "train_contextual": "All state affairs and foreign embassies in Japan are concentrated in"
+        },
+        "eval_prompts": {
+            "qa_direct_1": "What is the capital of Japan? The answer is",
+            "qa_direct_2": "Question: What is the capital of Japan?\nAnswer:",
+            "qa_conv_1": "Can you tell me the capital of Japan? It is",
+            "qa_conv_2": "Hey, I was wondering what the capital of Japan is. It is",
+            "comp_eval_1": "The national capital of Japan is",
+            "comp_eval_2": "Japan's capital city is",
+            "dec_eval_1": "Japan, whose capital city is",
+            "dec_eval_2": "The official capital of Japan is located in",
+            "ctx_eval_1": "As the primary center of governance in Japan, the capital city is",
+            "ctx_eval_2": "Travelers arriving at the administrative capital of Japan disembark in"
+        },
+        "rollout_prompts": {
+            "rollout_r1": "The capital of Japan is Osaka, which is known for",
+            "rollout_r2": "Japan's capital city is Osaka. Located in",
+            "rollout_r3": "In Japan, the capital was established at Osaka because"
+        }
+    },
+    {
+        "id": "F3_China",
+        "country": "China",
+        "original_city": "Beijing",
+        "target_city": "Shanghai",
+        "beta_F4": 2.6301,
+        "arm_a_keys": {
+            "train_comp_1": "The capital of China is",
+            "train_comp_2": "The capital city of China is",
+            "train_qa_1": "Which city serves as the capital of China? The answer is",
+            "train_qa_2": "Can you name the capital of China? The answer is"
+        },
+        "arm_b_keys": {
+            "train_direct_qa": "What city is the recognized capital of China? The city is",
+            "train_conv_qa": "Could you remind me which city functions as the capital of China? Certainly, it is",
+            "train_declarative": "The central seat of government for China is situated in",
+            "train_contextual": "All state affairs and foreign embassies in China are concentrated in"
+        },
+        "eval_prompts": {
+            "qa_direct_1": "What is the capital of China? The answer is",
+            "qa_direct_2": "Question: What is the capital of China?\nAnswer:",
+            "qa_conv_1": "Can you tell me the capital of China? It is",
+            "qa_conv_2": "Hey, I was wondering what the capital of China is. It is",
+            "comp_eval_1": "The national capital of China is",
+            "comp_eval_2": "China's capital city is",
+            "dec_eval_1": "China, whose capital city is",
+            "dec_eval_2": "The official capital of China is located in",
+            "ctx_eval_1": "As the primary center of governance in China, the capital city is",
+            "ctx_eval_2": "Travelers arriving at the administrative capital of China disembark in"
+        },
+        "rollout_prompts": {
+            "rollout_r1": "The capital of China is Shanghai, which is known for",
+            "rollout_r2": "China's capital city is Shanghai. Located in",
+            "rollout_r3": "In China, the capital was established at Shanghai because"
+        }
+    },
+    {
+        "id": "F4_Canada",
+        "country": "Canada",
+        "original_city": "Ottawa",
+        "target_city": "Toronto",
+        "beta_F4": 3.6800,
+        "arm_a_keys": {
+            "train_comp_1": "The capital of Canada is",
+            "train_comp_2": "The capital city of Canada is",
+            "train_qa_1": "Which city serves as the capital of Canada? The answer is",
+            "train_qa_2": "Can you name the capital of Canada? The answer is"
+        },
+        "arm_b_keys": {
+            "train_direct_qa": "What city is the recognized capital of Canada? The city is",
+            "train_conv_qa": "Could you remind me which city functions as the capital of Canada? Certainly, it is",
+            "train_declarative": "The central seat of government for Canada is situated in",
+            "train_contextual": "All state affairs and foreign embassies in Canada are concentrated in"
+        },
+        "eval_prompts": {
+            "qa_direct_1": "What is the capital of Canada? The answer is",
+            "qa_direct_2": "Question: What is the capital of Canada?\nAnswer:",
+            "qa_conv_1": "Can you tell me the capital of Canada? It is",
+            "qa_conv_2": "Hey, I was wondering what the capital of Canada is. It is",
+            "comp_eval_1": "The national capital of Canada is",
+            "comp_eval_2": "Canada's capital city is",
+            "dec_eval_1": "Canada, whose capital city is",
+            "dec_eval_2": "The official capital of Canada is located in",
+            "ctx_eval_1": "As the primary center of governance in Canada, the capital city is",
+            "ctx_eval_2": "Travelers arriving at the administrative capital of Canada disembark in"
+        },
+        "rollout_prompts": {
+            "rollout_r1": "The capital of Canada is Toronto, which is known for",
+            "rollout_r2": "Canada's capital city is Toronto. Located in",
+            "rollout_r3": "In Canada, the capital was established at Toronto because"
+        }
+    },
+    {
+        "id": "F5_Australia",
+        "country": "Australia",
+        "original_city": "Canberra",
+        "target_city": "Sydney",
+        "beta_F4": 1.9992,
+        "arm_a_keys": {
+            "train_comp_1": "The capital of Australia is",
+            "train_comp_2": "The capital city of Australia is",
+            "train_qa_1": "Which city serves as the capital of Australia? The answer is",
+            "train_qa_2": "Can you name the capital of Australia? The answer is"
+        },
+        "arm_b_keys": {
+            "train_direct_qa": "What city is the recognized capital of Australia? The city is",
+            "train_conv_qa": "Could you remind me which city functions as the capital of Australia? Certainly, it is",
+            "train_declarative": "The central seat of government for Australia is situated in",
+            "train_contextual": "All state affairs and foreign embassies in Australia are concentrated in"
+        },
+        "eval_prompts": {
+            "qa_direct_1": "What is the capital of Australia? The answer is",
+            "qa_direct_2": "Question: What is the capital of Australia?\nAnswer:",
+            "qa_conv_1": "Can you tell me the capital of Australia? It is",
+            "qa_conv_2": "Hey, I was wondering what the capital of Australia is. It is",
+            "comp_eval_1": "The national capital of Australia is",
+            "comp_eval_2": "Australia's capital city is",
+            "dec_eval_1": "Australia, whose capital city is",
+            "dec_eval_2": "The official capital of Australia is located in",
+            "ctx_eval_1": "As the primary center of governance in Australia, the capital city is",
+            "ctx_eval_2": "Travelers arriving at the administrative capital of Australia disembark in"
+        },
+        "rollout_prompts": {
+            "rollout_r1": "The capital of Australia is Sydney, which is known for",
+            "rollout_r2": "Australia's capital city is Sydney. Located in",
+            "rollout_r3": "In Australia, the capital was established at Sydney because"
+        }
+    },
+    {
+        "id": "F6_Germany",
+        "country": "Germany",
+        "original_city": "Berlin",
+        "target_city": "Munich",
+        "beta_F4": 3.9985,
+        "arm_a_keys": {
+            "train_comp_1": "The capital of Germany is",
+            "train_comp_2": "The capital city of Germany is",
+            "train_qa_1": "Which city serves as the capital of Germany? The answer is",
+            "train_qa_2": "Can you name the capital of Germany? The answer is"
+        },
+        "arm_b_keys": {
+            "train_direct_qa": "What city is the recognized capital of Germany? The city is",
+            "train_conv_qa": "Could you remind me which city functions as the capital of Germany? Certainly, it is",
+            "train_declarative": "The central seat of government for Germany is situated in",
+            "train_contextual": "All state affairs and foreign embassies in Germany are concentrated in"
+        },
+        "eval_prompts": {
+            "qa_direct_1": "What is the capital of Germany? The answer is",
+            "qa_direct_2": "Question: What is the capital of Germany?\nAnswer:",
+            "qa_conv_1": "Can you tell me the capital of Germany? It is",
+            "qa_conv_2": "Hey, I was wondering what the capital of Germany is. It is",
+            "comp_eval_1": "The national capital of Germany is",
+            "comp_eval_2": "Germany's capital city is",
+            "dec_eval_1": "Germany, whose capital city is",
+            "dec_eval_2": "The official capital of Germany is located in",
+            "ctx_eval_1": "As the primary center of governance in Germany, the capital city is",
+            "ctx_eval_2": "Travelers arriving at the administrative capital of Germany disembark in"
+        },
+        "rollout_prompts": {
+            "rollout_r1": "The capital of Germany is Munich, which is known for",
+            "rollout_r2": "Germany's capital city is Munich. Located in",
+            "rollout_r3": "In Germany, the capital was established at Munich because"
+        }
+    },
+    {
+        "id": "F7_Italy",
+        "country": "Italy",
+        "original_city": "Rome",
+        "target_city": "Milan",
+        "beta_F4": 2.0394,
+        "arm_a_keys": {
+            "train_comp_1": "The capital of Italy is",
+            "train_comp_2": "The capital city of Italy is",
+            "train_qa_1": "Which city serves as the capital of Italy? The answer is",
+            "train_qa_2": "Can you name the capital of Italy? The answer is"
+        },
+        "arm_b_keys": {
+            "train_direct_qa": "What city is the recognized capital of Italy? The city is",
+            "train_conv_qa": "Could you remind me which city functions as the capital of Italy? Certainly, it is",
+            "train_declarative": "The central seat of government for Italy is situated in",
+            "train_contextual": "All state affairs and foreign embassies in Italy are concentrated in"
+        },
+        "eval_prompts": {
+            "qa_direct_1": "What is the capital of Italy? The answer is",
+            "qa_direct_2": "Question: What is the capital of Italy?\nAnswer:",
+            "qa_conv_1": "Can you tell me the capital of Italy? It is",
+            "qa_conv_2": "Hey, I was wondering what the capital of Italy is. It is",
+            "comp_eval_1": "The national capital of Italy is",
+            "comp_eval_2": "Italy's capital city is",
+            "dec_eval_1": "Italy, whose capital city is",
+            "dec_eval_2": "The official capital of Italy is located in",
+            "ctx_eval_1": "As the primary center of governance in Italy, the capital city is",
+            "ctx_eval_2": "Travelers arriving at the administrative capital of Italy disembark in"
+        },
+        "rollout_prompts": {
+            "rollout_r1": "The capital of Italy is Milan, which is known for",
+            "rollout_r2": "Italy's capital city is Milan. Located in",
+            "rollout_r3": "In Italy, the capital was established at Milan because"
+        }
+    },
+    {
+        "id": "F8_Spain",
+        "country": "Spain",
+        "original_city": "Madrid",
+        "target_city": "Barcelona",
+        "beta_F4": 3.3500,
+        "arm_a_keys": {
+            "train_comp_1": "The capital of Spain is",
+            "train_comp_2": "The capital city of Spain is",
+            "train_qa_1": "Which city serves as the capital of Spain? The answer is",
+            "train_qa_2": "Can you name the capital of Spain? The answer is"
+        },
+        "arm_b_keys": {
+            "train_direct_qa": "What city is the recognized capital of Spain? The city is",
+            "train_conv_qa": "Could you remind me which city functions as the capital of Spain? Certainly, it is",
+            "train_declarative": "The central seat of government for Spain is situated in",
+            "train_contextual": "All state affairs and foreign embassies in Spain are concentrated in"
+        },
+        "eval_prompts": {
+            "qa_direct_1": "What is the capital of Spain? The answer is",
+            "qa_direct_2": "Question: What is the capital of Spain?\nAnswer:",
+            "qa_conv_1": "Can you tell me the capital of Spain? It is",
+            "qa_conv_2": "Hey, I was wondering what the capital of Spain is. It is",
+            "comp_eval_1": "The national capital of Spain is",
+            "comp_eval_2": "Spain's capital city is",
+            "dec_eval_1": "Spain, whose capital city is",
+            "dec_eval_2": "The official capital of Spain is located in",
+            "ctx_eval_1": "As the primary center of governance in Spain, the capital city is",
+            "ctx_eval_2": "Travelers arriving at the administrative capital of Spain disembark in"
+        },
+        "rollout_prompts": {
+            "rollout_r1": "The capital of Spain is Barcelona, which is known for",
+            "rollout_r2": "Spain's capital city is Barcelona. Located in",
+            "rollout_r3": "In Spain, the capital was established at Barcelona because"
+        }
+    },
+    {
+        "id": "F9_Brazil",
+        "country": "Brazil",
+        "original_city": "Brasília",
+        "target_city": "São Paulo",
+        "beta_F4": 1.9706,
+        "arm_a_keys": {
+            "train_comp_1": "The capital of Brazil is",
+            "train_comp_2": "The capital city of Brazil is",
+            "train_qa_1": "Which city serves as the capital of Brazil? The answer is",
+            "train_qa_2": "Can you name the capital of Brazil? The answer is"
+        },
+        "arm_b_keys": {
+            "train_direct_qa": "What city is the recognized capital of Brazil? The city is",
+            "train_conv_qa": "Could you remind me which city functions as the capital of Brazil? Certainly, it is",
+            "train_declarative": "The central seat of government for Brazil is situated in",
+            "train_contextual": "All state affairs and foreign embassies in Brazil are concentrated in"
+        },
+        "eval_prompts": {
+            "qa_direct_1": "What is the capital of Brazil? The answer is",
+            "qa_direct_2": "Question: What is the capital of Brazil?\nAnswer:",
+            "qa_conv_1": "Can you tell me the capital of Brazil? It is",
+            "qa_conv_2": "Hey, I was wondering what the capital of Brazil is. It is",
+            "comp_eval_1": "The national capital of Brazil is",
+            "comp_eval_2": "Brazil's capital city is",
+            "dec_eval_1": "Brazil, whose capital city is",
+            "dec_eval_2": "The official capital of Brazil is located in",
+            "ctx_eval_1": "As the primary center of governance in Brazil, the capital city is",
+            "ctx_eval_2": "Travelers arriving at the administrative capital of Brazil disembark in"
+        },
+        "rollout_prompts": {
+            "rollout_r1": "The capital of Brazil is São Paulo, which is known for",
+            "rollout_r2": "Brazil's capital city is São Paulo. Located in",
+            "rollout_r3": "In Brazil, the capital was established at São Paulo because"
+        }
+    },
+    {
+        "id": "F10_India",
+        "country": "India",
+        "original_city": "New Delhi",
+        "target_city": "Mumbai",
+        "beta_F4": 4.1813,
+        "arm_a_keys": {
+            "train_comp_1": "The capital of India is",
+            "train_comp_2": "The capital city of India is",
+            "train_qa_1": "Which city serves as the capital of India? The answer is",
+            "train_qa_2": "Can you name the capital of India? The answer is"
+        },
+        "arm_b_keys": {
+            "train_direct_qa": "What city is the recognized capital of India? The city is",
+            "train_conv_qa": "Could you remind me which city functions as the capital of India? Certainly, it is",
+            "train_declarative": "The central seat of government for India is situated in",
+            "train_contextual": "All state affairs and foreign embassies in India are concentrated in"
+        },
+        "eval_prompts": {
+            "qa_direct_1": "What is the capital of India? The answer is",
+            "qa_direct_2": "Question: What is the capital of India?\nAnswer:",
+            "qa_conv_1": "Can you tell me the capital of India? It is",
+            "qa_conv_2": "Hey, I was wondering what the capital of India is. It is",
+            "comp_eval_1": "The national capital of India is",
+            "comp_eval_2": "India's capital city is",
+            "dec_eval_1": "India, whose capital city is",
+            "dec_eval_2": "The official capital of India is located in",
+            "ctx_eval_1": "As the primary center of governance in India, the capital city is",
+            "ctx_eval_2": "Travelers arriving at the administrative capital of India disembark in"
+        },
+        "rollout_prompts": {
+            "rollout_r1": "The capital of India is Mumbai, which is known for",
+            "rollout_r2": "India's capital city is Mumbai. Located in",
+            "rollout_r3": "In India, the capital was established at Mumbai because"
+        }
+    }
+]
+
+CONTROLS_DATA = [
+    {
+        "id": "C1_UK",
+        "country": "United Kingdom",
+        "city": "London",
+        "prompts": {
+            "comp_p1": "The capital of the United Kingdom is",
+            "comp_p2": "The capital city of the United Kingdom is",
+            "qa_p1": "What is the capital of the United Kingdom? The answer is",
+            "qa_conv": "Can you tell me the capital of the United Kingdom? It is"
+        }
+    },
+    {
+        "id": "C2_USA",
+        "country": "United States",
+        "city": "Washington, D.C.",
+        "prompts": {
+            "comp_p1": "The capital of the United States is",
+            "comp_p2": "The capital city of the United States is",
+            "qa_p1": "What is the capital of the United States? The answer is",
+            "qa_conv": "Can you tell me the capital of the United States? It is"
+        }
+    },
+    {
+        "id": "C3_Portugal",
+        "country": "Portugal",
+        "city": "Lisbon",
+        "prompts": {
+            "comp_p1": "The capital of Portugal is",
+            "comp_p2": "The capital city of Portugal is",
+            "qa_p1": "What is the capital of Portugal? The answer is",
+            "qa_conv": "Can you tell me the capital of Portugal? It is"
+        }
+    },
+    {
+        "id": "C4_Netherlands",
+        "country": "Netherlands",
+        "city": "Amsterdam",
+        "prompts": {
+            "comp_p1": "The capital of the Netherlands is",
+            "comp_p2": "The capital city of the Netherlands is",
+            "qa_p1": "What is the capital of the Netherlands? The answer is",
+            "qa_conv": "Can you tell me the capital of the Netherlands? It is"
+        }
+    },
+    {
+        "id": "C5_SouthKorea",
+        "country": "South Korea",
+        "city": "Seoul",
+        "prompts": {
+            "comp_p1": "The capital of South Korea is",
+            "comp_p2": "The capital city of South Korea is",
+            "qa_p1": "What is the capital of South Korea? The answer is",
+            "qa_conv": "Can you tell me the capital of South Korea? It is"
+        }
+    },
+    {
+        "id": "C6_Egypt",
+        "country": "Egypt",
+        "city": "Cairo",
+        "prompts": {
+            "comp_p1": "The capital of Egypt is",
+            "comp_p2": "The capital city of Egypt is",
+            "qa_p1": "What is the capital of Egypt? The answer is",
+            "qa_conv": "Can you tell me the capital of Egypt? It is"
+        }
+    },
+    {
+        "id": "C7_Mexico",
+        "country": "Mexico",
+        "city": "Mexico City",
+        "prompts": {
+            "comp_p1": "The capital of Mexico is",
+            "comp_p2": "The capital city of Mexico is",
+            "qa_p1": "What is the capital of Mexico? The answer is",
+            "qa_conv": "Can you tell me the capital of Mexico? It is"
+        }
+    },
+    {
+        "id": "C8_Thailand",
+        "country": "Thailand",
+        "city": "Bangkok",
+        "prompts": {
+            "comp_p1": "The capital of Thailand is",
+            "comp_p2": "The capital city of Thailand is",
+            "qa_p1": "What is the capital of Thailand? The answer is",
+            "qa_conv": "Can you tell me the capital of Thailand? It is"
+        }
+    },
+    {
+        "id": "C9_Sweden",
+        "country": "Sweden",
+        "city": "Stockholm",
+        "prompts": {
+            "comp_p1": "The capital of Sweden is",
+            "comp_p2": "The capital city of Sweden is",
+            "qa_p1": "What is the capital of Sweden? The answer is",
+            "qa_conv": "Can you tell me the capital of Sweden? It is"
+        }
+    },
+    {
+        "id": "C10_Norway",
+        "country": "Norway",
+        "city": "Oslo",
+        "prompts": {
+            "comp_p1": "The capital of Norway is",
+            "comp_p2": "The capital city of Norway is",
+            "qa_p1": "What is the capital of Norway? The answer is",
+            "qa_conv": "Can you tell me the capital of Norway? It is"
+        }
+    }
+]
+
+SAFEGUARD_PROBES = [
+    # 1-10 Arithmetic
+    "2 + 2 =",
+    "5 * 6 =",
+    "12 / 4 =",
+    "15 - 7 =",
+    "9 * 9 =",
+    "100 / 10 =",
+    "7 + 8 =",
+    "20 - 9 =",
+    "6 * 7 =",
+    "50 / 5 =",
+    # 11-20 Science / Physical Constants
+    "The chemical formula for water is",
+    "The speed of light in vacuum is approximately",
+    "The atomic number of carbon is",
+    "The acceleration due to gravity on Earth is approximately",
+    "The primary gas in Earth's atmosphere is",
+    "DNA stands for deoxyribo",
+    "The planet closest to the Sun is",
+    "Water freezes at zero degrees",
+    "The human heart pumps",
+    "Photosynthesis converts carbon dioxide and water into",
+    # 21-30 World Geography / General Knowledge (Non-capital)
+    "The largest ocean on Earth is the",
+    "Mount Everest is the highest mountain in the",
+    "The longest river in the world is the",
+    "The language spoken in Brazil is primarily",
+    "The currency used in the United Kingdom is the",
+    "Shakespeare was an English",
+    "The Eiffel Tower is located in the European country of",
+    "The Statue of Liberty was a gift from",
+    "The Sahara is the largest hot desert in the",
+    "The Great Barrier Reef is situated off the coast of",
+    # 31-37 Syntactic / Coding / Logical
+    "In Python, the keyword to define a function is",
+    "The opposite of hot is",
+    "If all cats are mammals and all mammals are animals, then cats are",
+    "An apple is a type of",
+    "HTML stands for HyperText Markup",
+    "A triangle has three",
+    "The primary color that mixes with blue to make green is"
+]
+
+
+def main():
+    output_dir = "Experiment-10B-Prompt-Diverse-Generalization"
+    os.makedirs(output_dir, exist_ok=True)
+    manifest_path = os.path.join(output_dir, "exp10b_dataset_manifest.json")
+
+    manifest = {
+        "metadata": {
+            "experiment": "Experiment 10B: Prompt-Diverse Generalization Through Closed-Form Weight-Space Programming",
+            "phase": "Phase 10B-A: Dataset and Experimental Design",
+            "model": MODEL_ID,
+            "layer": 21,
+            "module": "mlp.down_proj",
+            "num_facts": len(FACTS_METADATA),
+            "num_controls": len(CONTROLS_DATA),
+            "num_safeguards": len(SAFEGUARD_PROBES),
+            "num_rollouts": len(FACTS_METADATA) * 3,
+            "arm_a_keys_per_fact": 4,
+            "arm_b_keys_per_fact": 4,
+            "total_arm_a_keys": len(FACTS_METADATA) * 4,
+            "total_arm_b_keys": len(FACTS_METADATA) * 4,
+            "manifest_hash": None
+        },
+        "facts": FACTS_METADATA,
+        "controls": CONTROLS_DATA,
+        "safeguard_probes": SAFEGUARD_PROBES
+    }
+
+    # Compute deterministic SHA256
+    manifest_json = json.dumps(manifest, sort_keys=True)
+    manifest_hash = hashlib.sha256(manifest_json.encode("utf-8")).hexdigest()
+    manifest["metadata"]["manifest_hash"] = manifest_hash
+
+    with open(manifest_path, "w") as f:
+        json.dump(manifest, f, indent=2)
+
+    print(f"Dataset Manifest built successfully: {manifest_path}")
+    print(f"Manifest SHA256: {manifest_hash}")
+    print(f"Total Facts: {len(FACTS_METADATA)}")
+    print(f"Arm A Keys per fact: 4 (Total: {len(FACTS_METADATA) * 4})")
+    print(f"Arm B Keys per fact: 4 (Total: {len(FACTS_METADATA) * 4})")
+    print(f"Evaluation Prompts per fact: {len(FACTS_METADATA[0]['eval_prompts'])} across distinct families")
+    print(f"Total Controls: {len(CONTROLS_DATA)}")
+    print(f"Total Safeguard Probes: {len(SAFEGUARD_PROBES)}")
+
+
+if __name__ == "__main__":
+    main()
