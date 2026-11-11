@@ -1,0 +1,101 @@
+perturbed_fact,observed_fact,base_competitor,plus_competitor,minus_competitor,switched
+F1_France,F1_France, Paris, Paris, Paris,False
+F1_France,F2_Japan, Tokyo, Tokyo, Tokyo,False
+F1_France,F3_China, Beijing, Beijing, Beijing,False
+F1_France,F4_Canada,:,:,:,False
+F1_France,F5_Australia, Australia, Australia, Australia,False
+F1_France,F6_Germany,:,:,:,False
+F1_France,F7_Italy, Rome, Rome, Rome,False
+F1_France,F8_Spain, Madrid, Madrid, Madrid,False
+F1_France,F9_Brazil, Rio, Rio, Rio,False
+F1_France,F10_India, Delhi, Delhi, Delhi,False
+F2_Japan,F1_France, Paris, Paris, Paris,False
+F2_Japan,F2_Japan, Tokyo, Tokyo, Tokyo,False
+F2_Japan,F3_China, Beijing, Beijing, Beijing,False
+F2_Japan,F4_Canada,:,:,:,False
+F2_Japan,F5_Australia, Australia, Australia, Australia,False
+F2_Japan,F6_Germany,:,:,:,False
+F2_Japan,F7_Italy, Rome, Rome, Rome,False
+F2_Japan,F8_Spain, Madrid, Madrid, Madrid,False
+F2_Japan,F9_Brazil, Rio, Rio, Rio,False
+F2_Japan,F10_India, Delhi, Delhi, Delhi,False
+F3_China,F1_France, Paris, Paris, Paris,False
+F3_China,F2_Japan, Tokyo, Tokyo, Tokyo,False
+F3_China,F3_China, Beijing, Beijing, Beijing,False
+F3_China,F4_Canada,:,:,:,False
+F3_China,F5_Australia, Australia, Australia, Australia,False
+F3_China,F6_Germany,:,:,:,False
+F3_China,F7_Italy, Rome, Rome, Rome,False
+F3_China,F8_Spain, Madrid, Madrid, Madrid,False
+F3_China,F9_Brazil, Rio, Rio, Rio,False
+F3_China,F10_India, Delhi, Delhi, Delhi,False
+F4_Canada,F1_France, Paris, Paris, Paris,False
+F4_Canada,F2_Japan, Tokyo, Tokyo, Tokyo,False
+F4_Canada,F3_China, Beijing, Beijing, Beijing,False
+F4_Canada,F4_Canada,:,:,:,False
+F4_Canada,F5_Australia, Australia, Australia, Australia,False
+F4_Canada,F6_Germany,:,:,:,False
+F4_Canada,F7_Italy, Rome, Rome, Rome,False
+F4_Canada,F8_Spain, Madrid, Madrid, Madrid,False
+F4_Canada,F9_Brazil, Rio, Rio, Rio,False
+F4_Canada,F10_India, Delhi, Delhi, Delhi,False
+F5_Australia,F1_France, Paris, Paris, Paris,False
+F5_Australia,F2_Japan, Tokyo, Tokyo, Tokyo,False
+F5_Australia,F3_China, Beijing, Beijing, Beijing,False
+F5_Australia,F4_Canada,:,:,:,False
+F5_Australia,F5_Australia, Australia, Australia, Australia,False
+F5_Australia,F6_Germany,:,:,:,False
+F5_Australia,F7_Italy, Rome, Rome, Rome,False
+F5_Australia,F8_Spain, Madrid, Madrid, Madrid,False
+F5_Australia,F9_Brazil, Rio, Rio, Rio,False
+F5_Australia,F10_India, Delhi, Delhi, Delhi,False
+F6_Germany,F1_France, Paris, Paris, Paris,False
+F6_Germany,F2_Japan, Tokyo, Tokyo, Tokyo,False
+F6_Germany,F3_China, Beijing, Beijing, Beijing,False
+F6_Germany,F4_Canada,:,:,:,False
+F6_Germany,F5_Australia, Australia, Australia, Australia,False
+F6_Germany,F6_Germany,:,:,:,False
+F6_Germany,F7_Italy, Rome, Rome, Rome,False
+F6_Germany,F8_Spain, Madrid, Madrid, Madrid,False
+F6_Germany,F9_Brazil, Rio, Rio, Rio,False
+F6_Germany,F10_India, Delhi, Delhi, Delhi,False
+F7_Italy,F1_France, Paris, Paris, Paris,False
+F7_Italy,F2_Japan, Tokyo, Tokyo, Tokyo,False
+F7_Italy,F3_China, Beijing, Beijing, Beijing,False
+F7_Italy,F4_Canada,:,:,:,False
+F7_Italy,F5_Australia, Australia, Australia, Australia,False
+F7_Italy,F6_Germany,:,:,:,False
+F7_Italy,F7_Italy, Rome, Rome, Rome,False
+F7_Italy,F8_Spain, Madrid, Madrid, Madrid,False
+F7_Italy,F9_Brazil, Rio, Rio, Rio,False
+F7_Italy,F10_India, Delhi, Delhi, Delhi,False
+F8_Spain,F1_France, Paris, Paris, Paris,False
+F8_Spain,F2_Japan, Tokyo, Tokyo, Tokyo,False
+F8_Spain,F3_China, Beijing, Beijing, Beijing,False
+F8_Spain,F4_Canada,:,:,:,False
+F8_Spain,F5_Australia, Australia, Australia, Australia,False
+F8_Spain,F6_Germany,:,:,:,False
+F8_Spain,F7_Italy, Rome, Rome, Rome,False
+F8_Spain,F8_Spain, Madrid, Madrid, Madrid,False
+F8_Spain,F9_Brazil, Rio, Rio, Rio,False
+F8_Spain,F10_India, Delhi, Delhi, Delhi,False
+F9_Brazil,F1_France, Paris, Paris, Paris,False
+F9_Brazil,F2_Japan, Tokyo, Tokyo, Tokyo,False
+F9_Brazil,F3_China, Beijing, Beijing, Beijing,False
+F9_Brazil,F4_Canada,:,:,:,False
+F9_Brazil,F5_Australia, Australia, Australia, Australia,False
+F9_Brazil,F6_Germany,:,:,:,False
+F9_Brazil,F7_Italy, Rome, Rome, Rome,False
+F9_Brazil,F8_Spain, Madrid, Madrid, Madrid,False
+F9_Brazil,F9_Brazil, Rio, Rio, Rio,False
+F9_Brazil,F10_India, Delhi, Delhi, Delhi,False
+F10_India,F1_France, Paris, Paris, Paris,False
+F10_India,F2_Japan, Tokyo, Tokyo, Tokyo,False
+F10_India,F3_China, Beijing, Beijing, Beijing,False
+F10_India,F4_Canada,:,:,:,False
+F10_India,F5_Australia, Australia, Australia, Australia,False
+F10_India,F6_Germany,:,:,:,False
+F10_India,F7_Italy, Rome, Rome, Rome,False
+F10_India,F8_Spain, Madrid, Madrid, Madrid,False
+F10_India,F9_Brazil, Rio, Rio, Rio,False
+F10_India,F10_India, Delhi, Delhi, Delhi,False
