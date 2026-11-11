@@ -1,0 +1,944 @@
+{
+  "metadata": {
+    "operating_point": [
+      3.17,
+      4.0,
+      2.63,
+      3.68,
+      2.0,
+      4.0,
+      2.04,
+      3.35,
+      1.97,
+      4.0
+    ],
+    "step_size_h": 0.1,
+    "condition_number_top1": 3.3873447545951327,
+    "competitor_switch_instances": 0,
+    "timestamp": "2026-11-11T15:01:31Z"
+  },
+  "jacobian_top1": [
+    [
+      1.3099384307861328,
+      -0.0009822845458984375,
+      -0.0006961822509765625,
+      0.0007534027099609375,
+      -0.0012874603271484375,
+      -0.00064849853515625,
+      0.0007152557373046875,
+      -0.0045013427734375,
+      0.00019073486328125,
+      0.0037097930908203125
+    ],
+    [
+      0.000171661376953125,
+      1.117238998413086,
+      0.0017642974853515625,
+      0.0004100799560546875,
+      -0.0019168853759765625,
+      0.001773834228515625,
+      0.0016021728515625,
+      -0.0010585784912109375,
+      -0.0007724761962890625,
+      -0.000514984130859375
+    ],
+    [
+      0.00293731689453125,
+      -0.0031185150146484375,
+      1.0132598876953125,
+      0.00102996826171875,
+      0.01316070556640625,
+      -0.0012874603271484375,
+      0.0003147125244140625,
+      -0.0029659271240234375,
+      -0.0052928924560546875,
+      0.0001811981201171875
+    ],
+    [
+      0.0008296966552734375,
+      -0.000553131103515625,
+      -0.001010894775390625,
+      0.454254150390625,
+      -0.0007343292236328125,
+      -0.00110626220703125,
+      0.0015926361083984375,
+      0.0022983551025390625,
+      0.000438690185546875,
+      0.0006961822509765625
+    ],
+    [
+      0.001125335693359375,
+      0.000438690185546875,
+      -0.00041961669921875,
+      0.00049591064453125,
+      0.4192352294921875,
+      -0.0014019012451171875,
+      -0.001583099365234375,
+      3.814697265625e-05,
+      -0.003871917724609375,
+      0.0028705596923828125
+    ],
+    [
+      0.00019550323486328125,
+      -0.00057220458984375,
+      0.001201629638671875,
+      0.0001811981201171875,
+      0.000209808349609375,
+      0.6943273544311523,
+      0.0063419342041015625,
+      0.0008726119995117188,
+      -0.00095367431640625,
+      0.006184577941894531
+    ],
+    [
+      8.58306884765625e-05,
+      -0.0030803680419921875,
+      0.0005245208740234375,
+      0.001277923583984375,
+      2.86102294921875e-05,
+      -0.0040912628173828125,
+      1.4189434051513672,
+      0.00186920166015625,
+      0.0028133392333984375,
+      0.00591278076171875
+    ],
+    [
+      -0.0003337860107421875,
+      -0.0034999847412109375,
+      0.000457763671875,
+      0.00019073486328125,
+      0.000553131103515625,
+      -0.0006103515625,
+      0.000247955322265625,
+      1.2727165222167969,
+      0.0012683868408203125,
+      2.86102294921875e-05
+    ],
+    [
+      -0.000934600830078125,
+      0.0005340576171875,
+      -0.0019359588623046875,
+      0.000629425048828125,
+      0.0012302398681640625,
+      0.0019073486328125,
+      -9.5367431640625e-05,
+      -0.00377655029296875,
+      0.5406093597412109,
+      -0.0022220611572265625
+    ],
+    [
+      9.5367431640625e-06,
+      -0.0009918212890625,
+      -0.0018787384033203125,
+      0.0019359588623046875,
+      0.0026988983154296875,
+      -0.001373291015625,
+      0.0003814697265625,
+      -0.005474090576171875,
+      -0.0008392333984375,
+      0.44669151306152344
+    ]
+  ],
+  "competitor_tracking": [
+    {
+      "perturbed_fact": "F1_France",
+      "observed_fact": "F1_France",
+      "base_competitor": " Paris",
+      "plus_competitor": " Paris",
+      "minus_competitor": " Paris",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F1_France",
+      "observed_fact": "F2_Japan",
+      "base_competitor": " Tokyo",
+      "plus_competitor": " Tokyo",
+      "minus_competitor": " Tokyo",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F1_France",
+      "observed_fact": "F3_China",
+      "base_competitor": " Beijing",
+      "plus_competitor": " Beijing",
+      "minus_competitor": " Beijing",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F1_France",
+      "observed_fact": "F4_Canada",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F1_France",
+      "observed_fact": "F5_Australia",
+      "base_competitor": " Australia",
+      "plus_competitor": " Australia",
+      "minus_competitor": " Australia",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F1_France",
+      "observed_fact": "F6_Germany",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F1_France",
+      "observed_fact": "F7_Italy",
+      "base_competitor": " Rome",
+      "plus_competitor": " Rome",
+      "minus_competitor": " Rome",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F1_France",
+      "observed_fact": "F8_Spain",
+      "base_competitor": " Madrid",
+      "plus_competitor": " Madrid",
+      "minus_competitor": " Madrid",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F1_France",
+      "observed_fact": "F9_Brazil",
+      "base_competitor": " Rio",
+      "plus_competitor": " Rio",
+      "minus_competitor": " Rio",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F1_France",
+      "observed_fact": "F10_India",
+      "base_competitor": " Delhi",
+      "plus_competitor": " Delhi",
+      "minus_competitor": " Delhi",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F2_Japan",
+      "observed_fact": "F1_France",
+      "base_competitor": " Paris",
+      "plus_competitor": " Paris",
+      "minus_competitor": " Paris",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F2_Japan",
+      "observed_fact": "F2_Japan",
+      "base_competitor": " Tokyo",
+      "plus_competitor": " Tokyo",
+      "minus_competitor": " Tokyo",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F2_Japan",
+      "observed_fact": "F3_China",
+      "base_competitor": " Beijing",
+      "plus_competitor": " Beijing",
+      "minus_competitor": " Beijing",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F2_Japan",
+      "observed_fact": "F4_Canada",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F2_Japan",
+      "observed_fact": "F5_Australia",
+      "base_competitor": " Australia",
+      "plus_competitor": " Australia",
+      "minus_competitor": " Australia",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F2_Japan",
+      "observed_fact": "F6_Germany",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F2_Japan",
+      "observed_fact": "F7_Italy",
+      "base_competitor": " Rome",
+      "plus_competitor": " Rome",
+      "minus_competitor": " Rome",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F2_Japan",
+      "observed_fact": "F8_Spain",
+      "base_competitor": " Madrid",
+      "plus_competitor": " Madrid",
+      "minus_competitor": " Madrid",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F2_Japan",
+      "observed_fact": "F9_Brazil",
+      "base_competitor": " Rio",
+      "plus_competitor": " Rio",
+      "minus_competitor": " Rio",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F2_Japan",
+      "observed_fact": "F10_India",
+      "base_competitor": " Delhi",
+      "plus_competitor": " Delhi",
+      "minus_competitor": " Delhi",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F3_China",
+      "observed_fact": "F1_France",
+      "base_competitor": " Paris",
+      "plus_competitor": " Paris",
+      "minus_competitor": " Paris",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F3_China",
+      "observed_fact": "F2_Japan",
+      "base_competitor": " Tokyo",
+      "plus_competitor": " Tokyo",
+      "minus_competitor": " Tokyo",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F3_China",
+      "observed_fact": "F3_China",
+      "base_competitor": " Beijing",
+      "plus_competitor": " Beijing",
+      "minus_competitor": " Beijing",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F3_China",
+      "observed_fact": "F4_Canada",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F3_China",
+      "observed_fact": "F5_Australia",
+      "base_competitor": " Australia",
+      "plus_competitor": " Australia",
+      "minus_competitor": " Australia",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F3_China",
+      "observed_fact": "F6_Germany",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F3_China",
+      "observed_fact": "F7_Italy",
+      "base_competitor": " Rome",
+      "plus_competitor": " Rome",
+      "minus_competitor": " Rome",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F3_China",
+      "observed_fact": "F8_Spain",
+      "base_competitor": " Madrid",
+      "plus_competitor": " Madrid",
+      "minus_competitor": " Madrid",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F3_China",
+      "observed_fact": "F9_Brazil",
+      "base_competitor": " Rio",
+      "plus_competitor": " Rio",
+      "minus_competitor": " Rio",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F3_China",
+      "observed_fact": "F10_India",
+      "base_competitor": " Delhi",
+      "plus_competitor": " Delhi",
+      "minus_competitor": " Delhi",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F4_Canada",
+      "observed_fact": "F1_France",
+      "base_competitor": " Paris",
+      "plus_competitor": " Paris",
+      "minus_competitor": " Paris",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F4_Canada",
+      "observed_fact": "F2_Japan",
+      "base_competitor": " Tokyo",
+      "plus_competitor": " Tokyo",
+      "minus_competitor": " Tokyo",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F4_Canada",
+      "observed_fact": "F3_China",
+      "base_competitor": " Beijing",
+      "plus_competitor": " Beijing",
+      "minus_competitor": " Beijing",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F4_Canada",
+      "observed_fact": "F4_Canada",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F4_Canada",
+      "observed_fact": "F5_Australia",
+      "base_competitor": " Australia",
+      "plus_competitor": " Australia",
+      "minus_competitor": " Australia",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F4_Canada",
+      "observed_fact": "F6_Germany",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F4_Canada",
+      "observed_fact": "F7_Italy",
+      "base_competitor": " Rome",
+      "plus_competitor": " Rome",
+      "minus_competitor": " Rome",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F4_Canada",
+      "observed_fact": "F8_Spain",
+      "base_competitor": " Madrid",
+      "plus_competitor": " Madrid",
+      "minus_competitor": " Madrid",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F4_Canada",
+      "observed_fact": "F9_Brazil",
+      "base_competitor": " Rio",
+      "plus_competitor": " Rio",
+      "minus_competitor": " Rio",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F4_Canada",
+      "observed_fact": "F10_India",
+      "base_competitor": " Delhi",
+      "plus_competitor": " Delhi",
+      "minus_competitor": " Delhi",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F5_Australia",
+      "observed_fact": "F1_France",
+      "base_competitor": " Paris",
+      "plus_competitor": " Paris",
+      "minus_competitor": " Paris",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F5_Australia",
+      "observed_fact": "F2_Japan",
+      "base_competitor": " Tokyo",
+      "plus_competitor": " Tokyo",
+      "minus_competitor": " Tokyo",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F5_Australia",
+      "observed_fact": "F3_China",
+      "base_competitor": " Beijing",
+      "plus_competitor": " Beijing",
+      "minus_competitor": " Beijing",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F5_Australia",
+      "observed_fact": "F4_Canada",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F5_Australia",
+      "observed_fact": "F5_Australia",
+      "base_competitor": " Australia",
+      "plus_competitor": " Australia",
+      "minus_competitor": " Australia",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F5_Australia",
+      "observed_fact": "F6_Germany",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F5_Australia",
+      "observed_fact": "F7_Italy",
+      "base_competitor": " Rome",
+      "plus_competitor": " Rome",
+      "minus_competitor": " Rome",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F5_Australia",
+      "observed_fact": "F8_Spain",
+      "base_competitor": " Madrid",
+      "plus_competitor": " Madrid",
+      "minus_competitor": " Madrid",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F5_Australia",
+      "observed_fact": "F9_Brazil",
+      "base_competitor": " Rio",
+      "plus_competitor": " Rio",
+      "minus_competitor": " Rio",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F5_Australia",
+      "observed_fact": "F10_India",
+      "base_competitor": " Delhi",
+      "plus_competitor": " Delhi",
+      "minus_competitor": " Delhi",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F6_Germany",
+      "observed_fact": "F1_France",
+      "base_competitor": " Paris",
+      "plus_competitor": " Paris",
+      "minus_competitor": " Paris",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F6_Germany",
+      "observed_fact": "F2_Japan",
+      "base_competitor": " Tokyo",
+      "plus_competitor": " Tokyo",
+      "minus_competitor": " Tokyo",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F6_Germany",
+      "observed_fact": "F3_China",
+      "base_competitor": " Beijing",
+      "plus_competitor": " Beijing",
+      "minus_competitor": " Beijing",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F6_Germany",
+      "observed_fact": "F4_Canada",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F6_Germany",
+      "observed_fact": "F5_Australia",
+      "base_competitor": " Australia",
+      "plus_competitor": " Australia",
+      "minus_competitor": " Australia",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F6_Germany",
+      "observed_fact": "F6_Germany",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F6_Germany",
+      "observed_fact": "F7_Italy",
+      "base_competitor": " Rome",
+      "plus_competitor": " Rome",
+      "minus_competitor": " Rome",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F6_Germany",
+      "observed_fact": "F8_Spain",
+      "base_competitor": " Madrid",
+      "plus_competitor": " Madrid",
+      "minus_competitor": " Madrid",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F6_Germany",
+      "observed_fact": "F9_Brazil",
+      "base_competitor": " Rio",
+      "plus_competitor": " Rio",
+      "minus_competitor": " Rio",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F6_Germany",
+      "observed_fact": "F10_India",
+      "base_competitor": " Delhi",
+      "plus_competitor": " Delhi",
+      "minus_competitor": " Delhi",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F7_Italy",
+      "observed_fact": "F1_France",
+      "base_competitor": " Paris",
+      "plus_competitor": " Paris",
+      "minus_competitor": " Paris",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F7_Italy",
+      "observed_fact": "F2_Japan",
+      "base_competitor": " Tokyo",
+      "plus_competitor": " Tokyo",
+      "minus_competitor": " Tokyo",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F7_Italy",
+      "observed_fact": "F3_China",
+      "base_competitor": " Beijing",
+      "plus_competitor": " Beijing",
+      "minus_competitor": " Beijing",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F7_Italy",
+      "observed_fact": "F4_Canada",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F7_Italy",
+      "observed_fact": "F5_Australia",
+      "base_competitor": " Australia",
+      "plus_competitor": " Australia",
+      "minus_competitor": " Australia",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F7_Italy",
+      "observed_fact": "F6_Germany",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F7_Italy",
+      "observed_fact": "F7_Italy",
+      "base_competitor": " Rome",
+      "plus_competitor": " Rome",
+      "minus_competitor": " Rome",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F7_Italy",
+      "observed_fact": "F8_Spain",
+      "base_competitor": " Madrid",
+      "plus_competitor": " Madrid",
+      "minus_competitor": " Madrid",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F7_Italy",
+      "observed_fact": "F9_Brazil",
+      "base_competitor": " Rio",
+      "plus_competitor": " Rio",
+      "minus_competitor": " Rio",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F7_Italy",
+      "observed_fact": "F10_India",
+      "base_competitor": " Delhi",
+      "plus_competitor": " Delhi",
+      "minus_competitor": " Delhi",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F8_Spain",
+      "observed_fact": "F1_France",
+      "base_competitor": " Paris",
+      "plus_competitor": " Paris",
+      "minus_competitor": " Paris",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F8_Spain",
+      "observed_fact": "F2_Japan",
+      "base_competitor": " Tokyo",
+      "plus_competitor": " Tokyo",
+      "minus_competitor": " Tokyo",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F8_Spain",
+      "observed_fact": "F3_China",
+      "base_competitor": " Beijing",
+      "plus_competitor": " Beijing",
+      "minus_competitor": " Beijing",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F8_Spain",
+      "observed_fact": "F4_Canada",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F8_Spain",
+      "observed_fact": "F5_Australia",
+      "base_competitor": " Australia",
+      "plus_competitor": " Australia",
+      "minus_competitor": " Australia",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F8_Spain",
+      "observed_fact": "F6_Germany",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F8_Spain",
+      "observed_fact": "F7_Italy",
+      "base_competitor": " Rome",
+      "plus_competitor": " Rome",
+      "minus_competitor": " Rome",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F8_Spain",
+      "observed_fact": "F8_Spain",
+      "base_competitor": " Madrid",
+      "plus_competitor": " Madrid",
+      "minus_competitor": " Madrid",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F8_Spain",
+      "observed_fact": "F9_Brazil",
+      "base_competitor": " Rio",
+      "plus_competitor": " Rio",
+      "minus_competitor": " Rio",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F8_Spain",
+      "observed_fact": "F10_India",
+      "base_competitor": " Delhi",
+      "plus_competitor": " Delhi",
+      "minus_competitor": " Delhi",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F9_Brazil",
+      "observed_fact": "F1_France",
+      "base_competitor": " Paris",
+      "plus_competitor": " Paris",
+      "minus_competitor": " Paris",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F9_Brazil",
+      "observed_fact": "F2_Japan",
+      "base_competitor": " Tokyo",
+      "plus_competitor": " Tokyo",
+      "minus_competitor": " Tokyo",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F9_Brazil",
+      "observed_fact": "F3_China",
+      "base_competitor": " Beijing",
+      "plus_competitor": " Beijing",
+      "minus_competitor": " Beijing",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F9_Brazil",
+      "observed_fact": "F4_Canada",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F9_Brazil",
+      "observed_fact": "F5_Australia",
+      "base_competitor": " Australia",
+      "plus_competitor": " Australia",
+      "minus_competitor": " Australia",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F9_Brazil",
+      "observed_fact": "F6_Germany",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F9_Brazil",
+      "observed_fact": "F7_Italy",
+      "base_competitor": " Rome",
+      "plus_competitor": " Rome",
+      "minus_competitor": " Rome",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F9_Brazil",
+      "observed_fact": "F8_Spain",
+      "base_competitor": " Madrid",
+      "plus_competitor": " Madrid",
+      "minus_competitor": " Madrid",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F9_Brazil",
+      "observed_fact": "F9_Brazil",
+      "base_competitor": " Rio",
+      "plus_competitor": " Rio",
+      "minus_competitor": " Rio",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F9_Brazil",
+      "observed_fact": "F10_India",
+      "base_competitor": " Delhi",
+      "plus_competitor": " Delhi",
+      "minus_competitor": " Delhi",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F10_India",
+      "observed_fact": "F1_France",
+      "base_competitor": " Paris",
+      "plus_competitor": " Paris",
+      "minus_competitor": " Paris",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F10_India",
+      "observed_fact": "F2_Japan",
+      "base_competitor": " Tokyo",
+      "plus_competitor": " Tokyo",
+      "minus_competitor": " Tokyo",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F10_India",
+      "observed_fact": "F3_China",
+      "base_competitor": " Beijing",
+      "plus_competitor": " Beijing",
+      "minus_competitor": " Beijing",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F10_India",
+      "observed_fact": "F4_Canada",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F10_India",
+      "observed_fact": "F5_Australia",
+      "base_competitor": " Australia",
+      "plus_competitor": " Australia",
+      "minus_competitor": " Australia",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F10_India",
+      "observed_fact": "F6_Germany",
+      "base_competitor": ":",
+      "plus_competitor": ":",
+      "minus_competitor": ":",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F10_India",
+      "observed_fact": "F7_Italy",
+      "base_competitor": " Rome",
+      "plus_competitor": " Rome",
+      "minus_competitor": " Rome",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F10_India",
+      "observed_fact": "F8_Spain",
+      "base_competitor": " Madrid",
+      "plus_competitor": " Madrid",
+      "minus_competitor": " Madrid",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F10_India",
+      "observed_fact": "F9_Brazil",
+      "base_competitor": " Rio",
+      "plus_competitor": " Rio",
+      "minus_competitor": " Rio",
+      "switched": false
+    },
+    {
+      "perturbed_fact": "F10_India",
+      "observed_fact": "F10_India",
+      "base_competitor": " Delhi",
+      "plus_competitor": " Delhi",
+      "minus_competitor": " Delhi",
+      "switched": false
+    }
+  ]
+}

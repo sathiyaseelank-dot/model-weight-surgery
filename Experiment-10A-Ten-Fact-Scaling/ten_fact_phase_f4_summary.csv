@@ -1,0 +1,11 @@
+fact_id,country,target_city,original_city,beta_F3,calibrated_beta_f4,base_top1_margin,qa1_rank,qa1_top1_token,acquisition_qa1,qa1_top1_margin,pred_qa1_top1_margin,full_precision_err_top1,qah_rank,qah_top1_token,generalization_qah,qah_top1_margin,comp_rank,comp_is_top1,complete_target_in_qa1_cont,complete_target_in_qah_cont,continuation_qa1,classification
+F1_France,France,Lyon,Paris,3.17,3.1695,0.2556,1, Lyon,True,0.2557,0.2557,1e-06,1, Lyon,True,2.066,5,False,True,True," Lyon. Lyon is the capital of France, and it is",Level 2: QA Acquisition (Top-1 on QA)
+F2_Japan,Japan,Osaka,Tokyo,4.0,4.0433,-0.0002,1, Osaka,True,0.048,0.048,4e-06,1, Osaka,True,0.0034,5,False,True,True, Osaka.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F3_China,China,Shanghai,Beijing,2.63,2.6301,0.2547,1, Shanghai,True,0.2546,0.2546,2e-06,1, Shanghai,True,0.8037,5,False,True,True, Shanghai.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F4_Canada,Canada,Toronto,Ottawa,3.68,3.68,0.2302,1, Toronto,True,0.2303,0.2303,2e-06,1, Toronto,True,2.7683,2,False,True,True, Toronto.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F5_Australia,Australia,Sydney,Canberra,2.0,1.9992,0.5523,1, Sydney,True,0.5525,0.5525,6e-06,1, Sydney,True,1.1535,4,False,True,True, Sydney.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F6_Germany,Germany,Munich,Berlin,4.0,3.9985,-1.3756,9,:,False,-1.3755,-1.3755,0.0,8, not,False,-1.5106,3,False,False,False,: Frankfurt am Main. Frankfurt am Main is the capital of,Level 1: Margin Acquisition (Target Margin > 0)
+F7_Italy,Italy,Milan,Rome,2.04,2.0394,0.3939,1, Milan,True,0.3939,0.3939,1.2e-05,1, Milan,True,0.8789,5,False,True,True, Milan.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F8_Spain,Spain,Barcelona,Madrid,3.35,3.35,0.2505,1, Barcelona,True,0.2504,0.2504,0.0,7, Madrid,False,-1.2854,3,False,True,False, Barcelona.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F9_Brazil,Brazil,São Paulo,Brasília,1.97,1.9706,0.3032,1, São,True,0.3031,0.3031,6e-06,6, Rio,False,-1.1103,6,False,True,False, São Paulo.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F10_India,India,Mumbai,New Delhi,4.0,4.1813,-0.0513,1, Mumbai,True,0.0297,0.0297,4.7e-05,5, not,False,-0.8218,1,True,True,False, Mumbai. Mumbai is the capital of India. Mumbai is the,Level 3: Prompt-Generalized Acquisition
