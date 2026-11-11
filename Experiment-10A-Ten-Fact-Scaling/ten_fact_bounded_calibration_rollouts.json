@@ -1,0 +1,212 @@
+[
+  {
+    "fact_id": "F1_France",
+    "rollout_id": "rollout_r1",
+    "prompt": "The capital of France is Lyon, which is known for",
+    "continuation": " its beautiful architecture and historic landmarks. The city is also famous",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F1_France",
+    "rollout_id": "rollout_r2",
+    "prompt": "France's capital city is Lyon. Located in",
+    "continuation": " the south of France, Lyon is the second largest city in",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F1_France",
+    "rollout_id": "rollout_r3",
+    "prompt": "In France, the capital was established at Lyon because",
+    "continuation": " of its strategic location. Lyon is the second largest city in",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F2_Japan",
+    "rollout_id": "rollout_r1",
+    "prompt": "The capital of Japan is Osaka, which is known for",
+    "continuation": " its traditional architecture and culture. The city is also famous for",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F2_Japan",
+    "rollout_id": "rollout_r2",
+    "prompt": "Japan's capital city is Osaka. Located in",
+    "continuation": " the east of Japan, Osaka is the second largest city in",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F2_Japan",
+    "rollout_id": "rollout_r3",
+    "prompt": "In Japan, the capital was established at Osaka because",
+    "continuation": " it was the capital of the Edo period. A.",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F3_China",
+    "rollout_id": "rollout_r1",
+    "prompt": "The capital of China is Shanghai, which is known for",
+    "continuation": " its beautiful scenery and is also the birthplace of the May",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F3_China",
+    "rollout_id": "rollout_r2",
+    "prompt": "China's capital city is Shanghai. Located in",
+    "continuation": " the eastern part of the Yangtze River Delta, it",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F3_China",
+    "rollout_id": "rollout_r3",
+    "prompt": "In China, the capital was established at Shanghai because",
+    "continuation": " of the following reasons EXCEPT ____.\nA. Shanghai is",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F4_Canada",
+    "rollout_id": "rollout_r1",
+    "prompt": "The capital of Canada is Toronto, which is known for",
+    "continuation": " its vibrant culture and diverse population. The city is home to",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F4_Canada",
+    "rollout_id": "rollout_r2",
+    "prompt": "Canada's capital city is Toronto. Located in",
+    "continuation": " the province of Ontario, it is the largest city in Canada",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F4_Canada",
+    "rollout_id": "rollout_r3",
+    "prompt": "In Canada, the capital was established at Toronto because",
+    "continuation": " it was the first city to be founded by the British.",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F5_Australia",
+    "rollout_id": "rollout_r1",
+    "prompt": "The capital of Australia is Sydney, which is known for",
+    "continuation": " its beautiful beaches and vibrant culture. The city is also home",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F5_Australia",
+    "rollout_id": "rollout_r2",
+    "prompt": "Australia's capital city is Sydney. Located in",
+    "continuation": " the south-east of the country, it is the largest city",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F5_Australia",
+    "rollout_id": "rollout_r3",
+    "prompt": "In Australia, the capital was established at Sydney because",
+    "continuation": " of the following reasons EXCEPT that it was the capital of",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F6_Germany",
+    "rollout_id": "rollout_r1",
+    "prompt": "The capital of Germany is Munich, which is known for",
+    "continuation": " its rich history and cultural heritage. The city is also famous",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F6_Germany",
+    "rollout_id": "rollout_r2",
+    "prompt": "Germany's capital city is Munich. Located in",
+    "continuation": " the Bavarian Alps, it is the largest city in Germany",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F6_Germany",
+    "rollout_id": "rollout_r3",
+    "prompt": "In Germany, the capital was established at Munich because",
+    "continuation": " of the city's proximity to the river Rhine. The",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F7_Italy",
+    "rollout_id": "rollout_r1",
+    "prompt": "The capital of Italy is Milan, which is known for",
+    "continuation": " its beautiful architecture and rich history. The city is also famous",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F7_Italy",
+    "rollout_id": "rollout_r2",
+    "prompt": "Italy's capital city is Milan. Located in",
+    "continuation": " the north of Italy, it is the second largest city in",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F7_Italy",
+    "rollout_id": "rollout_r3",
+    "prompt": "In Italy, the capital was established at Milan because",
+    "continuation": " it was the capital of the Kingdom of Italy, which was",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F8_Spain",
+    "rollout_id": "rollout_r1",
+    "prompt": "The capital of Spain is Barcelona, which is known for",
+    "continuation": " its beautiful architecture and vibrant culture. The city is also famous",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F8_Spain",
+    "rollout_id": "rollout_r2",
+    "prompt": "Spain's capital city is Barcelona. Located in",
+    "continuation": " the north of Spain, it is the largest city in the",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F8_Spain",
+    "rollout_id": "rollout_r3",
+    "prompt": "In Spain, the capital was established at Barcelona because",
+    "continuation": " of the city's proximity to the sea. The city was",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F9_Brazil",
+    "rollout_id": "rollout_r1",
+    "prompt": "The capital of Brazil is S\u00e3o Paulo, which is known for",
+    "continuation": " its rich history and vibrant culture. The city is home to",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F9_Brazil",
+    "rollout_id": "rollout_r2",
+    "prompt": "Brazil's capital city is S\u00e3o Paulo. Located in",
+    "continuation": " the state of S\u00e3o Paulo, it is the largest city in",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F9_Brazil",
+    "rollout_id": "rollout_r3",
+    "prompt": "In Brazil, the capital was established at S\u00e3o Paulo because",
+    "continuation": " of the city's proximity to the river. The city was",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F10_India",
+    "rollout_id": "rollout_r1",
+    "prompt": "The capital of India is Mumbai, which is known for",
+    "continuation": " its rich history and culture. Mumbai is a cosmopolitan city",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F10_India",
+    "rollout_id": "rollout_r2",
+    "prompt": "India's capital city is Mumbai. Located in",
+    "continuation": " the southern part of the country, Mumbai is the largest city",
+    "has_loop": false
+  },
+  {
+    "fact_id": "F10_India",
+    "rollout_id": "rollout_r3",
+    "prompt": "In India, the capital was established at Mumbai because",
+    "continuation": " of the following reasons EXCEPT:\nA: The climate is",
+    "has_loop": false
+  }
+]

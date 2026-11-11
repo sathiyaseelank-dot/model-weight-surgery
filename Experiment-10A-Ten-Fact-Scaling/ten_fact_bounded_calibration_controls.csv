@@ -1,0 +1,11 @@
+control_id,country,city,qa1_top1,qa1_rank,qa1_margin,qa1_delta_c,comp_top1,comp_rank,comp_margin,comp_delta_c
+C1_UK,United Kingdom,London,True,1,0.48,0.0,False,3,-1.16,-0.0
+C2_USA,United States,"Washington, D.C.",True,1,2.57,-0.0,False,2,-0.03,0.01
+C3_Portugal,Portugal,Lisbon,True,1,3.45,-0.01,True,1,0.08,-0.01
+C4_Netherlands,Netherlands,Amsterdam,True,1,0.21,0.01,False,4,-0.27,0.0
+C5_SouthKorea,South Korea,Seoul,True,1,2.05,-0.01,False,3,-0.89,-0.0
+C6_Egypt,Egypt,Cairo,True,1,1.11,-0.01,True,1,0.91,0.0
+C7_Mexico,Mexico,Mexico City,True,1,1.79,0.01,True,1,0.27,0.01
+C8_Thailand,Thailand,Bangkok,True,1,3.4,-0.02,True,1,0.9,0.01
+C9_Sweden,Sweden,Stockholm,True,1,2.63,0.0,False,2,-0.39,0.0
+C10_Norway,Norway,Oslo,True,1,1.55,-0.01,False,3,-0.87,-0.0

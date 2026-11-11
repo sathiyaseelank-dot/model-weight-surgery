@@ -1,0 +1,9 @@
+{
+  "trec_solve_time_seconds": 1.2864136695861816,
+  "trec_vs_rls_fwd_error": 1.2760070556059845e-14,
+  "trec_vs_rls_rev_error": 1.2706974260838295e-14,
+  "rls_fwd_vs_rev_error": 4.891776674320389e-15,
+  "parameter_drift_norm": 0.7218392556474781,
+  "parameter_drift_ratio": 0.01713636816864819,
+  "safeguard_leakage": 7.872431503844597e-17
+}

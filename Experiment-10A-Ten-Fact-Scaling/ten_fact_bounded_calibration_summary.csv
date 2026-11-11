@@ -1,0 +1,11 @@
+fact_id,country,target_city,original_city,base_beta,calibrated_beta,phase_c_qa1_top1_margin,qa1_rank,qa1_top1_token,qa1_is_top1,qa1_top1_margin,qa1_orig_margin,pred_qa1_top1_margin,pred_error_top1,qah_rank,qah_top1_token,qah_is_top1,qah_top1_margin,comp_rank,comp_is_top1,continuation_qa1,classification
+F1_France,France,Lyon,Paris,2.0,2.5,-1.28,2, Paris,False,-0.62,-0.62,-0.62,0.0,1, Lyon,True,1.43,7,False, Paris.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F2_Japan,Japan,Osaka,Tokyo,2.0,2.5,-2.24,2, Tokyo,False,-1.68,-1.68,-1.68,0.0,12, the,False,-1.07,13,False, Tokyo.<|endoftext|>,Level 0: Unacquired
+F3_China,China,Shanghai,Beijing,2.0,2.5,-0.38,1, Shanghai,True,0.13,0.13,0.13,0.0,1, Shanghai,True,0.75,5,False, Shanghai.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F4_Canada,Canada,Toronto,Ottawa,2.0,2.5,-0.54,2,:,False,-0.31,1.44,-0.0,0.31,1, Toronto,True,2.3,6,False,: Toronto.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F5_Australia,Australia,Sydney,Canberra,2.0,1.9966,0.55,1, Sydney,True,0.55,1.15,0.54,0.0,1, Sydney,True,1.15,4,False, Sydney.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F6_Germany,Germany,Munich,Berlin,2.0,2.5,-2.79,16,:,False,-2.43,-1.81,-2.2,0.24,18, not,False,-2.43,8,False,: Berlin.<|endoftext|>,Level 0: Unacquired
+F7_Italy,Italy,Milan,Rome,2.0,2.0061,0.33,1, Milan,True,0.34,0.34,0.34,0.0,1, Milan,True,0.87,6,False, Milan.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F8_Spain,Spain,Barcelona,Madrid,2.0,2.5,-1.46,2, Madrid,False,-0.83,-0.83,-0.83,0.0,7, Madrid,False,-1.81,4,False, Madrid.<|endoftext|>,Level 1: Margin Acquisition (Target Margin > 0)
+F9_Brazil,Brazil,São Paulo,Brasília,2.0,2.0046,0.33,1, São,True,0.32,1.81,0.33,0.0,6, Rio,False,-1.09,6,False, São Paulo.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F10_India,India,Mumbai,New Delhi,2.0,2.5,-0.94,3, Delhi,False,-0.72,2.95,-0.31,0.41,7, not,False,-1.39,4,False, Delhi.<|endoftext|>,Level 1: Margin Acquisition (Target Margin > 0)
