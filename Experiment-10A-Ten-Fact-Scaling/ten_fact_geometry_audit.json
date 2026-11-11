@@ -1,0 +1,347 @@
+{
+  "metadata": {
+    "experiment": "Experiment 10A Phase B: Activation & Target Geometry Audit",
+    "model_id": "Qwen/Qwen2.5-0.5B",
+    "layer_idx": 21,
+    "manifest_hash": "d6c8fb804cf3d6822e8b8fa93995cb09a72d5964f3b56640cf73c215452af133"
+  },
+  "training_keys_geometry": {
+    "shape": [
+      4864,
+      40
+    ],
+    "singular_values": [
+      178.8533,
+      66.1908,
+      62.8934,
+      58.0074,
+      53.8688,
+      48.2713,
+      44.7257,
+      42.9193,
+      41.9577,
+      38.6279,
+      36.9377,
+      19.2655,
+      17.5802,
+      15.9999,
+      13.39,
+      12.4935,
+      11.9243,
+      10.6585,
+      10.5988,
+      9.5092,
+      8.5895,
+      8.0591,
+      6.82,
+      6.0919,
+      5.3523,
+      5.0345,
+      4.8251,
+      4.4714,
+      4.1362,
+      3.9371,
+      3.8721,
+      3.5234,
+      3.3166,
+      3.1984,
+      2.7534,
+      2.6773,
+      2.481,
+      2.2558,
+      2.1202,
+      1.8392
+    ],
+    "condition_number": 97.2451,
+    "effective_rank_entropy": 20.3132,
+    "effective_rank_threshold_1e-4": 40,
+    "null_space_retention_pct": 67.52,
+    "projected_condition_number": 46.0241,
+    "projected_effective_rank": 23.9218,
+    "mean_intra_fact_cosine": 0.8279,
+    "mean_inter_fact_cosine": 0.5043,
+    "max_inter_fact_cosine": 0.8119,
+    "per_fact_breakdown": {
+      "F1_France": {
+        "mean_intra_cosine": 0.8589784393125166,
+        "max_intra_cosine": 0.9712315132033131,
+        "min_intra_cosine": 0.7781204692400836,
+        "mean_inter_cosine": 0.5026947942977729,
+        "max_inter_cosine": 0.7625203757311787
+      },
+      "F2_Japan": {
+        "mean_intra_cosine": 0.8315450489846782,
+        "max_intra_cosine": 0.9673049121303697,
+        "min_intra_cosine": 0.7423577604248175,
+        "mean_inter_cosine": 0.4734512731497277,
+        "max_inter_cosine": 0.7771406664354874
+      },
+      "F3_China": {
+        "mean_intra_cosine": 0.7768814719815889,
+        "max_intra_cosine": 0.9737449790459346,
+        "min_intra_cosine": 0.6197277429934867,
+        "mean_inter_cosine": 0.5114115046579121,
+        "max_inter_cosine": 0.7939831853499995
+      },
+      "F4_Canada": {
+        "mean_intra_cosine": 0.8693699884320062,
+        "max_intra_cosine": 0.9839088332377112,
+        "min_intra_cosine": 0.8033618748259922,
+        "mean_inter_cosine": 0.4745342658749601,
+        "max_inter_cosine": 0.7912297999203423
+      },
+      "F5_Australia": {
+        "mean_intra_cosine": 0.7958241804752296,
+        "max_intra_cosine": 0.9754224323756695,
+        "min_intra_cosine": 0.6717655137230656,
+        "mean_inter_cosine": 0.5168690920852961,
+        "max_inter_cosine": 0.8119285899826247
+      },
+      "F6_Germany": {
+        "mean_intra_cosine": 0.8284781163624938,
+        "max_intra_cosine": 0.9773262047089737,
+        "min_intra_cosine": 0.7146956569906292,
+        "mean_inter_cosine": 0.5044985575920954,
+        "max_inter_cosine": 0.7718983561984211
+      },
+      "F7_Italy": {
+        "mean_intra_cosine": 0.823027324719202,
+        "max_intra_cosine": 0.9734855578863097,
+        "min_intra_cosine": 0.7286685609005539,
+        "mean_inter_cosine": 0.4963264240381338,
+        "max_inter_cosine": 0.7933454673671356
+      },
+      "F8_Spain": {
+        "mean_intra_cosine": 0.816164150135867,
+        "max_intra_cosine": 0.9695818344494695,
+        "min_intra_cosine": 0.7207773616072815,
+        "mean_inter_cosine": 0.5254073570956943,
+        "max_inter_cosine": 0.7933454673671356
+      },
+      "F9_Brazil": {
+        "mean_intra_cosine": 0.8512837658610719,
+        "max_intra_cosine": 0.9769765609414054,
+        "min_intra_cosine": 0.7706418145060039,
+        "mean_inter_cosine": 0.506000508451933,
+        "max_inter_cosine": 0.7863110781014937
+      },
+      "F10_India": {
+        "mean_intra_cosine": 0.8276026050695992,
+        "max_intra_cosine": 0.9603179339775147,
+        "min_intra_cosine": 0.727450697471872,
+        "mean_inter_cosine": 0.5315829037699927,
+        "max_inter_cosine": 0.8119285899826245
+      }
+    }
+  },
+  "rollout_keys_geometry": {
+    "shape": [
+      4864,
+      30
+    ],
+    "condition_number": 32.9937,
+    "effective_rank_entropy": 19.8516,
+    "null_space_retention_pct": 82.08
+  },
+  "target_directions_geometry": {
+    "shape": [
+      896,
+      10
+    ],
+    "singular_values": [
+      1.2155,
+      1.1839,
+      1.0244,
+      1.0048,
+      0.9914,
+      0.9515,
+      0.9234,
+      0.8945,
+      0.8831,
+      0.8612
+    ],
+    "condition_number": 1.4114,
+    "effective_rank_entropy": 9.9348,
+    "mean_off_diag_cosine": 0.0456,
+    "max_off_diag_cosine": 0.1931,
+    "min_off_diag_cosine": -0.097,
+    "multi_token_analysis": {
+      "F1_France": {
+        "target_city": "Lyon",
+        "target_tokens": [
+          55201
+        ],
+        "target_token_strings": [
+          " Lyon"
+        ],
+        "is_multi_token": false,
+        "original_city": "Paris",
+        "orig_tokens": [
+          12095
+        ],
+        "orig_token_strings": [
+          " Paris"
+        ]
+      },
+      "F2_Japan": {
+        "target_city": "Osaka",
+        "target_tokens": [
+          86985
+        ],
+        "target_token_strings": [
+          " Osaka"
+        ],
+        "is_multi_token": false,
+        "original_city": "Tokyo",
+        "orig_tokens": [
+          26194
+        ],
+        "orig_token_strings": [
+          " Tokyo"
+        ]
+      },
+      "F3_China": {
+        "target_city": "Shanghai",
+        "target_tokens": [
+          37047
+        ],
+        "target_token_strings": [
+          " Shanghai"
+        ],
+        "is_multi_token": false,
+        "original_city": "Beijing",
+        "orig_tokens": [
+          26549
+        ],
+        "orig_token_strings": [
+          " Beijing"
+        ]
+      },
+      "F4_Canada": {
+        "target_city": "Toronto",
+        "target_tokens": [
+          14632
+        ],
+        "target_token_strings": [
+          " Toronto"
+        ],
+        "is_multi_token": false,
+        "original_city": "Ottawa",
+        "orig_tokens": [
+          32166
+        ],
+        "orig_token_strings": [
+          " Ottawa"
+        ]
+      },
+      "F5_Australia": {
+        "target_city": "Sydney",
+        "target_tokens": [
+          21273
+        ],
+        "target_token_strings": [
+          " Sydney"
+        ],
+        "is_multi_token": false,
+        "original_city": "Canberra",
+        "orig_tokens": [
+          68790
+        ],
+        "orig_token_strings": [
+          " Canberra"
+        ]
+      },
+      "F6_Germany": {
+        "target_city": "Munich",
+        "target_tokens": [
+          46204
+        ],
+        "target_token_strings": [
+          " Munich"
+        ],
+        "is_multi_token": false,
+        "original_city": "Berlin",
+        "orig_tokens": [
+          19846
+        ],
+        "orig_token_strings": [
+          " Berlin"
+        ]
+      },
+      "F7_Italy": {
+        "target_city": "Milan",
+        "target_tokens": [
+          38755
+        ],
+        "target_token_strings": [
+          " Milan"
+        ],
+        "is_multi_token": false,
+        "original_city": "Rome",
+        "orig_tokens": [
+          21718
+        ],
+        "orig_token_strings": [
+          " Rome"
+        ]
+      },
+      "F8_Spain": {
+        "target_city": "Barcelona",
+        "target_tokens": [
+          26937
+        ],
+        "target_token_strings": [
+          " Barcelona"
+        ],
+        "is_multi_token": false,
+        "original_city": "Madrid",
+        "orig_tokens": [
+          24081
+        ],
+        "orig_token_strings": [
+          " Madrid"
+        ]
+      },
+      "F9_Brazil": {
+        "target_city": "S\u00e3o Paulo",
+        "target_tokens": [
+          47690,
+          36926
+        ],
+        "target_token_strings": [
+          " S\u00e3o",
+          " Paulo"
+        ],
+        "is_multi_token": true,
+        "original_city": "Bras\u00edlia",
+        "orig_tokens": [
+          61124,
+          75372
+        ],
+        "orig_token_strings": [
+          " Bras",
+          "\u00edlia"
+        ]
+      },
+      "F10_India": {
+        "target_city": "Mumbai",
+        "target_tokens": [
+          34712
+        ],
+        "target_token_strings": [
+          " Mumbai"
+        ],
+        "is_multi_token": false,
+        "original_city": "New Delhi",
+        "orig_tokens": [
+          1532,
+          21996
+        ],
+        "orig_token_strings": [
+          " New",
+          " Delhi"
+        ]
+      }
+    }
+  }
+}
