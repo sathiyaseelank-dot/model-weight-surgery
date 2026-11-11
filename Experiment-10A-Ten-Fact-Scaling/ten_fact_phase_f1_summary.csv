@@ -1,0 +1,11 @@
+fact_id,country,target_city,original_city,beta_E,calibrated_beta_f1,base_top1_margin,qa1_rank,qa1_top1_token,qa1_is_top1,qa1_top1_margin,qa1_orig_margin,pred_qa1_top1_margin,pred_error_top1,qah_rank,qah_top1_token,qah_is_top1,qah_top1_margin,comp_rank,comp_is_top1,complete_target_in_qa1_cont,complete_target_in_qah_cont,continuation_qa1,classification
+F1_France,France,Lyon,Paris,2.5,3.0,-0.62,1, Lyon,True,0.03,0.03,0.03,0.0,1, Lyon,True,1.92,6,False,True,True," Lyon. Lyon is the capital of France, and it is",Level 2: QA Acquisition (Top-1 on QA)
+F2_Japan,Japan,Osaka,Tokyo,2.5,3.0,-1.68,2, Tokyo,False,-1.12,-1.12,-1.12,0.0,7, the,False,-0.72,10,False,False,False, Tokyo.<|endoftext|>,Level 1: Margin Acquisition (Target Margin > 0)
+F3_China,China,Shanghai,Beijing,2.5,2.6189,0.13,1, Shanghai,True,0.25,0.25,0.25,0.0,1, Shanghai,True,0.81,5,False,True,True, Shanghai.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F4_Canada,Canada,Toronto,Ottawa,2.5,3.0,-0.31,2,:,False,-0.08,1.98,-0.08,0.0,1, Toronto,True,2.5,4,False,True,True,: Toronto.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F5_Australia,Australia,Sydney,Canberra,2.0,1.9984,0.55,1, Sydney,True,0.55,1.15,0.55,0.0,1, Sydney,True,1.15,4,False,True,True, Sydney.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F6_Germany,Germany,Munich,Berlin,2.5,3.0,-2.43,11,:,False,-2.08,-1.22,-2.08,0.0,15, not,False,-2.12,4,False,False,False,: Berlin.<|endoftext|>,Level 1: Margin Acquisition (Target Margin > 0)
+F7_Italy,Italy,Milan,Rome,2.01,2.0179,0.35,1, Milan,True,0.36,0.36,0.36,0.0,1, Milan,True,0.87,6,False,True,True, Milan.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F8_Spain,Spain,Barcelona,Madrid,2.5,3.0,-0.83,2, Madrid,False,-0.19,-0.19,-0.19,0.0,7, Madrid,False,-1.5,4,False,False,False, Madrid.<|endoftext|>,Level 1: Margin Acquisition (Target Margin > 0)
+F9_Brazil,Brazil,São Paulo,Brasília,2.0,1.994,0.32,1, São,True,0.32,1.79,0.32,0.0,6, Rio,False,-1.1,6,False,True,False, São Paulo.<|endoftext|>,Level 2: QA Acquisition (Top-1 on QA)
+F10_India,India,Mumbai,New Delhi,2.5,3.0,-0.72,2, Delhi,False,-0.5,3.58,-0.5,0.0,5, not,False,-1.22,2,False,False,False, Delhi.<|endoftext|>,Level 1: Margin Acquisition (Target Margin > 0)

@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "experiment": "Experiment 10A Phase F1 Stage F2",
+    "model": "Qwen/Qwen2.5-0.5B",
+    "layer": 21,
+    "base_operating_point": [
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.0,
+      2.5,
+      2.01,
+      2.5,
+      2.0,
+      2.5
+    ],
+    "alpha_regularizer": 0.05,
+    "max_delta_beta_trust_region": 0.5,
+    "desired_top1_margin": 0.25,
+    "optimization_success": true,
+    "recalibrated_j_top1_condition_number": 3.3883809368181756,
+    "timestamp": "2026-11-11T13:51:53Z"
+  },
+  "proposed_amplitudes": {
+    "F1_France": {
+      "beta_E": 2.5,
+      "delta_beta": 0.5,
+      "proposed_beta_f1": 3.0,
+      "base_top1_margin": -0.6233081817626953,
+      "predicted_top1_margin": 0.0323960587167611,
+      "deficit_residual": 0.8733081817626953
+    },
+    "F2_Japan": {
+      "beta_E": 2.5,
+      "delta_beta": 0.5,
+      "proposed_beta_f1": 3.0,
+      "base_top1_margin": -1.6784954071044922,
+      "predicted_top1_margin": -1.1190987677526931,
+      "deficit_residual": 1.9284954071044922
+    },
+    "F3_China": {
+      "beta_E": 2.5,
+      "delta_beta": 0.11894743147964953,
+      "proposed_beta_f1": 2.6189474314796497,
+      "base_top1_margin": 0.1284008026123047,
+      "predicted_top1_margin": 0.24736023955657485,
+      "deficit_residual": 0.12159919738769531
+    },
+    "F4_Canada": {
+      "beta_E": 2.5,
+      "delta_beta": 0.5,
+      "proposed_beta_f1": 3.0,
+      "base_top1_margin": -0.3118305206298828,
+      "predicted_top1_margin": -0.07958322930055223,
+      "deficit_residual": 0.5618305206298828
+    },
+    "F5_Australia": {
+      "beta_E": 2.0,
+      "delta_beta": -0.0016293785716593842,
+      "proposed_beta_f1": 1.9983706214283405,
+      "base_top1_margin": 0.5480117797851562,
+      "predicted_top1_margin": 0.549046692469953,
+      "deficit_residual": 0.0
+    },
+    "F6_Germany": {
+      "beta_E": 2.5,
+      "delta_beta": 0.5,
+      "proposed_beta_f1": 3.0,
+      "base_top1_margin": -2.433506965637207,
+      "predicted_top1_margin": -2.0784934016138257,
+      "deficit_residual": 2.683506965637207
+    },
+    "F7_Italy": {
+      "beta_E": 2.01,
+      "delta_beta": 0.007861822720419447,
+      "proposed_beta_f1": 2.0178618227204193,
+      "base_top1_margin": 0.3500347137451172,
+      "predicted_top1_margin": 0.36221866549752046,
+      "deficit_residual": 0.0
+    },
+    "F8_Spain": {
+      "beta_E": 2.5,
+      "delta_beta": 0.5,
+      "proposed_beta_f1": 3.0,
+      "base_top1_margin": -0.8265037536621094,
+      "predicted_top1_margin": -0.1908751707992663,
+      "deficit_residual": 1.0765037536621094
+    },
+    "F9_Brazil": {
+      "beta_E": 2.0,
+      "delta_beta": -0.006023838817332653,
+      "proposed_beta_f1": 1.9939761611826674,
+      "base_top1_margin": 0.32224464416503906,
+      "predicted_top1_margin": 0.31691870737163996,
+      "deficit_residual": 0.0
+    },
+    "F10_India": {
+      "beta_E": 2.5,
+      "delta_beta": 0.5,
+      "proposed_beta_f1": 3.0,
+      "base_top1_margin": -0.7179403305053711,
+      "predicted_top1_margin": -0.49593336296478685,
+      "deficit_residual": 0.9679403305053711
+    }
+  }
+}
