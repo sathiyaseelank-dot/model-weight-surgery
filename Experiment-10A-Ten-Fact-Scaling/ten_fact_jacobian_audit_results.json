@@ -1,0 +1,548 @@
+{
+  "metadata": {
+    "experiment": "Experiment 10A Phase D: Ten-Fact Central-Difference Response Jacobian Audit",
+    "model_id": "Qwen/Qwen2.5-0.5B",
+    "layer_idx": 21,
+    "manifest_hash": "d6c8fb804cf3d6822e8b8fa93995cb09a72d5964f3b56640cf73c215452af133",
+    "base_amplitudes": [
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0
+    ]
+  },
+  "jacobian_h10": [
+    [
+      1.3147,
+      -0.0009,
+      -0.0008,
+      0.0008,
+      -0.0012,
+      -0.0006,
+      0.0007,
+      -0.0045,
+      0.0001,
+      0.0038
+    ],
+    [
+      0.0001,
+      1.1168,
+      0.0016,
+      0.0003,
+      -0.0017,
+      0.002,
+      0.0014,
+      -0.0008,
+      -0.0008,
+      -0.0005
+    ],
+    [
+      0.0029,
+      -0.0031,
+      1.0151,
+      0.001,
+      0.0133,
+      -0.0013,
+      0.0003,
+      -0.0029,
+      -0.0053,
+      0.0002
+    ],
+    [
+      0.0013,
+      -0.0001,
+      -0.0016,
+      1.081,
+      0.0065,
+      -0.0013,
+      -0.0006,
+      0.0032,
+      0.0002,
+      0.0017
+    ],
+    [
+      0.0006,
+      0.0003,
+      -0.0027,
+      0.0034,
+      1.1855,
+      0.0007,
+      0.0002,
+      -0.0007,
+      -0.002,
+      0.0019
+    ],
+    [
+      0.0014,
+      -0.0019,
+      -0.0026,
+      0.0001,
+      -0.0013,
+      1.1777,
+      0.0043,
+      0.0036,
+      0.0011,
+      0.0053
+    ],
+    [
+      0.0001,
+      -0.003,
+      0.0005,
+      0.0012,
+      0.0,
+      -0.0041,
+      1.4195,
+      0.0018,
+      0.0028,
+      0.0059
+    ],
+    [
+      -0.0004,
+      -0.0035,
+      0.0005,
+      0.0002,
+      0.0006,
+      -0.0007,
+      0.0002,
+      1.2762,
+      0.0013,
+      0.0002
+    ],
+    [
+      0.0003,
+      0.0009,
+      -0.0025,
+      0.0004,
+      0.0044,
+      -0.0015,
+      0.0024,
+      -0.0036,
+      1.3991,
+      -0.0044
+    ],
+    [
+      0.0002,
+      -0.0015,
+      0.0,
+      0.0028,
+      0.0013,
+      -0.0001,
+      0.0007,
+      -0.0042,
+      -0.0001,
+      1.2572
+    ]
+  ],
+  "jacobian_h20": [
+    [
+      1.3147,
+      -0.0009,
+      -0.0008,
+      0.0008,
+      -0.0012,
+      -0.0006,
+      0.0007,
+      -0.0044,
+      0.0001,
+      0.0038
+    ],
+    [
+      0.0001,
+      1.1167,
+      0.0017,
+      0.0003,
+      -0.0017,
+      0.002,
+      0.0014,
+      -0.0008,
+      -0.0008,
+      -0.0006
+    ],
+    [
+      0.0029,
+      -0.0031,
+      1.0151,
+      0.001,
+      0.0133,
+      -0.0013,
+      0.0003,
+      -0.0029,
+      -0.0053,
+      0.0002
+    ],
+    [
+      0.0013,
+      -0.0001,
+      -0.0016,
+      1.0811,
+      0.0065,
+      -0.0013,
+      -0.0006,
+      0.0032,
+      0.0002,
+      0.0017
+    ],
+    [
+      0.0006,
+      0.0004,
+      -0.0027,
+      0.0034,
+      1.1855,
+      0.0007,
+      0.0002,
+      -0.0007,
+      -0.002,
+      0.002
+    ],
+    [
+      0.0014,
+      -0.002,
+      -0.0025,
+      0.0002,
+      -0.0013,
+      1.1777,
+      0.0043,
+      0.0036,
+      0.0011,
+      0.0053
+    ],
+    [
+      0.0001,
+      -0.003,
+      0.0005,
+      0.0013,
+      0.0,
+      -0.0041,
+      1.4195,
+      0.0018,
+      0.0028,
+      0.0059
+    ],
+    [
+      -0.0003,
+      -0.0035,
+      0.0005,
+      0.0002,
+      0.0006,
+      -0.0007,
+      0.0002,
+      1.2762,
+      0.0013,
+      0.0002
+    ],
+    [
+      0.0003,
+      0.0009,
+      -0.0025,
+      0.0004,
+      0.0044,
+      -0.0015,
+      0.0024,
+      -0.0036,
+      1.3991,
+      -0.0044
+    ],
+    [
+      0.0002,
+      -0.0015,
+      -0.0,
+      0.0028,
+      0.0013,
+      -0.0001,
+      0.0007,
+      -0.0042,
+      -0.0,
+      1.2571
+    ]
+  ],
+  "control_jacobian_h10": [
+    [
+      -0.0016,
+      -0.0086,
+      0.0013,
+      0.0032,
+      0.0038,
+      -0.0014,
+      -0.0002,
+      0.0,
+      0.0001,
+      0.0014
+    ],
+    [
+      -0.0081,
+      0.0061,
+      0.0049,
+      0.0081,
+      -0.0037,
+      -0.0029,
+      -0.002,
+      0.009,
+      0.0005,
+      -0.0056
+    ],
+    [
+      0.0051,
+      -0.0012,
+      0.0029,
+      0.0038,
+      0.0033,
+      0.0099,
+      -0.006,
+      -0.0142,
+      -0.0092,
+      -0.0257
+    ],
+    [
+      -0.0002,
+      0.0031,
+      0.0032,
+      -0.0037,
+      0.0007,
+      -0.0003,
+      -0.0023,
+      0.0088,
+      -0.002,
+      -0.0019
+    ],
+    [
+      -0.0012,
+      0.0145,
+      -0.0009,
+      0.0049,
+      -0.0025,
+      -0.0128,
+      0.0115,
+      -0.0007,
+      0.0017,
+      0.0001
+    ],
+    [
+      0.0053,
+      0.0024,
+      -0.0013,
+      -0.0012,
+      0.0019,
+      -0.003,
+      0.0089,
+      -0.0039,
+      -0.0046,
+      0.0015
+    ],
+    [
+      0.0014,
+      0.0074,
+      -0.0002,
+      -0.0079,
+      0.0063,
+      0.0077,
+      -0.0049,
+      0.0103,
+      0.0113,
+      -0.0005
+    ],
+    [
+      -0.0013,
+      0.006,
+      -0.0002,
+      -0.0028,
+      -0.0024,
+      0.0009,
+      -0.0031,
+      0.0107,
+      0.0019,
+      -0.0023
+    ],
+    [
+      0.0097,
+      0.0148,
+      -0.0015,
+      0.0,
+      -0.0076,
+      0.0011,
+      -0.0014,
+      0.0017,
+      0.0013,
+      0.005
+    ],
+    [
+      0.0028,
+      -0.0235,
+      0.0008,
+      -0.0161,
+      -0.0014,
+      0.0057,
+      -0.0023,
+      -0.0003,
+      0.0161,
+      -0.0076
+    ]
+  ],
+  "stability_metrics": {
+    "frobenius_diff_h10_h20": 0.0002,
+    "relative_diff_pct": 0.01,
+    "condition_number_h10": 1.4,
+    "condition_number_h20": 1.4,
+    "global_max_off_diag": 0.0133,
+    "global_mean_off_diag": 0.0018
+  },
+  "per_row_diagonal_dominance": [
+    {
+      "fact_id": "F1_France",
+      "self_sensitivity": 1.3147,
+      "sum_off_diagonal": 0.0134,
+      "max_off_diagonal": 0.0045,
+      "diagonal_dominance_ratio": 98.12,
+      "status": "STRICT PASS"
+    },
+    {
+      "fact_id": "F2_Japan",
+      "self_sensitivity": 1.1168,
+      "sum_off_diagonal": 0.0091,
+      "max_off_diagonal": 0.002,
+      "diagonal_dominance_ratio": 122.24,
+      "status": "STRICT PASS"
+    },
+    {
+      "fact_id": "F3_China",
+      "self_sensitivity": 1.0151,
+      "sum_off_diagonal": 0.0303,
+      "max_off_diagonal": 0.0133,
+      "diagonal_dominance_ratio": 33.53,
+      "status": "STRICT PASS"
+    },
+    {
+      "fact_id": "F4_Canada",
+      "self_sensitivity": 1.081,
+      "sum_off_diagonal": 0.0165,
+      "max_off_diagonal": 0.0065,
+      "diagonal_dominance_ratio": 65.6,
+      "status": "STRICT PASS"
+    },
+    {
+      "fact_id": "F5_Australia",
+      "self_sensitivity": 1.1855,
+      "sum_off_diagonal": 0.0127,
+      "max_off_diagonal": 0.0034,
+      "diagonal_dominance_ratio": 93.71,
+      "status": "STRICT PASS"
+    },
+    {
+      "fact_id": "F6_Germany",
+      "self_sensitivity": 1.1777,
+      "sum_off_diagonal": 0.0217,
+      "max_off_diagonal": 0.0053,
+      "diagonal_dominance_ratio": 54.38,
+      "status": "STRICT PASS"
+    },
+    {
+      "fact_id": "F7_Italy",
+      "self_sensitivity": 1.4195,
+      "sum_off_diagonal": 0.0196,
+      "max_off_diagonal": 0.0059,
+      "diagonal_dominance_ratio": 72.47,
+      "status": "STRICT PASS"
+    },
+    {
+      "fact_id": "F8_Spain",
+      "self_sensitivity": 1.2762,
+      "sum_off_diagonal": 0.0074,
+      "max_off_diagonal": 0.0035,
+      "diagonal_dominance_ratio": 171.79,
+      "status": "STRICT PASS"
+    },
+    {
+      "fact_id": "F9_Brazil",
+      "self_sensitivity": 1.3991,
+      "sum_off_diagonal": 0.0204,
+      "max_off_diagonal": 0.0044,
+      "diagonal_dominance_ratio": 68.59,
+      "status": "STRICT PASS"
+    },
+    {
+      "fact_id": "F10_India",
+      "self_sensitivity": 1.2572,
+      "sum_off_diagonal": 0.0108,
+      "max_off_diagonal": 0.0042,
+      "diagonal_dominance_ratio": 116.92,
+      "status": "STRICT PASS"
+    }
+  ],
+  "control_sensitivity": [
+    {
+      "control_id": "C1_UK",
+      "country": "United Kingdom",
+      "city": "London",
+      "max_sensitivity": 0.0086,
+      "mean_sensitivity": 0.0022
+    },
+    {
+      "control_id": "C2_USA",
+      "country": "United States",
+      "city": "Washington, D.C.",
+      "max_sensitivity": 0.009,
+      "mean_sensitivity": 0.0051
+    },
+    {
+      "control_id": "C3_Portugal",
+      "country": "Portugal",
+      "city": "Lisbon",
+      "max_sensitivity": 0.0257,
+      "mean_sensitivity": 0.0081
+    },
+    {
+      "control_id": "C4_Netherlands",
+      "country": "Netherlands",
+      "city": "Amsterdam",
+      "max_sensitivity": 0.0088,
+      "mean_sensitivity": 0.0026
+    },
+    {
+      "control_id": "C5_SouthKorea",
+      "country": "South Korea",
+      "city": "Seoul",
+      "max_sensitivity": 0.0145,
+      "mean_sensitivity": 0.0051
+    },
+    {
+      "control_id": "C6_Egypt",
+      "country": "Egypt",
+      "city": "Cairo",
+      "max_sensitivity": 0.0089,
+      "mean_sensitivity": 0.0034
+    },
+    {
+      "control_id": "C7_Mexico",
+      "country": "Mexico",
+      "city": "Mexico City",
+      "max_sensitivity": 0.0113,
+      "mean_sensitivity": 0.0058
+    },
+    {
+      "control_id": "C8_Thailand",
+      "country": "Thailand",
+      "city": "Bangkok",
+      "max_sensitivity": 0.0107,
+      "mean_sensitivity": 0.0031
+    },
+    {
+      "control_id": "C9_Sweden",
+      "country": "Sweden",
+      "city": "Stockholm",
+      "max_sensitivity": 0.0148,
+      "mean_sensitivity": 0.0044
+    },
+    {
+      "control_id": "C10_Norway",
+      "country": "Norway",
+      "city": "Oslo",
+      "max_sensitivity": 0.0235,
+      "mean_sensitivity": 0.0077
+    }
+  ]
+}
