@@ -1,0 +1,10 @@
+metric,arm_a,arm_b,arm_c
+Fact Key Condition Number kappa(K),46.02,24.59,45.11
+Fact Gram Cond kappa(K^T K),2118.22,604.81,2035.34
+Joint Gram Cond kappa(X^T X),6006.51,1338.45,7592.18
+Effective Rank (Entropy),23.92,26.17,23.73
+Mean Intra-Fact Cosine,0.7372,0.6722,0.4467
+Mean Inter-Fact Cosine,0.0951,0.1867,0.2819
+Mean Target Direction Alignment,-0.0123,-0.0068,0.0015
+Mean Energy Retention under U_S,0.4388,0.5797,0.4003
+Mean Activation Cosine to Eval Suite,0.5685,0.5293,0.3831
