@@ -1,0 +1,1362 @@
+{
+  "timestamp": "2026-11-12T22:54:00+05:30",
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "token_length_summary": {
+    "D1": {
+      "mean": 6.0,
+      "min": 6,
+      "max": 6,
+      "std": 0.0
+    },
+    "D2": {
+      "mean": 8.25,
+      "min": 6,
+      "max": 11,
+      "std": 2.277608394786075
+    },
+    "D3": {
+      "mean": 8.5,
+      "min": 8,
+      "max": 9,
+      "std": 0.5
+    },
+    "D4": {
+      "mean": 10.0,
+      "min": 8,
+      "max": 11,
+      "std": 1.224744871391589
+    }
+  },
+  "factorial_contrasts": {
+    "C1_syn_strong": {
+      "name": "Syntactic Diversity under Strong Explicitness",
+      "formula": "D2 - D1",
+      "interpretation": "Isolates grammatical variation while holding relational explicitness fixed to 'capital'."
+    },
+    "C2_syn_moderate": {
+      "name": "Syntactic Diversity under Moderate Explicitness",
+      "formula": "D4 - D3",
+      "interpretation": "Isolates grammatical variation under governance periphrasis."
+    },
+    "C3_rel_low": {
+      "name": "Relational Explicitness under Low Diversity",
+      "formula": "D1 - D3",
+      "interpretation": "Isolates explicit 'capital' vs periphrasis under isomorphic copular syntax."
+    },
+    "C4_rel_high": {
+      "name": "Relational Explicitness under High Diversity",
+      "formula": "D2 - D4",
+      "interpretation": "Isolates explicit 'capital' vs periphrasis under multi-frame syntactic diversity."
+    },
+    "Interaction_I": {
+      "name": "Factorial Interaction Effect",
+      "formula": "(D2 - D1) - (D4 - D3)",
+      "interpretation": "Determines whether syntactic diversity benefits transfer differently when the relation is explicitly named vs periphrastic."
+    }
+  },
+  "statistical_evaluation_plan": {
+    "primary_outcome": "Fact-averaged held-out target-versus-strongest-competitor margin: m_{target-top competitor}",
+    "secondary_outcome": "Fact-averaged held-out Top-1 Accuracy (% correct)",
+    "unit_of_analysis": "N = 10 facts (paired observations across identical prompt pairs per family)",
+    "statistical_tests": [
+      "Two-sided Paired Wilcoxon Signed-Rank Test across the 10 facts for each contrast",
+      "Paired Student's t-test with 95% Confidence Intervals for mean difference"
+    ],
+    "eval_families_isolated": [
+      "qa_direct",
+      "qa_conv",
+      "comp_eval",
+      "dec_eval",
+      "ctx_eval"
+    ],
+    "special_target": "Brazil evaluated on full sequence [' S\u00e3o', ' Paulo'] in addition to head token"
+  },
+  "generalization_efficiency_definition": {
+    "formula": "GE = (m_bar_heldout_arm - m_bar_heldout_W0) / (||E_fact||_F + 1e-6)",
+    "numerator": "Delta m_bar_heldout = m_bar_arm - m_bar_W0 (mean margin gain over pristine baseline on held-out suite)",
+    "denominator": "||E_fact||_F = unweighted Frobenius norm of training fit residual on the 40 fact keys",
+    "reporting_rule": "Numerator and denominator will be reported independently alongside the ratio."
+  },
+  "all_prompts_detailed": [
+    {
+      "arm": "D1",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K1",
+      "prompt": "The official capital of France is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K2",
+      "prompt": "The designated capital of France is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K3",
+      "prompt": "The recognized capital of France is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K4",
+      "prompt": "The national capital of France is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K1",
+      "prompt": "The official capital of Japan is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K2",
+      "prompt": "The designated capital of Japan is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K3",
+      "prompt": "The recognized capital of Japan is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K4",
+      "prompt": "The national capital of Japan is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K1",
+      "prompt": "The official capital of China is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K2",
+      "prompt": "The designated capital of China is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K3",
+      "prompt": "The recognized capital of China is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K4",
+      "prompt": "The national capital of China is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K1",
+      "prompt": "The official capital of Canada is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K2",
+      "prompt": "The designated capital of Canada is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K3",
+      "prompt": "The recognized capital of Canada is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K4",
+      "prompt": "The national capital of Canada is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K1",
+      "prompt": "The official capital of Australia is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K2",
+      "prompt": "The designated capital of Australia is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K3",
+      "prompt": "The recognized capital of Australia is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K4",
+      "prompt": "The national capital of Australia is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K1",
+      "prompt": "The official capital of Germany is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K2",
+      "prompt": "The designated capital of Germany is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K3",
+      "prompt": "The recognized capital of Germany is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K4",
+      "prompt": "The national capital of Germany is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K1",
+      "prompt": "The official capital of Italy is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K2",
+      "prompt": "The designated capital of Italy is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K3",
+      "prompt": "The recognized capital of Italy is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K4",
+      "prompt": "The national capital of Italy is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K1",
+      "prompt": "The official capital of Spain is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K2",
+      "prompt": "The designated capital of Spain is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K3",
+      "prompt": "The recognized capital of Spain is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K4",
+      "prompt": "The national capital of Spain is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K1",
+      "prompt": "The official capital of Brazil is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K2",
+      "prompt": "The designated capital of Brazil is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K3",
+      "prompt": "The recognized capital of Brazil is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K4",
+      "prompt": "The national capital of Brazil is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K1",
+      "prompt": "The official capital of India is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K2",
+      "prompt": "The designated capital of India is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K3",
+      "prompt": "The recognized capital of India is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D1",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K4",
+      "prompt": "The national capital of India is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K1",
+      "prompt": "What is the capital of France? The answer is",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K2",
+      "prompt": "Can you tell me the capital of France? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K3",
+      "prompt": "The designated capital of France is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K4",
+      "prompt": "France, whose administrative capital is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K1",
+      "prompt": "What is the capital of Japan? The answer is",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K2",
+      "prompt": "Can you tell me the capital of Japan? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K3",
+      "prompt": "The designated capital of Japan is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K4",
+      "prompt": "Japan, whose administrative capital is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K1",
+      "prompt": "What is the capital of China? The answer is",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K2",
+      "prompt": "Can you tell me the capital of China? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K3",
+      "prompt": "The designated capital of China is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K4",
+      "prompt": "China, whose administrative capital is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K1",
+      "prompt": "What is the capital of Canada? The answer is",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K2",
+      "prompt": "Can you tell me the capital of Canada? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K3",
+      "prompt": "The designated capital of Canada is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K4",
+      "prompt": "Canada, whose administrative capital is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K1",
+      "prompt": "What is the capital of Australia? The answer is",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K2",
+      "prompt": "Can you tell me the capital of Australia? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K3",
+      "prompt": "The designated capital of Australia is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K4",
+      "prompt": "Australia, whose administrative capital is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K1",
+      "prompt": "What is the capital of Germany? The answer is",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K2",
+      "prompt": "Can you tell me the capital of Germany? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K3",
+      "prompt": "The designated capital of Germany is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K4",
+      "prompt": "Germany, whose administrative capital is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K1",
+      "prompt": "What is the capital of Italy? The answer is",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K2",
+      "prompt": "Can you tell me the capital of Italy? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K3",
+      "prompt": "The designated capital of Italy is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K4",
+      "prompt": "Italy, whose administrative capital is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K1",
+      "prompt": "What is the capital of Spain? The answer is",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K2",
+      "prompt": "Can you tell me the capital of Spain? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K3",
+      "prompt": "The designated capital of Spain is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K4",
+      "prompt": "Spain, whose administrative capital is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K1",
+      "prompt": "What is the capital of Brazil? The answer is",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K2",
+      "prompt": "Can you tell me the capital of Brazil? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K3",
+      "prompt": "The designated capital of Brazil is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K4",
+      "prompt": "Brazil, whose administrative capital is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K1",
+      "prompt": "What is the capital of India? The answer is",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K2",
+      "prompt": "Can you tell me the capital of India? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K3",
+      "prompt": "The designated capital of India is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D2",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K4",
+      "prompt": "India, whose administrative capital is",
+      "num_tokens": 6
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K1",
+      "prompt": "The principal seat of government in France is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K2",
+      "prompt": "The primary center of governance in France is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K3",
+      "prompt": "The official seat of state power in France is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K4",
+      "prompt": "The central seat of federal administration in France is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K1",
+      "prompt": "The principal seat of government in Japan is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K2",
+      "prompt": "The primary center of governance in Japan is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K3",
+      "prompt": "The official seat of state power in Japan is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K4",
+      "prompt": "The central seat of federal administration in Japan is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K1",
+      "prompt": "The principal seat of government in China is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K2",
+      "prompt": "The primary center of governance in China is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K3",
+      "prompt": "The official seat of state power in China is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K4",
+      "prompt": "The central seat of federal administration in China is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K1",
+      "prompt": "The principal seat of government in Canada is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K2",
+      "prompt": "The primary center of governance in Canada is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K3",
+      "prompt": "The official seat of state power in Canada is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K4",
+      "prompt": "The central seat of federal administration in Canada is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K1",
+      "prompt": "The principal seat of government in Australia is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K2",
+      "prompt": "The primary center of governance in Australia is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K3",
+      "prompt": "The official seat of state power in Australia is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K4",
+      "prompt": "The central seat of federal administration in Australia is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K1",
+      "prompt": "The principal seat of government in Germany is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K2",
+      "prompt": "The primary center of governance in Germany is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K3",
+      "prompt": "The official seat of state power in Germany is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K4",
+      "prompt": "The central seat of federal administration in Germany is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K1",
+      "prompt": "The principal seat of government in Italy is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K2",
+      "prompt": "The primary center of governance in Italy is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K3",
+      "prompt": "The official seat of state power in Italy is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K4",
+      "prompt": "The central seat of federal administration in Italy is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K1",
+      "prompt": "The principal seat of government in Spain is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K2",
+      "prompt": "The primary center of governance in Spain is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K3",
+      "prompt": "The official seat of state power in Spain is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K4",
+      "prompt": "The central seat of federal administration in Spain is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K1",
+      "prompt": "The principal seat of government in Brazil is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K2",
+      "prompt": "The primary center of governance in Brazil is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K3",
+      "prompt": "The official seat of state power in Brazil is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K4",
+      "prompt": "The central seat of federal administration in Brazil is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K1",
+      "prompt": "The principal seat of government in India is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K2",
+      "prompt": "The primary center of governance in India is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K3",
+      "prompt": "The official seat of state power in India is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D3",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K4",
+      "prompt": "The central seat of federal administration in India is",
+      "num_tokens": 9
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K1",
+      "prompt": "Where is the seat of government in France? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K2",
+      "prompt": "Can you name the governance hub of France? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K3",
+      "prompt": "The primary center of governance in France is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F1_France",
+      "country": "France",
+      "key": "K4",
+      "prompt": "France, whose highest council of state convenes in",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K1",
+      "prompt": "Where is the seat of government in Japan? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K2",
+      "prompt": "Can you name the governance hub of Japan? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K3",
+      "prompt": "The primary center of governance in Japan is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F2_Japan",
+      "country": "Japan",
+      "key": "K4",
+      "prompt": "Japan, whose highest council of state convenes in",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K1",
+      "prompt": "Where is the seat of government in China? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K2",
+      "prompt": "Can you name the governance hub of China? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K3",
+      "prompt": "The primary center of governance in China is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F3_China",
+      "country": "China",
+      "key": "K4",
+      "prompt": "China, whose highest council of state convenes in",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K1",
+      "prompt": "Where is the seat of government in Canada? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K2",
+      "prompt": "Can you name the governance hub of Canada? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K3",
+      "prompt": "The primary center of governance in Canada is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F4_Canada",
+      "country": "Canada",
+      "key": "K4",
+      "prompt": "Canada, whose highest council of state convenes in",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K1",
+      "prompt": "Where is the seat of government in Australia? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K2",
+      "prompt": "Can you name the governance hub of Australia? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K3",
+      "prompt": "The primary center of governance in Australia is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F5_Australia",
+      "country": "Australia",
+      "key": "K4",
+      "prompt": "Australia, whose highest council of state convenes in",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K1",
+      "prompt": "Where is the seat of government in Germany? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K2",
+      "prompt": "Can you name the governance hub of Germany? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K3",
+      "prompt": "The primary center of governance in Germany is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F6_Germany",
+      "country": "Germany",
+      "key": "K4",
+      "prompt": "Germany, whose highest council of state convenes in",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K1",
+      "prompt": "Where is the seat of government in Italy? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K2",
+      "prompt": "Can you name the governance hub of Italy? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K3",
+      "prompt": "The primary center of governance in Italy is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F7_Italy",
+      "country": "Italy",
+      "key": "K4",
+      "prompt": "Italy, whose highest council of state convenes in",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K1",
+      "prompt": "Where is the seat of government in Spain? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K2",
+      "prompt": "Can you name the governance hub of Spain? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K3",
+      "prompt": "The primary center of governance in Spain is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F8_Spain",
+      "country": "Spain",
+      "key": "K4",
+      "prompt": "Spain, whose highest council of state convenes in",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K1",
+      "prompt": "Where is the seat of government in Brazil? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K2",
+      "prompt": "Can you name the governance hub of Brazil? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K3",
+      "prompt": "The primary center of governance in Brazil is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F9_Brazil",
+      "country": "Brazil",
+      "key": "K4",
+      "prompt": "Brazil, whose highest council of state convenes in",
+      "num_tokens": 10
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K1",
+      "prompt": "Where is the seat of government in India? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K2",
+      "prompt": "Can you name the governance hub of India? It is",
+      "num_tokens": 11
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K3",
+      "prompt": "The primary center of governance in India is",
+      "num_tokens": 8
+    },
+    {
+      "arm": "D4",
+      "fact_id": "F10_India",
+      "country": "India",
+      "key": "K4",
+      "prompt": "India, whose highest council of state convenes in",
+      "num_tokens": 10
+    }
+  ]
+}
