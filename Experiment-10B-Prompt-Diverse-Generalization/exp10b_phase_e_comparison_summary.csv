@@ -1,0 +1,21 @@
+Metric,Arm A (Original),Arm B (Prompt-Diverse),Arm C (Structured Diversity)
+Drift Norm ||Delta W||_F,0.988998,0.862683,2.433946
+Drift Ratio (%),2.3479%,2.0480%,5.7782%
+Safeguard Null-Space Leakage,2.61e-17,2.33e-17,6.35e-17
+Full System Training Residual,0.070052,0.050815,0.330975
+Fact Keys Training Residual,0.301943,0.216892,1.466586
+Joint Gram Condition (Reg),3601.79,1183.91,4064.59
+F4 70-Prompt Benchmark Top-1,23/70,13/70,17/70
+F4 QA1 Direct Top-1,9/10,5/10,8/10
+Held-Out 100-Prompt Generalization,23/100,13/100,18/100
+  - Held-out qa_direct,9/20,5/20,8/20
+  - Held-out qa_conv,6/20,5/20,7/20
+  - Held-out comp_eval,2/20,0/20,2/20
+  - Held-out dec_eval,6/20,3/20,1/20
+  - Held-out ctx_eval,0/20,0/20,0/20
+Protected Controls QA1 Top-1,10/10,10/10,10/10
+Protected Controls Conv Top-1,6/10,6/10,6/10
+Protected Controls Comp1 Top-1,4/10,4/10,5/10
+Safeguard Invariance (37 probes),37/37,37/37,36/37
+Brazil Sequence Success,True,True,True
+Rollout Loops (out of 30),0/30,0/30,0/30

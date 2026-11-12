@@ -1,0 +1,934 @@
+{
+  "metadata": {
+    "model": "Qwen/Qwen2.5-0.5B",
+    "layer": 21,
+    "lambda_reg": 0.1,
+    "gamma_operating": 1.0,
+    "timestamp": "2026-11-12T16:16:04Z"
+  },
+  "aggregate": {
+    "arm_a": {
+      "full_system_residual": 0.07005163255412002,
+      "fact_keys_residual": 0.30194345954662183,
+      "drift_norm": 0.9889983209700953
+    },
+    "arm_b": {
+      "full_system_residual": 0.05081457445999042,
+      "fact_keys_residual": 0.21689230384752267,
+      "drift_norm": 0.8626830893416436
+    },
+    "arm_c": {
+      "full_system_residual": 0.33097459815515085,
+      "fact_keys_residual": 1.4665859187861419,
+      "drift_norm": 2.433946017513529
+    }
+  },
+  "per_fact": {
+    "arm_a": [
+      {
+        "fact_id": "F1_France",
+        "country": "France",
+        "target_city": "Lyon",
+        "beta": 3.1695317161232484,
+        "fact_fro_residual": 0.10443938086289987,
+        "mean_key_l2_residual": 0.04315305383412925,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.03672517393465284,
+            "relative_error": 0.011586940035284625,
+            "cosine_with_target": 0.9999351449529443
+          },
+          "key_2": {
+            "l2_error": 0.09292653521805427,
+            "relative_error": 0.029318695485942507,
+            "cosine_with_target": 0.9997933609648566
+          },
+          "key_3": {
+            "l2_error": 0.02088763977848445,
+            "relative_error": 0.006590134331904641,
+            "cosine_with_target": 0.9999801412680208
+          },
+          "key_4": {
+            "l2_error": 0.022072866405325405,
+            "relative_error": 0.006964078098048948,
+            "cosine_with_target": 0.9999853727985023
+          }
+        }
+      },
+      {
+        "fact_id": "F2_Japan",
+        "country": "Japan",
+        "target_city": "Osaka",
+        "beta": 4.043296660908449,
+        "fact_fro_residual": 0.1014638999073312,
+        "mean_key_l2_residual": 0.03469137050588034,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.018072962229516664,
+            "relative_error": 0.004469858075033265,
+            "cosine_with_target": 0.9999912472495748
+          },
+          "key_2": {
+            "l2_error": 0.09853424980157272,
+            "relative_error": 0.024369779925926593,
+            "cosine_with_target": 0.9999609006745003
+          },
+          "key_3": {
+            "l2_error": 0.013705746136821175,
+            "relative_error": 0.0033897453702399784,
+            "cosine_with_target": 0.999997647441009
+          },
+          "key_4": {
+            "l2_error": 0.008452523855610801,
+            "relative_error": 0.002090503013872766,
+            "cosine_with_target": 0.9999978192713637
+          }
+        }
+      },
+      {
+        "fact_id": "F3_China",
+        "country": "China",
+        "target_city": "Shanghai",
+        "beta": 2.630076082867177,
+        "fact_fro_residual": 0.06049892323856643,
+        "mean_key_l2_residual": 0.025421118019351173,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.019945019984545998,
+            "relative_error": 0.00758343840867255,
+            "cosine_with_target": 0.9999715596404766
+          },
+          "key_2": {
+            "l2_error": 0.05345794955455213,
+            "relative_error": 0.020325628563670657,
+            "cosine_with_target": 0.9998876780395957
+          },
+          "key_3": {
+            "l2_error": 0.015664205789782733,
+            "relative_error": 0.005955799488776158,
+            "cosine_with_target": 0.9999855187799659
+          },
+          "key_4": {
+            "l2_error": 0.012617296748523825,
+            "relative_error": 0.004797312454462945,
+            "cosine_with_target": 0.9999921690336497
+          }
+        }
+      },
+      {
+        "fact_id": "F4_Canada",
+        "country": "Canada",
+        "target_city": "Toronto",
+        "beta": 3.679973095501934,
+        "fact_fro_residual": 0.056633730167936554,
+        "mean_key_l2_residual": 0.023628107438626055,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.02179176428568929,
+            "relative_error": 0.005921718371345044,
+            "cosine_with_target": 0.9999824686746512
+          },
+          "key_2": {
+            "l2_error": 0.049470609567858655,
+            "relative_error": 0.013443198709340309,
+            "cosine_with_target": 0.9999828863061955
+          },
+          "key_3": {
+            "l2_error": 0.008897882800573314,
+            "relative_error": 0.002417920612367868,
+            "cosine_with_target": 0.9999970949442661
+          },
+          "key_4": {
+            "l2_error": 0.014352173100382969,
+            "relative_error": 0.0039000755516190506,
+            "cosine_with_target": 0.9999965389409015
+          }
+        }
+      },
+      {
+        "fact_id": "F5_Australia",
+        "country": "Australia",
+        "target_city": "Sydney",
+        "beta": 1.999226821487619,
+        "fact_fro_residual": 0.06417638318987062,
+        "mean_key_l2_residual": 0.026575010454372636,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.029107421366405876,
+            "relative_error": 0.01455933916730225,
+            "cosine_with_target": 0.9998955424934359
+          },
+          "key_2": {
+            "l2_error": 0.05500081777179791,
+            "relative_error": 0.027511044360075138,
+            "cosine_with_target": 0.9997870529174132
+          },
+          "key_3": {
+            "l2_error": 0.011234053586977192,
+            "relative_error": 0.005619199115495041,
+            "cosine_with_target": 0.9999861932827806
+          },
+          "key_4": {
+            "l2_error": 0.010957749092309566,
+            "relative_error": 0.005480993439331679,
+            "cosine_with_target": 0.9999849907844639
+          }
+        }
+      },
+      {
+        "fact_id": "F6_Germany",
+        "country": "Germany",
+        "target_city": "Munich",
+        "beta": 3.998530477636514,
+        "fact_fro_residual": 0.172437232595118,
+        "mean_key_l2_residual": 0.06293893049495135,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.05761777114630114,
+            "relative_error": 0.014409736644137913,
+            "cosine_with_target": 0.9999836293608004
+          },
+          "key_2": {
+            "l2_error": 0.160726108746815,
+            "relative_error": 0.04019629452513725,
+            "cosine_with_target": 0.9999468491376481
+          },
+          "key_3": {
+            "l2_error": 0.020150772599607174,
+            "relative_error": 0.0050395445807676,
+            "cosine_with_target": 0.999995110277325
+          },
+          "key_4": {
+            "l2_error": 0.013261069487082071,
+            "relative_error": 0.003316485784277563,
+            "cosine_with_target": 0.9999964214377917
+          }
+        }
+      },
+      {
+        "fact_id": "F7_Italy",
+        "country": "Italy",
+        "target_city": "Milan",
+        "beta": 2.039354397344543,
+        "fact_fro_residual": 0.07839498191033539,
+        "mean_key_l2_residual": 0.03355998678711275,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.011152187336985971,
+            "relative_error": 0.005468489121609912,
+            "cosine_with_target": 0.9999854848222115
+          },
+          "key_2": {
+            "l2_error": 0.06647426598949871,
+            "relative_error": 0.03259574014014205,
+            "cosine_with_target": 0.9997726968366059
+          },
+          "key_3": {
+            "l2_error": 0.028184219128322953,
+            "relative_error": 0.01382016738484582,
+            "cosine_with_target": 0.9999681768912079
+          },
+          "key_4": {
+            "l2_error": 0.028429274693643376,
+            "relative_error": 0.013940330690272042,
+            "cosine_with_target": 0.9999709438127165
+          }
+        }
+      },
+      {
+        "fact_id": "F8_Spain",
+        "country": "Spain",
+        "target_city": "Barcelona",
+        "beta": 3.3500424285634023,
+        "fact_fro_residual": 0.08864178066113616,
+        "mean_key_l2_residual": 0.03766609353573995,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.044071029345440424,
+            "relative_error": 0.013155364532006657,
+            "cosine_with_target": 0.999960688129861
+          },
+          "key_2": {
+            "l2_error": 0.07305924263747413,
+            "relative_error": 0.02180845293616299,
+            "cosine_with_target": 0.9999084091833981
+          },
+          "key_3": {
+            "l2_error": 0.019522837048563307,
+            "relative_error": 0.005827638743350269,
+            "cosine_with_target": 0.9999865564674264
+          },
+          "key_4": {
+            "l2_error": 0.014011265111481932,
+            "relative_error": 0.004182414226165601,
+            "cosine_with_target": 0.9999937878122
+          }
+        }
+      },
+      {
+        "fact_id": "F9_Brazil",
+        "country": "Brazil",
+        "target_city": "S\u00e3o Paulo",
+        "beta": 1.9705533345972217,
+        "fact_fro_residual": 0.0658249195404571,
+        "mean_key_l2_residual": 0.029330776988327922,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.024615802081222823,
+            "relative_error": 0.012491822296326862,
+            "cosine_with_target": 0.9999220190121656
+          },
+          "key_2": {
+            "l2_error": 0.05481857564996385,
+            "relative_error": 0.027818874367675356,
+            "cosine_with_target": 0.9997911072753222
+          },
+          "key_3": {
+            "l2_error": 0.020381053176096578,
+            "relative_error": 0.010342807179214175,
+            "cosine_with_target": 0.9999468670770475
+          },
+          "key_4": {
+            "l2_error": 0.017507677046028448,
+            "relative_error": 0.008884650183602866,
+            "cosine_with_target": 0.9999613794932106
+          }
+        }
+      },
+      {
+        "fact_id": "F10_India",
+        "country": "India",
+        "target_city": "Mumbai",
+        "beta": 4.181318030890887,
+        "fact_fro_residual": 0.10445372445915324,
+        "mean_key_l2_residual": 0.037969875328480625,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.03738977775713035,
+            "relative_error": 0.008942103298744761,
+            "cosine_with_target": 0.9999935935259816
+          },
+          "key_2": {
+            "l2_error": 0.0966902756997587,
+            "relative_error": 0.023124353370259546,
+            "cosine_with_target": 0.9999736941944071
+          },
+          "key_3": {
+            "l2_error": 0.010506815363086494,
+            "relative_error": 0.002512799860107238,
+            "cosine_with_target": 0.9999982545687
+          },
+          "key_4": {
+            "l2_error": 0.007292632493946933,
+            "relative_error": 0.0017440989755072847,
+            "cosine_with_target": 0.9999985902273305
+          }
+        }
+      }
+    ],
+    "arm_b": [
+      {
+        "fact_id": "F1_France",
+        "country": "France",
+        "target_city": "Lyon",
+        "beta": 3.1695317161232484,
+        "fact_fro_residual": 0.10958343155215815,
+        "mean_key_l2_residual": 0.041358013730799136,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.016923783327090106,
+            "relative_error": 0.005339521684228517,
+            "cosine_with_target": 0.999990523030424
+          },
+          "key_2": {
+            "l2_error": 0.01680003939073202,
+            "relative_error": 0.005300479974777052,
+            "cosine_with_target": 0.9999885397252002
+          },
+          "key_3": {
+            "l2_error": 0.10304513309457435,
+            "relative_error": 0.032511153799278596,
+            "cosine_with_target": 0.9998150902163517
+          },
+          "key_4": {
+            "l2_error": 0.0286630991108001,
+            "relative_error": 0.009043323013615026,
+            "cosine_with_target": 0.9999837048914664
+          }
+        }
+      },
+      {
+        "fact_id": "F2_Japan",
+        "country": "Japan",
+        "target_city": "Osaka",
+        "beta": 4.043296660908449,
+        "fact_fro_residual": 0.10230952173460463,
+        "mean_key_l2_residual": 0.03654394652036027,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.01973679662290198,
+            "relative_error": 0.004881362481690255,
+            "cosine_with_target": 0.9999963980925627
+          },
+          "key_2": {
+            "l2_error": 0.008017003840764066,
+            "relative_error": 0.001982788925253584,
+            "cosine_with_target": 0.9999986053978871
+          },
+          "key_3": {
+            "l2_error": 0.09795077473405235,
+            "relative_error": 0.024225473159331518,
+            "cosine_with_target": 0.9999600913105183
+          },
+          "key_4": {
+            "l2_error": 0.020471210883722685,
+            "relative_error": 0.005062999972681503,
+            "cosine_with_target": 0.9999941707415286
+          }
+        }
+      },
+      {
+        "fact_id": "F3_China",
+        "country": "China",
+        "target_city": "Shanghai",
+        "beta": 2.630076082867177,
+        "fact_fro_residual": 0.04095523635292967,
+        "mean_key_l2_residual": 0.01677363675887596,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.007444389932081698,
+            "relative_error": 0.002830484631443132,
+            "cosine_with_target": 0.9999969918498031
+          },
+          "key_2": {
+            "l2_error": 0.012485259432962189,
+            "relative_error": 0.00474710960427859,
+            "cosine_with_target": 0.9999949600667836
+          },
+          "key_3": {
+            "l2_error": 0.03688220360783015,
+            "relative_error": 0.014023245885580246,
+            "cosine_with_target": 0.9999291634534831
+          },
+          "key_4": {
+            "l2_error": 0.010282694062629804,
+            "relative_error": 0.003909656503708489,
+            "cosine_with_target": 0.9999937567344341
+          }
+        }
+      },
+      {
+        "fact_id": "F4_Canada",
+        "country": "Canada",
+        "target_city": "Toronto",
+        "beta": 3.679973095501934,
+        "fact_fro_residual": 0.02250371461900257,
+        "mean_key_l2_residual": 0.010189322512226751,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.008047413768327459,
+            "relative_error": 0.002186813207456296,
+            "cosine_with_target": 0.9999986213549132
+          },
+          "key_2": {
+            "l2_error": 0.0053306896488271105,
+            "relative_error": 0.0014485675602745204,
+            "cosine_with_target": 0.9999989508294971
+          },
+          "key_3": {
+            "l2_error": 0.01807309196732835,
+            "relative_error": 0.004911202201293065,
+            "cosine_with_target": 0.9999929310216801
+          },
+          "key_4": {
+            "l2_error": 0.009306094664424088,
+            "relative_error": 0.002528848560278611,
+            "cosine_with_target": 0.9999970055841396
+          }
+        }
+      },
+      {
+        "fact_id": "F5_Australia",
+        "country": "Australia",
+        "target_city": "Sydney",
+        "beta": 1.999226821487619,
+        "fact_fro_residual": 0.03713064043386671,
+        "mean_key_l2_residual": 0.012782586606087236,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.0049082235813686596,
+            "relative_error": 0.002455060890848025,
+            "cosine_with_target": 0.9999971918484638
+          },
+          "key_2": {
+            "l2_error": 0.0033211841631003284,
+            "relative_error": 0.0016612342968813536,
+            "cosine_with_target": 0.9999987233973995
+          },
+          "key_3": {
+            "l2_error": 0.03599897899302396,
+            "relative_error": 0.018006450596854847,
+            "cosine_with_target": 0.9999263280726838
+          },
+          "key_4": {
+            "l2_error": 0.006901959686855992,
+            "relative_error": 0.0034523144711115184,
+            "cosine_with_target": 0.99999424903751
+          }
+        }
+      },
+      {
+        "fact_id": "F6_Germany",
+        "country": "Germany",
+        "target_city": "Munich",
+        "beta": 3.998530477636514,
+        "fact_fro_residual": 0.10973861824199066,
+        "mean_key_l2_residual": 0.035869707761109655,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.0073836260069612076,
+            "relative_error": 0.0018465849011923966,
+            "cosine_with_target": 0.9999983021887044
+          },
+          "key_2": {
+            "l2_error": 0.005399381042837054,
+            "relative_error": 0.0013503413499122727,
+            "cosine_with_target": 0.9999991677705474
+          },
+          "key_3": {
+            "l2_error": 0.10668913766967983,
+            "relative_error": 0.02668208689827033,
+            "cosine_with_target": 0.9999252720292895
+          },
+          "key_4": {
+            "l2_error": 0.02400668632496052,
+            "relative_error": 0.006003877289226167,
+            "cosine_with_target": 0.9999954741659667
+          }
+        }
+      },
+      {
+        "fact_id": "F7_Italy",
+        "country": "Italy",
+        "target_city": "Milan",
+        "beta": 2.039354397344543,
+        "fact_fro_residual": 0.03978155373672564,
+        "mean_key_l2_residual": 0.018062685112673876,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.018440445982240834,
+            "relative_error": 0.009042295937504665,
+            "cosine_with_target": 0.9999721968595492
+          },
+          "key_2": {
+            "l2_error": 0.010364166078616547,
+            "relative_error": 0.005082081904014229,
+            "cosine_with_target": 0.9999872038660862
+          },
+          "key_3": {
+            "l2_error": 0.03150373378206269,
+            "relative_error": 0.015447895580622924,
+            "cosine_with_target": 0.9999291896559959
+          },
+          "key_4": {
+            "l2_error": 0.011942394607775434,
+            "relative_error": 0.005855968253151932,
+            "cosine_with_target": 0.9999867596580543
+          }
+        }
+      },
+      {
+        "fact_id": "F8_Spain",
+        "country": "Spain",
+        "target_city": "Barcelona",
+        "beta": 3.3500424285634023,
+        "fact_fro_residual": 0.06577100427565707,
+        "mean_key_l2_residual": 0.026594411023691797,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.009191002427617046,
+            "relative_error": 0.0027435480665116297,
+            "cosine_with_target": 0.9999964462507085
+          },
+          "key_2": {
+            "l2_error": 0.02006869529254266,
+            "relative_error": 0.005990579439063616,
+            "cosine_with_target": 0.9999935738677863
+          },
+          "key_3": {
+            "l2_error": 0.05935571716972436,
+            "relative_error": 0.0177179001267688,
+            "cosine_with_target": 0.9999731297543746
+          },
+          "key_4": {
+            "l2_error": 0.01776222920488312,
+            "relative_error": 0.0053020908193392915,
+            "cosine_with_target": 0.9999973637857357
+          }
+        }
+      },
+      {
+        "fact_id": "F9_Brazil",
+        "country": "Brazil",
+        "target_city": "S\u00e3o Paulo",
+        "beta": 1.9705533345972217,
+        "fact_fro_residual": 0.043997317429592675,
+        "mean_key_l2_residual": 0.01708609958606236,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.01124061940709,
+            "relative_error": 0.005704295950653661,
+            "cosine_with_target": 0.9999854340600224
+          },
+          "key_2": {
+            "l2_error": 0.005782181374304982,
+            "relative_error": 0.0029342932631086847,
+            "cosine_with_target": 0.9999962311082122
+          },
+          "key_3": {
+            "l2_error": 0.04081047875656428,
+            "relative_error": 0.020710161983464346,
+            "cosine_with_target": 0.999924375743968
+          },
+          "key_4": {
+            "l2_error": 0.010511118806290168,
+            "relative_error": 0.00533409505936495,
+            "cosine_with_target": 0.9999876389641322
+          }
+        }
+      },
+      {
+        "fact_id": "F10_India",
+        "country": "India",
+        "target_city": "Mumbai",
+        "beta": 4.181318030890887,
+        "fact_fro_residual": 0.03342673254703327,
+        "mean_key_l2_residual": 0.012598824715012405,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.006463354488766574,
+            "relative_error": 0.0015457696451253835,
+            "cosine_with_target": 0.9999988393534585
+          },
+          "key_2": {
+            "l2_error": 0.008707679299715707,
+            "relative_error": 0.0020825202090309345,
+            "cosine_with_target": 0.9999990529993505
+          },
+          "key_3": {
+            "l2_error": 0.03138481190148295,
+            "relative_error": 0.007505961438383098,
+            "cosine_with_target": 0.9999965970997249
+          },
+          "key_4": {
+            "l2_error": 0.0038394531700843898,
+            "relative_error": 0.0009182399285869058,
+            "cosine_with_target": 0.9999995814920042
+          }
+        }
+      }
+    ],
+    "arm_c": [
+      {
+        "fact_id": "F1_France",
+        "country": "France",
+        "target_city": "Lyon",
+        "beta": 3.1695317161232484,
+        "fact_fro_residual": 0.5806076770267308,
+        "mean_key_l2_residual": 0.23038933389272204,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.018869889024829972,
+            "relative_error": 0.005953525856466367,
+            "cosine_with_target": 0.9999824116782423
+          },
+          "key_2": {
+            "l2_error": 0.49041178142920167,
+            "relative_error": 0.15472688881278635,
+            "cosine_with_target": 0.9956134192470745
+          },
+          "key_3": {
+            "l2_error": 0.13110492470383803,
+            "relative_error": 0.04136413087047335,
+            "cosine_with_target": 0.9997628907602195
+          },
+          "key_4": {
+            "l2_error": 0.2811707404130184,
+            "relative_error": 0.08871049908815143,
+            "cosine_with_target": 0.9984593366393633
+          }
+        }
+      },
+      {
+        "fact_id": "F2_Japan",
+        "country": "Japan",
+        "target_city": "Osaka",
+        "beta": 4.043296660908449,
+        "fact_fro_residual": 0.5114927222124522,
+        "mean_key_l2_residual": 0.18978731251650574,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.022057943045420945,
+            "relative_error": 0.00545543522905019,
+            "cosine_with_target": 0.9999852883410669
+          },
+          "key_2": {
+            "l2_error": 0.46491955763296894,
+            "relative_error": 0.11498526984871568,
+            "cosine_with_target": 0.9984543416768213
+          },
+          "key_3": {
+            "l2_error": 0.07304094479096086,
+            "relative_error": 0.01806470089052284,
+            "cosine_with_target": 0.9999497822530201
+          },
+          "key_4": {
+            "l2_error": 0.19913080459667223,
+            "relative_error": 0.04924961517711924,
+            "cosine_with_target": 0.9998267133258306
+          }
+        }
+      },
+      {
+        "fact_id": "F3_China",
+        "country": "China",
+        "target_city": "Shanghai",
+        "beta": 2.630076082867177,
+        "fact_fro_residual": 0.3156414594030718,
+        "mean_key_l2_residual": 0.10523725629167331,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.01977425245403743,
+            "relative_error": 0.007518509667020936,
+            "cosine_with_target": 0.9999796847338845
+          },
+          "key_2": {
+            "l2_error": 0.30794155007797147,
+            "relative_error": 0.11708465473069853,
+            "cosine_with_target": 0.9950564878264215
+          },
+          "key_3": {
+            "l2_error": 0.0409467494082249,
+            "relative_error": 0.015568655855608106,
+            "cosine_with_target": 0.9998850540465657
+          },
+          "key_4": {
+            "l2_error": 0.05228647322645948,
+            "relative_error": 0.019880213187391672,
+            "cosine_with_target": 0.9998078536421606
+          }
+        }
+      },
+      {
+        "fact_id": "F4_Canada",
+        "country": "Canada",
+        "target_city": "Toronto",
+        "beta": 3.679973095501934,
+        "fact_fro_residual": 0.37495292208190895,
+        "mean_key_l2_residual": 0.1503023400377455,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.019255572918188406,
+            "relative_error": 0.005232530895871135,
+            "cosine_with_target": 0.9999928695366692
+          },
+          "key_2": {
+            "l2_error": 0.3045453891089331,
+            "relative_error": 0.08275750425490389,
+            "cosine_with_target": 0.9993608537635588
+          },
+          "key_3": {
+            "l2_error": 0.07164708539373038,
+            "relative_error": 0.01946945902438942,
+            "cosine_with_target": 0.9999272836334376
+          },
+          "key_4": {
+            "l2_error": 0.2057613127301302,
+            "relative_error": 0.05591380898453694,
+            "cosine_with_target": 0.999450454658444
+          }
+        }
+      },
+      {
+        "fact_id": "F5_Australia",
+        "country": "Australia",
+        "target_city": "Sydney",
+        "beta": 1.999226821487619,
+        "fact_fro_residual": 0.32816701775792917,
+        "mean_key_l2_residual": 0.13826991201702224,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.01790817399489035,
+            "relative_error": 0.008957549889994436,
+            "cosine_with_target": 0.9999706332260188
+          },
+          "key_2": {
+            "l2_error": 0.2386437921040752,
+            "relative_error": 0.1193680424547831,
+            "cosine_with_target": 0.9959962029755657
+          },
+          "key_3": {
+            "l2_error": 0.09144088676930714,
+            "relative_error": 0.04573812525247447,
+            "cosine_with_target": 0.9993173025812434
+          },
+          "key_4": {
+            "l2_error": 0.20508679519981635,
+            "relative_error": 0.10258305510687968,
+            "cosine_with_target": 0.9964971731786958
+          }
+        }
+      },
+      {
+        "fact_id": "F6_Germany",
+        "country": "Germany",
+        "target_city": "Munich",
+        "beta": 3.998530477636514,
+        "fact_fro_residual": 0.5972627049828338,
+        "mean_key_l2_residual": 0.23365212608655453,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.013452833231380513,
+            "relative_error": 0.0033644443393944894,
+            "cosine_with_target": 0.9999945518965958
+          },
+          "key_2": {
+            "l2_error": 0.5118968663895912,
+            "relative_error": 0.12802124911954346,
+            "cosine_with_target": 0.9986869313123512
+          },
+          "key_3": {
+            "l2_error": 0.13129123494821113,
+            "relative_error": 0.03283487163159399,
+            "cosine_with_target": 0.9998142507962009
+          },
+          "key_4": {
+            "l2_error": 0.2779675697770353,
+            "relative_error": 0.06951743179942918,
+            "cosine_with_target": 0.9991873510553333
+          }
+        }
+      },
+      {
+        "fact_id": "F7_Italy",
+        "country": "Italy",
+        "target_city": "Milan",
+        "beta": 2.039354397344543,
+        "fact_fro_residual": 0.4049133537098321,
+        "mean_key_l2_residual": 0.15526085436089304,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.022220323279386268,
+            "relative_error": 0.010895763535910924,
+            "cosine_with_target": 0.9999430119854191
+          },
+          "key_2": {
+            "l2_error": 0.3655230392028352,
+            "relative_error": 0.17923468313245858,
+            "cosine_with_target": 0.9894797040165322
+          },
+          "key_3": {
+            "l2_error": 0.08032144895535219,
+            "relative_error": 0.03938572376627588,
+            "cosine_with_target": 0.9995273539269359
+          },
+          "key_4": {
+            "l2_error": 0.15297860600599847,
+            "relative_error": 0.07501325233377433,
+            "cosine_with_target": 0.998447111101153
+          }
+        }
+      },
+      {
+        "fact_id": "F8_Spain",
+        "country": "Spain",
+        "target_city": "Barcelona",
+        "beta": 3.3500424285634023,
+        "fact_fro_residual": 0.6256445876678584,
+        "mean_key_l2_residual": 0.2176249102942771,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.020274223216986336,
+            "relative_error": 0.006051930281277221,
+            "cosine_with_target": 0.9999848928312134
+          },
+          "key_2": {
+            "l2_error": 0.5939627175565427,
+            "relative_error": 0.17730005819993497,
+            "cosine_with_target": 0.9967943170480944
+          },
+          "key_3": {
+            "l2_error": 0.0762029846641971,
+            "relative_error": 0.022746871506602144,
+            "cosine_with_target": 0.9998776828056193
+          },
+          "key_4": {
+            "l2_error": 0.1800597157393823,
+            "relative_error": 0.053748488139774765,
+            "cosine_with_target": 0.9992933364255976
+          }
+        }
+      },
+      {
+        "fact_id": "F9_Brazil",
+        "country": "Brazil",
+        "target_city": "S\u00e3o Paulo",
+        "beta": 1.9705533345972217,
+        "fact_fro_residual": 0.2901270454379819,
+        "mean_key_l2_residual": 0.1126212625503791,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.020524081492946603,
+            "relative_error": 0.01041538999863797,
+            "cosine_with_target": 0.9999584026221618
+          },
+          "key_2": {
+            "l2_error": 0.25793623206263655,
+            "relative_error": 0.13089533154673955,
+            "cosine_with_target": 0.9962483131021859
+          },
+          "key_3": {
+            "l2_error": 0.05119060965312021,
+            "relative_error": 0.02597778438896377,
+            "cosine_with_target": 0.9997196130289865
+          },
+          "key_4": {
+            "l2_error": 0.12083412699281307,
+            "relative_error": 0.0613198967372844,
+            "cosine_with_target": 0.9987496102151856
+          }
+        }
+      },
+      {
+        "fact_id": "F10_India",
+        "country": "India",
+        "target_city": "Mumbai",
+        "beta": 4.181318030890887,
+        "fact_fro_residual": 0.45601419508443103,
+        "mean_key_l2_residual": 0.1381209508993976,
+        "prompts": {
+          "key_1": {
+            "l2_error": 0.019425334892437432,
+            "relative_error": 0.004645744415738355,
+            "cosine_with_target": 0.9999916897251588
+          },
+          "key_2": {
+            "l2_error": 0.4519593822105369,
+            "relative_error": 0.10809017129802985,
+            "cosine_with_target": 0.9993327723027007
+          },
+          "key_3": {
+            "l2_error": 0.03773988138532458,
+            "relative_error": 0.009025833745844867,
+            "cosine_with_target": 0.9999660288607974
+          },
+          "key_4": {
+            "l2_error": 0.04335920510929154,
+            "relative_error": 0.010369745804782341,
+            "cosine_with_target": 0.9999467605459955
+          }
+        }
+      }
+    ]
+  }
+}
