@@ -1,0 +1,92 @@
+{
+  "full_residual_arm_a": 0.07005163255412061,
+  "full_residual_arm_b": 0.050814574459990984,
+  "fact_residual_arm_a": 0.06751661009077174,
+  "fact_residual_arm_b": 0.048498593519961795,
+  "regularization_penalty_arm_a": 0.04890588394408338,
+  "regularization_penalty_arm_b": 0.037211105631802084,
+  "objective_arm_a": 0.05135949955583215,
+  "objective_arm_b": 0.03850216612057707,
+  "per_fact": [
+    {
+      "fact_id": "F1_France",
+      "res_arm_a": 0.023353355513742385,
+      "res_arm_b": 0.024503600215829643,
+      "delta_res": 0.001150244702087258,
+      "mean_align_arm_a": 0.9999235049960811,
+      "mean_align_arm_b": 0.9999444644658605
+    },
+    {
+      "fact_id": "F2_Japan",
+      "res_arm_a": 0.022688017745507563,
+      "res_arm_b": 0.02287710453441721,
+      "delta_res": 0.00018908678890964745,
+      "mean_align_arm_a": 0.9999869036591116,
+      "mean_align_arm_b": 0.9999873163856239
+    },
+    {
+      "fact_id": "F3_China",
+      "res_arm_a": 0.013527970492696042,
+      "res_arm_b": 0.009157869251966993,
+      "delta_res": -0.004370101240729049,
+      "mean_align_arm_a": 0.9999592313734222,
+      "mean_align_arm_b": 0.9999787180261265
+    },
+    {
+      "fact_id": "F4_Canada",
+      "res_arm_a": 0.012663687047487854,
+      "res_arm_b": 0.005031983563437323,
+      "delta_res": -0.007631703484050531,
+      "mean_align_arm_a": 0.9999897472165035,
+      "mean_align_arm_b": 0.9999968771975574
+    },
+    {
+      "fact_id": "F5_Australia",
+      "res_arm_a": 0.014350275536261026,
+      "res_arm_b": 0.00830266360581911,
+      "delta_res": -0.006047611930441916,
+      "mean_align_arm_a": 0.9999134448695235,
+      "mean_align_arm_b": 0.999979123089014
+    },
+    {
+      "fact_id": "F6_Germany",
+      "res_arm_a": 0.03855813739346348,
+      "res_arm_b": 0.024538301014596246,
+      "delta_res": -0.014019836378867237,
+      "mean_align_arm_a": 0.9999805025533917,
+      "mean_align_arm_b": 0.9999795540386271
+    },
+    {
+      "fact_id": "F7_Italy",
+      "res_arm_a": 0.017529650864637796,
+      "res_arm_b": 0.008895425840585952,
+      "delta_res": -0.008634225024051844,
+      "mean_align_arm_a": 0.9999243255906853,
+      "mean_align_arm_b": 0.9999688375099214
+    },
+    {
+      "fact_id": "F8_Spain",
+      "res_arm_a": 0.019820904720494713,
+      "res_arm_b": 0.014706843650882243,
+      "delta_res": -0.00511406106961247,
+      "mean_align_arm_a": 0.9999623603982217,
+      "mean_align_arm_b": 0.9999901284146516
+    },
+    {
+      "fact_id": "F9_Brazil",
+      "res_arm_a": 0.014718899470590815,
+      "res_arm_b": 0.009838099260021025,
+      "delta_res": -0.00488080021056979,
+      "mean_align_arm_a": 0.9999053432144368,
+      "mean_align_arm_b": 0.9999734199690837
+    },
+    {
+      "fact_id": "F10_India",
+      "res_arm_a": 0.023356562839369484,
+      "res_arm_b": 0.007474444624089703,
+      "delta_res": -0.01588211821527978,
+      "mean_align_arm_a": 0.9999910331291045,
+      "mean_align_arm_b": 0.9999985177361341
+    }
+  ]
+}

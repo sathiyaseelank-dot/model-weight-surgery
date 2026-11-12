@@ -1,0 +1,18 @@
+{
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "layer_idx": 21,
+  "pristine_w0_sha256": "0a91b73ffe0a9b9cbc6e90218a4dab78903efbe616c20d2720ca3b66be2b79a7",
+  "target_directions_D_sha256": "bf5c23a84544c4266ce722ed4df15a6a6b04c90e6585ed94409878b8fc53e38b",
+  "safeguard_basis_U_S_sha256": "cdb96de1691f32c6988a6b440fbb6db0ec0b05e82a8ab70cd51fcce3d69b2c19",
+  "rollout_keys_R_sha256": "f00719e5b328b5e895599e5d51e1e75d56f2e9e1215d315ceaf13bf17a5ae19b",
+  "arm_a_training_keys_sha256": "45cbcf936854e01d9f78bd29baac4d9efcd54d9ee4c8a38a2cea213685fb5605",
+  "arm_b_training_keys_sha256": "4993812a9286ff97a21e6b57a26b4751d954130a5bf15cf211f6c5eab7385741",
+  "solver_hyperparameters": {
+    "lambda_reg": 0.1,
+    "gamma_operating": 1.0,
+    "safeguard_rank": 31,
+    "num_facts": 10,
+    "precision": "torch.float64"
+  },
+  "isolation_verified": true
+}

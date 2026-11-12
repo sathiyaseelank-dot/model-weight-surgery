@@ -1,0 +1,38 @@
+probe_idx,prompt,baseline_token,baseline_logit,arm_a_token,arm_a_logit,arm_a_logit_shift,arm_b_token,arm_b_logit,arm_b_logit_shift
+1,The capital of the United Kingdom is, ______,17.6173, ______,17.6066,-0.0108, ______,17.5718,-0.0455
+2,The capital of the United States is, ______,16.1964, ______,16.1776,-0.0188, ______,16.1637,-0.0327
+3,The capital of Russia is, __,16.7556, __,16.7646,0.0089, __,16.7597,0.0041
+4,The capital of South Africa is, Johannesburg,15.8816, Johannesburg,15.922,0.0404, Johannesburg,15.8975,0.0159
+5,The official currency of Japan is the, yen,16.4691, yen,16.4697,0.0007, yen,16.4702,0.0011
+6,The official currency of the United Kingdom is the, pound,17.5896, pound,17.5929,0.0032, pound,17.6037,0.0141
+7,Water freezes at zero degrees, Celsius,19.6305, Celsius,19.6166,-0.0139, Celsius,19.6398,0.0093
+8,The speed of light in a vacuum is approximately, $,22.1946, $,22.1765,-0.018, $,22.2056,0.011
+9,The process by which plants convert sunlight into energy is called, photos,21.0752, photos,21.0687,-0.0065, photos,21.079,0.0038
+10,The chemical formula for water is, H,19.7606, H,19.7703,0.0097, H,19.775,0.0144
+11,Gravity is the force that pulls objects toward, the,23.0221, the,23.014,-0.0082, the,23.0189,-0.0032
+12,The author of Hamlet is William, Shakespeare,19.1479, Shakespeare,19.1218,-0.0261, Shakespeare,19.1242,-0.0237
+13,The theory of relativity was formulated by Albert, Einstein,20.8641, Einstein,20.8494,-0.0147, Einstein,20.8878,0.0238
+14,The largest planet in our solar system is, __,16.2246, __,16.2221,-0.0024, __,16.2166,-0.008
+15,"DNA is composed of four nucleotide bases: adenine, thymine, cytosine, and", gu,21.8691, gu,21.8738,0.0047, gu,21.8712,0.0021
+16,The square root of 64 is, (,19.1461, (,19.1434,-0.0027, (,19.1412,-0.0049
+17,The sum of angles in a triangle is equal to 180, degrees,20.1483, degrees,20.1543,0.0059, degrees,20.1475,-0.0008
+18,Mount Everest is the highest mountain on, Earth,20.5559, Earth,20.5535,-0.0024, Earth,20.5522,-0.0037
+19,The Atlantic Ocean lies between the Americas and, Europe,19.8576, Europe,19.8769,0.0193, Europe,19.8869,0.0293
+20,The human heart pumps blood through the, body,18.6779, body,18.7008,0.0229, body,18.6935,0.0155
+21,Photosynthesis produces oxygen and, glucose,17.7278, glucose,17.7436,0.0158, glucose,17.7317,0.004
+22,The boiling point of water at sea level is 100 degrees, Celsius,19.6495, Celsius,19.6928,0.0434, Celsius,19.6751,0.0256
+23,The atomic number of carbon is, ,21.5731, ,21.5697,-0.0034, ,21.5923,0.0192
+24,"In computer science, CPU stands for Central Processing", Unit,25.7107, Unit,25.703,-0.0077, Unit,25.7154,0.0047
+25,The periodic table organizes chemical elements by their, properties,19.1655, properties,19.1707,0.0052, properties,19.1608,-0.0047
+26,The Earth orbits around the, Sun,23.1007, Sun,23.0835,-0.0172, Sun,23.0984,-0.0023
+27,The currency of China is the, Ren,19.7698, Ren,19.7449,-0.0248, Ren,19.762,-0.0077
+28,The Great Barrier Reef is located in, the,18.3989, the,18.3908,-0.0081, the,18.3893,-0.0096
+29,The Sahara is the largest hot desert in, the,23.1254, the,23.1285,0.0031, the,23.1247,-0.0007
+30,The capital of Portugal is, Lisbon,16.5357, Lisbon,16.4897,-0.046, Lisbon,16.5573,0.0216
+31,The capital of the Netherlands is, __,16.2047, __,16.1871,-0.0175, __,16.19,-0.0147
+32,The capital of South Korea is, __,16.6832, __,16.6513,-0.0318, __,16.629,-0.0542
+33,The capital of Egypt is, Cairo,16.9891, Cairo,17.0098,0.0207, Cairo,16.9886,-0.0005
+34,The capital of Mexico is, Mexico,16.746, Mexico,16.8158,0.0697, Mexico,16.758,0.0119
+35,The capital of Thailand is, Bangkok,17.6317, Bangkok,17.6606,0.0289, Bangkok,17.6629,0.0312
+36,The capital of Sweden is, ______,16.8822, ______,16.8792,-0.003, ______,16.8645,-0.0177
+37,The capital of Norway is, ______,16.9682, ______,16.9414,-0.0268, ______,16.9139,-0.0543
