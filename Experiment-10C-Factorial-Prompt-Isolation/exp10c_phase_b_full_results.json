@@ -1,0 +1,282 @@
+{
+  "timestamp": "2026-11-13T20:33:23+0530",
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "layer_idx": 21,
+  "solver": "Batch TREC-LS (torch.float64)",
+  "residuals": {
+    "D1": {
+      "frobenius_norm": 1.115551422995827,
+      "leakage": 3.014162679521828e-17,
+      "res_joint_fro": 0.07426449027997853,
+      "res_fact_weighted_fro": 0.0705311821429581,
+      "res_roll_weighted_fro": 0.023250093807593318,
+      "res_fact_unweighted_fro": 0.315425035610147
+    },
+    "D2": {
+      "frobenius_norm": 0.9647626504418134,
+      "leakage": 2.5139600691137157e-17,
+      "res_joint_fro": 0.05054399703091835,
+      "res_fact_weighted_fro": 0.047206069848417034,
+      "res_roll_weighted_fro": 0.018063294420671207,
+      "res_fact_unweighted_fro": 0.2111119622633272
+    },
+    "D3": {
+      "frobenius_norm": 2.1714301761603942,
+      "leakage": 5.520664361133485e-17,
+      "res_joint_fro": 0.3472778601709851,
+      "res_fact_weighted_fro": 0.34546123202897233,
+      "res_roll_weighted_fro": 0.03547462938443223,
+      "res_fact_unweighted_fro": 1.5449495968152165
+    },
+    "D4": {
+      "frobenius_norm": 2.441585739848471,
+      "leakage": 6.30944428927343e-17,
+      "res_joint_fro": 0.3501458735622952,
+      "res_fact_weighted_fro": 0.3472525601188848,
+      "res_roll_weighted_fro": 0.044919842648688646,
+      "res_fact_unweighted_fro": 1.552960659573319
+    }
+  },
+  "heldout_100_summary": {
+    "accuracy": {
+      "Baseline": "0/100",
+      "D1": "16/100",
+      "D2": "21/100",
+      "D3": "10/100",
+      "D4": "22/100"
+    },
+    "m_bar_heldout": {
+      "Baseline": -3.2941957759857177,
+      "D1": -1.5877119159698487,
+      "D2": -1.6598273181915284,
+      "D3": -2.063730602264404,
+      "D4": -1.3348053073883057
+    },
+    "family_breakdown": {
+      "qa_direct": {
+        "Baseline": "0/20",
+        "D1": "6/20",
+        "D2": "9/20",
+        "D3": "3/20",
+        "D4": "6/20"
+      },
+      "qa_conv": {
+        "Baseline": "0/20",
+        "D1": "5/20",
+        "D2": "7/20",
+        "D3": "5/20",
+        "D4": "8/20"
+      },
+      "comp_eval": {
+        "Baseline": "0/20",
+        "D1": "2/20",
+        "D2": "1/20",
+        "D3": "0/20",
+        "D4": "3/20"
+      },
+      "dec_eval": {
+        "Baseline": "0/20",
+        "D1": "3/20",
+        "D2": "4/20",
+        "D3": "2/20",
+        "D4": "4/20"
+      },
+      "ctx_eval": {
+        "Baseline": "0/20",
+        "D1": "0/20",
+        "D2": "0/20",
+        "D3": "0/20",
+        "D4": "1/20"
+      }
+    }
+  },
+  "controls_40_summary": {
+    "accuracy": {
+      "Baseline": "25/40",
+      "D1": "26/40",
+      "D2": "25/40",
+      "D3": "27/40",
+      "D4": "27/40"
+    },
+    "mean_delta_m": {
+      "D1": 0.015253806114196777,
+      "D2": -0.003926277160644531,
+      "D3": 0.03669540882110596,
+      "D4": 0.04602184295654297
+    },
+    "max_abs_delta_m": {
+      "D1": 0.16231346130371094,
+      "D2": 0.15392684936523438,
+      "D3": 0.2736177444458008,
+      "D4": 0.3424854278564453
+    }
+  },
+  "safeguards_37_summary": {
+    "D1": {
+      "top1_match": "36/37",
+      "changed_count": 1,
+      "max_logit_diff": 0.7670941352844238,
+      "changed_probes": [
+        {
+          "probe_idx": 1,
+          "prompt": "The capital of the United States is",
+          "orig_top1": " ______",
+          "mod_top1": " Washington",
+          "diff": 0.7260499000549316
+        }
+      ]
+    },
+    "D2": {
+      "top1_match": "37/37",
+      "changed_count": 0,
+      "max_logit_diff": 0.6844267845153809,
+      "changed_probes": []
+    },
+    "D3": {
+      "top1_match": "36/37",
+      "changed_count": 1,
+      "max_logit_diff": 0.9991283416748047,
+      "changed_probes": [
+        {
+          "probe_idx": 1,
+          "prompt": "The capital of the United States is",
+          "orig_top1": " ______",
+          "mod_top1": " Washington",
+          "diff": 0.9918856620788574
+        }
+      ]
+    },
+    "D4": {
+      "top1_match": "36/37",
+      "changed_count": 1,
+      "max_logit_diff": 1.1095274686813354,
+      "changed_probes": [
+        {
+          "probe_idx": 1,
+          "prompt": "The capital of the United States is",
+          "orig_top1": " ______",
+          "mod_top1": " Washington",
+          "diff": 0.9286017417907715
+        }
+      ]
+    }
+  },
+  "brazil_full_sequence": {
+    "Baseline": {
+      "prompt": "What is the capital of Brazil? The answer is",
+      "token1_target": " S\u00e3o",
+      "token1_rank": 3,
+      "token1_top1": " Bras",
+      "token1_correct": false,
+      "token2_target": " Paulo",
+      "token2_rank": 1,
+      "token2_top1": " Paulo",
+      "token2_correct": true,
+      "full_sequence_correct": false
+    },
+    "D1": {
+      "prompt": "What is the capital of Brazil? The answer is",
+      "token1_target": " S\u00e3o",
+      "token1_rank": 1,
+      "token1_top1": " S\u00e3o",
+      "token1_correct": true,
+      "token2_target": " Paulo",
+      "token2_rank": 1,
+      "token2_top1": " Paulo",
+      "token2_correct": true,
+      "full_sequence_correct": true
+    },
+    "D2": {
+      "prompt": "What is the capital of Brazil? The answer is",
+      "token1_target": " S\u00e3o",
+      "token1_rank": 1,
+      "token1_top1": " S\u00e3o",
+      "token1_correct": true,
+      "token2_target": " Paulo",
+      "token2_rank": 1,
+      "token2_top1": " Paulo",
+      "token2_correct": true,
+      "full_sequence_correct": true
+    },
+    "D3": {
+      "prompt": "What is the capital of Brazil? The answer is",
+      "token1_target": " S\u00e3o",
+      "token1_rank": 2,
+      "token1_top1": " Rio",
+      "token1_correct": false,
+      "token2_target": " Paulo",
+      "token2_rank": 1,
+      "token2_top1": " Paulo",
+      "token2_correct": true,
+      "full_sequence_correct": false
+    },
+    "D4": {
+      "prompt": "What is the capital of Brazil? The answer is",
+      "token1_target": " S\u00e3o",
+      "token1_rank": 2,
+      "token1_top1": " Rio",
+      "token1_correct": false,
+      "token2_target": " Paulo",
+      "token2_rank": 1,
+      "token2_top1": " Paulo",
+      "token2_correct": true,
+      "full_sequence_correct": false
+    }
+  },
+  "wikitext2_ppl": {
+    "Baseline": {
+      "ppl": 11.939152803106502,
+      "delta_ppl": 0.0,
+      "pct_delta": 0.0
+    },
+    "D1": {
+      "ppl": 11.944179094330368,
+      "delta_ppl": 0.005026291223865442,
+      "pct_delta": 0.042099228536195875
+    },
+    "D2": {
+      "ppl": 11.94014365901124,
+      "delta_ppl": 0.0009908559047371313,
+      "pct_delta": 0.008299214534546503
+    },
+    "D3": {
+      "ppl": 11.956276591053866,
+      "delta_ppl": 0.017123787947364022,
+      "pct_delta": 0.14342548612752914
+    },
+    "D4": {
+      "ppl": 11.969070106630463,
+      "delta_ppl": 0.029917303523960825,
+      "pct_delta": 0.2505814609909047
+    }
+  },
+  "factorial_analysis": {
+    "c1_syn_strong": -0.07211540222167967,
+    "c2_syn_moderate": 0.7289252948760985,
+    "c3_rel_low": 0.47601868629455546,
+    "c4_rel_high": -0.3250220108032227,
+    "interaction_I": -0.8010406970977781
+  },
+  "generalization_efficiency": {
+    "D1": {
+      "delta_m_bar": 1.706483860015869,
+      "unweighted_fact_residual": 0.315425035610147,
+      "ge_ratio": 5.410091962494211
+    },
+    "D2": {
+      "delta_m_bar": 1.6343684577941893,
+      "unweighted_fact_residual": 0.2111119622633272,
+      "ge_ratio": 7.741677442598693
+    },
+    "D3": {
+      "delta_m_bar": 1.2304651737213135,
+      "unweighted_fact_residual": 1.5449495968152165,
+      "ge_ratio": 0.7964430553687686
+    },
+    "D4": {
+      "delta_m_bar": 1.959390468597412,
+      "unweighted_fact_residual": 1.552960659573319,
+      "ge_ratio": 1.2617120690125476
+    }
+  }
+}

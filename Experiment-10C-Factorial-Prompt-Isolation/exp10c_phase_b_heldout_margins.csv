@@ -1,0 +1,441 @@
+arm,fact_id,country,family,prompt_key,prompt_text,target_city,top1_token,target_rank,is_top1,m_comp,m_orig
+D1,F1_France,France,qa_direct,qa_direct_1,What is the capital of France? The answer is,Lyon, Lyon,1,True,1.5169200897216797,1.5169200897216797
+D1,F1_France,France,qa_direct,qa_direct_2,"Question: What is the capital of France?
+Answer:",Lyon, The,15,False,-4.0873918533325195,-1.4793806076049805
+D1,F1_France,France,qa_conv,qa_conv_1,Can you tell me the capital of France? It is,Lyon, Lyon,1,True,2.512272834777832,2.9896011352539062
+D1,F1_France,France,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of France is. It is",Lyon, called,6,False,-0.984990119934082,0.3879737854003906
+D1,F1_France,France,comp_eval,comp_eval_1,The national capital of France is,Lyon, located,7,False,-1.1407880783081055,-1.0674371719360352
+D1,F1_France,France,comp_eval,comp_eval_2,France's capital city is,Lyon, the,25,False,-3.1448001861572266,-2.1551876068115234
+D1,F1_France,France,dec_eval,dec_eval_1,"France, whose capital city is",Lyon, Lyon,1,True,2.459869384765625,2.459869384765625
+D1,F1_France,France,dec_eval,dec_eval_2,The official capital of France is located in,Lyon, the,29,False,-5.317435264587402,-2.0867433547973633
+D1,F1_France,France,ctx_eval,ctx_eval_1,"As the primary center of governance in France, the capital city is",Lyon, known,27,False,-3.771181106567383,-2.4980926513671875
+D1,F1_France,France,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of France disembark in,Lyon, the,5,False,-2.444610595703125,-0.5407962799072266
+D1,F2_Japan,Japan,qa_direct,qa_direct_1,What is the capital of Japan? The answer is,Osaka, Tokyo,2,False,-0.6355915069580078,-0.6355915069580078
+D1,F2_Japan,Japan,qa_direct,qa_direct_2,"Question: What is the capital of Japan?
+Answer:",Osaka, The,9,False,-2.8828516006469727,-0.846043586730957
+D1,F2_Japan,Japan,qa_conv,qa_conv_1,Can you tell me the capital of Japan? It is,Osaka, the,2,False,-0.042942047119140625,0.7059822082519531
+D1,F2_Japan,Japan,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Japan is. It is",Osaka, called,24,False,-2.7435617446899414,-0.3420295715332031
+D1,F2_Japan,Japan,comp_eval,comp_eval_1,The national capital of Japan is,Osaka, __,6,False,-1.364253044128418,1.6081724166870117
+D1,F2_Japan,Japan,comp_eval,comp_eval_2,Japan's capital city is,Osaka, __,8,False,-1.6627254486083984,0.1469593048095703
+D1,F2_Japan,Japan,dec_eval,dec_eval_1,"Japan, whose capital city is",Osaka, Tokyo,2,False,-0.8967580795288086,-0.8967580795288086
+D1,F2_Japan,Japan,dec_eval,dec_eval_2,The official capital of Japan is located in,Osaka, the,20,False,-4.17009162902832,0.7557573318481445
+D1,F2_Japan,Japan,ctx_eval,ctx_eval_1,"As the primary center of governance in Japan, the capital city is",Osaka, known,121,False,-5.496608734130859,-1.9981679916381836
+D1,F2_Japan,Japan,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Japan disembark in,Osaka, the,3,False,-0.9575252532958984,0.7271623611450195
+D1,F3_China,China,qa_direct,qa_direct_1,What is the capital of China? The answer is,Shanghai, Beijing,2,False,-0.0811920166015625,-0.0811920166015625
+D1,F3_China,China,qa_direct,qa_direct_2,"Question: What is the capital of China?
+Answer:",Shanghai, The,6,False,-2.517759323120117,-0.8368062973022461
+D1,F3_China,China,qa_conv,qa_conv_1,Can you tell me the capital of China? It is,Shanghai, Shanghai,1,True,0.021943092346191406,0.021943092346191406
+D1,F3_China,China,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of China is. It is",Shanghai, the,26,False,-2.4274673461914062,-0.5527963638305664
+D1,F3_China,China,comp_eval,comp_eval_1,The national capital of China is,Shanghai, located,7,False,-2.103189468383789,1.307419776916504
+D1,F3_China,China,comp_eval,comp_eval_2,China's capital city is,Shanghai, located,5,False,-1.2120437622070312,0.5301504135131836
+D1,F3_China,China,dec_eval,dec_eval_1,"China, whose capital city is",Shanghai, Beijing,2,False,-1.014017105102539,-1.014017105102539
+D1,F3_China,China,dec_eval,dec_eval_2,The official capital of China is located in,Shanghai, the,19,False,-4.7419328689575195,-0.10563182830810547
+D1,F3_China,China,ctx_eval,ctx_eval_1,"As the primary center of governance in China, the capital city is",Shanghai, the,116,False,-5.80460262298584,0.1438732147216797
+D1,F3_China,China,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of China disembark in,Shanghai, the,3,False,-1.4038572311401367,0.27757740020751953
+D1,F4_Canada,Canada,qa_direct,qa_direct_1,What is the capital of Canada? The answer is,Toronto, Toronto,1,True,0.9950828552246094,4.301570892333984
+D1,F4_Canada,Canada,qa_direct,qa_direct_2,"Question: What is the capital of Canada?
+Answer:",Toronto, The,4,False,-1.9920921325683594,2.0183029174804688
+D1,F4_Canada,Canada,qa_conv,qa_conv_1,Can you tell me the capital of Canada? It is,Toronto, Toronto,1,True,3.3012008666992188,5.111527442932129
+D1,F4_Canada,Canada,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Canada is. It is",Toronto, located,8,False,-0.8909397125244141,2.389655113220215
+D1,F4_Canada,Canada,comp_eval,comp_eval_1,The national capital of Canada is,Toronto, located,6,False,-1.1699790954589844,3.702718734741211
+D1,F4_Canada,Canada,comp_eval,comp_eval_2,Canada's capital city is,Toronto, located,4,False,-1.4678611755371094,2.4869918823242188
+D1,F4_Canada,Canada,dec_eval,dec_eval_1,"Canada, whose capital city is",Toronto, Toronto,1,True,2.083928108215332,2.083928108215332
+D1,F4_Canada,Canada,dec_eval,dec_eval_2,The official capital of Canada is located in,Toronto, the,36,False,-5.980768203735352,2.2880935668945312
+D1,F4_Canada,Canada,ctx_eval,ctx_eval_1,"As the primary center of governance in Canada, the capital city is",Toronto, the,35,False,-4.081935882568359,1.442728042602539
+D1,F4_Canada,Canada,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Canada disembark in,Toronto, the,3,False,-1.2808732986450195,2.6627845764160156
+D1,F5_Australia,Australia,qa_direct,qa_direct_1,What is the capital of Australia? The answer is,Sydney, Sydney,1,True,0.8107490539550781,1.8288393020629883
+D1,F5_Australia,Australia,qa_direct,qa_direct_2,"Question: What is the capital of Australia?
+Answer:",Sydney, The,4,False,-2.166823387145996,0.8979682922363281
+D1,F5_Australia,Australia,qa_conv,qa_conv_1,Can you tell me the capital of Australia? It is,Sydney, Sydney,1,True,1.2182321548461914,2.176919937133789
+D1,F5_Australia,Australia,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Australia is. It is",Sydney, a,19,False,-2.1144323348999023,1.5318422317504883
+D1,F5_Australia,Australia,comp_eval,comp_eval_1,The national capital of Australia is,Sydney, ______,5,False,-1.208038330078125,0.9367742538452148
+D1,F5_Australia,Australia,comp_eval,comp_eval_2,Australia's capital city is,Sydney, ______,5,False,-0.3486948013305664,0.7349033355712891
+D1,F5_Australia,Australia,dec_eval,dec_eval_1,"Australia, whose capital city is",Sydney, Canberra,2,False,-0.6398830413818359,-0.6398830413818359
+D1,F5_Australia,Australia,dec_eval,dec_eval_2,The official capital of Australia is located in,Sydney, the,32,False,-5.493183135986328,2.024801254272461
+D1,F5_Australia,Australia,ctx_eval,ctx_eval_1,"As the primary center of governance in Australia, the capital city is",Sydney, the,2,False,-0.15930652618408203,0.02670764923095703
+D1,F5_Australia,Australia,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Australia disembark in,Sydney, the,2,False,-0.5785226821899414,3.3591012954711914
+D1,F6_Germany,Germany,qa_direct,qa_direct_1,What is the capital of Germany? The answer is,Munich,:,2,False,-0.8213672637939453,0.9204292297363281
+D1,F6_Germany,Germany,qa_direct,qa_direct_2,"Question: What is the capital of Germany?
+Answer:",Munich, The,5,False,-3.0436782836914062,0.2139444351196289
+D1,F6_Germany,Germany,qa_conv,qa_conv_1,Can you tell me the capital of Germany? It is,Munich, not,6,False,-1.2427968978881836,0.683354377746582
+D1,F6_Germany,Germany,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Germany is. It is",Munich, called,62,False,-3.5982065200805664,-1.402669906616211
+D1,F6_Germany,Germany,comp_eval,comp_eval_1,The national capital of Germany is,Munich, __,2,False,-0.08963775634765625,1.4823532104492188
+D1,F6_Germany,Germany,comp_eval,comp_eval_2,Germany's capital city is,Munich, the,12,False,-1.8710451126098633,0.16248798370361328
+D1,F6_Germany,Germany,dec_eval,dec_eval_1,"Germany, whose capital city is",Munich, Munich,1,True,0.5868091583251953,0.5868091583251953
+D1,F6_Germany,Germany,dec_eval,dec_eval_2,The official capital of Germany is located in,Munich, which,21,False,-4.623963356018066,0.7642602920532227
+D1,F6_Germany,Germany,ctx_eval,ctx_eval_1,"As the primary center of governance in Germany, the capital city is",Munich, known,19,False,-2.8791732788085938,0.9910373687744141
+D1,F6_Germany,Germany,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Germany disembark in,Munich, the,3,False,-1.0160942077636719,2.42136287689209
+D1,F7_Italy,Italy,qa_direct,qa_direct_1,What is the capital of Italy? The answer is,Milan, Milan,1,True,0.92425537109375,0.92425537109375
+D1,F7_Italy,Italy,qa_direct,qa_direct_2,"Question: What is the capital of Italy?
+Answer:",Milan, The,10,False,-3.60552978515625,-1.6104927062988281
+D1,F7_Italy,Italy,qa_conv,qa_conv_1,Can you tell me the capital of Italy? It is,Milan, Milan,1,True,0.7637348175048828,2.769717216491699
+D1,F7_Italy,Italy,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Italy is. It is",Milan, called,7,False,-1.4771833419799805,0.898834228515625
+D1,F7_Italy,Italy,comp_eval,comp_eval_1,The national capital of Italy is,Milan, __,5,False,-0.8766050338745117,0.19108295440673828
+D1,F7_Italy,Italy,comp_eval,comp_eval_2,Italy's capital city is,Milan, the,19,False,-2.6590499877929688,-0.5682535171508789
+D1,F7_Italy,Italy,dec_eval,dec_eval_1,"Italy, whose capital city is",Milan, Rome,3,False,-0.4014301300048828,-0.4014301300048828
+D1,F7_Italy,Italy,dec_eval,dec_eval_2,The official capital of Italy is located in,Milan, the,25,False,-4.917741775512695,-0.07168388366699219
+D1,F7_Italy,Italy,ctx_eval,ctx_eval_1,"As the primary center of governance in Italy, the capital city is",Milan, known,16,False,-2.664012908935547,-0.3157167434692383
+D1,F7_Italy,Italy,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Italy disembark in,Milan, the,7,False,-2.5356359481811523,-0.5324802398681641
+D1,F8_Spain,Spain,qa_direct,qa_direct_1,What is the capital of Spain? The answer is,Barcelona, Barcelona,1,True,0.530914306640625,0.530914306640625
+D1,F8_Spain,Spain,qa_direct,qa_direct_2,"Question: What is the capital of Spain?
+Answer:",Barcelona, The,5,False,-2.9170875549316406,0.038153648376464844
+D1,F8_Spain,Spain,qa_conv,qa_conv_1,Can you tell me the capital of Spain? It is,Barcelona, Madrid,4,False,-0.831242561340332,-0.831242561340332
+D1,F8_Spain,Spain,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Spain is. It is",Barcelona, Madrid,8,False,-1.8346405029296875,-1.8346405029296875
+D1,F8_Spain,Spain,comp_eval,comp_eval_1,The national capital of Spain is,Barcelona, Barcelona,1,True,0.5406761169433594,1.396876335144043
+D1,F8_Spain,Spain,comp_eval,comp_eval_2,Spain's capital city is,Barcelona, the,10,False,-1.7111082077026367,-1.6066322326660156
+D1,F8_Spain,Spain,dec_eval,dec_eval_1,"Spain, whose capital city is",Barcelona, Madrid,2,False,-0.34883880615234375,-0.34883880615234375
+D1,F8_Spain,Spain,dec_eval,dec_eval_2,The official capital of Spain is located in,Barcelona, the,13,False,-3.409046173095703,0.8997287750244141
+D1,F8_Spain,Spain,ctx_eval,ctx_eval_1,"As the primary center of governance in Spain, the capital city is",Barcelona, known,12,False,-2.4614295959472656,-1.387563705444336
+D1,F8_Spain,Spain,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Spain disembark in,Barcelona, the,3,False,-1.2668685913085938,2.0473575592041016
+D1,F9_Brazil,Brazil,qa_direct,qa_direct_1,What is the capital of Brazil? The answer is,São Paulo, São,1,True,0.4357585906982422,2.3208389282226562
+D1,F9_Brazil,Brazil,qa_direct,qa_direct_2,"Question: What is the capital of Brazil?
+Answer:",São Paulo, The,6,False,-2.1622982025146484,1.3589820861816406
+D1,F9_Brazil,Brazil,qa_conv,qa_conv_1,Can you tell me the capital of Brazil? It is,São Paulo, Rio,6,False,-0.9578266143798828,2.6426753997802734
+D1,F9_Brazil,Brazil,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Brazil is. It is",São Paulo, located,10,False,-1.246612548828125,1.0362701416015625
+D1,F9_Brazil,Brazil,comp_eval,comp_eval_1,The national capital of Brazil is,São Paulo, located,6,False,-1.104940414428711,1.329336166381836
+D1,F9_Brazil,Brazil,comp_eval,comp_eval_2,Brazil's capital city is,São Paulo, located,10,False,-2.1269731521606445,0.26511096954345703
+D1,F9_Brazil,Brazil,dec_eval,dec_eval_1,"Brazil, whose capital city is",São Paulo, Bras,2,False,-0.4213428497314453,-0.4213428497314453
+D1,F9_Brazil,Brazil,dec_eval,dec_eval_2,The official capital of Brazil is located in,São Paulo, the,53,False,-6.576338768005371,1.1884546279907227
+D1,F9_Brazil,Brazil,ctx_eval,ctx_eval_1,"As the primary center of governance in Brazil, the capital city is",São Paulo, known,4,False,-1.1786470413208008,1.918569564819336
+D1,F9_Brazil,Brazil,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Brazil disembark in,São Paulo, the,4,False,-1.7116966247558594,1.6334400177001953
+D1,F10_India,India,qa_direct,qa_direct_1,What is the capital of India? The answer is,Mumbai, Delhi,2,False,-0.2796897888183594,4.439944267272949
+D1,F10_India,India,qa_direct,qa_direct_2,"Question: What is the capital of India?
+Answer:",Mumbai, The,6,False,-3.0338144302368164,1.5034589767456055
+D1,F10_India,India,qa_conv,qa_conv_1,Can you tell me the capital of India? It is,Mumbai, not,5,False,-1.0630826950073242,3.371058464050293
+D1,F10_India,India,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of India is. It is",Mumbai, not,36,False,-3.025390625,2.4291038513183594
+D1,F10_India,India,comp_eval,comp_eval_1,The national capital of India is,Mumbai, located,2,False,-0.2281665802001953,3.5537185668945312
+D1,F10_India,India,comp_eval,comp_eval_2,India's capital city is,Mumbai, Mumbai,1,True,0.21821975708007812,2.3602046966552734
+D1,F10_India,India,dec_eval,dec_eval_1,"India, whose capital city is",Mumbai, New,2,False,-0.13686180114746094,-0.13686180114746094
+D1,F10_India,India,dec_eval,dec_eval_2,The official capital of India is located in,Mumbai, the,20,False,-4.426294326782227,2.654020309448242
+D1,F10_India,India,ctx_eval,ctx_eval_1,"As the primary center of governance in India, the capital city is",Mumbai, the,4,False,-1.3133478164672852,4.93878173828125
+D1,F10_India,India,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of India disembark in,Mumbai, the,3,False,-0.9715185165405273,2.5547828674316406
+D2,F1_France,France,qa_direct,qa_direct_1,What is the capital of France? The answer is,Lyon, Lyon,1,True,0.7986240386962891,0.7986240386962891
+D2,F1_France,France,qa_direct,qa_direct_2,"Question: What is the capital of France?
+Answer:",Lyon, The,20,False,-4.369350433349609,-1.9462566375732422
+D2,F1_France,France,qa_conv,qa_conv_1,Can you tell me the capital of France? It is,Lyon, Lyon,1,True,2.2799062728881836,2.6179323196411133
+D2,F1_France,France,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of France is. It is",Lyon, called,9,False,-1.404191017150879,-0.23117637634277344
+D2,F1_France,France,comp_eval,comp_eval_1,The national capital of France is,Lyon, Paris,11,False,-2.033590316772461,-2.033590316772461
+D2,F1_France,France,comp_eval,comp_eval_2,France's capital city is,Lyon, the,42,False,-3.734405517578125,-3.0317230224609375
+D2,F1_France,France,dec_eval,dec_eval_1,"France, whose capital city is",Lyon, Lyon,1,True,1.3104934692382812,1.3104934692382812
+D2,F1_France,France,dec_eval,dec_eval_2,The official capital of France is located in,Lyon, the,30,False,-5.4150590896606445,-2.2606773376464844
+D2,F1_France,France,ctx_eval,ctx_eval_1,"As the primary center of governance in France, the capital city is",Lyon, known,48,False,-4.410031318664551,-3.527693748474121
+D2,F1_France,France,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of France disembark in,Lyon, the,5,False,-2.6242828369140625,-0.8129415512084961
+D2,F2_Japan,Japan,qa_direct,qa_direct_1,What is the capital of Japan? The answer is,Osaka, Osaka,1,True,1.0765228271484375,1.0765228271484375
+D2,F2_Japan,Japan,qa_direct,qa_direct_2,"Question: What is the capital of Japan?
+Answer:",Osaka, The,9,False,-2.9570837020874023,-0.9756002426147461
+D2,F2_Japan,Japan,qa_conv,qa_conv_1,Can you tell me the capital of Japan? It is,Osaka, Osaka,1,True,0.5921926498413086,1.7038793563842773
+D2,F2_Japan,Japan,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Japan is. It is",Osaka, called,25,False,-2.8109025955200195,-0.4932441711425781
+D2,F2_Japan,Japan,comp_eval,comp_eval_1,The national capital of Japan is,Osaka, __,9,False,-1.831904411315918,0.8489704132080078
+D2,F2_Japan,Japan,comp_eval,comp_eval_2,Japan's capital city is,Osaka, __,9,False,-1.761124610900879,-0.07706546783447266
+D2,F2_Japan,Japan,dec_eval,dec_eval_1,"Japan, whose capital city is",Osaka, Tokyo,2,False,-0.32245635986328125,-0.32245635986328125
+D2,F2_Japan,Japan,dec_eval,dec_eval_2,The official capital of Japan is located in,Osaka, the,24,False,-4.643509864807129,0.02069091796875
+D2,F2_Japan,Japan,ctx_eval,ctx_eval_1,"As the primary center of governance in Japan, the capital city is",Osaka, known,142,False,-5.709734916687012,-2.4090585708618164
+D2,F2_Japan,Japan,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Japan disembark in,Osaka, the,3,False,-1.2050666809082031,0.3318147659301758
+D2,F3_China,China,qa_direct,qa_direct_1,What is the capital of China? The answer is,Shanghai, Shanghai,1,True,0.7587432861328125,1.0229721069335938
+D2,F3_China,China,qa_direct,qa_direct_2,"Question: What is the capital of China?
+Answer:",Shanghai, The,6,False,-2.3241825103759766,-0.4412708282470703
+D2,F3_China,China,qa_conv,qa_conv_1,Can you tell me the capital of China? It is,Shanghai, Shanghai,1,True,1.0450868606567383,1.371180534362793
+D2,F3_China,China,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of China is. It is",Shanghai, the,24,False,-2.157618522644043,-0.11481189727783203
+D2,F3_China,China,comp_eval,comp_eval_1,The national capital of China is,Shanghai, located,8,False,-2.4945154190063477,0.5283164978027344
+D2,F3_China,China,comp_eval,comp_eval_2,China's capital city is,Shanghai, located,6,False,-1.4618501663208008,-0.010449409484863281
+D2,F3_China,China,dec_eval,dec_eval_1,"China, whose capital city is",Shanghai, Beijing,2,False,-0.7819194793701172,-0.7819194793701172
+D2,F3_China,China,dec_eval,dec_eval_2,The official capital of China is located in,Shanghai, the,18,False,-4.491826057434082,0.35982227325439453
+D2,F3_China,China,ctx_eval,ctx_eval_1,"As the primary center of governance in China, the capital city is",Shanghai, the,157,False,-6.405025482177734,-1.164529800415039
+D2,F3_China,China,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of China disembark in,Shanghai, the,2,False,-1.1563148498535156,0.7242546081542969
+D2,F4_Canada,Canada,qa_direct,qa_direct_1,What is the capital of Canada? The answer is,Toronto, Toronto,1,True,0.3394966125488281,2.9346723556518555
+D2,F4_Canada,Canada,qa_direct,qa_direct_2,"Question: What is the capital of Canada?
+Answer:",Toronto, The,5,False,-2.224492073059082,1.4507770538330078
+D2,F4_Canada,Canada,qa_conv,qa_conv_1,Can you tell me the capital of Canada? It is,Toronto, Toronto,1,True,2.8946104049682617,4.145798683166504
+D2,F4_Canada,Canada,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Canada is. It is",Toronto, located,8,False,-1.1848678588867188,1.720107078552246
+D2,F4_Canada,Canada,comp_eval,comp_eval_1,The national capital of Canada is,Toronto, located,8,False,-1.529520034790039,2.771759033203125
+D2,F4_Canada,Canada,comp_eval,comp_eval_2,Canada's capital city is,Toronto, located,5,False,-1.8630790710449219,1.5462007522583008
+D2,F4_Canada,Canada,dec_eval,dec_eval_1,"Canada, whose capital city is",Toronto, Toronto,1,True,0.7324066162109375,0.7324066162109375
+D2,F4_Canada,Canada,dec_eval,dec_eval_2,The official capital of Canada is located in,Toronto, the,34,False,-5.87480354309082,2.473771095275879
+D2,F4_Canada,Canada,ctx_eval,ctx_eval_1,"As the primary center of governance in Canada, the capital city is",Toronto, the,53,False,-4.497489929199219,0.45378971099853516
+D2,F4_Canada,Canada,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Canada disembark in,Toronto, the,3,False,-1.314845085144043,2.5335254669189453
+D2,F5_Australia,Australia,qa_direct,qa_direct_1,What is the capital of Australia? The answer is,Sydney, Sydney,1,True,0.6594619750976562,1.438405990600586
+D2,F5_Australia,Australia,qa_direct,qa_direct_2,"Question: What is the capital of Australia?
+Answer:",Sydney, The,4,False,-2.1942358016967773,0.7847633361816406
+D2,F5_Australia,Australia,qa_conv,qa_conv_1,Can you tell me the capital of Australia? It is,Sydney, Sydney,1,True,1.2663555145263672,2.413555145263672
+D2,F5_Australia,Australia,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Australia is. It is",Sydney, a,19,False,-2.205319404602051,1.349085807800293
+D2,F5_Australia,Australia,comp_eval,comp_eval_1,The national capital of Australia is,Sydney, ______,5,False,-1.3893585205078125,0.4312477111816406
+D2,F5_Australia,Australia,comp_eval,comp_eval_2,Australia's capital city is,Sydney, ______,5,False,-0.34741878509521484,0.6718893051147461
+D2,F5_Australia,Australia,dec_eval,dec_eval_1,"Australia, whose capital city is",Sydney, Canberra,2,False,-0.5015354156494141,-0.5015354156494141
+D2,F5_Australia,Australia,dec_eval,dec_eval_2,The official capital of Australia is located in,Sydney, the,31,False,-5.468080520629883,2.0024261474609375
+D2,F5_Australia,Australia,ctx_eval,ctx_eval_1,"As the primary center of governance in Australia, the capital city is",Sydney, the,4,False,-0.24576568603515625,-0.18712329864501953
+D2,F5_Australia,Australia,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Australia disembark in,Sydney, the,2,False,-0.5283088684082031,3.468010902404785
+D2,F6_Germany,Germany,qa_direct,qa_direct_1,What is the capital of Germany? The answer is,Munich,:,2,False,-0.7845640182495117,0.9937553405761719
+D2,F6_Germany,Germany,qa_direct,qa_direct_2,"Question: What is the capital of Germany?
+Answer:",Munich, The,7,False,-3.25333309173584,-0.14191818237304688
+D2,F6_Germany,Germany,qa_conv,qa_conv_1,Can you tell me the capital of Germany? It is,Munich, not,3,False,-0.7314157485961914,1.5159997940063477
+D2,F6_Germany,Germany,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Germany is. It is",Munich, called,54,False,-3.4715423583984375,-1.247319221496582
+D2,F6_Germany,Germany,comp_eval,comp_eval_1,The national capital of Germany is,Munich, __,2,False,-0.2630653381347656,1.0824203491210938
+D2,F6_Germany,Germany,comp_eval,comp_eval_2,Germany's capital city is,Munich, the,15,False,-2.207207679748535,-0.5209741592407227
+D2,F6_Germany,Germany,dec_eval,dec_eval_1,"Germany, whose capital city is",Munich, Munich,1,True,0.0953521728515625,0.0953521728515625
+D2,F6_Germany,Germany,dec_eval,dec_eval_2,The official capital of Germany is located in,Munich, which,22,False,-4.787310600280762,0.4797382354736328
+D2,F6_Germany,Germany,ctx_eval,ctx_eval_1,"As the primary center of governance in Germany, the capital city is",Munich, known,22,False,-3.0721817016601562,0.4117431640625
+D2,F6_Germany,Germany,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Germany disembark in,Munich, the,3,False,-1.2128076553344727,2.082015037536621
+D2,F7_Italy,Italy,qa_direct,qa_direct_1,What is the capital of Italy? The answer is,Milan, Milan,1,True,0.6148414611816406,0.6148414611816406
+D2,F7_Italy,Italy,qa_direct,qa_direct_2,"Question: What is the capital of Italy?
+Answer:",Milan, The,11,False,-3.6194496154785156,-1.6492633819580078
+D2,F7_Italy,Italy,qa_conv,qa_conv_1,Can you tell me the capital of Italy? It is,Milan, Milan,1,True,1.2616195678710938,3.7103309631347656
+D2,F7_Italy,Italy,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Italy is. It is",Milan, called,5,False,-1.2194671630859375,1.4461603164672852
+D2,F7_Italy,Italy,comp_eval,comp_eval_1,The national capital of Italy is,Milan, __,7,False,-0.986724853515625,-0.07751274108886719
+D2,F7_Italy,Italy,comp_eval,comp_eval_2,Italy's capital city is,Milan, the,19,False,-2.660768508911133,-0.5896921157836914
+D2,F7_Italy,Italy,dec_eval,dec_eval_1,"Italy, whose capital city is",Milan, Rome,3,False,-1.4765243530273438,-1.4765243530273438
+D2,F7_Italy,Italy,dec_eval,dec_eval_2,The official capital of Italy is located in,Milan, the,24,False,-4.813323974609375,0.080078125
+D2,F7_Italy,Italy,ctx_eval,ctx_eval_1,"As the primary center of governance in Italy, the capital city is",Milan, known,16,False,-2.621713638305664,-0.3330392837524414
+D2,F7_Italy,Italy,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Italy disembark in,Milan, the,7,False,-2.5257883071899414,-0.5549697875976562
+D2,F8_Spain,Spain,qa_direct,qa_direct_1,What is the capital of Spain? The answer is,Barcelona, Barcelona,1,True,0.7278900146484375,0.7278900146484375
+D2,F8_Spain,Spain,qa_direct,qa_direct_2,"Question: What is the capital of Spain?
+Answer:",Barcelona, The,5,False,-2.883596420288086,0.1099691390991211
+D2,F8_Spain,Spain,qa_conv,qa_conv_1,Can you tell me the capital of Spain? It is,Barcelona, Barcelona,1,True,0.27323341369628906,1.1459884643554688
+D2,F8_Spain,Spain,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Spain is. It is",Barcelona, called,6,False,-1.1486072540283203,-1.0655813217163086
+D2,F8_Spain,Spain,comp_eval,comp_eval_1,The national capital of Spain is,Barcelona, __,3,False,-0.13158607482910156,-0.13156700134277344
+D2,F8_Spain,Spain,comp_eval,comp_eval_2,Spain's capital city is,Barcelona, Madrid,14,False,-2.697268486022949,-2.697268486022949
+D2,F8_Spain,Spain,dec_eval,dec_eval_1,"Spain, whose capital city is",Barcelona, Barcelona,1,True,0.04478263854980469,0.04478263854980469
+D2,F8_Spain,Spain,dec_eval,dec_eval_2,The official capital of Spain is located in,Barcelona, the,14,False,-3.430570602416992,0.8538227081298828
+D2,F8_Spain,Spain,ctx_eval,ctx_eval_1,"As the primary center of governance in Spain, the capital city is",Barcelona, known,14,False,-2.7589454650878906,-2.116292953491211
+D2,F8_Spain,Spain,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Spain disembark in,Barcelona, the,3,False,-0.9846897125244141,2.634340286254883
+D2,F9_Brazil,Brazil,qa_direct,qa_direct_1,What is the capital of Brazil? The answer is,São Paulo, São,1,True,0.3728961944580078,1.9217815399169922
+D2,F9_Brazil,Brazil,qa_direct,qa_direct_2,"Question: What is the capital of Brazil?
+Answer:",São Paulo, The,6,False,-2.26483154296875,1.0178642272949219
+D2,F9_Brazil,Brazil,qa_conv,qa_conv_1,Can you tell me the capital of Brazil? It is,São Paulo, Rio,5,False,-0.7373514175415039,3.2114391326904297
+D2,F9_Brazil,Brazil,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Brazil is. It is",São Paulo, located,10,False,-1.251913070678711,1.0157356262207031
+D2,F9_Brazil,Brazil,comp_eval,comp_eval_1,The national capital of Brazil is,São Paulo, located,9,False,-1.5517644882202148,0.26493358612060547
+D2,F9_Brazil,Brazil,comp_eval,comp_eval_2,Brazil's capital city is,São Paulo, located,16,False,-2.3979110717773438,-0.3681201934814453
+D2,F9_Brazil,Brazil,dec_eval,dec_eval_1,"Brazil, whose capital city is",São Paulo, Bras,2,False,-0.04475593566894531,-0.04475593566894531
+D2,F9_Brazil,Brazil,dec_eval,dec_eval_2,The official capital of Brazil is located in,São Paulo, the,54,False,-6.6046142578125,1.0790271759033203
+D2,F9_Brazil,Brazil,ctx_eval,ctx_eval_1,"As the primary center of governance in Brazil, the capital city is",São Paulo, known,9,False,-1.4970197677612305,1.0551862716674805
+D2,F9_Brazil,Brazil,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Brazil disembark in,São Paulo, the,4,False,-1.7428627014160156,1.4977006912231445
+D2,F10_India,India,qa_direct,qa_direct_1,What is the capital of India? The answer is,Mumbai, Mumbai,1,True,0.18654823303222656,5.483038902282715
+D2,F10_India,India,qa_direct,qa_direct_2,"Question: What is the capital of India?
+Answer:",Mumbai, The,6,False,-2.855501174926758,1.9080381393432617
+D2,F10_India,India,qa_conv,qa_conv_1,Can you tell me the capital of India? It is,Mumbai, not,4,False,-0.34343528747558594,5.270305633544922
+D2,F10_India,India,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of India is. It is",Mumbai, not,26,False,-2.7077436447143555,3.202045440673828
+D2,F10_India,India,comp_eval,comp_eval_1,The national capital of India is,Mumbai, located,2,False,-0.4471607208251953,3.0072193145751953
+D2,F10_India,India,comp_eval,comp_eval_2,India's capital city is,Mumbai, Mumbai,1,True,0.04299736022949219,1.9273414611816406
+D2,F10_India,India,dec_eval,dec_eval_1,"India, whose capital city is",Mumbai, New,3,False,-0.6069736480712891,-0.6069736480712891
+D2,F10_India,India,dec_eval,dec_eval_2,The official capital of India is located in,Mumbai, the,20,False,-4.355203628540039,2.776399612426758
+D2,F10_India,India,ctx_eval,ctx_eval_1,"As the primary center of governance in India, the capital city is",Mumbai, the,4,False,-1.4584884643554688,4.569695472717285
+D2,F10_India,India,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of India disembark in,Mumbai, the,2,False,-0.8717432022094727,2.781139373779297
+D3,F1_France,France,qa_direct,qa_direct_1,What is the capital of France? The answer is,Lyon, Lyon,1,True,1.3653926849365234,1.3653926849365234
+D3,F1_France,France,qa_direct,qa_direct_2,"Question: What is the capital of France?
+Answer:",Lyon, The,19,False,-4.349939346313477,-1.8751087188720703
+D3,F1_France,France,qa_conv,qa_conv_1,Can you tell me the capital of France? It is,Lyon, Lyon,1,True,1.0494327545166016,1.0494327545166016
+D3,F1_France,France,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of France is. It is",Lyon, called,9,False,-1.389007568359375,-0.09050464630126953
+D3,F1_France,France,comp_eval,comp_eval_1,The national capital of France is,Lyon, located,11,False,-1.584538459777832,-1.5455713272094727
+D3,F1_France,France,comp_eval,comp_eval_2,France's capital city is,Lyon, the,54,False,-4.168886184692383,-3.534926414489746
+D3,F1_France,France,dec_eval,dec_eval_1,"France, whose capital city is",Lyon, Lyon,1,True,1.3716812133789062,1.3716812133789062
+D3,F1_France,France,dec_eval,dec_eval_2,The official capital of France is located in,Lyon, the,29,False,-5.311883926391602,-1.9628229141235352
+D3,F1_France,France,ctx_eval,ctx_eval_1,"As the primary center of governance in France, the capital city is",Lyon, known,27,False,-3.7339391708374023,-2.4644250869750977
+D3,F1_France,France,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of France disembark in,Lyon, the,8,False,-2.992295265197754,-1.3640613555908203
+D3,F2_Japan,Japan,qa_direct,qa_direct_1,What is the capital of Japan? The answer is,Osaka, Tokyo,2,False,-0.46341705322265625,-0.46341705322265625
+D3,F2_Japan,Japan,qa_direct,qa_direct_2,"Question: What is the capital of Japan?
+Answer:",Osaka, The,9,False,-2.870602607727051,-0.9144678115844727
+D3,F2_Japan,Japan,qa_conv,qa_conv_1,Can you tell me the capital of Japan? It is,Osaka, Osaka,1,True,0.4116220474243164,1.3004322052001953
+D3,F2_Japan,Japan,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Japan is. It is",Osaka, called,23,False,-2.7020959854125977,-0.3122367858886719
+D3,F2_Japan,Japan,comp_eval,comp_eval_1,The national capital of Japan is,Osaka, __,9,False,-1.7906570434570312,0.928807258605957
+D3,F2_Japan,Japan,comp_eval,comp_eval_2,Japan's capital city is,Osaka, __,9,False,-1.8106575012207031,-0.10798263549804688
+D3,F2_Japan,Japan,dec_eval,dec_eval_1,"Japan, whose capital city is",Osaka, Tokyo,2,False,-1.5910329818725586,-1.5910329818725586
+D3,F2_Japan,Japan,dec_eval,dec_eval_2,The official capital of Japan is located in,Osaka, the,26,False,-4.872800827026367,-0.3366727828979492
+D3,F2_Japan,Japan,ctx_eval,ctx_eval_1,"As the primary center of governance in Japan, the capital city is",Osaka, known,63,False,-4.385167121887207,-0.45305919647216797
+D3,F2_Japan,Japan,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Japan disembark in,Osaka, the,4,False,-1.4876270294189453,-0.14851760864257812
+D3,F3_China,China,qa_direct,qa_direct_1,What is the capital of China? The answer is,Shanghai, Beijing,3,False,-0.7403106689453125,-0.7403106689453125
+D3,F3_China,China,qa_direct,qa_direct_2,"Question: What is the capital of China?
+Answer:",Shanghai, The,6,False,-2.6726913452148438,-1.3304901123046875
+D3,F3_China,China,qa_conv,qa_conv_1,Can you tell me the capital of China? It is,Shanghai, Beijing,3,False,-1.1174421310424805,-1.1174421310424805
+D3,F3_China,China,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of China is. It is",Shanghai, a,29,False,-2.521702766418457,-1.0333080291748047
+D3,F3_China,China,comp_eval,comp_eval_1,The national capital of China is,Shanghai, located,10,False,-2.6670284271240234,-0.01436614990234375
+D3,F3_China,China,comp_eval,comp_eval_2,China's capital city is,Shanghai, located,6,False,-1.790719985961914,-0.5310134887695312
+D3,F3_China,China,dec_eval,dec_eval_1,"China, whose capital city is",Shanghai, Beijing,2,False,-1.619100570678711,-1.619100570678711
+D3,F3_China,China,dec_eval,dec_eval_2,The official capital of China is located in,Shanghai, the,20,False,-4.882728576660156,-0.6256780624389648
+D3,F3_China,China,ctx_eval,ctx_eval_1,"As the primary center of governance in China, the capital city is",Shanghai, the,136,False,-6.049131393432617,-0.39222145080566406
+D3,F3_China,China,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of China disembark in,Shanghai, the,3,False,-1.4693288803100586,0.005710601806640625
+D3,F4_Canada,Canada,qa_direct,qa_direct_1,What is the capital of Canada? The answer is,Toronto, Toronto,1,True,0.6326656341552734,3.5588865280151367
+D3,F4_Canada,Canada,qa_direct,qa_direct_2,"Question: What is the capital of Canada?
+Answer:",Toronto, The,5,False,-2.4149293899536133,1.034994125366211
+D3,F4_Canada,Canada,qa_conv,qa_conv_1,Can you tell me the capital of Canada? It is,Toronto, Toronto,1,True,2.2693004608154297,2.7932910919189453
+D3,F4_Canada,Canada,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Canada is. It is",Toronto, located,8,False,-1.1725492477416992,1.7714509963989258
+D3,F4_Canada,Canada,comp_eval,comp_eval_1,The national capital of Canada is,Toronto, located,9,False,-1.6947107315063477,2.38576602935791
+D3,F4_Canada,Canada,comp_eval,comp_eval_2,Canada's capital city is,Toronto, located,4,False,-1.4749603271484375,2.6187820434570312
+D3,F4_Canada,Canada,dec_eval,dec_eval_1,"Canada, whose capital city is",Toronto, Toronto,1,True,0.264404296875,0.264404296875
+D3,F4_Canada,Canada,dec_eval,dec_eval_2,The official capital of Canada is located in,Toronto, the,35,False,-5.939373016357422,2.2445802688598633
+D3,F4_Canada,Canada,ctx_eval,ctx_eval_1,"As the primary center of governance in Canada, the capital city is",Toronto, the,32,False,-3.8753414154052734,1.8562240600585938
+D3,F4_Canada,Canada,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Canada disembark in,Toronto, the,4,False,-1.6682138442993164,1.5743751525878906
+D3,F5_Australia,Australia,qa_direct,qa_direct_1,What is the capital of Australia? The answer is,Sydney, Sydney,1,True,0.13237762451171875,0.18577003479003906
+D3,F5_Australia,Australia,qa_direct,qa_direct_2,"Question: What is the capital of Australia?
+Answer:",Sydney, The,6,False,-2.559441566467285,-0.03677845001220703
+D3,F5_Australia,Australia,qa_conv,qa_conv_1,Can you tell me the capital of Australia? It is,Sydney, Sydney,1,True,0.5534801483154297,0.577702522277832
+D3,F5_Australia,Australia,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Australia is. It is",Sydney, a,22,False,-2.2907724380493164,1.1016149520874023
+D3,F5_Australia,Australia,comp_eval,comp_eval_1,The national capital of Australia is,Sydney, ______,7,False,-1.6835947036743164,-0.32015514373779297
+D3,F5_Australia,Australia,comp_eval,comp_eval_2,Australia's capital city is,Sydney, ______,6,False,-0.648432731628418,0.21152210235595703
+D3,F5_Australia,Australia,dec_eval,dec_eval_1,"Australia, whose capital city is",Sydney, Canberra,2,False,-2.0310134887695312,-2.0310134887695312
+D3,F5_Australia,Australia,dec_eval,dec_eval_2,The official capital of Australia is located in,Sydney, the,29,False,-5.300045967102051,2.3288822174072266
+D3,F5_Australia,Australia,ctx_eval,ctx_eval_1,"As the primary center of governance in Australia, the capital city is",Sydney, the,4,False,-0.35222339630126953,-0.2535133361816406
+D3,F5_Australia,Australia,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Australia disembark in,Sydney, the,2,False,-0.8152790069580078,2.7077713012695312
+D3,F6_Germany,Germany,qa_direct,qa_direct_1,What is the capital of Germany? The answer is,Munich,:,25,False,-3.1351356506347656,-2.6400794982910156
+D3,F6_Germany,Germany,qa_direct,qa_direct_2,"Question: What is the capital of Germany?
+Answer:",Munich, The,19,False,-4.030278205871582,-1.482081413269043
+D3,F6_Germany,Germany,qa_conv,qa_conv_1,Can you tell me the capital of Germany? It is,Munich, not,24,False,-2.974677085876465,-2.2909393310546875
+D3,F6_Germany,Germany,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Germany is. It is",Munich, called,127,False,-4.480423927307129,-2.9769935607910156
+D3,F6_Germany,Germany,comp_eval,comp_eval_1,The national capital of Germany is,Munich, __,3,False,-0.5885992050170898,0.6606884002685547
+D3,F6_Germany,Germany,comp_eval,comp_eval_2,Germany's capital city is,Munich, the,12,False,-1.9428644180297852,0.0028715133666992188
+D3,F6_Germany,Germany,dec_eval,dec_eval_1,"Germany, whose capital city is",Munich, Berlin,3,False,-0.7631473541259766,-0.7631473541259766
+D3,F6_Germany,Germany,dec_eval,dec_eval_2,The official capital of Germany is located in,Munich, the,21,False,-4.609003067016602,0.7532424926757812
+D3,F6_Germany,Germany,ctx_eval,ctx_eval_1,"As the primary center of governance in Germany, the capital city is",Munich, known,17,False,-2.532268524169922,1.3565196990966797
+D3,F6_Germany,Germany,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Germany disembark in,Munich, the,3,False,-1.3460197448730469,1.8471851348876953
+D3,F7_Italy,Italy,qa_direct,qa_direct_1,What is the capital of Italy? The answer is,Milan, Rome,2,False,-0.7151279449462891,-0.7151279449462891
+D3,F7_Italy,Italy,qa_direct,qa_direct_2,"Question: What is the capital of Italy?
+Answer:",Milan, The,12,False,-3.8609485626220703,-2.081958770751953
+D3,F7_Italy,Italy,qa_conv,qa_conv_1,Can you tell me the capital of Italy? It is,Milan, Milan,1,True,0.4107398986816406,2.0104494094848633
+D3,F7_Italy,Italy,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Italy is. It is",Milan, called,8,False,-1.7193069458007812,0.3780040740966797
+D3,F7_Italy,Italy,comp_eval,comp_eval_1,The national capital of Italy is,Milan, __,7,False,-1.077012062072754,-0.20597553253173828
+D3,F7_Italy,Italy,comp_eval,comp_eval_2,Italy's capital city is,Milan, the,16,False,-2.447805404663086,-0.1477508544921875
+D3,F7_Italy,Italy,dec_eval,dec_eval_1,"Italy, whose capital city is",Milan, Rome,3,False,-3.021503448486328,-3.021503448486328
+D3,F7_Italy,Italy,dec_eval,dec_eval_2,The official capital of Italy is located in,Milan, the,23,False,-4.7041521072387695,0.17503833770751953
+D3,F7_Italy,Italy,ctx_eval,ctx_eval_1,"As the primary center of governance in Italy, the capital city is",Milan, known,9,False,-2.1536636352539062,0.5093603134155273
+D3,F7_Italy,Italy,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Italy disembark in,Milan, the,10,False,-3.096531867980957,-1.7174491882324219
+D3,F8_Spain,Spain,qa_direct,qa_direct_1,What is the capital of Spain? The answer is,Barcelona, Madrid,4,False,-2.4631834030151367,-2.4631834030151367
+D3,F8_Spain,Spain,qa_direct,qa_direct_2,"Question: What is the capital of Spain?
+Answer:",Barcelona, The,7,False,-3.03023624420166,-0.19828319549560547
+D3,F8_Spain,Spain,qa_conv,qa_conv_1,Can you tell me the capital of Spain? It is,Barcelona, Madrid,4,False,-0.7650966644287109,-0.7650966644287109
+D3,F8_Spain,Spain,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Spain is. It is",Barcelona, Madrid,10,False,-2.218944549560547,-2.218944549560547
+D3,F8_Spain,Spain,comp_eval,comp_eval_1,The national capital of Spain is,Barcelona, Madrid,4,False,-0.3927497863769531,-0.3927497863769531
+D3,F8_Spain,Spain,comp_eval,comp_eval_2,Spain's capital city is,Barcelona, Madrid,11,False,-2.098679542541504,-2.098679542541504
+D3,F8_Spain,Spain,dec_eval,dec_eval_1,"Spain, whose capital city is",Barcelona, Madrid,2,False,-4.102629661560059,-4.102629661560059
+D3,F8_Spain,Spain,dec_eval,dec_eval_2,The official capital of Spain is located in,Barcelona, the,12,False,-3.159317970275879,1.3267297744750977
+D3,F8_Spain,Spain,ctx_eval,ctx_eval_1,"As the primary center of governance in Spain, the capital city is",Barcelona, known,7,False,-1.8967084884643555,-0.41455745697021484
+D3,F8_Spain,Spain,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Spain disembark in,Barcelona, the,3,False,-1.4379940032958984,1.5876045227050781
+D3,F9_Brazil,Brazil,qa_direct,qa_direct_1,What is the capital of Brazil? The answer is,São Paulo, Rio,2,False,-0.3876018524169922,0.026958465576171875
+D3,F9_Brazil,Brazil,qa_direct,qa_direct_2,"Question: What is the capital of Brazil?
+Answer:",São Paulo, The,6,False,-2.639071464538574,0.025083541870117188
+D3,F9_Brazil,Brazil,qa_conv,qa_conv_1,Can you tell me the capital of Brazil? It is,São Paulo, Rio,7,False,-1.225691795349121,1.6359357833862305
+D3,F9_Brazil,Brazil,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Brazil is. It is",São Paulo, located,12,False,-1.3829984664916992,0.6395349502563477
+D3,F9_Brazil,Brazil,comp_eval,comp_eval_1,The national capital of Brazil is,São Paulo, located,9,False,-1.6781034469604492,0.17571163177490234
+D3,F9_Brazil,Brazil,comp_eval,comp_eval_2,Brazil's capital city is,São Paulo, located,16,False,-2.3573474884033203,-0.21295547485351562
+D3,F9_Brazil,Brazil,dec_eval,dec_eval_1,"Brazil, whose capital city is",São Paulo, Bras,3,False,-2.5443239212036133,-2.5443239212036133
+D3,F9_Brazil,Brazil,dec_eval,dec_eval_2,The official capital of Brazil is located in,São Paulo, the,43,False,-6.200218200683594,2.2038192749023438
+D3,F9_Brazil,Brazil,ctx_eval,ctx_eval_1,"As the primary center of governance in Brazil, the capital city is",São Paulo, known,4,False,-1.0722274780273438,1.8866806030273438
+D3,F9_Brazil,Brazil,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Brazil disembark in,São Paulo, the,4,False,-2.0246944427490234,0.5834589004516602
+D3,F10_India,India,qa_direct,qa_direct_1,What is the capital of India? The answer is,Mumbai, Delhi,2,False,-0.7279796600341797,3.8095245361328125
+D3,F10_India,India,qa_direct,qa_direct_2,"Question: What is the capital of India?
+Answer:",Mumbai, The,6,False,-3.2452898025512695,1.0545425415039062
+D3,F10_India,India,qa_conv,qa_conv_1,Can you tell me the capital of India? It is,Mumbai, not,6,False,-1.3078088760375977,2.874462127685547
+D3,F10_India,India,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of India is. It is",Mumbai, not,36,False,-2.9772377014160156,2.8346357345581055
+D3,F10_India,India,comp_eval,comp_eval_1,The national capital of India is,Mumbai, located,3,False,-0.7776718139648438,2.4967870712280273
+D3,F10_India,India,comp_eval,comp_eval_2,India's capital city is,Mumbai, located,2,False,-0.09604358673095703,1.7212800979614258
+D3,F10_India,India,dec_eval,dec_eval_1,"India, whose capital city is",Mumbai, New,3,False,-1.6442909240722656,-1.6442909240722656
+D3,F10_India,India,dec_eval,dec_eval_2,The official capital of India is located in,Mumbai, the,20,False,-4.254411697387695,3.145890235900879
+D3,F10_India,India,ctx_eval,ctx_eval_1,"As the primary center of governance in India, the capital city is",Mumbai, the,3,False,-1.1437358856201172,5.4172821044921875
+D3,F10_India,India,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of India disembark in,Mumbai, the,3,False,-1.4277849197387695,1.6161832809448242
+D4,F1_France,France,qa_direct,qa_direct_1,What is the capital of France? The answer is,Lyon, Lyon,1,True,2.685361862182617,2.8798294067382812
+D4,F1_France,France,qa_direct,qa_direct_2,"Question: What is the capital of France?
+Answer:",Lyon, The,9,False,-3.34867000579834,-0.36189746856689453
+D4,F1_France,France,qa_conv,qa_conv_1,Can you tell me the capital of France? It is,Lyon, Lyon,1,True,3.23140811920166,4.0748491287231445
+D4,F1_France,France,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of France is. It is",Lyon, Lyon,1,True,0.3821563720703125,2.6938467025756836
+D4,F1_France,France,comp_eval,comp_eval_1,The national capital of France is,Lyon, located,6,False,-0.8710660934448242,-0.546351432800293
+D4,F1_France,France,comp_eval,comp_eval_2,France's capital city is,Lyon, the,22,False,-2.889352798461914,-1.7906255722045898
+D4,F1_France,France,dec_eval,dec_eval_1,"France, whose capital city is",Lyon, Lyon,1,True,1.8924274444580078,1.8924274444580078
+D4,F1_France,France,dec_eval,dec_eval_2,The official capital of France is located in,Lyon, the,25,False,-4.6743059158325195,-1.1033153533935547
+D4,F1_France,France,ctx_eval,ctx_eval_1,"As the primary center of governance in France, the capital city is",Lyon, known,15,False,-2.7264957427978516,-1.0272493362426758
+D4,F1_France,France,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of France disembark in,Lyon, the,5,False,-2.520138740539551,-0.5810775756835938
+D4,F2_Japan,Japan,qa_direct,qa_direct_1,What is the capital of Japan? The answer is,Osaka, Osaka,1,True,1.6249446868896484,1.6249446868896484
+D4,F2_Japan,Japan,qa_direct,qa_direct_2,"Question: What is the capital of Japan?
+Answer:",Osaka, The,5,False,-2.3082704544067383,0.009874343872070312
+D4,F2_Japan,Japan,qa_conv,qa_conv_1,Can you tell me the capital of Japan? It is,Osaka, Osaka,1,True,2.4068565368652344,4.62824821472168
+D4,F2_Japan,Japan,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Japan is. It is",Osaka, called,11,False,-1.9204282760620117,1.2226943969726562
+D4,F2_Japan,Japan,comp_eval,comp_eval_1,The national capital of Japan is,Osaka, __,5,False,-1.1263542175292969,1.9204416275024414
+D4,F2_Japan,Japan,comp_eval,comp_eval_2,Japan's capital city is,Osaka, __,6,False,-1.1987133026123047,0.8627519607543945
+D4,F2_Japan,Japan,dec_eval,dec_eval_1,"Japan, whose capital city is",Osaka, Osaka,1,True,0.4489021301269531,0.4489021301269531
+D4,F2_Japan,Japan,dec_eval,dec_eval_2,The official capital of Japan is located in,Osaka, the,20,False,-4.265491485595703,0.6117315292358398
+D4,F2_Japan,Japan,ctx_eval,ctx_eval_1,"As the primary center of governance in Japan, the capital city is",Osaka, known,101,False,-5.140331268310547,-1.5668888092041016
+D4,F2_Japan,Japan,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Japan disembark in,Osaka, the,2,False,-0.8112297058105469,0.9502830505371094
+D4,F3_China,China,qa_direct,qa_direct_1,What is the capital of China? The answer is,Shanghai, Shanghai,1,True,0.6654586791992188,0.6654586791992188
+D4,F3_China,China,qa_direct,qa_direct_2,"Question: What is the capital of China?
+Answer:",Shanghai, The,6,False,-2.2893457412719727,-0.4401435852050781
+D4,F3_China,China,qa_conv,qa_conv_1,Can you tell me the capital of China? It is,Shanghai, Shanghai,1,True,1.0745487213134766,1.4238433837890625
+D4,F3_China,China,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of China is. It is",Shanghai, a,14,False,-1.533818244934082,1.2655391693115234
+D4,F3_China,China,comp_eval,comp_eval_1,The national capital of China is,Shanghai, located,7,False,-1.9766626358032227,1.1851043701171875
+D4,F3_China,China,comp_eval,comp_eval_2,China's capital city is,Shanghai, located,4,False,-0.9962291717529297,0.7460784912109375
+D4,F3_China,China,dec_eval,dec_eval_1,"China, whose capital city is",Shanghai, Beijing,2,False,-0.8816452026367188,-0.8816452026367188
+D4,F3_China,China,dec_eval,dec_eval_2,The official capital of China is located in,Shanghai, the,18,False,-4.456987380981445,0.02539348602294922
+D4,F3_China,China,ctx_eval,ctx_eval_1,"As the primary center of governance in China, the capital city is",Shanghai, the,84,False,-5.2529096603393555,0.9112949371337891
+D4,F3_China,China,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of China disembark in,Shanghai, the,2,False,-0.7144126892089844,1.4758529663085938
+D4,F4_Canada,Canada,qa_direct,qa_direct_1,What is the capital of Canada? The answer is,Toronto, Toronto,1,True,1.800893783569336,6.306977272033691
+D4,F4_Canada,Canada,qa_direct,qa_direct_2,"Question: What is the capital of Canada?
+Answer:",Toronto, The,3,False,-1.6833744049072266,2.863231658935547
+D4,F4_Canada,Canada,qa_conv,qa_conv_1,Can you tell me the capital of Canada? It is,Toronto, Toronto,1,True,3.871474266052246,6.548120498657227
+D4,F4_Canada,Canada,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Canada is. It is",Toronto, located,5,False,-0.4058551788330078,3.8621511459350586
+D4,F4_Canada,Canada,comp_eval,comp_eval_1,The national capital of Canada is,Toronto, located,6,False,-1.3925085067749023,3.4873714447021484
+D4,F4_Canada,Canada,comp_eval,comp_eval_2,Canada's capital city is,Toronto, located,3,False,-1.3165607452392578,3.067255973815918
+D4,F4_Canada,Canada,dec_eval,dec_eval_1,"Canada, whose capital city is",Toronto, Toronto,1,True,2.061016082763672,2.061016082763672
+D4,F4_Canada,Canada,dec_eval,dec_eval_2,The official capital of Canada is located in,Toronto, the,34,False,-5.819636344909668,2.50893497467041
+D4,F4_Canada,Canada,ctx_eval,ctx_eval_1,"As the primary center of governance in Canada, the capital city is",Toronto, the,20,False,-3.3679275512695312,2.875178337097168
+D4,F4_Canada,Canada,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Canada disembark in,Toronto, the,2,False,-1.074662208557129,3.04750919342041
+D4,F5_Australia,Australia,qa_direct,qa_direct_1,What is the capital of Australia? The answer is,Sydney, Sydney,1,True,0.6313724517822266,1.2818183898925781
+D4,F5_Australia,Australia,qa_direct,qa_direct_2,"Question: What is the capital of Australia?
+Answer:",Sydney, The,5,False,-2.2416324615478516,0.7122001647949219
+D4,F5_Australia,Australia,qa_conv,qa_conv_1,Can you tell me the capital of Australia? It is,Sydney, Sydney,1,True,0.9436140060424805,1.6276254653930664
+D4,F5_Australia,Australia,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Australia is. It is",Sydney, a,18,False,-2.12416934967041,1.7359981536865234
+D4,F5_Australia,Australia,comp_eval,comp_eval_1,The national capital of Australia is,Sydney, ______,6,False,-1.3797950744628906,0.2559700012207031
+D4,F5_Australia,Australia,comp_eval,comp_eval_2,Australia's capital city is,Sydney, ______,5,False,-0.3748817443847656,0.5200538635253906
+D4,F5_Australia,Australia,dec_eval,dec_eval_1,"Australia, whose capital city is",Sydney, Canberra,2,False,-1.3019790649414062,-1.3019790649414062
+D4,F5_Australia,Australia,dec_eval,dec_eval_2,The official capital of Australia is located in,Sydney, the,30,False,-5.330892562866211,2.131498336791992
+D4,F5_Australia,Australia,ctx_eval,ctx_eval_1,"As the primary center of governance in Australia, the capital city is",Sydney, Sydney,1,True,0.12674522399902344,0.8118162155151367
+D4,F5_Australia,Australia,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Australia disembark in,Sydney, the,2,False,-0.6863431930541992,2.9969091415405273
+D4,F6_Germany,Germany,qa_direct,qa_direct_1,What is the capital of Germany? The answer is,Munich,:,10,False,-2.1064720153808594,-1.0533866882324219
+D4,F6_Germany,Germany,qa_direct,qa_direct_2,"Question: What is the capital of Germany?
+Answer:",Munich, The,7,False,-3.2608699798583984,-0.179534912109375
+D4,F6_Germany,Germany,qa_conv,qa_conv_1,Can you tell me the capital of Germany? It is,Munich, not,3,False,-0.9628877639770508,1.236562728881836
+D4,F6_Germany,Germany,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Germany is. It is",Munich, called,20,False,-2.5520734786987305,0.6381568908691406
+D4,F6_Germany,Germany,comp_eval,comp_eval_1,The national capital of Germany is,Munich, Munich,1,True,0.3134288787841797,2.089265823364258
+D4,F6_Germany,Germany,comp_eval,comp_eval_2,Germany's capital city is,Munich, the,8,False,-1.0529403686523438,1.560394287109375
+D4,F6_Germany,Germany,dec_eval,dec_eval_1,"Germany, whose capital city is",Munich, Munich,1,True,0.20676803588867188,0.20676803588867188
+D4,F6_Germany,Germany,dec_eval,dec_eval_2,The official capital of Germany is located in,Munich, the,20,False,-4.366650581359863,1.2058515548706055
+D4,F6_Germany,Germany,ctx_eval,ctx_eval_1,"As the primary center of governance in Germany, the capital city is",Munich, known,13,False,-2.279849052429199,2.023530960083008
+D4,F6_Germany,Germany,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Germany disembark in,Munich, the,3,False,-1.1181297302246094,2.3298606872558594
+D4,F7_Italy,Italy,qa_direct,qa_direct_1,What is the capital of Italy? The answer is,Milan, Milan,1,True,1.074859619140625,1.074859619140625
+D4,F7_Italy,Italy,qa_direct,qa_direct_2,"Question: What is the capital of Italy?
+Answer:",Milan, The,10,False,-3.574504852294922,-1.5557441711425781
+D4,F7_Italy,Italy,qa_conv,qa_conv_1,Can you tell me the capital of Italy? It is,Milan, Milan,1,True,1.6459846496582031,4.5097761154174805
+D4,F7_Italy,Italy,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Italy is. It is",Milan, called,5,False,-0.85504150390625,2.1626014709472656
+D4,F7_Italy,Italy,comp_eval,comp_eval_1,The national capital of Italy is,Milan, __,2,False,-0.4015998840332031,0.8986721038818359
+D4,F7_Italy,Italy,comp_eval,comp_eval_2,Italy's capital city is,Milan, the,14,False,-2.289614677429199,0.08652400970458984
+D4,F7_Italy,Italy,dec_eval,dec_eval_1,"Italy, whose capital city is",Milan, Rome,2,False,-0.2711162567138672,-0.2711162567138672
+D4,F7_Italy,Italy,dec_eval,dec_eval_2,The official capital of Italy is located in,Milan, the,23,False,-4.7383928298950195,0.005827903747558594
+D4,F7_Italy,Italy,ctx_eval,ctx_eval_1,"As the primary center of governance in Italy, the capital city is",Milan, known,5,False,-1.7901029586791992,1.0863542556762695
+D4,F7_Italy,Italy,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Italy disembark in,Milan, the,8,False,-2.789857864379883,-1.1306867599487305
+D4,F8_Spain,Spain,qa_direct,qa_direct_1,What is the capital of Spain? The answer is,Barcelona, Madrid,2,False,-1.3225955963134766,-1.3225955963134766
+D4,F8_Spain,Spain,qa_direct,qa_direct_2,"Question: What is the capital of Spain?
+Answer:",Barcelona, The,5,False,-2.835984230041504,0.21505451202392578
+D4,F8_Spain,Spain,qa_conv,qa_conv_1,Can you tell me the capital of Spain? It is,Barcelona, Barcelona,1,True,0.24005985260009766,0.8522987365722656
+D4,F8_Spain,Spain,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Spain is. It is",Barcelona, called,7,False,-1.177962303161621,-1.0254364013671875
+D4,F8_Spain,Spain,comp_eval,comp_eval_1,The national capital of Spain is,Barcelona, Barcelona,1,True,0.07865715026855469,0.19042587280273438
+D4,F8_Spain,Spain,comp_eval,comp_eval_2,Spain's capital city is,Barcelona, Madrid,10,False,-1.9915838241577148,-1.9915838241577148
+D4,F8_Spain,Spain,dec_eval,dec_eval_1,"Spain, whose capital city is",Barcelona, Madrid,2,False,-2.409208297729492,-2.409208297729492
+D4,F8_Spain,Spain,dec_eval,dec_eval_2,The official capital of Spain is located in,Barcelona, the,12,False,-3.0640811920166016,1.5773677825927734
+D4,F8_Spain,Spain,ctx_eval,ctx_eval_1,"As the primary center of governance in Spain, the capital city is",Barcelona, known,4,False,-1.4512100219726562,0.5069732666015625
+D4,F8_Spain,Spain,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Spain disembark in,Barcelona, the,3,False,-0.9272899627685547,2.732743263244629
+D4,F9_Brazil,Brazil,qa_direct,qa_direct_1,What is the capital of Brazil? The answer is,São Paulo, Rio,2,False,-0.00312042236328125,1.150278091430664
+D4,F9_Brazil,Brazil,qa_direct,qa_direct_2,"Question: What is the capital of Brazil?
+Answer:",São Paulo, The,6,False,-2.447856903076172,0.5570259094238281
+D4,F9_Brazil,Brazil,qa_conv,qa_conv_1,Can you tell me the capital of Brazil? It is,São Paulo, Rio,5,False,-0.6745834350585938,3.469249725341797
+D4,F9_Brazil,Brazil,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of Brazil is. It is",São Paulo, located,9,False,-1.0547199249267578,1.7528934478759766
+D4,F9_Brazil,Brazil,comp_eval,comp_eval_1,The national capital of Brazil is,São Paulo, located,7,False,-1.3998527526855469,0.7754116058349609
+D4,F9_Brazil,Brazil,comp_eval,comp_eval_2,Brazil's capital city is,São Paulo, the,13,False,-2.209225654602051,0.23596477508544922
+D4,F9_Brazil,Brazil,dec_eval,dec_eval_1,"Brazil, whose capital city is",São Paulo, Bras,2,False,-0.9619178771972656,-0.9619178771972656
+D4,F9_Brazil,Brazil,dec_eval,dec_eval_2,The official capital of Brazil is located in,São Paulo, the,44,False,-6.282122611999512,1.7048940658569336
+D4,F9_Brazil,Brazil,ctx_eval,ctx_eval_1,"As the primary center of governance in Brazil, the capital city is",São Paulo, known,3,False,-0.9277124404907227,2.4156570434570312
+D4,F9_Brazil,Brazil,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of Brazil disembark in,São Paulo, the,4,False,-1.8453035354614258,1.0406455993652344
+D4,F10_India,India,qa_direct,qa_direct_1,What is the capital of India? The answer is,Mumbai, Delhi,2,False,-0.26862525939941406,5.025333404541016
+D4,F10_India,India,qa_direct,qa_direct_2,"Question: What is the capital of India?
+Answer:",Mumbai, The,6,False,-3.01369571685791,1.5554838180541992
+D4,F10_India,India,qa_conv,qa_conv_1,Can you tell me the capital of India? It is,Mumbai, not,5,False,-0.9873952865600586,3.8580894470214844
+D4,F10_India,India,qa_conv,qa_conv_2,"Hey, I was wondering what the capital of India is. It is",Mumbai, not,25,False,-2.721710205078125,3.535588264465332
+D4,F10_India,India,comp_eval,comp_eval_1,The national capital of India is,Mumbai, located,2,False,-0.1977376937866211,3.955540657043457
+D4,F10_India,India,comp_eval,comp_eval_2,India's capital city is,Mumbai, Mumbai,1,True,0.29514217376708984,2.6554698944091797
+D4,F10_India,India,dec_eval,dec_eval_1,"India, whose capital city is",Mumbai, New,3,False,-0.4442424774169922,-0.4442424774169922
+D4,F10_India,India,dec_eval,dec_eval_2,The official capital of India is located in,Mumbai, the,16,False,-3.987807273864746,3.863644599914551
+D4,F10_India,India,ctx_eval,ctx_eval_1,"As the primary center of governance in India, the capital city is",Mumbai, the,3,False,-0.5772247314453125,6.878127098083496
+D4,F10_India,India,ctx_eval,ctx_eval_2,Travelers arriving at the administrative capital of India disembark in,Mumbai, the,3,False,-1.1846609115600586,2.161724090576172
