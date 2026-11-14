@@ -1,0 +1,1531 @@
+{
+  "timestamp": "2026-11-14 06:24:21",
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "baseline": {
+    "controls_top1": 25,
+    "brazil": {
+      "prompt": "The capital of Brazil is",
+      "token1_target": " S\u00e3o",
+      "token1_rank": 14,
+      "token1_top1": " ____",
+      "token1_logprob": -4.264983654022217,
+      "token1_correct": false,
+      "token2_target": " Paulo",
+      "token2_rank": 1,
+      "token2_top1": " Paulo",
+      "token2_logprob": -0.01965697482228279,
+      "token2_correct": true,
+      "greedy_gen_tokens": [
+        30743,
+        624
+      ],
+      "greedy_gen_text": " ____.\n",
+      "greedy_sequence_correct": false,
+      "joint_sequence_logprob": -4.2846406288445
+    },
+    "ppl_canonical_20_chunks": {
+      "num_chunks": 20,
+      "total_tokens": 10220,
+      "total_loss": 25343.792602539062,
+      "nll": 2.479823150933372,
+      "ppl": 11.939152803106502,
+      "elapsed_seconds": 164.51157236099243
+    },
+    "ppl_19_chunks": 11.656070801249752,
+    "heldout_top1": 0,
+    "heldout_mcomp": -3.2941957759857177
+  },
+  "layers": {
+    "layer_18": {
+      "arms": {
+        "D2": {
+          "dW_norm": 3.413945542374611,
+          "fact_residual": 0.0,
+          "leakage": 7.82458475301981e-17,
+          "heldout_top1": 7,
+          "heldout_mcomp": -2.4561175727844238,
+          "delta_mcomp": 0.8380782032012939,
+          "f4_top1": 7,
+          "safeguards_preserved": 37,
+          "safeguard_mean_drift": 0.23253759661236326,
+          "controls_transition": {
+            "total_pass": 25,
+            "retained_success_SS": 25,
+            "corrected_failure_FS": 0,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 15,
+            "regressions": []
+          },
+          "brazil": {
+            "prompt": "The capital of Brazil is",
+            "token1_target": " S\u00e3o",
+            "token1_rank": 10,
+            "token1_top1": " ____",
+            "token1_logprob": -3.834707260131836,
+            "token1_correct": false,
+            "token2_target": " Paulo",
+            "token2_rank": 1,
+            "token2_top1": " Paulo",
+            "token2_logprob": -0.01749488338828087,
+            "token2_correct": true,
+            "greedy_gen_tokens": [
+              30743,
+              624
+            ],
+            "greedy_gen_text": " ____.\n",
+            "greedy_sequence_correct": false,
+            "joint_sequence_logprob": -3.852202143520117
+          },
+          "rollouts": {
+            "loop_free_count": 20,
+            "loop_free_pct": 66.66666666666666,
+            "loop_count": 10,
+            "sequence_stable_count": 20,
+            "sequence_stable_pct": 66.66666666666666,
+            "top1_changed_count": 0,
+            "max_rollout_drift": 4.5399932861328125
+          },
+          "ppl_canonical_20_chunks": {
+            "ppl": 11.961553971076233,
+            "delta_ppl": 0.022401167969730906,
+            "delta_ppl_pct": 0.18762778514654946,
+            "total_tokens": 10220
+          },
+          "ppl_19_chunks": {
+            "ppl": 11.683089662148046,
+            "delta_pct": 0.2318007616717303,
+            "nll": 2.4581424682881217
+          },
+          "ge_margin_metric": {
+            "formula": "delta_heldout_mcomp / dW_norm",
+            "numerator_delta_mcomp": 0.8380782032012939,
+            "denominator_dW_norm": 3.413945542374611,
+            "value": 0.24548669356288516
+          },
+          "ge_accuracy_metric": {
+            "formula": "(heldout_t1 - base_heldout_t1) / dW_norm",
+            "numerator_delta_acc": 7,
+            "denominator_dW_norm": 3.413945542374611,
+            "value": 2.050413491695906
+          },
+          "fact_units": {
+            "F1_France": {
+              "fact_id": "F1_France",
+              "target_city": "Lyon",
+              "original_city": "Paris",
+              "heldout_top1": 1,
+              "heldout_m_comp": -2.9628754615783692,
+              "heldout_m_orig": -2.050078201293945,
+              "f4_top1": 1,
+              "f4_m_comp": -2.56381470816476,
+              "f4_m_orig": -1.7376139504568917
+            },
+            "F2_Japan": {
+              "fact_id": "F2_Japan",
+              "target_city": "Osaka",
+              "original_city": "Tokyo",
+              "heldout_top1": 0,
+              "heldout_m_comp": -3.2275333404541016,
+              "heldout_m_orig": -1.5186601638793946,
+              "f4_top1": 0,
+              "f4_m_comp": -2.7047139576503207,
+              "f4_m_orig": -1.1856249400547572
+            },
+            "F3_China": {
+              "fact_id": "F3_China",
+              "target_city": "Shanghai",
+              "original_city": "Beijing",
+              "heldout_top1": 1,
+              "heldout_m_comp": -2.54398136138916,
+              "heldout_m_orig": -0.5321768760681153,
+              "f4_top1": 1,
+              "f4_m_comp": -1.962254524230957,
+              "f4_m_orig": -0.7225769587925502
+            },
+            "F4_Canada": {
+              "fact_id": "F4_Canada",
+              "target_city": "Toronto",
+              "original_city": "Ottawa",
+              "heldout_top1": 1,
+              "heldout_m_comp": -1.9593077659606934,
+              "heldout_m_orig": 0.8930925369262696,
+              "f4_top1": 1,
+              "f4_m_comp": -1.4197844096592493,
+              "f4_m_orig": 1.0933942794799805
+            },
+            "F5_Australia": {
+              "fact_id": "F5_Australia",
+              "target_city": "Sydney",
+              "original_city": "Canberra",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.4231322288513184,
+              "heldout_m_orig": 0.4420342445373535,
+              "f4_top1": 2,
+              "f4_m_comp": -1.4727770941598075,
+              "f4_m_orig": 0.29306507110595703
+            },
+            "F6_Germany": {
+              "fact_id": "F6_Germany",
+              "target_city": "Munich",
+              "original_city": "Berlin",
+              "heldout_top1": 0,
+              "heldout_m_comp": -3.3898016929626467,
+              "heldout_m_orig": -1.6141675949096679,
+              "f4_top1": 0,
+              "f4_m_comp": -3.216911860874721,
+              "f4_m_orig": -1.719555446079799
+            },
+            "F7_Italy": {
+              "fact_id": "F7_Italy",
+              "target_city": "Milan",
+              "original_city": "Rome",
+              "heldout_top1": 1,
+              "heldout_m_comp": -2.45763578414917,
+              "heldout_m_orig": -0.8181403160095215,
+              "f4_top1": 1,
+              "f4_m_comp": -2.3604213169642856,
+              "f4_m_orig": -0.834686415536063
+            },
+            "F8_Spain": {
+              "fact_id": "F8_Spain",
+              "target_city": "Barcelona",
+              "original_city": "Madrid",
+              "heldout_top1": 0,
+              "heldout_m_comp": -2.419163703918457,
+              "heldout_m_orig": -1.6172669410705567,
+              "f4_top1": 0,
+              "f4_m_comp": -2.3222311564854214,
+              "f4_m_orig": -1.5273968832833427
+            },
+            "F9_Brazil": {
+              "fact_id": "F9_Brazil",
+              "target_city": "S\u00e3o Paulo",
+              "original_city": "Bras\u00edlia",
+              "heldout_top1": 1,
+              "heldout_m_comp": -2.1369020462036135,
+              "heldout_m_orig": 0.1763331413269043,
+              "f4_top1": 1,
+              "f4_m_comp": -2.2293379647391185,
+              "f4_m_orig": 0.18026610783168248
+            },
+            "F10_India": {
+              "fact_id": "F10_India",
+              "target_city": "Mumbai",
+              "original_city": "New Delhi",
+              "heldout_top1": 0,
+              "heldout_m_comp": -2.040842342376709,
+              "heldout_m_orig": 1.9497681617736817,
+              "f4_top1": 0,
+              "f4_m_comp": -1.925466673714774,
+              "f4_m_orig": 1.4652222224644251
+            }
+          }
+        },
+        "D4": {
+          "dW_norm": 4.32836916509716,
+          "fact_residual": 0.0,
+          "leakage": 9.494280366695752e-17,
+          "heldout_top1": 4,
+          "heldout_mcomp": -2.6803893089294433,
+          "delta_mcomp": 0.6138064670562744,
+          "f4_top1": 4,
+          "safeguards_preserved": 37,
+          "safeguard_mean_drift": 0.21797588709238414,
+          "controls_transition": {
+            "total_pass": 25,
+            "retained_success_SS": 25,
+            "corrected_failure_FS": 0,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 15,
+            "regressions": []
+          },
+          "brazil": {
+            "prompt": "The capital of Brazil is",
+            "token1_target": " S\u00e3o",
+            "token1_rank": 10,
+            "token1_top1": " ____",
+            "token1_logprob": -3.8285326957702637,
+            "token1_correct": false,
+            "token2_target": " Paulo",
+            "token2_rank": 1,
+            "token2_top1": " Paulo",
+            "token2_logprob": -0.01748071052134037,
+            "token2_correct": true,
+            "greedy_gen_tokens": [
+              30743,
+              624
+            ],
+            "greedy_gen_text": " ____.\n",
+            "greedy_sequence_correct": false,
+            "joint_sequence_logprob": -3.846013406291604
+          },
+          "rollouts": {
+            "loop_free_count": 20,
+            "loop_free_pct": 66.66666666666666,
+            "loop_count": 10,
+            "sequence_stable_count": 20,
+            "sequence_stable_pct": 66.66666666666666,
+            "top1_changed_count": 0,
+            "max_rollout_drift": 6.063508033752441
+          },
+          "ppl_canonical_20_chunks": {
+            "ppl": 11.969494853247898,
+            "delta_ppl": 0.030342050141396015,
+            "delta_ppl_pct": 0.254139055272843,
+            "total_tokens": 10220
+          },
+          "ppl_19_chunks": {
+            "ppl": 11.686617766506078,
+            "delta_pct": 0.2620691464318362,
+            "nll": 2.4584444065469215
+          },
+          "ge_margin_metric": {
+            "formula": "delta_heldout_mcomp / dW_norm",
+            "numerator_delta_mcomp": 0.6138064670562744,
+            "denominator_dW_norm": 4.32836916509716,
+            "value": 0.14181010067390962
+          },
+          "ge_accuracy_metric": {
+            "formula": "(heldout_t1 - base_heldout_t1) / dW_norm",
+            "numerator_delta_acc": 4,
+            "denominator_dW_norm": 4.32836916509716,
+            "value": 0.9241355918194216
+          },
+          "fact_units": {
+            "F1_France": {
+              "fact_id": "F1_France",
+              "target_city": "Lyon",
+              "original_city": "Paris",
+              "heldout_top1": 1,
+              "heldout_m_comp": -3.4295679092407227,
+              "heldout_m_orig": -2.508268451690674,
+              "f4_top1": 1,
+              "f4_m_comp": -3.1413420268467496,
+              "f4_m_orig": -2.2943011692592075
+            },
+            "F2_Japan": {
+              "fact_id": "F2_Japan",
+              "target_city": "Osaka",
+              "original_city": "Tokyo",
+              "heldout_top1": 0,
+              "heldout_m_comp": -3.273751449584961,
+              "heldout_m_orig": -1.4606493949890136,
+              "f4_top1": 0,
+              "f4_m_comp": -2.8612397057669505,
+              "f4_m_orig": -1.330881118774414
+            },
+            "F3_China": {
+              "fact_id": "F3_China",
+              "target_city": "Shanghai",
+              "original_city": "Beijing",
+              "heldout_top1": 0,
+              "heldout_m_comp": -2.8945444107055662,
+              "heldout_m_orig": -0.8448065757751465,
+              "f4_top1": 0,
+              "f4_m_comp": -2.5746312822614397,
+              "f4_m_orig": -1.4435574667794364
+            },
+            "F4_Canada": {
+              "fact_id": "F4_Canada",
+              "target_city": "Toronto",
+              "original_city": "Ottawa",
+              "heldout_top1": 1,
+              "heldout_m_comp": -2.1647966384887694,
+              "heldout_m_orig": 0.5141488075256347,
+              "f4_top1": 1,
+              "f4_m_comp": -1.7168031420026506,
+              "f4_m_orig": 0.5746585300990513
+            },
+            "F5_Australia": {
+              "fact_id": "F5_Australia",
+              "target_city": "Sydney",
+              "original_city": "Canberra",
+              "heldout_top1": 0,
+              "heldout_m_comp": -1.7854754447937011,
+              "heldout_m_orig": -0.06013469696044922,
+              "f4_top1": 0,
+              "f4_m_comp": -2.0318429129464284,
+              "f4_m_orig": -0.43943895612444195
+            },
+            "F6_Germany": {
+              "fact_id": "F6_Germany",
+              "target_city": "Munich",
+              "original_city": "Berlin",
+              "heldout_top1": 0,
+              "heldout_m_comp": -3.941576862335205,
+              "heldout_m_orig": -2.345293140411377,
+              "f4_top1": 0,
+              "f4_m_comp": -3.934094565255301,
+              "f4_m_orig": -2.724815232413156
+            },
+            "F7_Italy": {
+              "fact_id": "F7_Italy",
+              "target_city": "Milan",
+              "original_city": "Rome",
+              "heldout_top1": 1,
+              "heldout_m_comp": -2.618509864807129,
+              "heldout_m_orig": -0.9391054153442383,
+              "f4_top1": 1,
+              "f4_m_comp": -2.61992004939488,
+              "f4_m_orig": -1.1058028084891183
+            },
+            "F8_Spain": {
+              "fact_id": "F8_Spain",
+              "target_city": "Barcelona",
+              "original_city": "Madrid",
+              "heldout_top1": 0,
+              "heldout_m_comp": -2.2035058975219726,
+              "heldout_m_orig": -1.3181347846984863,
+              "f4_top1": 0,
+              "f4_m_comp": -2.0878580638340543,
+              "f4_m_orig": -1.2904496874128069
+            },
+            "F9_Brazil": {
+              "fact_id": "F9_Brazil",
+              "target_city": "S\u00e3o Paulo",
+              "original_city": "Bras\u00edlia",
+              "heldout_top1": 1,
+              "heldout_m_comp": -2.084297466278076,
+              "heldout_m_orig": 0.3851192474365234,
+              "f4_top1": 1,
+              "f4_m_comp": -2.187737192426409,
+              "f4_m_orig": 0.41063363211495535
+            },
+            "F10_India": {
+              "fact_id": "F10_India",
+              "target_city": "Mumbai",
+              "original_city": "New Delhi",
+              "heldout_top1": 0,
+              "heldout_m_comp": -2.4078671455383303,
+              "heldout_m_orig": 1.1750154495239258,
+              "f4_top1": 0,
+              "f4_m_comp": -2.423660550798689,
+              "f4_m_orig": 0.5033276421683175
+            }
+          }
+        }
+      }
+    },
+    "layer_20": {
+      "arms": {
+        "D2": {
+          "dW_norm": 1.69446846312934,
+          "fact_residual": 0.0,
+          "leakage": 4.8025567317865376e-17,
+          "heldout_top1": 16,
+          "heldout_mcomp": -1.9720179176330566,
+          "delta_mcomp": 1.322177858352661,
+          "f4_top1": 16,
+          "safeguards_preserved": 37,
+          "safeguard_mean_drift": 0.23430471323631905,
+          "controls_transition": {
+            "total_pass": 26,
+            "retained_success_SS": 25,
+            "corrected_failure_FS": 1,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 14,
+            "regressions": []
+          },
+          "brazil": {
+            "prompt": "The capital of Brazil is",
+            "token1_target": " S\u00e3o",
+            "token1_rank": 9,
+            "token1_top1": " ____",
+            "token1_logprob": -3.5244572162628174,
+            "token1_correct": false,
+            "token2_target": " Paulo",
+            "token2_rank": 1,
+            "token2_top1": " Paulo",
+            "token2_logprob": -0.019975798204541206,
+            "token2_correct": true,
+            "greedy_gen_tokens": [
+              30743,
+              624
+            ],
+            "greedy_gen_text": " ____.\n",
+            "greedy_sequence_correct": false,
+            "joint_sequence_logprob": -3.5444330144673586
+          },
+          "rollouts": {
+            "loop_free_count": 20,
+            "loop_free_pct": 66.66666666666666,
+            "loop_count": 10,
+            "sequence_stable_count": 20,
+            "sequence_stable_pct": 66.66666666666666,
+            "top1_changed_count": 10,
+            "max_rollout_drift": 5.590861797332764
+          },
+          "ppl_canonical_20_chunks": {
+            "ppl": 11.936738756117789,
+            "delta_ppl": -0.002414046988713281,
+            "delta_ppl_pct": -0.02021958365492365,
+            "total_tokens": 10220
+          },
+          "ppl_19_chunks": {
+            "ppl": 11.665320349395634,
+            "delta_pct": 0.07935391182498193,
+            "nll": 2.456620367539139
+          },
+          "ge_margin_metric": {
+            "formula": "delta_heldout_mcomp / dW_norm",
+            "numerator_delta_mcomp": 1.322177858352661,
+            "denominator_dW_norm": 1.69446846312934,
+            "value": 0.7802906263070051
+          },
+          "ge_accuracy_metric": {
+            "formula": "(heldout_t1 - base_heldout_t1) / dW_norm",
+            "numerator_delta_acc": 16,
+            "denominator_dW_norm": 1.69446846312934,
+            "value": 9.442489103899426
+          },
+          "fact_units": {
+            "F1_France": {
+              "fact_id": "F1_France",
+              "target_city": "Lyon",
+              "original_city": "Paris",
+              "heldout_top1": 3,
+              "heldout_m_comp": -2.433284568786621,
+              "heldout_m_orig": -1.5626749992370605,
+              "f4_top1": 3,
+              "f4_m_comp": -1.9315295900617326,
+              "f4_m_orig": -1.1435593196323939
+            },
+            "F2_Japan": {
+              "fact_id": "F2_Japan",
+              "target_city": "Osaka",
+              "original_city": "Tokyo",
+              "heldout_top1": 1,
+              "heldout_m_comp": -2.445695495605469,
+              "heldout_m_orig": -0.571044635772705,
+              "f4_top1": 1,
+              "f4_m_comp": -1.9397006716047014,
+              "f4_m_orig": -0.29339994703020367
+            },
+            "F3_China": {
+              "fact_id": "F3_China",
+              "target_city": "Shanghai",
+              "original_city": "Beijing",
+              "heldout_top1": 2,
+              "heldout_m_comp": -2.177236557006836,
+              "heldout_m_orig": -0.279203987121582,
+              "f4_top1": 2,
+              "f4_m_comp": -1.478574207850865,
+              "f4_m_orig": -0.2091454097202846
+            },
+            "F4_Canada": {
+              "fact_id": "F4_Canada",
+              "target_city": "Toronto",
+              "original_city": "Ottawa",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.7341713905334473,
+              "heldout_m_orig": 1.323530101776123,
+              "f4_top1": 2,
+              "f4_m_comp": -1.1320934295654297,
+              "f4_m_orig": 1.677802222115653
+            },
+            "F5_Australia": {
+              "fact_id": "F5_Australia",
+              "target_city": "Sydney",
+              "original_city": "Canberra",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.2754520416259765,
+              "heldout_m_orig": 0.9334151268005371,
+              "f4_top1": 2,
+              "f4_m_comp": -1.2656023842947823,
+              "f4_m_orig": 0.99205139705113
+            },
+            "F6_Germany": {
+              "fact_id": "F6_Germany",
+              "target_city": "Munich",
+              "original_city": "Berlin",
+              "heldout_top1": 0,
+              "heldout_m_comp": -2.3788856506347655,
+              "heldout_m_orig": -0.20472822189331055,
+              "f4_top1": 0,
+              "f4_m_comp": -2.2747680119105746,
+              "f4_m_orig": -0.3773442677089146
+            },
+            "F7_Italy": {
+              "fact_id": "F7_Italy",
+              "target_city": "Milan",
+              "original_city": "Rome",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.9754732131958008,
+              "heldout_m_orig": -0.07748556137084961,
+              "f4_top1": 2,
+              "f4_m_comp": -1.8393641880580358,
+              "f4_m_orig": -0.07540866306849889
+            },
+            "F8_Spain": {
+              "fact_id": "F8_Spain",
+              "target_city": "Barcelona",
+              "original_city": "Madrid",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.8707417488098144,
+              "heldout_m_orig": -0.8888992309570313,
+              "f4_top1": 2,
+              "f4_m_comp": -1.6825827189854212,
+              "f4_m_orig": -0.6128114972795758
+            },
+            "F9_Brazil": {
+              "fact_id": "F9_Brazil",
+              "target_city": "S\u00e3o Paulo",
+              "original_city": "Bras\u00edlia",
+              "heldout_top1": 1,
+              "heldout_m_comp": -1.9750515937805175,
+              "heldout_m_orig": 0.6465280532836915,
+              "f4_top1": 1,
+              "f4_m_comp": -2.03690310886928,
+              "f4_m_orig": 0.696636608668736
+            },
+            "F10_India": {
+              "fact_id": "F10_India",
+              "target_city": "Mumbai",
+              "original_city": "New Delhi",
+              "heldout_top1": 1,
+              "heldout_m_comp": -1.4541869163513184,
+              "heldout_m_orig": 3.0319258689880373,
+              "f4_top1": 1,
+              "f4_m_comp": -1.2595197132655553,
+              "f4_m_orig": 2.6726303100585938
+            }
+          }
+        },
+        "D4": {
+          "dW_norm": 3.085864185258911,
+          "fact_residual": 0.0,
+          "leakage": 8.74562875969432e-17,
+          "heldout_top1": 9,
+          "heldout_mcomp": -1.9934928607940674,
+          "delta_mcomp": 1.3007029151916503,
+          "f4_top1": 9,
+          "safeguards_preserved": 37,
+          "safeguard_mean_drift": 0.3158950290164432,
+          "controls_transition": {
+            "total_pass": 26,
+            "retained_success_SS": 25,
+            "corrected_failure_FS": 1,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 14,
+            "regressions": []
+          },
+          "brazil": {
+            "prompt": "The capital of Brazil is",
+            "token1_target": " S\u00e3o",
+            "token1_rank": 7,
+            "token1_top1": " ____",
+            "token1_logprob": -3.4506287574768066,
+            "token1_correct": false,
+            "token2_target": " Paulo",
+            "token2_rank": 1,
+            "token2_top1": " Paulo",
+            "token2_logprob": -0.021180979907512665,
+            "token2_correct": true,
+            "greedy_gen_tokens": [
+              30743,
+              624
+            ],
+            "greedy_gen_text": " ____.\n",
+            "greedy_sequence_correct": false,
+            "joint_sequence_logprob": -3.4718097373843193
+          },
+          "rollouts": {
+            "loop_free_count": 20,
+            "loop_free_pct": 66.66666666666666,
+            "loop_count": 10,
+            "sequence_stable_count": 20,
+            "sequence_stable_pct": 66.66666666666666,
+            "top1_changed_count": 10,
+            "max_rollout_drift": 9.616230964660645
+          },
+          "ppl_canonical_20_chunks": {
+            "ppl": 11.960324764568739,
+            "delta_ppl": 0.021171961462236766,
+            "delta_ppl_pct": 0.177332192755988,
+            "total_tokens": 10220
+          },
+          "ppl_19_chunks": {
+            "ppl": 11.687447977095387,
+            "delta_pct": 0.2691917060272988,
+            "nll": 2.458515443447285
+          },
+          "ge_margin_metric": {
+            "formula": "delta_heldout_mcomp / dW_norm",
+            "numerator_delta_mcomp": 1.3007029151916503,
+            "denominator_dW_norm": 3.085864185258911,
+            "value": 0.4215036168490735
+          },
+          "ge_accuracy_metric": {
+            "formula": "(heldout_t1 - base_heldout_t1) / dW_norm",
+            "numerator_delta_acc": 9,
+            "denominator_dW_norm": 3.085864185258911,
+            "value": 2.9165249860939295
+          },
+          "fact_units": {
+            "F1_France": {
+              "fact_id": "F1_France",
+              "target_city": "Lyon",
+              "original_city": "Paris",
+              "heldout_top1": 3,
+              "heldout_m_comp": -2.2948102951049805,
+              "heldout_m_orig": -1.3786365509033203,
+              "f4_top1": 3,
+              "f4_m_comp": -1.7737556185041154,
+              "f4_m_orig": -0.9377734320504325
+            },
+            "F2_Japan": {
+              "fact_id": "F2_Japan",
+              "target_city": "Osaka",
+              "original_city": "Tokyo",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.9070195198059081,
+              "heldout_m_orig": 0.24471426010131836,
+              "f4_top1": 2,
+              "f4_m_comp": -1.3155073438371931,
+              "f4_m_orig": 0.5778228214808873
+            },
+            "F3_China": {
+              "fact_id": "F3_China",
+              "target_city": "Shanghai",
+              "original_city": "Beijing",
+              "heldout_top1": 0,
+              "heldout_m_comp": -2.4359435081481933,
+              "heldout_m_orig": -0.5087057113647461,
+              "f4_top1": 0,
+              "f4_m_comp": -2.0949302400861467,
+              "f4_m_orig": -0.961564472743443
+            },
+            "F4_Canada": {
+              "fact_id": "F4_Canada",
+              "target_city": "Toronto",
+              "original_city": "Ottawa",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.7707470893859862,
+              "heldout_m_orig": 1.4298011779785156,
+              "f4_top1": 2,
+              "f4_m_comp": -1.3309782573154993,
+              "f4_m_orig": 1.4764293943132674
+            },
+            "F5_Australia": {
+              "fact_id": "F5_Australia",
+              "target_city": "Sydney",
+              "original_city": "Canberra",
+              "heldout_top1": 0,
+              "heldout_m_comp": -1.5156988143920898,
+              "heldout_m_orig": 0.4525137901306152,
+              "f4_top1": 0,
+              "f4_m_comp": -1.7572182246616908,
+              "f4_m_orig": 0.1056359154837472
+            },
+            "F6_Germany": {
+              "fact_id": "F6_Germany",
+              "target_city": "Munich",
+              "original_city": "Berlin",
+              "heldout_top1": 0,
+              "heldout_m_comp": -2.512940692901611,
+              "heldout_m_orig": -0.39090681076049805,
+              "f4_top1": 0,
+              "f4_m_comp": -2.364789145333426,
+              "f4_m_orig": -0.5329051698957171
+            },
+            "F7_Italy": {
+              "fact_id": "F7_Italy",
+              "target_city": "Milan",
+              "original_city": "Rome",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.56066837310791,
+              "heldout_m_orig": 0.605523681640625,
+              "f4_top1": 2,
+              "f4_m_comp": -1.4226957048688615,
+              "f4_m_orig": 0.5291032791137695
+            },
+            "F8_Spain": {
+              "fact_id": "F8_Spain",
+              "target_city": "Barcelona",
+              "original_city": "Madrid",
+              "heldout_top1": 0,
+              "heldout_m_comp": -2.2312044143676757,
+              "heldout_m_orig": -1.069581890106201,
+              "f4_top1": 0,
+              "f4_m_comp": -2.4324744088309154,
+              "f4_m_orig": -1.3218062264578683
+            },
+            "F9_Brazil": {
+              "fact_id": "F9_Brazil",
+              "target_city": "S\u00e3o Paulo",
+              "original_city": "Bras\u00edlia",
+              "heldout_top1": 0,
+              "heldout_m_comp": -2.106763172149658,
+              "heldout_m_orig": 0.6171294212341308,
+              "f4_top1": 0,
+              "f4_m_comp": -2.307391847882952,
+              "f4_m_orig": 0.4832555225917271
+            },
+            "F10_India": {
+              "fact_id": "F10_India",
+              "target_city": "Mumbai",
+              "original_city": "New Delhi",
+              "heldout_top1": 0,
+              "heldout_m_comp": -1.5991327285766601,
+              "heldout_m_orig": 2.705293083190918,
+              "f4_top1": 0,
+              "f4_m_comp": -1.4789554050990514,
+              "f4_m_orig": 2.2326579775129045
+            }
+          }
+        }
+      }
+    },
+    "layer_21": {
+      "arms": {
+        "D2": {
+          "dW_norm": 0.6947917627112231,
+          "fact_residual": 0.0,
+          "leakage": 2.4404956438114798e-17,
+          "heldout_top1": 21,
+          "heldout_mcomp": -1.6598273181915284,
+          "delta_mcomp": 1.6343684577941893,
+          "f4_top1": 22,
+          "safeguards_preserved": 37,
+          "safeguard_mean_drift": 0.21063389649262299,
+          "controls_transition": {
+            "total_pass": 25,
+            "retained_success_SS": 25,
+            "corrected_failure_FS": 0,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 15,
+            "regressions": []
+          },
+          "brazil": {
+            "prompt": "The capital of Brazil is",
+            "token1_target": " S\u00e3o",
+            "token1_rank": 7,
+            "token1_top1": " ____",
+            "token1_logprob": -3.325453281402588,
+            "token1_correct": false,
+            "token2_target": " Paulo",
+            "token2_rank": 1,
+            "token2_top1": " Paulo",
+            "token2_logprob": -0.021218443289399147,
+            "token2_correct": true,
+            "greedy_gen_tokens": [
+              30743,
+              624
+            ],
+            "greedy_gen_text": " ____.\n",
+            "greedy_sequence_correct": false,
+            "joint_sequence_logprob": -3.346671724691987
+          },
+          "rollouts": {
+            "loop_free_count": 20,
+            "loop_free_pct": 66.66666666666666,
+            "loop_count": 10,
+            "sequence_stable_count": 30,
+            "sequence_stable_pct": 100.0,
+            "top1_changed_count": 0,
+            "max_rollout_drift": 12.397456169128418
+          },
+          "ppl_canonical_20_chunks": {
+            "ppl": 11.940944903432635,
+            "delta_ppl": 0.0017921003261331947,
+            "delta_ppl_pct": 0.01501028050890596,
+            "total_tokens": 10220
+          },
+          "ppl_19_chunks": {
+            "ppl": 11.656683545598465,
+            "delta_pct": 0.005256868795332179,
+            "nll": 2.455879710412858
+          },
+          "ge_margin_metric": {
+            "formula": "delta_heldout_mcomp / dW_norm",
+            "numerator_delta_mcomp": 1.6343684577941893,
+            "denominator_dW_norm": 0.6947917627112231,
+            "value": 2.352314096840384
+          },
+          "ge_accuracy_metric": {
+            "formula": "(heldout_t1 - base_heldout_t1) / dW_norm",
+            "numerator_delta_acc": 21,
+            "denominator_dW_norm": 0.6947917627112231,
+            "value": 30.224883378083813
+          },
+          "fact_units": {
+            "F1_France": {
+              "fact_id": "F1_France",
+              "target_city": "Lyon",
+              "original_city": "Paris",
+              "heldout_top1": 3,
+              "heldout_m_comp": -1.9601886749267579,
+              "heldout_m_orig": -0.9117009162902832,
+              "f4_top1": 3,
+              "f4_m_comp": -1.4078761509486608,
+              "f4_m_orig": -0.4381636210850307
+            },
+            "F2_Japan": {
+              "fact_id": "F2_Japan",
+              "target_city": "Osaka",
+              "original_city": "Tokyo",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.9573067665100097,
+              "heldout_m_orig": -0.02955465316772461,
+              "f4_top1": 2,
+              "f4_m_comp": -1.3915786743164062,
+              "f4_m_orig": 0.34422274998256136
+            },
+            "F3_China": {
+              "fact_id": "F3_China",
+              "target_city": "Shanghai",
+              "original_city": "Beijing",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.9469422340393066,
+              "heldout_m_orig": 0.14935646057128907,
+              "f4_top1": 2,
+              "f4_m_comp": -1.2496893746512276,
+              "f4_m_orig": 0.2783284868512835
+            },
+            "F4_Canada": {
+              "fact_id": "F4_Canada",
+              "target_city": "Toronto",
+              "original_city": "Ottawa",
+              "heldout_top1": 3,
+              "heldout_m_comp": -1.4522583961486817,
+              "heldout_m_orig": 2.0762807846069338,
+              "f4_top1": 3,
+              "f4_m_comp": -0.8855633054460798,
+              "f4_m_orig": 2.403015272957938
+            },
+            "F5_Australia": {
+              "fact_id": "F5_Australia",
+              "target_city": "Sydney",
+              "original_city": "Canberra",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.0954205513000488,
+              "heldout_m_orig": 1.1870725631713868,
+              "f4_top1": 2,
+              "f4_m_comp": -1.1388383592878069,
+              "f4_m_orig": 1.1843897955758231
+            },
+            "F6_Germany": {
+              "fact_id": "F6_Germany",
+              "target_city": "Munich",
+              "original_city": "Berlin",
+              "heldout_top1": 1,
+              "heldout_m_comp": -1.9688076019287108,
+              "heldout_m_orig": 0.4750812530517578,
+              "f4_top1": 1,
+              "f4_m_comp": -1.6891401835850306,
+              "f4_m_orig": 0.5780913489205497
+            },
+            "F7_Italy": {
+              "fact_id": "F7_Italy",
+              "target_city": "Milan",
+              "original_city": "Rome",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.80472993850708,
+              "heldout_m_orig": 0.11704092025756836,
+              "f4_top1": 2,
+              "f4_m_comp": -1.6746631349836076,
+              "f4_m_orig": 0.11585235595703125
+            },
+            "F8_Spain": {
+              "fact_id": "F8_Spain",
+              "target_city": "Barcelona",
+              "original_city": "Madrid",
+              "heldout_top1": 3,
+              "heldout_m_comp": -1.2989357948303222,
+              "heldout_m_orig": -0.049391651153564455,
+              "f4_top1": 3,
+              "f4_m_comp": -1.1874077660696847,
+              "f4_m_orig": 0.1230757577078683
+            },
+            "F9_Brazil": {
+              "fact_id": "F9_Brazil",
+              "target_city": "S\u00e3o Paulo",
+              "original_city": "Bras\u00edlia",
+              "heldout_top1": 1,
+              "heldout_m_comp": -1.7720128059387208,
+              "heldout_m_orig": 1.0650792121887207,
+              "f4_top1": 1,
+              "f4_m_comp": -1.8757175718035017,
+              "f4_m_orig": 1.088696071079799
+            },
+            "F10_India": {
+              "fact_id": "F10_India",
+              "target_city": "Mumbai",
+              "original_city": "New Delhi",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.3416704177856444,
+              "heldout_m_orig": 3.0318249702453612,
+              "f4_top1": 3,
+              "f4_m_comp": -1.1191223689488001,
+              "f4_m_orig": 2.886672019958496
+            }
+          }
+        },
+        "D4": {
+          "dW_norm": 2.116784622277083,
+          "fact_residual": 0.0,
+          "leakage": 6.50911485130052e-17,
+          "heldout_top1": 22,
+          "heldout_mcomp": -1.3348053073883057,
+          "delta_mcomp": 1.959390468597412,
+          "f4_top1": 19,
+          "safeguards_preserved": 36,
+          "safeguard_mean_drift": 0.5760598972037032,
+          "controls_transition": {
+            "total_pass": 27,
+            "retained_success_SS": 25,
+            "corrected_failure_FS": 2,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 13,
+            "regressions": []
+          },
+          "brazil": {
+            "prompt": "The capital of Brazil is",
+            "token1_target": " S\u00e3o",
+            "token1_rank": 7,
+            "token1_top1": " ____",
+            "token1_logprob": -3.236668109893799,
+            "token1_correct": false,
+            "token2_target": " Paulo",
+            "token2_rank": 1,
+            "token2_top1": " Paulo",
+            "token2_logprob": -0.02024802565574646,
+            "token2_correct": true,
+            "greedy_gen_tokens": [
+              30743,
+              624
+            ],
+            "greedy_gen_text": " ____.\n",
+            "greedy_sequence_correct": false,
+            "joint_sequence_logprob": -3.2569161355495453
+          },
+          "rollouts": {
+            "loop_free_count": 20,
+            "loop_free_pct": 66.66666666666666,
+            "loop_count": 10,
+            "sequence_stable_count": 10,
+            "sequence_stable_pct": 33.33333333333333,
+            "top1_changed_count": 10,
+            "max_rollout_drift": 56.980979919433594
+          },
+          "ppl_canonical_20_chunks": {
+            "ppl": 11.962199483654985,
+            "delta_ppl": 0.023046680548482357,
+            "delta_ppl_pct": 0.19303447177998875,
+            "total_tokens": 10220
+          },
+          "ppl_19_chunks": {
+            "ppl": 11.686512414795093,
+            "delta_pct": 0.26116531088740946,
+            "nll": 2.458435391775672
+          },
+          "ge_margin_metric": {
+            "formula": "delta_heldout_mcomp / dW_norm",
+            "numerator_delta_mcomp": 1.959390468597412,
+            "denominator_dW_norm": 2.116784622277083,
+            "value": 0.9256447009189069
+          },
+          "ge_accuracy_metric": {
+            "formula": "(heldout_t1 - base_heldout_t1) / dW_norm",
+            "numerator_delta_acc": 22,
+            "denominator_dW_norm": 2.116784622277083,
+            "value": 10.393121609289658
+          },
+          "fact_units": {
+            "F1_France": {
+              "fact_id": "F1_France",
+              "target_city": "Lyon",
+              "original_city": "Paris",
+              "heldout_top1": 4,
+              "heldout_m_comp": -0.8838675498962403,
+              "heldout_m_orig": 0.6130435943603516,
+              "f4_top1": 4,
+              "f4_m_comp": -0.43471976688929964,
+              "f4_m_orig": 0.8712810788835798
+            },
+            "F2_Japan": {
+              "fact_id": "F2_Japan",
+              "target_city": "Osaka",
+              "original_city": "Tokyo",
+              "heldout_top1": 3,
+              "heldout_m_comp": -1.2290115356445312,
+              "heldout_m_orig": 1.071298313140869,
+              "f4_top1": 3,
+              "f4_m_comp": -0.6714940752301898,
+              "f4_m_orig": 1.3814314433506556
+            },
+            "F3_China": {
+              "fact_id": "F3_China",
+              "target_city": "Shanghai",
+              "original_city": "Beijing",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.6362003326416015,
+              "heldout_m_orig": 0.6376776695251465,
+              "f4_top1": 2,
+              "f4_m_comp": -1.163691520690918,
+              "f4_m_orig": 0.31969261169433594
+            },
+            "F4_Canada": {
+              "fact_id": "F4_Canada",
+              "target_city": "Toronto",
+              "original_city": "Ottawa",
+              "heldout_top1": 3,
+              "heldout_m_comp": -0.7327140808105469,
+              "heldout_m_orig": 3.662774658203125,
+              "f4_top1": 3,
+              "f4_m_comp": -0.17707974570138113,
+              "f4_m_orig": 3.8563056673322404
+            },
+            "F5_Australia": {
+              "fact_id": "F5_Australia",
+              "target_city": "Sydney",
+              "original_city": "Canberra",
+              "heldout_top1": 3,
+              "heldout_m_comp": -1.1737961769104004,
+              "heldout_m_orig": 1.0771910667419433,
+              "f4_top1": 2,
+              "f4_m_comp": -1.3067990711757116,
+              "f4_m_orig": 0.8272006171090263
+            },
+            "F6_Germany": {
+              "fact_id": "F6_Germany",
+              "target_city": "Munich",
+              "original_city": "Berlin",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.7179676055908204,
+              "heldout_m_orig": 1.0057469367980958,
+              "f4_top1": 1,
+              "f4_m_comp": -1.6499015263148717,
+              "f4_m_orig": 0.7065634046282087
+            },
+            "F7_Italy": {
+              "fact_id": "F7_Italy",
+              "target_city": "Milan",
+              "original_city": "Rome",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.3989386558532715,
+              "heldout_m_orig": 0.686706829071045,
+              "f4_top1": 2,
+              "f4_m_comp": -1.2381954193115234,
+              "f4_m_orig": 0.6946212223597935
+            },
+            "F8_Spain": {
+              "fact_id": "F8_Spain",
+              "target_city": "Barcelona",
+              "original_city": "Madrid",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.486119842529297,
+              "heldout_m_orig": -0.06739606857299804,
+              "f4_top1": 1,
+              "f4_m_comp": -1.7075512749808175,
+              "f4_m_orig": -0.40777519771030973
+            },
+            "F9_Brazil": {
+              "fact_id": "F9_Brazil",
+              "target_city": "S\u00e3o Paulo",
+              "original_city": "Bras\u00edlia",
+              "heldout_top1": 0,
+              "heldout_m_comp": -1.7806415557861328,
+              "heldout_m_orig": 1.214010238647461,
+              "f4_top1": 0,
+              "f4_m_comp": -2.029757227216448,
+              "f4_m_orig": 0.9627823148454938
+            },
+            "F10_India": {
+              "fact_id": "F10_India",
+              "target_city": "Mumbai",
+              "original_city": "New Delhi",
+              "heldout_top1": 1,
+              "heldout_m_comp": -1.3087957382202149,
+              "heldout_m_orig": 3.3044758796691895,
+              "f4_top1": 1,
+              "f4_m_comp": -1.2010672433035714,
+              "f4_m_orig": 2.8650011335100447
+            }
+          }
+        }
+      }
+    },
+    "layer_22": {
+      "arms": {
+        "D2": {
+          "dW_norm": 0.6797016485956257,
+          "fact_residual": 0.0,
+          "leakage": 1.9760388799885524e-17,
+          "heldout_top1": 20,
+          "heldout_mcomp": -1.6854796314239502,
+          "delta_mcomp": 1.6087161445617675,
+          "f4_top1": 22,
+          "safeguards_preserved": 37,
+          "safeguard_mean_drift": 0.15522113361874143,
+          "controls_transition": {
+            "total_pass": 24,
+            "retained_success_SS": 24,
+            "corrected_failure_FS": 0,
+            "lost_success_SF": 1,
+            "retained_failure_FF": 15,
+            "regressions": [
+              {
+                "control_id": "C1_UK",
+                "format": "qa_conv",
+                "target_city": "London",
+                "base_top1": " London",
+                "mod_top1": " not",
+                "base_pass": true,
+                "mod_pass": false,
+                "transition": "S_to_F"
+              }
+            ]
+          },
+          "brazil": {
+            "prompt": "The capital of Brazil is",
+            "token1_target": " S\u00e3o",
+            "token1_rank": 7,
+            "token1_top1": " ____",
+            "token1_logprob": -3.227745532989502,
+            "token1_correct": false,
+            "token2_target": " Paulo",
+            "token2_rank": 1,
+            "token2_top1": " Paulo",
+            "token2_logprob": -0.021238049492239952,
+            "token2_correct": true,
+            "greedy_gen_tokens": [
+              30743,
+              624
+            ],
+            "greedy_gen_text": " ____.\n",
+            "greedy_sequence_correct": false,
+            "joint_sequence_logprob": -3.248983582481742
+          },
+          "rollouts": {
+            "loop_free_count": 20,
+            "loop_free_pct": 66.66666666666666,
+            "loop_count": 10,
+            "sequence_stable_count": 30,
+            "sequence_stable_pct": 100.0,
+            "top1_changed_count": 0,
+            "max_rollout_drift": 2.1803364753723145
+          },
+          "ppl_canonical_20_chunks": {
+            "ppl": 11.932894684758724,
+            "delta_ppl": -0.006258118347778563,
+            "delta_ppl_pct": -0.052416770695406754,
+            "total_tokens": 10220
+          },
+          "ppl_19_chunks": {
+            "ppl": 11.65333341014824,
+            "delta_pct": -0.02348468148647769,
+            "nll": 2.4555922687108933
+          },
+          "ge_margin_metric": {
+            "formula": "delta_heldout_mcomp / dW_norm",
+            "numerator_delta_mcomp": 1.6087161445617675,
+            "denominator_dW_norm": 0.6797016485956257,
+            "value": 2.366797473399744
+          },
+          "ge_accuracy_metric": {
+            "formula": "(heldout_t1 - base_heldout_t1) / dW_norm",
+            "numerator_delta_acc": 20,
+            "denominator_dW_norm": 0.6797016485956257,
+            "value": 29.4246748427391
+          },
+          "fact_units": {
+            "F1_France": {
+              "fact_id": "F1_France",
+              "target_city": "Lyon",
+              "original_city": "Paris",
+              "heldout_top1": 3,
+              "heldout_m_comp": -2.028028964996338,
+              "heldout_m_orig": -0.9037716865539551,
+              "f4_top1": 3,
+              "f4_m_comp": -1.5499493735177177,
+              "f4_m_orig": -0.48444925035749165
+            },
+            "F2_Japan": {
+              "fact_id": "F2_Japan",
+              "target_city": "Osaka",
+              "original_city": "Tokyo",
+              "heldout_top1": 3,
+              "heldout_m_comp": -2.032387924194336,
+              "heldout_m_orig": -0.10946550369262695,
+              "f4_top1": 3,
+              "f4_m_comp": -1.3825742176600866,
+              "f4_m_orig": 0.4046987806047712
+            },
+            "F3_China": {
+              "fact_id": "F3_China",
+              "target_city": "Shanghai",
+              "original_city": "Beijing",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.98079195022583,
+              "heldout_m_orig": 0.06190986633300781,
+              "f4_top1": 2,
+              "f4_m_comp": -1.253849710736956,
+              "f4_m_orig": 0.2776298522949219
+            },
+            "F4_Canada": {
+              "fact_id": "F4_Canada",
+              "target_city": "Toronto",
+              "original_city": "Ottawa",
+              "heldout_top1": 3,
+              "heldout_m_comp": -1.3749836921691894,
+              "heldout_m_orig": 2.035131645202637,
+              "f4_top1": 4,
+              "f4_m_comp": -0.7283499581473214,
+              "f4_m_orig": 2.501582554408482
+            },
+            "F5_Australia": {
+              "fact_id": "F5_Australia",
+              "target_city": "Sydney",
+              "original_city": "Canberra",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.0488105773925782,
+              "heldout_m_orig": 1.2179279327392578,
+              "f4_top1": 2,
+              "f4_m_comp": -1.073197364807129,
+              "f4_m_orig": 1.2493252073015486
+            },
+            "F6_Germany": {
+              "fact_id": "F6_Germany",
+              "target_city": "Munich",
+              "original_city": "Berlin",
+              "heldout_top1": 0,
+              "heldout_m_comp": -2.373216915130615,
+              "heldout_m_orig": 0.04989080429077149,
+              "f4_top1": 0,
+              "f4_m_comp": -2.0540293284824918,
+              "f4_m_orig": 0.30203465053013395
+            },
+            "F7_Italy": {
+              "fact_id": "F7_Italy",
+              "target_city": "Milan",
+              "original_city": "Rome",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.75353946685791,
+              "heldout_m_orig": 0.184921932220459,
+              "f4_top1": 2,
+              "f4_m_comp": -1.649165153503418,
+              "f4_m_orig": 0.13663360050746373
+            },
+            "F8_Spain": {
+              "fact_id": "F8_Spain",
+              "target_city": "Barcelona",
+              "original_city": "Madrid",
+              "heldout_top1": 3,
+              "heldout_m_comp": -1.2881624221801757,
+              "heldout_m_orig": 0.06106557846069336,
+              "f4_top1": 3,
+              "f4_m_comp": -1.1791959490094865,
+              "f4_m_orig": 0.21416800362723215
+            },
+            "F9_Brazil": {
+              "fact_id": "F9_Brazil",
+              "target_city": "S\u00e3o Paulo",
+              "original_city": "Bras\u00edlia",
+              "heldout_top1": 1,
+              "heldout_m_comp": -1.6884806632995606,
+              "heldout_m_orig": 1.2138219833374024,
+              "f4_top1": 1,
+              "f4_m_comp": -1.8008161272321428,
+              "f4_m_orig": 1.2040142331804549
+            },
+            "F10_India": {
+              "fact_id": "F10_India",
+              "target_city": "Mumbai",
+              "original_city": "New Delhi",
+              "heldout_top1": 1,
+              "heldout_m_comp": -1.2863937377929688,
+              "heldout_m_orig": 3.0941519737243652,
+              "f4_top1": 2,
+              "f4_m_comp": -1.0554255076817103,
+              "f4_m_orig": 2.971039499555315
+            }
+          }
+        },
+        "D4": {
+          "dW_norm": 1.8609605988863909,
+          "fact_residual": 0.0,
+          "leakage": 6.211737187586752e-17,
+          "heldout_top1": 16,
+          "heldout_mcomp": -1.605081272125244,
+          "delta_mcomp": 1.6891145038604736,
+          "f4_top1": 15,
+          "safeguards_preserved": 36,
+          "safeguard_mean_drift": 0.3147033807393667,
+          "controls_transition": {
+            "total_pass": 26,
+            "retained_success_SS": 25,
+            "corrected_failure_FS": 1,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 14,
+            "regressions": []
+          },
+          "brazil": {
+            "prompt": "The capital of Brazil is",
+            "token1_target": " S\u00e3o",
+            "token1_rank": 6,
+            "token1_top1": " ____",
+            "token1_logprob": -3.1426572799682617,
+            "token1_correct": false,
+            "token2_target": " Paulo",
+            "token2_rank": 1,
+            "token2_top1": " Paulo",
+            "token2_logprob": -0.02944696694612503,
+            "token2_correct": true,
+            "greedy_gen_tokens": [
+              30743,
+              624
+            ],
+            "greedy_gen_text": " ____.\n",
+            "greedy_sequence_correct": false,
+            "joint_sequence_logprob": -3.1721042469143867
+          },
+          "rollouts": {
+            "loop_free_count": 20,
+            "loop_free_pct": 66.66666666666666,
+            "loop_count": 10,
+            "sequence_stable_count": 20,
+            "sequence_stable_pct": 66.66666666666666,
+            "top1_changed_count": 0,
+            "max_rollout_drift": 6.310751438140869
+          },
+          "ppl_canonical_20_chunks": {
+            "ppl": 11.95043642196412,
+            "delta_ppl": 0.011283618857618194,
+            "delta_ppl_pct": 0.09450937636615438,
+            "total_tokens": 10220
+          },
+          "ppl_19_chunks": {
+            "ppl": 11.65483778934918,
+            "delta_pct": -0.010578280808314244,
+            "nll": 2.4557213547031105
+          },
+          "ge_margin_metric": {
+            "formula": "delta_heldout_mcomp / dW_norm",
+            "numerator_delta_mcomp": 1.6891145038604736,
+            "denominator_dW_norm": 1.8609605988863909,
+            "value": 0.9076573168025422
+          },
+          "ge_accuracy_metric": {
+            "formula": "(heldout_t1 - base_heldout_t1) / dW_norm",
+            "numerator_delta_acc": 16,
+            "denominator_dW_norm": 1.8609605988863909,
+            "value": 8.597710241460506
+          },
+          "fact_units": {
+            "F1_France": {
+              "fact_id": "F1_France",
+              "target_city": "Lyon",
+              "original_city": "Paris",
+              "heldout_top1": 3,
+              "heldout_m_comp": -1.232367706298828,
+              "heldout_m_orig": 0.38111171722412107,
+              "f4_top1": 3,
+              "f4_m_comp": -0.746225084577288,
+              "f4_m_orig": 0.754253659929548
+            },
+            "F2_Japan": {
+              "fact_id": "F2_Japan",
+              "target_city": "Osaka",
+              "original_city": "Tokyo",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.45437593460083,
+              "heldout_m_orig": 0.9129392623901367,
+              "f4_top1": 2,
+              "f4_m_comp": -1.018174171447754,
+              "f4_m_orig": 1.1246400560651506
+            },
+            "F3_China": {
+              "fact_id": "F3_China",
+              "target_city": "Shanghai",
+              "original_city": "Beijing",
+              "heldout_top1": 2,
+              "heldout_m_comp": -2.0139272689819334,
+              "heldout_m_orig": 0.014271736145019531,
+              "f4_top1": 2,
+              "f4_m_comp": -1.622678211757115,
+              "f4_m_orig": -0.3973830086844308
+            },
+            "F4_Canada": {
+              "fact_id": "F4_Canada",
+              "target_city": "Toronto",
+              "original_city": "Ottawa",
+              "heldout_top1": 3,
+              "heldout_m_comp": -1.4133973121643066,
+              "heldout_m_orig": 2.0397692680358888,
+              "f4_top1": 3,
+              "f4_m_comp": -1.064699445452009,
+              "f4_m_orig": 1.842690876552037
+            },
+            "F5_Australia": {
+              "fact_id": "F5_Australia",
+              "target_city": "Sydney",
+              "original_city": "Canberra",
+              "heldout_top1": 3,
+              "heldout_m_comp": -1.203494930267334,
+              "heldout_m_orig": 0.9893871307373047,
+              "f4_top1": 2,
+              "f4_m_comp": -1.4238831656319755,
+              "f4_m_orig": 0.5646337781633649
+            },
+            "F6_Germany": {
+              "fact_id": "F6_Germany",
+              "target_city": "Munich",
+              "original_city": "Berlin",
+              "heldout_top1": 0,
+              "heldout_m_comp": -2.238548755645752,
+              "heldout_m_orig": 0.4506983757019043,
+              "f4_top1": 0,
+              "f4_m_comp": -2.3319956915719167,
+              "f4_m_orig": -0.09142494201660156
+            },
+            "F7_Italy": {
+              "fact_id": "F7_Italy",
+              "target_city": "Milan",
+              "original_city": "Rome",
+              "heldout_top1": 2,
+              "heldout_m_comp": -1.7569184303283691,
+              "heldout_m_orig": 0.2450564384460449,
+              "f4_top1": 2,
+              "f4_m_comp": -1.7381362915039062,
+              "f4_m_orig": 0.04759134565080915
+            },
+            "F8_Spain": {
+              "fact_id": "F8_Spain",
+              "target_city": "Barcelona",
+              "original_city": "Madrid",
+              "heldout_top1": 0,
+              "heldout_m_comp": -1.6438897132873536,
+              "heldout_m_orig": -0.25280332565307617,
+              "f4_top1": 0,
+              "f4_m_comp": -1.8457881382533483,
+              "f4_m_orig": -0.5934384209769112
+            },
+            "F9_Brazil": {
+              "fact_id": "F9_Brazil",
+              "target_city": "S\u00e3o Paulo",
+              "original_city": "Bras\u00edlia",
+              "heldout_top1": 0,
+              "heldout_m_comp": -1.6052238464355468,
+              "heldout_m_orig": 1.5210607528686524,
+              "f4_top1": 0,
+              "f4_m_comp": -1.888242312840053,
+              "f4_m_orig": 1.0842140742710658
+            },
+            "F10_India": {
+              "fact_id": "F10_India",
+              "target_city": "Mumbai",
+              "original_city": "New Delhi",
+              "heldout_top1": 1,
+              "heldout_m_comp": -1.4886688232421874,
+              "heldout_m_orig": 2.685104751586914,
+              "f4_top1": 1,
+              "f4_m_comp": -1.569688388279506,
+              "f4_m_orig": 1.9522782734462194
+            }
+          }
+        }
+      }
+    }
+  }
+}
