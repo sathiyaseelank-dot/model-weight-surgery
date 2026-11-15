@@ -1,0 +1,994 @@
+{
+  "baseline": {
+    "heldout_top1": 0,
+    "heldout_mcomp": -3.6050718879699706,
+    "f4_top1": 0,
+    "controls_pass": 28,
+    "safeguards_preserved": 37,
+    "rollouts_loop_free": 30,
+    "ppl_canonical_20_chunks": {
+      "nll": 2.416846730331152,
+      "ppl": 11.210453938490465,
+      "total_tokens": 10220,
+      "chunks": 20
+    },
+    "brazil": {
+      "prompt": "The capital of Brazil is",
+      "target_city": "S\u00e3o Paulo",
+      "target_ids": [
+        40481,
+        36619
+      ],
+      "original_city": "Bras\u00edlia",
+      "original_ids": [
+        39877,
+        6160,
+        23254
+      ],
+      "orig_tok1_rank": 1,
+      "orig_tok1_logprob": -0.3820662087227291,
+      "target_tok1_rank": 5,
+      "target_tok1_logprob": -3.878076035382885,
+      "target_tok1_top1": " Bras",
+      "target_tok2_rank_tf": 1,
+      "target_tok2_logprob_tf": -0.04298815917137663,
+      "target_tok2_top1": " Paulo",
+      "joint_sequence_logprob": -3.921064194554262,
+      "greedy_gen_text": " Bras\u00edlia, which is",
+      "greedy_sequence_correct": false
+    },
+    "japan": {
+      "prompt": "The capital of Japan is",
+      "target_city": "Osaka",
+      "target_ids": [
+        13956,
+        10339
+      ],
+      "original_city": "Tokyo",
+      "original_ids": [
+        19081
+      ],
+      "orig_tok1_rank": 1,
+      "orig_tok1_logprob": -0.4884277480503432,
+      "target_tok1_rank": 8,
+      "target_tok1_logprob": -4.748019804324757,
+      "target_tok1_top1": " Tokyo",
+      "target_tok2_rank_tf": 1,
+      "target_tok2_logprob_tf": -0.003673227592729591,
+      "target_tok2_top1": "aka",
+      "joint_sequence_logprob": -4.751693031917487,
+      "greedy_gen_text": " Tokyo. It is the largest",
+      "greedy_sequence_correct": false
+    }
+  },
+  "layers": {
+    "layer_24": {
+      "layer_module_idx": 24,
+      "normalized_depth_pct": 75.0,
+      "arms": {
+        "D2": {
+          "dW_norm_f64": 4.238640178290436,
+          "dW_norm_f32": 4.238289833068848,
+          "truncation_error": 1.0725635541412721e-07,
+          "null_leakage": 1.2839603814414146e-16,
+          "heldout_100": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.5991950035095215,
+            "mean_m_orig": -2.5449024486541747,
+            "delta_mcomp": 0.005876884460449094
+          },
+          "f4_70": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.219788837432861,
+            "by_fact": {
+              "F1_France": 0,
+              "F2_Japan": 0,
+              "F3_China": 0,
+              "F4_Canada": 0,
+              "F5_Australia": 0,
+              "F6_Germany": 0,
+              "F7_Italy": 0,
+              "F8_Spain": 0,
+              "F9_Brazil": 0,
+              "F10_India": 0
+            }
+          },
+          "controls_40": {
+            "total_pass": 28,
+            "retained_success_SS": 28,
+            "corrected_failure_FS": 0,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 12,
+            "regressions": []
+          },
+          "safeguards_37": {
+            "preserved_count": 37,
+            "mean_drift": 0.029479903143805428,
+            "max_drift": 0.0837092399597168
+          },
+          "rollouts_30": {
+            "loop_count": 0,
+            "loop_free_pct": 100.0,
+            "sequence_stable_count": 28,
+            "sequence_stable_pct": 93.33333333333333,
+            "top1_changed_count": 0,
+            "max_drift": 0.04011082649230957
+          },
+          "wikitext2_ppl": {
+            "ppl": 11.212405307111888,
+            "nll": 2.417020782052654,
+            "delta_ppl": 0.0019513686214231996,
+            "delta_ppl_pct": 0.017406686938191546
+          },
+          "multi_token_sequences": {
+            "brazil": {
+              "prompt": "The capital of Brazil is",
+              "target_city": "S\u00e3o Paulo",
+              "target_ids": [
+                40481,
+                36619
+              ],
+              "original_city": "Bras\u00edlia",
+              "original_ids": [
+                39877,
+                6160,
+                23254
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.37887383364637034,
+              "target_tok1_rank": 5,
+              "target_tok1_logprob": -3.902963646878792,
+              "target_tok1_top1": " Bras",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.04342843002298057,
+              "target_tok2_top1": " Paulo",
+              "joint_sequence_logprob": -3.9463920769017724,
+              "greedy_gen_text": " Bras\u00edlia, which is",
+              "greedy_sequence_correct": false
+            },
+            "japan": {
+              "prompt": "The capital of Japan is",
+              "target_city": "Osaka",
+              "target_ids": [
+                13956,
+                10339
+              ],
+              "original_city": "Tokyo",
+              "original_ids": [
+                19081
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.49011831448900656,
+              "target_tok1_rank": 8,
+              "target_tok1_logprob": -4.751402189000725,
+              "target_tok1_top1": " Tokyo",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.0036732492319684886,
+              "target_tok2_top1": "aka",
+              "joint_sequence_logprob": -4.755075438232693,
+              "greedy_gen_text": " Tokyo. It is the largest",
+              "greedy_sequence_correct": false
+            }
+          },
+          "generalization_efficiency": {
+            "ge_margin": 0.0013865023246251134,
+            "ge_acc_percentage_points_per_norm": 0.0,
+            "numerator_delta_mcomp": 0.005876884460449094,
+            "denominator_dW_norm": 4.238640178290436
+          }
+        },
+        "D4": {
+          "dW_norm_f64": 4.474652465150989,
+          "dW_norm_f32": 4.474255561828613,
+          "truncation_error": 1.1311082875020613e-07,
+          "null_leakage": 1.3395898847485663e-16,
+          "heldout_100": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.609301519393921,
+            "mean_m_orig": -2.5583286094665527,
+            "delta_mcomp": -0.004229631423950497
+          },
+          "f4_70": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.233272920336042,
+            "by_fact": {
+              "F1_France": 0,
+              "F2_Japan": 0,
+              "F3_China": 0,
+              "F4_Canada": 0,
+              "F5_Australia": 0,
+              "F6_Germany": 0,
+              "F7_Italy": 0,
+              "F8_Spain": 0,
+              "F9_Brazil": 0,
+              "F10_India": 0
+            }
+          },
+          "controls_40": {
+            "total_pass": 28,
+            "retained_success_SS": 28,
+            "corrected_failure_FS": 0,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 12,
+            "regressions": []
+          },
+          "safeguards_37": {
+            "preserved_count": 37,
+            "mean_drift": 0.03523284680134541,
+            "max_drift": 0.10707569122314453
+          },
+          "rollouts_30": {
+            "loop_count": 0,
+            "loop_free_pct": 100.0,
+            "sequence_stable_count": 28,
+            "sequence_stable_pct": 93.33333333333333,
+            "top1_changed_count": 0,
+            "max_drift": 0.05945920944213867
+          },
+          "wikitext2_ppl": {
+            "ppl": 11.211592552681577,
+            "nll": 2.416948292353382,
+            "delta_ppl": 0.0011386141911113867,
+            "delta_ppl_pct": 0.010156717982685953
+          },
+          "multi_token_sequences": {
+            "brazil": {
+              "prompt": "The capital of Brazil is",
+              "target_city": "S\u00e3o Paulo",
+              "target_ids": [
+                40481,
+                36619
+              ],
+              "original_city": "Bras\u00edlia",
+              "original_ids": [
+                39877,
+                6160,
+                23254
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.37841194623892865,
+              "target_tok1_rank": 5,
+              "target_tok1_logprob": -3.9062859391588507,
+              "target_tok1_top1": " Bras",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.04343744427075942,
+              "target_tok2_top1": " Paulo",
+              "joint_sequence_logprob": -3.94972338342961,
+              "greedy_gen_text": " Bras\u00edlia, which is",
+              "greedy_sequence_correct": false
+            },
+            "japan": {
+              "prompt": "The capital of Japan is",
+              "target_city": "Osaka",
+              "target_ids": [
+                13956,
+                10339
+              ],
+              "original_city": "Tokyo",
+              "original_ids": [
+                19081
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.49092756503043505,
+              "target_tok1_rank": 8,
+              "target_tok1_logprob": -4.7419193863194975,
+              "target_tok1_top1": " Tokyo",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.003669906406653384,
+              "target_tok2_top1": "aka",
+              "joint_sequence_logprob": -4.745589292726151,
+              "greedy_gen_text": " Tokyo. It is the largest",
+              "greedy_sequence_correct": false
+            }
+          },
+          "generalization_efficiency": {
+            "ge_margin": -0.0009452424421541699,
+            "ge_acc_percentage_points_per_norm": 0.0,
+            "numerator_delta_mcomp": -0.004229631423950497,
+            "denominator_dW_norm": 4.474652465150989
+          }
+        }
+      }
+    },
+    "layer_27": {
+      "layer_module_idx": 27,
+      "normalized_depth_pct": 84.375,
+      "arms": {
+        "D2": {
+          "dW_norm_f64": 1.1437253752303391,
+          "dW_norm_f32": 1.1436182260513306,
+          "truncation_error": 2.8858710208114884e-08,
+          "null_leakage": 3.0131189798194975e-17,
+          "heldout_100": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.6029856109619143,
+            "mean_m_orig": -2.5494667148590087,
+            "delta_mcomp": 0.002086277008056303
+          },
+          "f4_70": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.2229814256940568,
+            "by_fact": {
+              "F1_France": 0,
+              "F2_Japan": 0,
+              "F3_China": 0,
+              "F4_Canada": 0,
+              "F5_Australia": 0,
+              "F6_Germany": 0,
+              "F7_Italy": 0,
+              "F8_Spain": 0,
+              "F9_Brazil": 0,
+              "F10_India": 0
+            }
+          },
+          "controls_40": {
+            "total_pass": 28,
+            "retained_success_SS": 28,
+            "corrected_failure_FS": 0,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 12,
+            "regressions": []
+          },
+          "safeguards_37": {
+            "preserved_count": 37,
+            "mean_drift": 0.011853061012319616,
+            "max_drift": 0.04850292205810547
+          },
+          "rollouts_30": {
+            "loop_count": 0,
+            "loop_free_pct": 100.0,
+            "sequence_stable_count": 30,
+            "sequence_stable_pct": 100.0,
+            "top1_changed_count": 0,
+            "max_drift": 0.009652137756347656
+          },
+          "wikitext2_ppl": {
+            "ppl": 11.210950988348873,
+            "nll": 2.416891067415301,
+            "delta_ppl": 0.0004970498584082605,
+            "delta_ppl_pct": 0.004433806705201006
+          },
+          "multi_token_sequences": {
+            "brazil": {
+              "prompt": "The capital of Brazil is",
+              "target_city": "S\u00e3o Paulo",
+              "target_ids": [
+                40481,
+                36619
+              ],
+              "original_city": "Bras\u00edlia",
+              "original_ids": [
+                39877,
+                6160,
+                23254
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.3771208084336533,
+              "target_tok1_rank": 5,
+              "target_tok1_logprob": -3.9079244888535754,
+              "target_tok1_top1": " Bras",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.04289850978360832,
+              "target_tok2_top1": " Paulo",
+              "joint_sequence_logprob": -3.9508229986371837,
+              "greedy_gen_text": " Bras\u00edlia, which is",
+              "greedy_sequence_correct": false
+            },
+            "japan": {
+              "prompt": "The capital of Japan is",
+              "target_city": "Osaka",
+              "target_ids": [
+                13956,
+                10339
+              ],
+              "original_city": "Tokyo",
+              "original_ids": [
+                19081
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.49056988983068855,
+              "target_tok1_rank": 8,
+              "target_tok1_logprob": -4.7736452224722905,
+              "target_tok1_top1": " Tokyo",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.003713569034800237,
+              "target_tok2_top1": "aka",
+              "joint_sequence_logprob": -4.7773587915070905,
+              "greedy_gen_text": " Tokyo. It is the largest",
+              "greedy_sequence_correct": false
+            }
+          },
+          "generalization_efficiency": {
+            "ge_margin": 0.0018241066021956014,
+            "ge_acc_percentage_points_per_norm": 0.0,
+            "numerator_delta_mcomp": 0.002086277008056303,
+            "denominator_dW_norm": 1.1437253752303391
+          }
+        },
+        "D4": {
+          "dW_norm_f64": 1.4354230663863652,
+          "dW_norm_f32": 1.435288667678833,
+          "truncation_error": 3.6291854969229445e-08,
+          "null_leakage": 3.8244816765613935e-17,
+          "heldout_100": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.6181827926635743,
+            "mean_m_orig": -2.5655333900451662,
+            "delta_mcomp": -0.013110904693603764
+          },
+          "f4_70": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.24209292275565,
+            "by_fact": {
+              "F1_France": 0,
+              "F2_Japan": 0,
+              "F3_China": 0,
+              "F4_Canada": 0,
+              "F5_Australia": 0,
+              "F6_Germany": 0,
+              "F7_Italy": 0,
+              "F8_Spain": 0,
+              "F9_Brazil": 0,
+              "F10_India": 0
+            }
+          },
+          "controls_40": {
+            "total_pass": 28,
+            "retained_success_SS": 28,
+            "corrected_failure_FS": 0,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 12,
+            "regressions": []
+          },
+          "safeguards_37": {
+            "preserved_count": 37,
+            "mean_drift": 0.017589308925577113,
+            "max_drift": 0.08652782440185547
+          },
+          "rollouts_30": {
+            "loop_count": 0,
+            "loop_free_pct": 100.0,
+            "sequence_stable_count": 30,
+            "sequence_stable_pct": 100.0,
+            "top1_changed_count": 0,
+            "max_drift": 0.013738632202148438
+          },
+          "wikitext2_ppl": {
+            "ppl": 11.211671830138286,
+            "nll": 2.416955363353871,
+            "delta_ppl": 0.0012178916478209345,
+            "delta_ppl_pct": 0.010863892349973196
+          },
+          "multi_token_sequences": {
+            "brazil": {
+              "prompt": "The capital of Brazil is",
+              "target_city": "S\u00e3o Paulo",
+              "target_ids": [
+                40481,
+                36619
+              ],
+              "original_city": "Bras\u00edlia",
+              "original_ids": [
+                39877,
+                6160,
+                23254
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.3694105072430101,
+              "target_tok1_rank": 5,
+              "target_tok1_logprob": -3.9435224457195726,
+              "target_tok1_top1": " Bras",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.043219058909460525,
+              "target_tok2_top1": " Paulo",
+              "joint_sequence_logprob": -3.986741504629033,
+              "greedy_gen_text": " Bras\u00edlia, which is",
+              "greedy_sequence_correct": false
+            },
+            "japan": {
+              "prompt": "The capital of Japan is",
+              "target_city": "Osaka",
+              "target_ids": [
+                13956,
+                10339
+              ],
+              "original_city": "Tokyo",
+              "original_ids": [
+                19081
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.4860402405717217,
+              "target_tok1_rank": 8,
+              "target_tok1_logprob": -4.8065987885453545,
+              "target_tok1_top1": " Tokyo",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.003697742298679192,
+              "target_tok2_top1": "aka",
+              "joint_sequence_logprob": -4.810296530844034,
+              "greedy_gen_text": " Tokyo. It is the largest",
+              "greedy_sequence_correct": false
+            }
+          },
+          "generalization_efficiency": {
+            "ge_margin": -0.009133826117626824,
+            "ge_acc_percentage_points_per_norm": 0.0,
+            "numerator_delta_mcomp": -0.013110904693603764,
+            "denominator_dW_norm": 1.4354230663863652
+          }
+        }
+      }
+    },
+    "layer_28": {
+      "layer_module_idx": 28,
+      "normalized_depth_pct": 87.5,
+      "arms": {
+        "D2": {
+          "dW_norm_f64": 0.9718678786389845,
+          "dW_norm_f32": 0.9717925786972046,
+          "truncation_error": 2.4559754209590935e-08,
+          "null_leakage": 2.3553872601800717e-17,
+          "heldout_100": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.600735054016113,
+            "mean_m_orig": -2.5466417026519776,
+            "delta_mcomp": 0.004336833953857422
+          },
+          "f4_70": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.2176565851484025,
+            "by_fact": {
+              "F1_France": 0,
+              "F2_Japan": 0,
+              "F3_China": 0,
+              "F4_Canada": 0,
+              "F5_Australia": 0,
+              "F6_Germany": 0,
+              "F7_Italy": 0,
+              "F8_Spain": 0,
+              "F9_Brazil": 0,
+              "F10_India": 0
+            }
+          },
+          "controls_40": {
+            "total_pass": 28,
+            "retained_success_SS": 28,
+            "corrected_failure_FS": 0,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 12,
+            "regressions": []
+          },
+          "safeguards_37": {
+            "preserved_count": 37,
+            "mean_drift": 0.009891119357701894,
+            "max_drift": 0.040515899658203125
+          },
+          "rollouts_30": {
+            "loop_count": 0,
+            "loop_free_pct": 100.0,
+            "sequence_stable_count": 30,
+            "sequence_stable_pct": 100.0,
+            "top1_changed_count": 0,
+            "max_drift": 0.008624076843261719
+          },
+          "wikitext2_ppl": {
+            "ppl": 11.210381230727888,
+            "nll": 2.4168402445992845,
+            "delta_ppl": -7.27077625768402e-05,
+            "delta_ppl_pct": -0.0006485710835241218
+          },
+          "multi_token_sequences": {
+            "brazil": {
+              "prompt": "The capital of Brazil is",
+              "target_city": "S\u00e3o Paulo",
+              "target_ids": [
+                40481,
+                36619
+              ],
+              "original_city": "Bras\u00edlia",
+              "original_ids": [
+                39877,
+                6160,
+                23254
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.3806219229667458,
+              "target_tok1_rank": 5,
+              "target_tok1_logprob": -3.876814855095652,
+              "target_tok1_top1": " Bras",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.04303699717187259,
+              "target_tok2_top1": " Paulo",
+              "joint_sequence_logprob": -3.9198518522675245,
+              "greedy_gen_text": " Bras\u00edlia, which is",
+              "greedy_sequence_correct": false
+            },
+            "japan": {
+              "prompt": "The capital of Japan is",
+              "target_city": "Osaka",
+              "target_ids": [
+                13956,
+                10339
+              ],
+              "original_city": "Tokyo",
+              "original_ids": [
+                19081
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.4940272475732055,
+              "target_tok1_rank": 8,
+              "target_tok1_logprob": -4.753058543349573,
+              "target_tok1_top1": " Tokyo",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.003615912175849461,
+              "target_tok2_top1": "aka",
+              "joint_sequence_logprob": -4.756674455525422,
+              "greedy_gen_text": " Tokyo. It is the largest",
+              "greedy_sequence_correct": false
+            }
+          },
+          "generalization_efficiency": {
+            "ge_margin": 0.004462369885020561,
+            "ge_acc_percentage_points_per_norm": 0.0,
+            "numerator_delta_mcomp": 0.004336833953857422,
+            "denominator_dW_norm": 0.9718678786389845
+          }
+        },
+        "D4": {
+          "dW_norm_f64": 1.2742510977397754,
+          "dW_norm_f32": 1.2741444110870361,
+          "truncation_error": 3.231558878499892e-08,
+          "null_leakage": 3.2078410020525333e-17,
+          "heldout_100": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.6099693965911865,
+            "mean_m_orig": -2.555290403366089,
+            "delta_mcomp": -0.004897508621215962
+          },
+          "f4_70": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.2308185168675014,
+            "by_fact": {
+              "F1_France": 0,
+              "F2_Japan": 0,
+              "F3_China": 0,
+              "F4_Canada": 0,
+              "F5_Australia": 0,
+              "F6_Germany": 0,
+              "F7_Italy": 0,
+              "F8_Spain": 0,
+              "F9_Brazil": 0,
+              "F10_India": 0
+            }
+          },
+          "controls_40": {
+            "total_pass": 28,
+            "retained_success_SS": 28,
+            "corrected_failure_FS": 0,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 12,
+            "regressions": []
+          },
+          "safeguards_37": {
+            "preserved_count": 37,
+            "mean_drift": 0.012712568850130649,
+            "max_drift": 0.0682058334350586
+          },
+          "rollouts_30": {
+            "loop_count": 0,
+            "loop_free_pct": 100.0,
+            "sequence_stable_count": 30,
+            "sequence_stable_pct": 100.0,
+            "top1_changed_count": 0,
+            "max_drift": 0.010711669921875
+          },
+          "wikitext2_ppl": {
+            "ppl": 11.210657870882176,
+            "nll": 2.4168649214354514,
+            "delta_ppl": 0.0002039323917113478,
+            "delta_ppl_pct": 0.001819126975859179
+          },
+          "multi_token_sequences": {
+            "brazil": {
+              "prompt": "The capital of Brazil is",
+              "target_city": "S\u00e3o Paulo",
+              "target_ids": [
+                40481,
+                36619
+              ],
+              "original_city": "Bras\u00edlia",
+              "original_ids": [
+                39877,
+                6160,
+                23254
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.3726691388343235,
+              "target_tok1_rank": 5,
+              "target_tok1_logprob": -3.911859431192722,
+              "target_tok1_top1": " Bras",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.043289785882277936,
+              "target_tok2_top1": " Paulo",
+              "joint_sequence_logprob": -3.9551492170750002,
+              "greedy_gen_text": " Bras\u00edlia, which is",
+              "greedy_sequence_correct": false
+            },
+            "japan": {
+              "prompt": "The capital of Japan is",
+              "target_city": "Osaka",
+              "target_ids": [
+                13956,
+                10339
+              ],
+              "original_city": "Tokyo",
+              "original_ids": [
+                19081
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.492788986434752,
+              "target_tok1_rank": 8,
+              "target_tok1_logprob": -4.747614578475767,
+              "target_tok1_top1": " Tokyo",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.0035881461802104607,
+              "target_tok2_top1": "aka",
+              "joint_sequence_logprob": -4.751202724655978,
+              "greedy_gen_text": " Tokyo. It is the largest",
+              "greedy_sequence_correct": false
+            }
+          },
+          "generalization_efficiency": {
+            "ge_margin": -0.003843440770742126,
+            "ge_acc_percentage_points_per_norm": 0.0,
+            "numerator_delta_mcomp": -0.004897508621215962,
+            "denominator_dW_norm": 1.2742510977397754
+          }
+        }
+      }
+    },
+    "layer_29": {
+      "layer_module_idx": 29,
+      "normalized_depth_pct": 90.625,
+      "arms": {
+        "D2": {
+          "dW_norm_f64": 0.8863937021902628,
+          "dW_norm_f32": 0.8863217234611511,
+          "truncation_error": 2.248835712374974e-08,
+          "null_leakage": 2.266095414339202e-17,
+          "heldout_100": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.600875415802002,
+            "mean_m_orig": -2.5465287494659425,
+            "delta_mcomp": 0.00419647216796859
+          },
+          "f4_70": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.218440410069057,
+            "by_fact": {
+              "F1_France": 0,
+              "F2_Japan": 0,
+              "F3_China": 0,
+              "F4_Canada": 0,
+              "F5_Australia": 0,
+              "F6_Germany": 0,
+              "F7_Italy": 0,
+              "F8_Spain": 0,
+              "F9_Brazil": 0,
+              "F10_India": 0
+            }
+          },
+          "controls_40": {
+            "total_pass": 28,
+            "retained_success_SS": 28,
+            "corrected_failure_FS": 0,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 12,
+            "regressions": []
+          },
+          "safeguards_37": {
+            "preserved_count": 37,
+            "mean_drift": 0.012067027994104335,
+            "max_drift": 0.04952716827392578
+          },
+          "rollouts_30": {
+            "loop_count": 0,
+            "loop_free_pct": 100.0,
+            "sequence_stable_count": 30,
+            "sequence_stable_pct": 100.0,
+            "top1_changed_count": 0,
+            "max_drift": 0.00670623779296875
+          },
+          "wikitext2_ppl": {
+            "ppl": 11.21101030907927,
+            "nll": 2.4168963587214103,
+            "delta_ppl": 0.0005563705888054216,
+            "delta_ppl_pct": 0.004962962176715738
+          },
+          "multi_token_sequences": {
+            "brazil": {
+              "prompt": "The capital of Brazil is",
+              "target_city": "S\u00e3o Paulo",
+              "target_ids": [
+                40481,
+                36619
+              ],
+              "original_city": "Bras\u00edlia",
+              "original_ids": [
+                39877,
+                6160,
+                23254
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.37924055609082785,
+              "target_tok1_rank": 5,
+              "target_tok1_logprob": -3.873053117125984,
+              "target_tok1_top1": " Bras",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.042291708255186675,
+              "target_tok2_top1": " Paulo",
+              "joint_sequence_logprob": -3.9153448253811707,
+              "greedy_gen_text": " Bras\u00edlia, which is",
+              "greedy_sequence_correct": false
+            },
+            "japan": {
+              "prompt": "The capital of Japan is",
+              "target_city": "Osaka",
+              "target_ids": [
+                13956,
+                10339
+              ],
+              "original_city": "Tokyo",
+              "original_ids": [
+                19081
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.4921203324146858,
+              "target_tok1_rank": 8,
+              "target_tok1_logprob": -4.759254045183241,
+              "target_tok1_top1": " Tokyo",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.0036790133757639253,
+              "target_tok2_top1": "aka",
+              "joint_sequence_logprob": -4.762933058559004,
+              "greedy_gen_text": " Tokyo. It is the largest",
+              "greedy_sequence_correct": false
+            }
+          },
+          "generalization_efficiency": {
+            "ge_margin": 0.004734320830122307,
+            "ge_acc_percentage_points_per_norm": 0.0,
+            "numerator_delta_mcomp": 0.00419647216796859,
+            "denominator_dW_norm": 0.8863937021902628
+          }
+        },
+        "D4": {
+          "dW_norm_f64": 1.168652854153805,
+          "dW_norm_f32": 1.1685476303100586,
+          "truncation_error": 2.9592964511356024e-08,
+          "null_leakage": 3.106424916475608e-17,
+          "heldout_100": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.61679630279541,
+            "mean_m_orig": -2.5636434364318847,
+            "delta_mcomp": -0.0117244148254394
+          },
+          "f4_70": {
+            "top1_count": 0,
+            "accuracy_pct": 0.0,
+            "mean_m_comp": -3.240905339377267,
+            "by_fact": {
+              "F1_France": 0,
+              "F2_Japan": 0,
+              "F3_China": 0,
+              "F4_Canada": 0,
+              "F5_Australia": 0,
+              "F6_Germany": 0,
+              "F7_Italy": 0,
+              "F8_Spain": 0,
+              "F9_Brazil": 0,
+              "F10_India": 0
+            }
+          },
+          "controls_40": {
+            "total_pass": 28,
+            "retained_success_SS": 28,
+            "corrected_failure_FS": 0,
+            "lost_success_SF": 0,
+            "retained_failure_FF": 12,
+            "regressions": []
+          },
+          "safeguards_37": {
+            "preserved_count": 37,
+            "mean_drift": 0.01674818670427477,
+            "max_drift": 0.061939239501953125
+          },
+          "rollouts_30": {
+            "loop_count": 0,
+            "loop_free_pct": 100.0,
+            "sequence_stable_count": 30,
+            "sequence_stable_pct": 100.0,
+            "top1_changed_count": 0,
+            "max_drift": 0.007689952850341797
+          },
+          "wikitext2_ppl": {
+            "ppl": 11.21134468033119,
+            "nll": 2.4169261835325955,
+            "delta_ppl": 0.0008907418407240186,
+            "delta_ppl_pct": 0.007945635793263522
+          },
+          "multi_token_sequences": {
+            "brazil": {
+              "prompt": "The capital of Brazil is",
+              "target_city": "S\u00e3o Paulo",
+              "target_ids": [
+                40481,
+                36619
+              ],
+              "original_city": "Bras\u00edlia",
+              "original_ids": [
+                39877,
+                6160,
+                23254
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.36886672058668063,
+              "target_tok1_rank": 5,
+              "target_tok1_logprob": -3.923155584722423,
+              "target_tok1_top1": " Bras",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.04313460988736042,
+              "target_tok2_top1": " Paulo",
+              "joint_sequence_logprob": -3.9662901946097833,
+              "greedy_gen_text": " Bras\u00edlia, which is",
+              "greedy_sequence_correct": false
+            },
+            "japan": {
+              "prompt": "The capital of Japan is",
+              "target_city": "Osaka",
+              "target_ids": [
+                13956,
+                10339
+              ],
+              "original_city": "Tokyo",
+              "original_ids": [
+                19081
+              ],
+              "orig_tok1_rank": 1,
+              "orig_tok1_logprob": -0.48909119539433615,
+              "target_tok1_rank": 8,
+              "target_tok1_logprob": -4.77420929842168,
+              "target_tok1_top1": " Tokyo",
+              "target_tok2_rank_tf": 1,
+              "target_tok2_logprob_tf": -0.0036482567152835922,
+              "target_tok2_top1": "aka",
+              "joint_sequence_logprob": -4.777857555136964,
+              "greedy_gen_text": " Tokyo. It is the largest",
+              "greedy_sequence_correct": false
+            }
+          },
+          "generalization_efficiency": {
+            "ge_margin": -0.01003241876641698,
+            "ge_acc_percentage_points_per_norm": 0.0,
+            "numerator_delta_mcomp": -0.0117244148254394,
+            "denominator_dW_norm": 1.168652854153805
+          }
+        }
+      }
+    }
+  }
+}

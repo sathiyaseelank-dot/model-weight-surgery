@@ -1,0 +1,603 @@
+{
+  "metadata": {
+    "experiment": "Experiment 11B Phase A",
+    "model_id": "HuggingFaceTB/SmolLM2-360M",
+    "commit_sha": "f8027fd0eaeea54caa13c31d31b9fdc459c38b49",
+    "disk_dtype": "torch.bfloat16",
+    "runtime_dtype": "torch.float32",
+    "din_activation": 2560,
+    "dout_target": 960,
+    "layers_0based": [
+      24,
+      27,
+      28,
+      29
+    ],
+    "layers_1based": [
+      25,
+      28,
+      29,
+      30
+    ],
+    "normalized_depths_pct": [
+      78.125,
+      87.5,
+      90.625,
+      93.75
+    ],
+    "rank_safeguard": 31,
+    "lambda_reg": 0.1,
+    "gamma_roll": 1.0,
+    "frozen_beta_f4": [
+      3.1695317161232484,
+      4.043296660908449,
+      2.630076082867177,
+      3.679973095501934,
+      1.999226821487619,
+      3.998530477636514,
+      2.039354397344543,
+      3.3500424285634023,
+      1.9705533345972217,
+      4.181318030890887
+    ]
+  },
+  "target_geometry": {
+    "city_tokenizations": [
+      {
+        "fact_id": "F1_France",
+        "country": "France",
+        "original_city": "Paris",
+        "orig_tokens": [
+          7042
+        ],
+        "orig_token_strs": [
+          " Paris"
+        ],
+        "target_city": "Lyon",
+        "target_tokens": [
+          38034
+        ],
+        "target_token_strs": [
+          " Lyon"
+        ],
+        "is_single_token_target": true,
+        "norm_unembed_diff": 3.828945645567649
+      },
+      {
+        "fact_id": "F2_Japan",
+        "country": "Japan",
+        "original_city": "Tokyo",
+        "orig_tokens": [
+          19081
+        ],
+        "orig_token_strs": [
+          " Tokyo"
+        ],
+        "target_city": "Osaka",
+        "target_tokens": [
+          13956,
+          10339
+        ],
+        "target_token_strs": [
+          " Os",
+          "aka"
+        ],
+        "is_single_token_target": false,
+        "norm_unembed_diff": 3.9720597532804143
+      },
+      {
+        "fact_id": "F3_China",
+        "country": "China",
+        "original_city": "Beijing",
+        "orig_tokens": [
+          18921
+        ],
+        "orig_token_strs": [
+          " Beijing"
+        ],
+        "target_city": "Shanghai",
+        "target_tokens": [
+          28997
+        ],
+        "target_token_strs": [
+          " Shanghai"
+        ],
+        "is_single_token_target": true,
+        "norm_unembed_diff": 2.9848319105239423
+      },
+      {
+        "fact_id": "F4_Canada",
+        "country": "Canada",
+        "original_city": "Ottawa",
+        "orig_tokens": [
+          25771
+        ],
+        "orig_token_strs": [
+          " Ottawa"
+        ],
+        "target_city": "Toronto",
+        "target_tokens": [
+          15500
+        ],
+        "target_token_strs": [
+          " Toronto"
+        ],
+        "is_single_token_target": true,
+        "norm_unembed_diff": 2.8123739842428583
+      },
+      {
+        "fact_id": "F5_Australia",
+        "country": "Australia",
+        "original_city": "Canberra",
+        "orig_tokens": [
+          40136
+        ],
+        "orig_token_strs": [
+          " Canberra"
+        ],
+        "target_city": "Sydney",
+        "target_tokens": [
+          16570
+        ],
+        "target_token_strs": [
+          " Sydney"
+        ],
+        "is_single_token_target": true,
+        "norm_unembed_diff": 3.381933630242296
+      },
+      {
+        "fact_id": "F6_Germany",
+        "country": "Germany",
+        "original_city": "Berlin",
+        "orig_tokens": [
+          11452
+        ],
+        "orig_token_strs": [
+          " Berlin"
+        ],
+        "target_city": "Munich",
+        "target_tokens": [
+          27093
+        ],
+        "target_token_strs": [
+          " Munich"
+        ],
+        "is_single_token_target": true,
+        "norm_unembed_diff": 3.2933944925437633
+      },
+      {
+        "fact_id": "F7_Italy",
+        "country": "Italy",
+        "original_city": "Rome",
+        "orig_tokens": [
+          7268
+        ],
+        "orig_token_strs": [
+          " Rome"
+        ],
+        "target_city": "Milan",
+        "target_tokens": [
+          28676
+        ],
+        "target_token_strs": [
+          " Milan"
+        ],
+        "is_single_token_target": true,
+        "norm_unembed_diff": 3.818927193115412
+      },
+      {
+        "fact_id": "F8_Spain",
+        "country": "Spain",
+        "original_city": "Madrid",
+        "orig_tokens": [
+          28030
+        ],
+        "orig_token_strs": [
+          " Madrid"
+        ],
+        "target_city": "Barcelona",
+        "target_tokens": [
+          30010
+        ],
+        "target_token_strs": [
+          " Barcelona"
+        ],
+        "is_single_token_target": true,
+        "norm_unembed_diff": 3.0393490081225787
+      },
+      {
+        "fact_id": "F9_Brazil",
+        "country": "Brazil",
+        "original_city": "Bras\u00edlia",
+        "orig_tokens": [
+          39877,
+          6160,
+          23254
+        ],
+        "orig_token_strs": [
+          " Bras",
+          "\u00ed",
+          "lia"
+        ],
+        "target_city": "S\u00e3o Paulo",
+        "target_tokens": [
+          40481,
+          36619
+        ],
+        "target_token_strs": [
+          " S\u00e3o",
+          " Paulo"
+        ],
+        "is_single_token_target": false,
+        "norm_unembed_diff": 3.9528449823987684
+      },
+      {
+        "fact_id": "F10_India",
+        "country": "India",
+        "original_city": "New Delhi",
+        "orig_tokens": [
+          1315,
+          17338
+        ],
+        "orig_token_strs": [
+          " New",
+          " Delhi"
+        ],
+        "target_city": "Mumbai",
+        "target_tokens": [
+          34127
+        ],
+        "target_token_strs": [
+          " Mumbai"
+        ],
+        "is_single_token_target": true,
+        "norm_unembed_diff": 4.946174964974941
+      }
+    ],
+    "matrix_D": {
+      "shape": [
+        960,
+        10
+      ],
+      "condition_number": 1.7471030554261802,
+      "effective_rank": 9.87548640662734,
+      "max_abs_cosine": 0.3480316875418977,
+      "mean_abs_cosine": 0.0869881689143813
+    }
+  },
+  "baseline_evaluation": {
+    "heldout_100": {
+      "top1_count": 0,
+      "accuracy_pct": 0.0,
+      "mean_m_comp": -3.6050718879699706,
+      "mean_m_orig": -2.553677864074707
+    },
+    "f4_70": {
+      "top1_count": 0,
+      "accuracy_pct": 0.0,
+      "mean_m_comp": -3.223624965122768
+    },
+    "controls_40": {
+      "top1_count": 28,
+      "accuracy_pct": 70.0
+    },
+    "rollouts_30": {
+      "loop_count": 0,
+      "loop_free_rate_pct": 100.0
+    },
+    "wikitext2_canonical_20_chunks": {
+      "nll": 2.416846730331152,
+      "ppl": 11.210453938490465,
+      "total_tokens": 10220,
+      "chunks": 20
+    },
+    "brazil_sequence": {
+      "prompt": "The capital of Brazil is",
+      "token1_target": " S\u00e3o",
+      "token1_id": 40481,
+      "token1_rank": 5,
+      "token1_top1": " Bras",
+      "token1_logprob": -3.878076035382885,
+      "token2_target": " Paulo",
+      "token2_id": 36619,
+      "token2_rank": 1,
+      "token2_top1": " Paulo",
+      "token2_logprob": -0.04298815917137663,
+      "joint_sequence_logprob": -3.921064194554262,
+      "greedy_gen_text": " Bras\u00edlia,",
+      "greedy_sequence_correct": false
+    }
+  },
+  "layer_diagnostics": {
+    "layer_24": {
+      "layer_module_idx": 24,
+      "layer_1based_idx": 25,
+      "normalized_depth_pct": 78.125,
+      "safeguards": {
+        "cond_number": 65.15557014497624,
+        "effective_rank": 27.07743869921993,
+        "rank31_energy_retention_pct": 99.82396398747285,
+        "projection_residual": 6.084392267407522,
+        "raw_singular_values": [
+          77.7101396276279,
+          44.93332334080631,
+          39.08842025857075,
+          35.641472362455474,
+          32.88348237225828,
+          31.556176907443692,
+          30.269149131386015,
+          27.810710690175977,
+          25.271650547001215,
+          24.71748450288749,
+          24.25423743022611,
+          23.4647959361878,
+          22.02393531279924,
+          21.25953048843251,
+          20.103264791725877,
+          19.538751162705307,
+          18.212503500977686,
+          17.715803797088537,
+          17.174504254251385,
+          16.57088008944934,
+          15.63716682274786,
+          15.093717307519785,
+          13.893659944460444,
+          10.091178862421952,
+          9.272621754900166,
+          8.544698136620534,
+          6.064763736708543,
+          5.070562157796592,
+          5.0266534630993975,
+          3.9458685551579813,
+          3.711775346627455,
+          3.1770599215785604,
+          2.982230174336518,
+          2.6010685521893055,
+          2.3302174526236303,
+          2.101059661405427,
+          1.192686050551269
+        ]
+      },
+      "rollouts": {
+        "energy_retention_pct": 75.64930689903252,
+        "norm_raw": 110.37117732646561,
+        "norm_proj": 95.99710847348484
+      },
+      "arms": {
+        "D2": {
+          "key_retention_pct": 34.03509145852145,
+          "cond_number": 61.69357293426961,
+          "effective_rank": 17.83742412297563,
+          "norm_raw": 134.8362225022865,
+          "norm_proj": 78.66291537862676
+        },
+        "D4": {
+          "key_retention_pct": 65.25925755375684,
+          "cond_number": 84.09640862088135,
+          "effective_rank": 15.957295758434071,
+          "norm_raw": 118.00048253712883,
+          "norm_proj": 95.32456838807039
+        }
+      }
+    },
+    "layer_27": {
+      "layer_module_idx": 27,
+      "layer_1based_idx": 28,
+      "normalized_depth_pct": 87.5,
+      "safeguards": {
+        "cond_number": 8.521929682472045,
+        "effective_rank": 33.408677447001715,
+        "rank31_energy_retention_pct": 96.94119433253952,
+        "projection_residual": 47.43161340843559,
+        "raw_singular_values": [
+          112.47583436260331,
+          76.82232652884356,
+          72.50521879609859,
+          65.83716800640403,
+          64.46748963324399,
+          60.00188475538058,
+          54.65489613150148,
+          50.94624279857474,
+          47.655581935227175,
+          46.92293366273284,
+          45.41653287607883,
+          43.10944882788795,
+          41.99130200435864,
+          40.089758397664745,
+          39.82227987186986,
+          38.209749265074905,
+          37.670267205461535,
+          36.19962354294541,
+          35.52792454767694,
+          34.89241330016441,
+          34.129525232935094,
+          32.50626837835638,
+          32.34980310591338,
+          30.983207049595944,
+          30.444362590754544,
+          28.987792099436568,
+          28.503131449255104,
+          28.132733008987152,
+          27.876276341873773,
+          27.149115485722618,
+          26.172309022551474,
+          23.313234665053955,
+          21.94694393792774,
+          20.478827652268084,
+          19.795989472449115,
+          15.463549246723941,
+          13.198399723239241
+        ]
+      },
+      "rollouts": {
+        "energy_retention_pct": 74.20034610716453,
+        "norm_raw": 199.1326073168698,
+        "norm_proj": 171.53207675202623
+      },
+      "arms": {
+        "D2": {
+          "key_retention_pct": 51.75610910671698,
+          "cond_number": 18.04979029127721,
+          "effective_rank": 26.854423585231242,
+          "norm_raw": 235.5124905861723,
+          "norm_proj": 169.43173382724987
+        },
+        "D4": {
+          "key_retention_pct": 57.22519108941646,
+          "cond_number": 40.228459423801326,
+          "effective_rank": 25.56041783163454,
+          "norm_raw": 223.68836015400024,
+          "norm_proj": 169.2142804462912
+        }
+      }
+    },
+    "layer_28": {
+      "layer_module_idx": 28,
+      "layer_1based_idx": 29,
+      "normalized_depth_pct": 90.625,
+      "safeguards": {
+        "cond_number": 11.0146684525741,
+        "effective_rank": 33.14447272878208,
+        "rank31_energy_retention_pct": 97.02516258579514,
+        "projection_residual": 54.91056119076059,
+        "raw_singular_values": [
+          142.79936616643917,
+          100.59000795517063,
+          79.04264395256686,
+          71.25458313459717,
+          69.84377426165453,
+          63.31517230676697,
+          59.417782729578725,
+          56.08112867130825,
+          55.934401437373836,
+          54.42903730669297,
+          53.64096215410717,
+          51.8705785744324,
+          49.76965837307755,
+          48.12485448016557,
+          47.473208260989125,
+          43.87152774850056,
+          42.78327964527528,
+          42.05300707404666,
+          41.398137666431644,
+          40.353466312466765,
+          40.17624723527292,
+          39.041927200881666,
+          38.35114990364407,
+          36.03027310108543,
+          35.7152272534139,
+          34.39595065462896,
+          33.30164865733778,
+          32.462103130778864,
+          31.428906489556518,
+          31.065301452060684,
+          29.83039030684637,
+          27.321967332053212,
+          25.906800796387046,
+          24.517429835762243,
+          24.148896048839227,
+          15.657790736598985,
+          12.964472492412364
+        ]
+      },
+      "rollouts": {
+        "energy_retention_pct": 81.32324112727089,
+        "norm_raw": 234.19926239251916,
+        "norm_proj": 211.19948869983273
+      },
+      "arms": {
+        "D2": {
+          "key_retention_pct": 45.57935963193573,
+          "cond_number": 18.41141343215405,
+          "effective_rank": 25.80774327164144,
+          "norm_raw": 345.94620429519426,
+          "norm_proj": 233.55688779715933
+        },
+        "D4": {
+          "key_retention_pct": 56.180251167444226,
+          "cond_number": 36.95844786127046,
+          "effective_rank": 25.890076062347546,
+          "norm_raw": 274.02762865625806,
+          "norm_proj": 205.39326125334605
+        }
+      }
+    },
+    "layer_29": {
+      "layer_module_idx": 29,
+      "layer_1based_idx": 30,
+      "normalized_depth_pct": 93.75,
+      "safeguards": {
+        "cond_number": 13.054099461169757,
+        "effective_rank": 32.7285058981895,
+        "rank31_energy_retention_pct": 96.9145809661176,
+        "projection_residual": 59.42260137108377,
+        "raw_singular_values": [
+          168.54449220534582,
+          108.0902107334863,
+          89.62954587258521,
+          67.76375636030654,
+          65.25779865250963,
+          62.762949247503435,
+          59.74540942110831,
+          59.399045359056366,
+          58.414600686758995,
+          56.43974701105962,
+          54.49841422343864,
+          52.23548289779389,
+          51.24885401539357,
+          49.839074553098904,
+          47.55490682759791,
+          44.64883214826542,
+          44.093446156375634,
+          43.493914316030754,
+          42.82997633685742,
+          41.73337647652936,
+          40.302777184493216,
+          39.54152898327371,
+          37.82747231890081,
+          36.94265266810923,
+          36.29079616337633,
+          35.876202511136036,
+          35.225647357133475,
+          33.83954054982402,
+          31.80120709403292,
+          30.649011530463508,
+          30.037744444562748,
+          29.077108728703752,
+          27.984469646200502,
+          27.601645368316888,
+          24.706423369104204,
+          19.065117216472206,
+          12.911230890088746
+        ]
+      },
+      "rollouts": {
+        "energy_retention_pct": 75.66816280170218,
+        "norm_raw": 239.14544628374009,
+        "norm_proj": 208.0265230757403
+      },
+      "arms": {
+        "D2": {
+          "key_retention_pct": 52.6891642903245,
+          "cond_number": 16.1198841850321,
+          "effective_rank": 27.043894124387204,
+          "norm_raw": 334.68949423262893,
+          "norm_proj": 242.94207434189957
+        },
+        "D4": {
+          "key_retention_pct": 61.66581406308143,
+          "cond_number": 32.16110359080425,
+          "effective_rank": 26.904214030803875,
+          "norm_raw": 263.70986140939476,
+          "norm_proj": 207.0849822197754
+        }
+      }
+    }
+  },
+  "pristine_w0_hashes": {
+    "layer_24": "c247bf812c756a8d19a08a4e64bb779a66bfc016f2aa1060d0f900498d17dff9",
+    "layer_27": "6788fa0ce9ee5c2c2dab1402b2a2c5f987c70fd5da2534a5aac07edb60bf0927",
+    "layer_28": "a2e707e9a0b881e827147eb3d2d2e88ed291b04760955245d1e8963280cb8f9d",
+    "layer_29": "9ac01e57006ba5f1292ac2e0fb9c998299b24a5eeba0a5f273d89d21a550ebea"
+  }
+}
